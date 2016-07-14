@@ -1,0 +1,49 @@
+@import 'reset';
+@import 'globals';
+
+$font: "Comic Sans";
+
+html {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+:root {
+  font-family: $font;
+  font-weight: 300;
+  font-size: 14px;
+  user-select: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+input {
+  font-size: 14px;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
