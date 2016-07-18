@@ -12,6 +12,14 @@ Right now, we are designing and ideating.
 
 ## Getting started
 
+As of now, we have two main folders:
+1. ["app"](./app) is where code lives.
+2. ["design"](./design) is where design assets live.
+
+Before you do any of the steps below, you need to be inside the `app` folder.
+
+`cd app`
+
 ### Installation
 
 1. `npm install`
