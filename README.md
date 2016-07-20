@@ -1,22 +1,25 @@
 # Hack the Budget
 
-**How might we get broad citizen input on the city budgeting process and move the City towards [participatory budgeting](http://www.participatorybudgeting.org/about-participatory-budgeting/what-is-pb/)?**
+## Problem Statement: 
 
-## What are we working on now?
+**How might we get broad citizen input on the city budgeting process and move the City towards the model of [participatory budgeting (PB)](http://www.participatorybudgeting.org/about-participatory-budgeting/what-is-pb/)?**
 
-We are working with Glasshouse Policy & the Austin Monitor to get a baseline prototype working for an public event on August 16th.
+For more info, check out the original [project proposal](https://github.com/open-austin/project-ideas/issues/70).
 
-Right now, we are designing and ideating.
+## What are we working on now?:
 
-[See design mocks and assets here.](./design)
+Right now, we are designing and ideating in preparation for a proof-of-concept working prototype app that will be used at the [Budget Game Night hosted by the Austin Monitor & Glasshouse Policy](https://www.eventbrite.com/e/budget-game-night-tickets-26423729085?aff=ehomecard) on **August 16th, 2016**.
 
-## Getting started
 
-As of now, we have two main folders:
-1. ["app"](./app) is where code lives.
-2. ["design"](./design) is where design assets live.
+## Design
 
-Before you do any of the steps below, you need to be inside the `app` folder.
+Here is a link to our [design assets and documentation](./design). Here are [open issues labeled "Design"](https://github.com/open-austin/hack-the-budget/issues?q=is%3Aissue+is%3Aopen+label%3Adesign) where you can discuss, provide feedback or volunteer to help.
+
+## Development
+
+**Getting started**
+
+Once you have cloned this repo to you local machine, open the `app` directory in your Terminal.
 
 `cd app`
 
@@ -36,4 +39,3 @@ Before you do any of the steps below, you need to be inside the `app` folder.
 
 ___
 
-For more info, check out the original [project proposal](https://github.com/open-austin/project-ideas/issues/70).
