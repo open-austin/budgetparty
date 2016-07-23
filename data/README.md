@@ -8,3 +8,6 @@
 - [City of Austin Performance Reports](http://data.austintexas.gov/stories/s/mfnw-2iaf)
 - [Austin Finance Online Budget Info](https://www.ci.austin.tx.us/financeonline/finance/financial_docs.cfm?ws=1&pg=1)
 	- ![](http://dsh.re/63b08)
+
+## Budget Game Night August 16
+- [Event Run of Show](https://docs.google.com/document/d/1ePX6p1KZbAvGASiWmMerZ3bfaiJFQoD1bkqLSOp5chc/edit?ts=579294c0)
