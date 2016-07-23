@@ -2,27 +2,28 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
-import DevTools from 'redux/DevTools';
 import configureStore from 'redux/configureStore';
 
 import App from 'components/App';
+import Welcome from 'components/Welcome';
+import Taxes from 'components/Taxes';
+import Services from 'components/Services';
 
 const store = window.store = configureStore();
 
-const renderDevTools = () => {
-  if (process.env.NODE_ENV !== 'production') {
-    return <DevTools />;
-  }
+// import react router dependencies
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-  return null;
-};
-
-render(
+const router = (
   <Provider store={store}>
-    <div>
-      <App />
-      { renderDevTools() }
-    </div>
-  </Provider>,
-  document.getElementById('root')
+    <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Welcome}></IndexRoute>
+        <Route path="/taxes" components={Taxes}></Route>
+        <Route path="/services" component={Services}></Route>
+      </Route>
+    </Router>
+  </Provider>
 );
+
+render(router, document.getElementById('root'));
