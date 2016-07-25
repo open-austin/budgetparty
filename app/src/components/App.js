@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-// import styles from 'styles/base.scss';
+import styles from 'styles/base.scss';
 
 import { setGlobalError } from 'actions/ui';
 

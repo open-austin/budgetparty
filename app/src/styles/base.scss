@@ -1,7 +1,8 @@
-@import 'reset';
+// This resets are only necessary if we drop Bootstrap
+// @import 'reset';
 @import 'globals';
 
-$font: "Comic Sans";
+$font: "Helvetica Neue";
 
 html {
   box-sizing: border-box;
