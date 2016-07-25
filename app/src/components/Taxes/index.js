@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import DollarCount from 'components/DollarCount';
-import BottomStickyNav from 'components/BottomStickyNav';
+import NavBottom from 'components/NavBottom';
 
 import styles from './styles.scss';
 
@@ -12,7 +12,7 @@ class Taxes extends Component {
         <div className={styles.contentBody}>
           <h1>Taxes Page</h1>
         </div>
-        <BottomStickyNav />
+        <NavBottom />
       </div>
     );
   }

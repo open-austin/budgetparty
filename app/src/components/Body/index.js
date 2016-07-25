@@ -7,12 +7,7 @@ import styles from './styles.scss';
 class Services extends Component {
   render() {
     return (
-      <div>
-        <DollarCount />
-        <div className={styles.contentBody}>
-          <h1>Services Page</h1>
-        </div>
-        <NavBottom />
+      <div className="content-body">
       </div>
     );
   }
