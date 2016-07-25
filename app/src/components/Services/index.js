@@ -1,13 +1,17 @@
 import React, { Component, PropTypes } from 'react';
-import TopStickyAmounts from 'components/TopStickyAmounts';
+import DollarCount from 'components/DollarCount';
 import BottomStickyNav from 'components/BottomStickyNav';
+
+import styles from './styles.scss';
 
 class Services extends Component {
   render() {
     return (
       <div>
-        <TopStickyAmounts />
-        <h1>Services Page</h1>
+        <DollarCount />
+        <div className={styles.contentBody}>
+          <h1>Services Page</h1>
+        </div>
         <BottomStickyNav />
       </div>
     );
