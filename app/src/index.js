@@ -6,8 +6,8 @@ import configureStore from 'redux/configureStore';
 
 import App from 'components/App';
 import Welcome from 'components/Welcome';
-import Taxes from 'components/Taxes';
-import Services from 'components/Services';
+import Taxes from 'components/BodyContent/Taxes';
+import Services from 'components/BodyContent/Services';
 
 const store = window.store = configureStore();
 

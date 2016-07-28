@@ -7,10 +7,22 @@ class NavBottom extends Component {
   render() {
     return (
       <div className={styles.navBottom}>
-        <Link to="/" className={styles.navItem}>Home</Link>
-        <Link to="/taxes" className={styles.navItem}>Taxes</Link>
-        <Link to="/services" className={styles.navItem}>Services</Link>
-        <Link to="/" className={styles.navItem}>Report</Link>
+        <Link to="/" className={styles.navItem}>
+          <img className={styles.navIcon} src="../../src/images/icons/home.png" alt=""/>
+          <span className={styles.navText}>Home</span>
+        </Link>
+        <Link to="/taxes" className={styles.navItem}>
+          <img className={styles.navIcon} src="../../src/images/icons/fund.png" alt=""/>
+          <span className={styles.navText}>Fund</span>
+        </Link>
+        <Link to="/services" className={styles.navItem}>
+          <img className={styles.navIcon} src="../../src/images/icons/fund.png" alt=""/>
+          <span className={styles.navText}>Services</span>
+        </Link>
+        <Link to="/" className={styles.navItem}>
+          <img className={styles.navIcon} src="../../src/images/icons/report.png" alt=""/>
+          <span className={styles.navText}>Report</span>
+        </Link>
       </div>
     );
   }

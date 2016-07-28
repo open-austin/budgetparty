@@ -1,0 +1,28 @@
+@import "globals";
+
+.contentBody {
+  margin-top: 62px; // sticky top offset
+  padding: 25px;
+}
+
+.pageTitle {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.pageBody {
+  margin-top: 40px;
+}
+
+.cashMoney {
+  color: $green;
+  font-weight: bold;
+}
+
+.button {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  background-color: $blue;
+  border-color: $blue;
+}

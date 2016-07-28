@@ -1,3 +1,5 @@
+import services from '../data/services';
+
 export default {
   ui: {
     globalError: {
@@ -8,6 +10,6 @@ export default {
     },
   },
   data: {
-
+    services
   }
 };
