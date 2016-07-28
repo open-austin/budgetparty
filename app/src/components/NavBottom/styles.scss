@@ -7,9 +7,21 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  background: #fff;
+  padding: 10px 0;
 }
 
 .navItem {
   width: 25%;
   float: left;
+}
+
+.navIcon {
+  height: 50px;
+  display: block;
+  margin: auto;
+}
+
+.navText {
+  clear: both;
 }

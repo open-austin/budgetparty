@@ -2,8 +2,6 @@
 // @import 'reset';
 @import 'globals';
 
-$font: "Helvetica Neue";
-
 html {
   box-sizing: border-box;
 }
@@ -27,6 +25,7 @@ html {
 }
 
 body {
+  font-family: $font;
   width: 100vw;
   overflow-x: hidden;
 }
@@ -42,6 +41,7 @@ input {
 a {
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  color: $blue;
 }
 
 .container {
