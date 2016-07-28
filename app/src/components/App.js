@@ -9,7 +9,7 @@ import Main from 'components/Main';
 
 const mapStateToProps = (state) => ({
   globalError: state.ui.globalError,
-});
+  data: state.data });
 
 const mapDispatchToProps = {
   setGlobalError,
