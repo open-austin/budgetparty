@@ -13,7 +13,7 @@ class Services extends Component {
 	  <div className={styles.contentBody}>
             <div>
               <h1>Services</h1>
-              <p></p>
+              <p>General Fund money is used to fund services. Choose how you want to spend the city budget by visiting the below sections. You can always change your answer.</p>
             </div>
 
             <div className={styles.serviceGroupsWrapper}>
