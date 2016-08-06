@@ -8,6 +8,7 @@ import App from 'components/App';
 import Welcome from 'components/Welcome';
 import Taxes from 'components/BodyContent/Taxes';
 import Services from 'components/BodyContent/Services';
+import ServiceGroup from 'components/ServiceGroup';
 
 const store = window.store = configureStore();
 
@@ -20,7 +21,9 @@ const router = (
       <Route path="/" component={App}>
         <IndexRoute component={Welcome}></IndexRoute>
         <Route path="/taxes" components={Taxes}></Route>
-        <Route path="/services" component={Services}></Route>
+        <Route path="/services" component={Services}>
+          <Route path="/services/:groupName" component={ServiceGroup}></Route>
+        </Route>
       </Route>
     </Router>
   </Provider>

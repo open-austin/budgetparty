@@ -1,66 +1,93 @@
-const money = {
+const servicesData = {
   generalFund: 911000000,
   servicesSum: 0,
-  'Public Safety': {
-    'Municipal Courts': {
-      default: 100000,
-      amount: 100000,
+  groups: [
+    {
+      name: 'Public Safety',
+      departments: [
+        {
+          name: 'Municipal Courts',
+          default: 100000,
+          amount: 100000,
+        },
+        {
+          name: 'Police',
+          default: 100000,
+          amount: 100000,
+        },
+        {
+          name: 'Fire',
+          default: 100000,
+          amount: 100000,
+        },
+        {
+          name: 'Emergency Management Services',
+          default: 100000,
+          amount: 100000,
+        },
+      ]
     },
-    'Police': {
-      default: 100000,
-      amount: 100000,
+    {
+      name: 'Development',
+      departments: [
+        {
+          name: 'Planning & Zoning',
+          default: 100000,
+          amount: 100000,
+        },
+        {
+          name: 'Development Services',
+          default: 100000,
+          amount: 100000,
+        },
+      ]
     },
-    'Fire': {
-      default: 100000,
-      amount: 100000,
+    {
+      name: 'Community Services',
+      departments: [
+        {
+          name: 'Animal Services',
+          default: 100000,
+          amount: 100000,
+        },
+        {
+          name: 'Parks & Recreation',
+          default: 100000,
+          amount: 100000,
+        },
+        {
+          name: 'Public Libraries',
+          default: 100000,
+          amount: 100000,
+        },
+        {
+          name: 'Social Service Contracts',
+          default: 100000,
+          amount: 100000,
+        },
+        {
+          name: 'Health & Human Services',
+          default: 100000,
+          amount: 100000,
+        },
+      ]
     },
-    'Emergency Management Services': {
-      default: 100000,
-      amount: 100000,
+    {
+      name: 'Infrastructure & Transportation',
+      departments: [
+        {
+          name: 'Transportation Department',
+          default: 100000,
+          amount: 100000,
+        },
+        {
+          name: 'Public Works',
+          default: 100000,
+          amount: 100000,
+        },
+      ]
     },
-  },
-  'Development': {
-    'Planning & Zoning': {
-      default: 100000,
-      amount: 100000,
-    },
-    'Development Services': {
-      default: 100000,
-      amount: 100000,
-    },
-  },
-  'Community Services': {
-    'Animal Services': {
-      default: 100000,
-      amount: 100000,
-    },
-    'Parks & Recreation': {
-      default: 100000,
-      amount: 100000,
-    },
-    'Public Libraries': {
-      default: 100000,
-      amount: 100000,
-    },
-    'Social Service Contracts': {
-      default: 100000,
-      amount: 100000,
-    },
-    'Health & Human Services': {
-      default: 100000,
-      amount: 100000,
-    },
-  },
-  'Infrastructure & Transportation': {
-    'Transportation Department': {
-      default: 100000,
-      amount: 100000,
-    },
-    'Public Works': {
-      default: 100000,
-      amount: 100000,
-    },
-  },
+  ]
 };
 
-export default money;
+export default servicesData;
