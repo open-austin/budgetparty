@@ -73,7 +73,7 @@ const servicesData = {
       ]
     },
     {
-      name: 'Infrastructure and Transportation',
+      name: 'Infrastructure & Transportation',
       departments: [
         {
           name: 'Transportation Department',

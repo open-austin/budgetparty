@@ -8,16 +8,9 @@
 .header {
   margin-bottom: 40px;
   font-weight: bold;
+  text-transform: uppercase; 
 }
 
 .text {
   margin-bottom: 40px;
-}
-
-.button {
-  width: 100%;
-  margin-bottom: 40px;
-  font-weight: bold;
-  background-color: $blue;
-  border-color: $blue;
 }

@@ -17,16 +17,15 @@ class Taxes extends Component {
             <h1>
               You have<br/>
               <span className={styles.cashMoney}>{dollarAmout}</span><br/>
-              to play with.
+              to fund services
             </h1>
-            <small>*The General Fund for 2016-17</small>
           </div>
 
-
           <div className={styles.pageBody}>
-            <h4>Where the Money comes from...</h4>
-            <p>Where does the City of Austin get the money to run its programs and pay the X,XXX civil servants it employs? </p>
-            <p>The General Fund includes money the City has gathered via:
+            <h4>This money comes from the General Fund for 2016-17</h4>
+            <p>The General Fund is where the City of Austin gets money to run programs and pay the 12,000 civil servants it employs.</p>
+
+            <p>General Fund money is collected through:
               <ul>
                 <li>Taxes on Property</li>
                 <li>Money generating enterprises like Energy, Waste Management, Airport Services, etc</li>
@@ -34,9 +33,14 @@ class Taxes extends Component {
                 <li>Sales taxes</li>
               </ul>
             </p>
-            <p>The General Fund varies from year to year because of outside effects like population change and overall economic activiy. It is also effected when City Council votes to change tax and service rates. It is politically unpopular for Councilmembers to increase taxes in any way.</p>
+
+            <p>The General Fund varies from year to year because of outside effects like population change and overall economic activiy.</p> 
+            
+            <p>It is also effected when City Council votes to change tax and service rates.</p>
+            
+            <p> It is politically unpopular for Councilmembers to increase taxes in any way.</p>
           </div>
-           <Link className={`${styles.button} btn btn-lg btn-success`} role="button" to="/services">Continue</Link>
+           <Link className={`${styles.buttonSolid} btn btn-lg btn-success`} role="button" to="/services">Continue</Link>
         </div>
         <NavBottom props={this.props}/>
       </div>
