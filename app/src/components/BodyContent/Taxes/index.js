@@ -5,7 +5,7 @@ import NavBottom from 'components/NavBottom';
 
 import styles from '../styles.scss';
 
-let dollarAmout = "$911 Million"
+let dollarAmout = "$969.2 Million"
 
 class Taxes extends Component {
   render() {
@@ -19,10 +19,8 @@ class Taxes extends Component {
               <span className={styles.cashMoney}>{dollarAmout}</span><br/>
               to play with.
             </h1>
-            <small>*The General Fund for 2016-17</small><br/>
-            <Link className={`${styles.button} btn btn-lg btn-success`} role="button" to="/services">Continue</Link>
+            <small>*The General Fund for 2016-17</small>
           </div>
-
 
 
           <div className={styles.pageBody}>
@@ -38,6 +36,7 @@ class Taxes extends Component {
             </p>
             <p>The General Fund varies from year to year because of outside effects like population change and overall economic activiy. It is also effected when City Council votes to change tax and service rates. It is politically unpopular for Councilmembers to increase taxes in any way.</p>
           </div>
+           <Link className={`${styles.button} btn btn-lg btn-success`} role="button" to="/services">Continue</Link>
         </div>
         <NavBottom props={this.props}/>
       </div>

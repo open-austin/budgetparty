@@ -1,5 +1,5 @@
 const servicesData = {
-  generalFund: 911000000,
+  generalFund: 969200000,
   servicesSum: 0,
   groups: [
     {
