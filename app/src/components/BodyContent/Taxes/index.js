@@ -25,22 +25,22 @@ class Taxes extends Component {
             <h4>This money comes from the General Fund for 2016-17</h4>
             <p>The General Fund is where the City of Austin gets money to run programs and pay the 12,000 civil servants it employs.</p>
 
-            <p>General Fund money is collected through:
+            <p>General Fund money is collected through:</p>
               <ul>
                 <li>Taxes on Property</li>
                 <li>Money generating enterprises like Energy, Waste Management, Airport Services, etc</li>
                 <li>Fees on Serivces</li>
                 <li>Sales taxes</li>
               </ul>
-            </p>
+
 
             <p>The General Fund varies from year to year because of outside effects like population change and overall economic activiy.</p> 
             
             <p>It is also effected when City Council votes to change tax and service rates.</p>
             
-            <p> It is politically unpopular for Councilmembers to increase taxes in any way.</p>
+            <p> It is politically unpopular for the council to increase taxes in any way.</p>
           </div>
-           <Link className={`${styles.buttonSolid} btn btn-lg btn-success`} role="button" to="/services">Continue</Link>
+           <Link className={`${styles.buttonSolid} btn btn-lg btn-success`} role="button" to="/services">Continue to services</Link>
         </div>
         <NavBottom props={this.props}/>
       </div>

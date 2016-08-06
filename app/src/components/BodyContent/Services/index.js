@@ -13,7 +13,7 @@ class Services extends Component {
 	  <div className={styles.contentBody}>
             <div>
               <h1>Services</h1>
-              <p>Services are  is the amount of spending money the city has. It collects these through taxes and fees on citizens. Complete the below sections. You can always change your answer.</p>
+              <p></p>
             </div>
 
             <div className={styles.serviceGroupsWrapper}>
