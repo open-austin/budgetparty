@@ -2,7 +2,7 @@
 
 .contentBody {
   margin-top: 62px; // sticky top offset
-  padding: 25px;
+  padding: 20px;
 }
 
 .pageTitle {
@@ -25,4 +25,9 @@
   font-weight: bold;
   background-color: $blue;
   border-color: $blue;
+}
+
+.serviceGroupsWrapper {
+  display: flex;
+  flex-flow: row wrap;
 }

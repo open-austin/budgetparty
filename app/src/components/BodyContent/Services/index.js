@@ -12,14 +12,19 @@ class Services extends Component {
         <DollarCount data={this.props.data}/>
         <div className={styles.contentBody}>
           <h1>Services</h1>
-          <p>Revenue is the amount of spending money the city has. It collects these through taxes and fees on citizens. Complete the below sections. You can always change your answer.</p>
+          <p>Services are  is the amount of spending money the city has. It collects these through taxes and fees on citizens. Complete the below sections. You can always change your answer.</p>
         </div>
 
-        { this.props.data.services.groups.map((group, i) =>
-          <ServiceIcon
+        <div className={styles.serviceGroupsWrapper}>
+
+          { this.props.data.services.groups.map((group, i) =>
+            <ServiceIcon
             group={group} key={i} i={i}
-          />
-        )}
+            />
+          )}
+
+        </div>
+
         <NavBottom />
       </div>
     );

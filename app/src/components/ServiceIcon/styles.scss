@@ -1,0 +1,15 @@
+@import "globals";
+
+.serviceIconWrapper {
+  flex: 0 1 50%;
+  text-align: center;
+  padding: 15px;
+}
+
+.placeholderBtn {
+  background-color: $blue;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin: auto;
+}
