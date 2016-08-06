@@ -5,7 +5,7 @@ class ServiceGroup extends Component {
   render() {
     return (
       <div>
-        <p>hi</p>
+        <p>{this.props.params.groupName}</p>
       </div>
     )
   }

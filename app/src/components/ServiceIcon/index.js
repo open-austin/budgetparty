@@ -3,13 +3,13 @@ import { Link } from 'react-router';
 
 class ServiceIcon extends Component {
   render() {
-    debugger
     const { name, departments } = this.props.group;
+    let urlParam = name.toLowerCase().split(' ').join("_");
     return (
       <div>
-        {/*<Link to={`/services/${name}`}/>*/}
+        <Link to={`/services/${urlParam}`}>
           <p>{name}</p>
-        {/*<Link />*/}
+        </Link>
       </div>
     )
   }

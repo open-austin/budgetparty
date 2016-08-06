@@ -21,9 +21,8 @@ const router = (
       <Route path="/" component={App}>
         <IndexRoute component={Welcome}></IndexRoute>
         <Route path="/taxes" components={Taxes}></Route>
-        <Route path="/services" component={Services}>
-          <Route path="/services/:groupName" component={ServiceGroup}></Route>
-        </Route>
+        <Route path="/services" component={Services}></Route>
+        <Route path="/services/:groupName" component={ServiceGroup}></Route>
       </Route>
     </Router>
   </Provider>
