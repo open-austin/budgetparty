@@ -14,7 +14,7 @@ class ServiceIcon extends Component {
             className={styles.serviceTypeIcon}
             alt={`${styles.name} icon`}
           />
-          <p>{name}</p>
+          <p className={styles.serviceTypeText}>{name}</p>
         </Link>
       </div>
     )

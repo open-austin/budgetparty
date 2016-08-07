@@ -7,10 +7,12 @@ import styles from '../styles.scss';
 
 class Services extends Component {
   render() {
+    const { groups } = this.props.data.services;
+
     return (
       <div>
-        <DollarCount data={this.props.data}/>
-      	  <div className={styles.contentBody}>
+        <DollarCount data={this.props.data} />
+          <div className={styles.contentBody}>
             <div>
               <h1>Services</h1>
               <p>General Fund money is used to fund services. Choose how you want to spend the city budget by visiting the below sections. You can always change your answer.</p>
@@ -18,9 +20,9 @@ class Services extends Component {
 
             <div className={styles.serviceGroupsWrapper}>
 
-              { this.props.data.services.groups.map((group, i) =>
+              { groups.map((group, i) =>
                 <ServiceIcon
-                group={group} key={i} i={i}
+                  group={group} key={i} i={i}
                 />
               )}
 
