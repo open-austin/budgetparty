@@ -1,20 +1,25 @@
+@import "globals";
+
 .dollarCount {
-  width: 100%;
-  text-align: center;
-  float: left;
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #fff; 
+    width: 100%;
+    text-align: center;
+    float: left;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $white; 
+}
+.dollarCount a {
+    color: $black; 
 }
 
 .amount {
   width: 50%;
   float: left;
   padding: 10px;
-  color: black; 
+  color: $black; 
 }
 
 .amountSumTitle {

@@ -7,8 +7,9 @@ $red: #BE071E;
 $green: #74C51C;
 $blue: #4A90E2;
 $white: #ffffff;
+$black: #3a3a3a;
 
-
+/*typography*/
 $font: 'ubuntu', sans-serif;
 
 
@@ -34,9 +35,9 @@ $font: 'ubuntu', sans-serif;
   width: 100%;
   margin-bottom: 40px;
   font-weight: bold;
-  background-color: $white;
+  background-color: $blue;
   border-color: $white;
-  color: $blue;
+  color: $white;
   font-size: 14px; 
   border-radius: 25px; 
 }
