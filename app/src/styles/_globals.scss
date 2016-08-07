@@ -3,8 +3,8 @@
 $iphone: 414px;
 $desktop: 960px;
 
-$red: #BE071E;
-$green: #74C51C;
+$red: #E53935;
+$green: #43A047;;
 $blue: #4A90E2;
 $white: #ffffff;
 $black: #3a3a3a;
@@ -13,13 +13,24 @@ $black: #3a3a3a;
 $font: 'ubuntu', sans-serif;
 
 
-/*Green + buttons*/
 
+/*Buttons*/
+/*Green buttons*/
+.buttondGreen {
+    border-color: $green;
+    color: $green;
+    background-color: $white;
+}
 
-/*Red - buttons*/
-
+/*Red buttons*/
+.buttondRed {
+    border-color: $red;
+    color: $red;
+    background-color: $white;
+}
 
 /*to be used on white backgrounds*/
+/*Solid Blue Button*/
 .buttonSolid {
   width: 100%;
   margin-bottom: 40px;
@@ -31,6 +42,7 @@ $font: 'ubuntu', sans-serif;
 }
 
 /*to be used on dark color backgrounds*/
+/*white button with blue outline and text*/
 .buttonWhiteOutline {
   width: 100%;
   margin-bottom: 40px;
