@@ -53,3 +53,9 @@ $font: 'ubuntu', sans-serif;
   font-size: 14px; 
   border-radius: 25px; 
 }
+
+.contentBody {
+  padding: 20px;
+  margin-top: 40px; // sticky top offset
+  margin-bottom: 24px; //sticky bottom offset
+}

@@ -3,16 +3,24 @@ import { Link } from 'react-router';
 import DollarCount from 'components/DollarCount';
 import NavBottom from 'components/NavBottom';
 
+import styles from './styles.scss';
+
 class ServiceType extends Component {
   render() {
-    const { group, params } = this.props.data.services;
-    debugger
+    const { groups } = this.props.data.services;
+    const { groupId } = this.props.params;
+    const i = groups.findIndex((group) => group.url === groupId);
+    const group = groups[i];
+
     return (
       <div>
         <DollarCount data={this.props.data} />
 
-        <div>
-          <p>{group.name}</p>
+        <div className={styles.contentBody}>
+          <div>
+            <h1>{group.name}</h1>
+            <p>{group.description}</p>
+          </div>
         </div>
 
         <NavBottom />

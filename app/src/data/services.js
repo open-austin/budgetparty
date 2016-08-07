@@ -4,7 +4,9 @@ const servicesData = {
   groups: [
     {
       name: 'Public Safety',
+      url: 'public-safety',
       image: '../../src/images/icons/publicSafety.gif',
+      description: 'persequeris. Omnis molestie ex est, te quo tale suas Complete the below sections. ale suas Complete the below sections. ale suas Complete the below sections.',
       departments: [
         {
           name: 'Municipal Courts',
@@ -30,7 +32,9 @@ const servicesData = {
     },
     {
       name: 'Development',
+      url: 'development',
       image: '../../src/images/icons/development.gif',
+      description: 'persequeris. Omnis molestie ex est, te quo tale suas Complete the below sections. ale suas Complete the below sections. ale suas Complete the below sections.',
       departments: [
         {
           name: 'Planning & Zoning',
@@ -46,7 +50,9 @@ const servicesData = {
     },
     {
       name: 'Community Services',
+      url: 'community-services',
       image: '../../src/images/icons/services.gif',
+      description: 'persequeris. Omnis molestie ex est, te quo tale suas Complete the below sections. ale suas Complete the below sections. ale suas Complete the below sections.',
       departments: [
         {
           name: 'Animal Services',
@@ -77,7 +83,9 @@ const servicesData = {
     },
     {
       name: 'Infrastructure & Transportation',
+      url: 'infra-transportation',
       image: '../../src/images/icons/infraTransport.gif',
+      description: 'persequeris. Omnis molestie ex est, te quo tale suas Complete the below sections. ale suas Complete the below sections. ale suas Complete the below sections.',
       departments: [
         {
           name: 'Transportation Department',
