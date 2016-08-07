@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import DollarCount from 'components/DollarCount';
 import NavBottom from 'components/NavBottom';
+import DepartmentCard from 'components/DepartmentCard';
 
 import styles from './styles.scss';
 
@@ -20,6 +21,13 @@ class ServiceType extends Component {
           <div>
             <h1>{group.name}</h1>
             <p>{group.description}</p>
+          </div>
+          <div>
+            { group.departments.map((dept, index) =>
+              <DepartmentCard
+                dept={dept} key={index} i={index}
+              />
+            )}
           </div>
         </div>
 
