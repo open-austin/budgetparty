@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
-class ServiceGroup extends Component {
+class ServiceType extends Component {
   render() {
     return (
       <div>
@@ -11,4 +11,4 @@ class ServiceGroup extends Component {
   }
 }
 
-export default ServiceGroup;
+export default ServiceType;

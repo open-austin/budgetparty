@@ -8,7 +8,7 @@ import App from 'components/App';
 import Welcome from 'components/Welcome';
 import Fund from 'components/BodyContent/Fund';
 import Services from 'components/BodyContent/Services';
-import ServiceGroup from 'components/ServiceGroup';
+import ServiceType from 'components/ServiceType';
 
 const store = window.store = configureStore();
 
@@ -22,7 +22,7 @@ const router = (
         <IndexRoute component={Welcome} />
         <Route path="/fund" components={Fund} />
         <Route path="/services" component={Services} />
-        <Route path="/services/:groupName" component={ServiceGroup} />
+        <Route path="/services/:groupName" component={ServiceType} />
       </Route>
     </Router>
   </Provider>

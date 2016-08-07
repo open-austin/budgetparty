@@ -18,7 +18,7 @@ class Services extends Component {
               <p>General Fund money is used to fund services. Choose how you want to spend the city budget by visiting the below sections. You can always change your answer.</p>
             </div>
 
-            <div className={styles.serviceGroupsWrapper}>
+            <div className={styles.ServiceTypesWrapper}>
 
               { groups.map((group, i) =>
                 <ServiceIcon
