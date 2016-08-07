@@ -5,14 +5,15 @@ import styles from './styles.scss';
 
 class ServiceIcon extends Component {
   render() {
-    const { name } = this.props.group;
+    const { name, image } = this.props.group;
     let urlParam = name.toLowerCase().split(' ').join("_");
     return (
       <div className={styles.serviceIconWrapper}>
         <Link to={`/services/${urlParam}`}>
-          <div className={styles.placeholderBtn}>
-
-          </div>
+          <img src={image}
+            className={styles.serviceTypeIcon}
+            alt={`${styles.name} icon`}
+          />
           <p>{name}</p>
         </Link>
       </div>
