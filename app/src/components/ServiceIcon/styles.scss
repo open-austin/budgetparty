@@ -6,10 +6,12 @@
   padding: 15px;
 }
 
-.placeholderBtn {
-  background-color: $blue;
+.serviceTypeIcon {
   width: 88px;
   height: 88px;
   border-radius: 50%;
   margin: auto;
+  p {
+    margin-top: 10px;
+  }
 }

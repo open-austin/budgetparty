@@ -1,10 +1,55 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700,300);
 
 $iphone: 414px;
 $desktop: 960px;
 
-$red: #BE071E;
-$green: #74C51C;
+$red: #E53935;
+$green: #43A047;;
 $blue: #4A90E2;
+$white: #ffffff;
+$black: #3a3a3a;
 
-$font: 'Raleway', sans-serif;
+/*typography*/
+$font: 'ubuntu', sans-serif;
+
+
+
+/*Buttons*/
+/*Green buttons*/
+.buttondGreen {
+    border-color: $green;
+    color: $green;
+    background-color: $white;
+}
+
+/*Red buttons*/
+.buttondRed {
+    border-color: $red;
+    color: $red;
+    background-color: $white;
+}
+
+/*to be used on white backgrounds*/
+/*Solid Blue Button*/
+.buttonSolid {
+  width: 100%;
+  margin-bottom: 40px;
+  font-weight: bold;
+  background-color: $blue;
+  border-color: $blue;
+  font-size: 14px; 
+  border-radius: 25px; 
+}
+
+/*to be used on dark color backgrounds*/
+/*white button with blue outline and text*/
+.buttonWhiteOutline {
+  width: 100%;
+  margin-bottom: 40px;
+  font-weight: bold;
+  background-color: $blue;
+  border-color: $white;
+  color: $white;
+  font-size: 14px; 
+  border-radius: 25px; 
+}

@@ -8,19 +8,19 @@ class NavBottom extends Component {
     return (
       <div className={styles.navBottom}>
         <Link to="/" className={styles.navItem}>
-          <img className={styles.navIcon} src="../../src/images/icons/home.png" alt=""/>
+          <img className={styles.navIcon} src="../../src/images/icons/bottom-nav/home.svg" alt=""/>
           <span className={styles.navText}>Home</span>
         </Link>
         <Link to="/taxes" className={styles.navItem}>
-          <img className={styles.navIcon} src="../../src/images/icons/fund.png" alt=""/>
+          <img className={styles.navIcon} src="../../src/images/icons/bottom-nav/revenue.svg" alt=""/>
           <span className={styles.navText}>Fund</span>
         </Link>
         <Link to="/services" className={styles.navItem}>
-          <img className={styles.navIcon} src="../../src/images/icons/fund.png" alt=""/>
+          <img className={styles.navIcon} src="../../src/images/icons/bottom-nav/services.svg" alt=""/>
           <span className={styles.navText}>Services</span>
         </Link>
         <Link to="/" className={styles.navItem}>
-          <img className={styles.navIcon} src="../../src/images/icons/report.png" alt=""/>
+          <img className={styles.navIcon} src="../../src/images/icons/bottom-nav/report.svg" alt=""/>
           <span className={styles.navText}>Report</span>
         </Link>
       </div>

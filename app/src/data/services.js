@@ -1,9 +1,10 @@
 const servicesData = {
-  generalFund: 911000000,
+  generalFund: 969200000,
   servicesSum: 0,
   groups: [
     {
       name: 'Public Safety',
+      image: '../../src/images/icons/publicSafety.gif',
       departments: [
         {
           name: 'Municipal Courts',
@@ -29,6 +30,7 @@ const servicesData = {
     },
     {
       name: 'Development',
+      image: '../../src/images/icons/development.gif',
       departments: [
         {
           name: 'Planning & Zoning',
@@ -44,6 +46,7 @@ const servicesData = {
     },
     {
       name: 'Community Services',
+      image: '../../src/images/icons/services.gif',
       departments: [
         {
           name: 'Animal Services',
@@ -73,7 +76,8 @@ const servicesData = {
       ]
     },
     {
-      name: 'Infrastructure and Transportation',
+      name: 'Infrastructure & Transportation',
+      image: '../../src/images/icons/infraTransport.gif',
       departments: [
         {
           name: 'Transportation Department',

@@ -14,13 +14,13 @@ class DollarCount extends Component {
       <div className={styles.dollarCount}>
         <div className={styles.amount}>
           <Link to="/taxes">
-            <span className={styles.amountSumTitle}>Revenue Collected</span>
+            <span className={styles.amountSumTitle}>Available Funds</span>
             <h3 className={styles.amountSum}>{generalFund}</h3>
           </Link>
         </div>
         <div className={styles.amount}>
           <Link to="/services">
-            <span className={styles.amountSumTitle}>Services Funded</span>
+            <span className={styles.amountSumTitle}>Service Spending</span>
             <h3 className={styles.amountSum}>{servicesSum}</h3>
           </Link>
         </div>

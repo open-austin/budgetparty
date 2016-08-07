@@ -8,7 +8,7 @@
   left: 0;
   width: 100%;
   background: #fff;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .navItem {
@@ -17,11 +17,12 @@
 }
 
 .navIcon {
-  height: 50px;
+  height: 25px;
   display: block;
   margin: auto;
 }
 
 .navText {
   clear: both;
+  font-size: small; 
 }
