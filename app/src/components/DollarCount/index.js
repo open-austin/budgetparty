@@ -13,7 +13,7 @@ class DollarCount extends Component {
     return (
       <div className={styles.dollarCount}>
         <div className={styles.amount}>
-          <Link to="/taxes">
+          <Link to="/fund">
             <span className={styles.amountSumTitle}>Available Funds</span>
             <h3 className={styles.amountSum}>{generalFund}</h3>
           </Link>

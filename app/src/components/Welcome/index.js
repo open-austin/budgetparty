@@ -10,7 +10,7 @@ class Welcome extends Component {
       <div className={`${styles.margin} container`}>
         <h1 className={styles.header}>Build a Budget</h1>
         <p className={`${styles.text} lead`}>Understand & create a city budget for Austin</p>
-        <Link className={`${styles.buttonWhiteOutline} btn btn-lg btn-success`} role="button" to="/taxes">Start building</Link>
+        <Link className={`${styles.buttonWhiteOutline} btn btn-lg btn-success`} role="button" to="/fund">Start building</Link>
         <Link to="/about"><p>More about this project</p></Link>
       </div>
     );

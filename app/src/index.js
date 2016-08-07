@@ -6,7 +6,7 @@ import configureStore from 'redux/configureStore';
 
 import App from 'components/App';
 import Welcome from 'components/Welcome';
-import Taxes from 'components/BodyContent/Taxes';
+import Fund from 'components/BodyContent/Fund';
 import Services from 'components/BodyContent/Services';
 import ServiceGroup from 'components/ServiceGroup';
 
@@ -19,10 +19,10 @@ const router = (
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component={App}>
-        <IndexRoute component={Welcome}></IndexRoute>
-        <Route path="/taxes" components={Taxes}></Route>
-        <Route path="/services" component={Services}></Route>
-        <Route path="/services/:groupName" component={ServiceGroup}></Route>
+        <IndexRoute component={Welcome} />
+        <Route path="/fund" components={Fund} />
+        <Route path="/services" component={Services} />
+        <Route path="/services/:groupName" component={ServiceGroup} />
       </Route>
     </Router>
   </Provider>

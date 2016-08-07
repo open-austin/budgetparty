@@ -11,7 +11,7 @@ class NavBottom extends Component {
           <img className={styles.navIcon} src="../../src/images/icons/bottom-nav/home.svg" alt=""/>
           <span className={styles.navText}>Home</span>
         </Link>
-        <Link to="/taxes" className={styles.navItem}>
+        <Link to="/fund" className={styles.navItem}>
           <img className={styles.navIcon} src="../../src/images/icons/bottom-nav/revenue.svg" alt=""/>
           <span className={styles.navText}>Fund</span>
         </Link>

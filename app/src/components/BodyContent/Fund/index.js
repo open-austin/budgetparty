@@ -7,7 +7,7 @@ import styles from '../styles.scss';
 
 let dollarAmout = "$969.2 Million"
 
-class Taxes extends Component {
+class Fund extends Component {
   render() {
     return (
       <div>
@@ -34,10 +34,10 @@ class Taxes extends Component {
               </ul>
 
 
-            <p>The General Fund varies from year to year because of outside effects like population change and overall economic activiy.</p> 
-            
+            <p>The General Fund varies from year to year because of outside effects like population change and overall economic activiy.</p>
+
             <p>It is also effected when City Council votes to change tax and service rates.</p>
-            
+
             <p> It is politically unpopular for the council to increase taxes in any way.</p>
           </div>
            <Link className={`${styles.buttonSolid} btn btn-lg btn-success`} role="button" to="/services">Continue to services</Link>
@@ -48,4 +48,4 @@ class Taxes extends Component {
   }
 }
 
-export default Taxes;
+export default Fund;
