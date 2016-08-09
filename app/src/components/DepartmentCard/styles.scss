@@ -1,0 +1,72 @@
+@import "globals";
+
+.departmentCard {
+  border: 1px solid $grey;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.header {
+  text-align: center;
+  padding: 0 15px 1px;
+  h3 {
+    font-weight: bold;
+  }
+}
+
+.body {
+  text-align: center;
+  padding: 0 15px 15px;
+}
+
+.adjustButtons {
+  display: flex;
+  padding: 10px 0 40px;
+}
+
+@mixin adjustButton {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 14px;
+  flex: 0 1 auto;
+  margin: 0 auto;
+}
+
+.descreaseButton {
+  @include adjustButton;
+  border: 1px solid $red;
+  color: $red;
+}
+
+.increaseButton {
+  @include adjustButton;
+  border: 1px solid $green;
+  color: $green;
+}
+
+.footer {
+  border-top: 1px solid $grey;
+  display: flex;
+  padding: 15px;
+}
+
+@mixin footerItem {
+  flex: 0 1 33%;
+}
+
+.footerItemLeft {
+  @include footerItem;
+  text-align: left;
+}
+
+.footerItemCenter {
+  @include footerItem;
+  text-align: center;
+}
+
+.footerItemRight {
+  @include footerItem;
+  text-align: right;
+}

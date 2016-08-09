@@ -10,21 +10,25 @@ const servicesData = {
       departments: [
         {
           name: 'Municipal Courts',
+          description: 'Provide planning, preservation and design services to make Austin livable.',
           default: 100000,
           amount: 100000,
         },
         {
           name: 'Police',
+          description: 'Provide planning, preservation and design services to make Austin livable.',
           default: 100000,
           amount: 100000,
         },
         {
           name: 'Fire',
+          description: 'Provide planning, preservation and design services to make Austin livable.',
           default: 100000,
           amount: 100000,
         },
         {
           name: 'Emergency Management Services',
+          description: 'Provide planning, preservation and design services to make Austin livable.',
           default: 100000,
           amount: 100000,
         },
@@ -38,11 +42,13 @@ const servicesData = {
       departments: [
         {
           name: 'Planning & Zoning',
+          description: 'Provide planning, preservation and design services to make Austin livable.',
           default: 100000,
           amount: 100000,
         },
         {
           name: 'Development Services',
+          description: 'Provide planning, preservation and design services to make Austin livable.',
           default: 100000,
           amount: 100000,
         },
@@ -56,26 +62,31 @@ const servicesData = {
       departments: [
         {
           name: 'Animal Services',
+          description: 'Provide planning, preservation and design services to make Austin livable.',
           default: 100000,
           amount: 100000,
         },
         {
           name: 'Parks & Recreation',
+          description: 'Provide planning, preservation and design services to make Austin livable.',
           default: 100000,
           amount: 100000,
         },
         {
           name: 'Public Libraries',
+          description: 'Provide planning, preservation and design services to make Austin livable.',
           default: 100000,
           amount: 100000,
         },
         {
           name: 'Social Service Contracts',
+          description: 'Provide planning, preservation and design services to make Austin livable.',
           default: 100000,
           amount: 100000,
         },
         {
           name: 'Health & Human Services',
+          description: 'Provide planning, preservation and design services to make Austin livable.',
           default: 100000,
           amount: 100000,
         },
@@ -89,11 +100,13 @@ const servicesData = {
       departments: [
         {
           name: 'Transportation Department',
+          description: 'Provide planning, preservation and design services to make Austin livable.',
           default: 100000,
           amount: 100000,
         },
         {
           name: 'Public Works',
+          description: 'Provide planning, preservation and design services to make Austin livable.',
           default: 100000,
           amount: 100000,
         },

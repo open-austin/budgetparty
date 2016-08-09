@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
+
 import DollarCount from 'components/DollarCount';
 import NavBottom from 'components/NavBottom';
 import DepartmentCard from 'components/DepartmentCard';
@@ -25,7 +26,10 @@ class ServiceType extends Component {
           <div>
             { group.departments.map((dept, index) =>
               <DepartmentCard
-                dept={dept} key={index} i={index}
+                dept={dept}
+                key={index}
+                i={index}
+                count={group.departments.length}
               />
             )}
           </div>
