@@ -22,7 +22,7 @@ const router = (
         <IndexRoute component={Welcome} />
         <Route path="/fund" components={Fund} />
         <Route path="/services" component={Services} />
-        <Route path="/services/:groupName" component={ServiceType} />
+        <Route path="/services/:groupId" component={ServiceType} />
       </Route>
     </Router>
   </Provider>
