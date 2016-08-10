@@ -1,0 +1,41 @@
+@import "colors";
+
+/*Buttons*/
+/*Green buttons*/
+.buttondGreen {
+    border-color: $green;
+    color: $green;
+    background-color: $white;
+}
+
+/*Red buttons*/
+.buttondRed {
+    border-color: $red;
+    color: $red;
+    background-color: $white;
+}
+
+/*to be used on white backgrounds*/
+/*Solid Blue Button*/
+.buttonSolid {
+  width: 100%;
+  margin-bottom: 40px;
+  font-weight: bold;
+  background-color: $blue;
+  border-color: $blue;
+  font-size: 14px;
+  border-radius: 25px;
+}
+
+/*to be used on dark color backgrounds*/
+/*white button with blue outline and text*/
+.buttonWhiteOutline {
+  width: 100%;
+  margin-bottom: 40px;
+  font-weight: bold;
+  background-color: $blue;
+  border-color: $white;
+  color: $white;
+  font-size: 14px;
+  border-radius: 25px;
+}

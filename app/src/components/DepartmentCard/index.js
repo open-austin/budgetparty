@@ -12,7 +12,7 @@ class DepartmentCard extends Component {
     );
 
     return (
-      <div className={styles.departmentCard}>
+      <div className={styles.cardOutline}>
         <div className={styles.header}>
           <h3>{name}</h3>
           <p>{description}</p>
@@ -35,7 +35,7 @@ class DepartmentCard extends Component {
             </div>
           </div>
         </div>
-        <div className={styles.footer}>
+        <div className={styles.cardFooter}>
           <a href="" className={styles.footerItemLeft}>Reset</a>
           <span className={styles.footerItemCenter}>{ `${i+1} of ${count}` }</span>
           <a href="#" className={styles.footerItemRight}>Learn More</a>

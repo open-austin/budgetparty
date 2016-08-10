@@ -3,60 +3,25 @@
 $iphone: 414px;
 $desktop: 960px;
 
-$red: #E53935;
-$green: #43A047;;
-$blue: #4A90E2;
-$white: #ffffff;
-$black: #3a3a3a;
-$grey: #E9E9E9;
-
 /*typography*/
 $font: 'ubuntu', sans-serif;
 
 
-
-/*Buttons*/
-/*Green buttons*/
-.buttondGreen {
-    border-color: $green;
-    color: $green;
-    background-color: $white;
-}
-
-/*Red buttons*/
-.buttondRed {
-    border-color: $red;
-    color: $red;
-    background-color: $white;
-}
-
-/*to be used on white backgrounds*/
-/*Solid Blue Button*/
-.buttonSolid {
-  width: 100%;
-  margin-bottom: 40px;
-  font-weight: bold;
-  background-color: $blue;
-  border-color: $blue;
-  font-size: 14px;
-  border-radius: 25px;
-}
-
-/*to be used on dark color backgrounds*/
-/*white button with blue outline and text*/
-.buttonWhiteOutline {
-  width: 100%;
-  margin-bottom: 40px;
-  font-weight: bold;
-  background-color: $blue;
-  border-color: $white;
-  color: $white;
-  font-size: 14px;
-  border-radius: 25px;
-}
+@import "colors";
+@import "buttons";
+@import "cards";
 
 .contentBody {
   padding: 20px;
   margin-top: 40px; // sticky top offset
   margin-bottom: 24px; //sticky bottom offset
+}
+
+.placeholderButton {
+  height: 88px;
+  width: 88px;
+  border-radius: 50%;
+  background-color: $blue;
+  margin: auto;
+  margin-bottom: 20px;
 }
