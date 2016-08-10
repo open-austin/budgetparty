@@ -9,6 +9,7 @@ import Welcome from 'components/Welcome';
 import Fund from 'components/BodyContent/Fund';
 import Services from 'components/BodyContent/Services';
 import ServiceType from 'components/ServiceType';
+import Report from 'components/BodyContent/Report';
 
 const store = window.store = configureStore();
 
@@ -23,6 +24,7 @@ const router = (
         <Route path="/fund" components={Fund} />
         <Route path="/services" component={Services} />
         <Route path="/services/:groupId" component={ServiceType} />
+        <Route path="/report" component={Report} />
       </Route>
     </Router>
   </Provider>

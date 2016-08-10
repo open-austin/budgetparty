@@ -1,11 +1,5 @@
 @import "globals";
 
-.departmentCard {
-  border: 1px solid $grey;
-  border-radius: 10px;
-  margin-bottom: 25px;
-}
-
 .header {
   text-align: center;
   padding: 0 15px 1px;
@@ -44,12 +38,6 @@
   @include adjustButton;
   border: 1px solid $green;
   color: $green;
-}
-
-.footer {
-  border-top: 1px solid $grey;
-  display: flex;
-  padding: 15px;
 }
 
 @mixin footerItem {

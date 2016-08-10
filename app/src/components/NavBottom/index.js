@@ -19,7 +19,7 @@ class NavBottom extends Component {
           <img className={styles.navIcon} src="../../src/images/icons/bottom-nav/services.svg" alt=""/>
           <span className={styles.navText}>Services</span>
         </Link>
-        <Link to="/" className={styles.navItem}>
+        <Link to="/report" className={styles.navItem}>
           <img className={styles.navIcon} src="../../src/images/icons/bottom-nav/report.svg" alt=""/>
           <span className={styles.navText}>Report</span>
         </Link>
