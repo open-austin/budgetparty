@@ -31,7 +31,7 @@ class ServiceType extends Component {
             { departmentsInGroup.map((dept, index) =>
               <DepartmentCard
                 data={this.props.data}
-                dept={dept}
+                deptIndex={dept.deptId - 1}
                 key={index}
                 i={index}
                 count={group.departments.length}

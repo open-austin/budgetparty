@@ -5,8 +5,8 @@ import styles from './styles.scss';
 class DepartmentCard extends Component {
   render() {
     const { departments } = this.props.data;
-    const { i, count } = this.props;
-    const currentDept = departments[i];
+    const { i, count, deptIndex } = this.props;
+    const currentDept = departments[deptIndex];
     const { name, description, amount, deptId } = currentDept;
 
     let spendingAmount = amount.toLocaleString(
