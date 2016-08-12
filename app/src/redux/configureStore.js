@@ -5,7 +5,7 @@ import createLogger from 'redux-logger';
 import rootReducer from 'reducers';
 import DevTools from 'redux/DevTools';
 
-import services from '../data/services';
+import data from '../data/services';
 
 let finalCreateStore;
 if (process.env.NODE_ENV !== 'production') {
@@ -23,7 +23,7 @@ else {
 
 export default function configureStore() {
   const InitialState = {
-    services
+    data
   };
   const store = finalCreateStore(rootReducer, InitialState);
 

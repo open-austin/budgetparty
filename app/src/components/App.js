@@ -4,15 +4,18 @@ import { connect } from 'react-redux';
 import styles from 'styles/base.scss';
 
 import { setGlobalError } from 'actions/ui';
+import { changeDepartmentAmount } from 'actions/data';
 
 import Main from 'components/Main';
 
 const mapStateToProps = (state) => ({
   globalError: state.ui.globalError,
-  data: state.data });
+  data: state.data,
+});
 
 const mapDispatchToProps = {
   setGlobalError,
+  changeDepartmentAmount,
 };
 
 const App = connect(mapStateToProps, mapDispatchToProps)(Main);

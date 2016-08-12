@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import DollarCount from '../components/DollarCount'
+import DollarCount from '../components/DollarCount';
 
 const mapStateToProps = (state) => ({
-  data : state.services
-})
+  // services: state.data,
+});
 
 const DollarAmountContainer = connect(mapStateToProps)(DollarCount);
 
