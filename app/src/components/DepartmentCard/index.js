@@ -7,7 +7,7 @@ class DepartmentCard extends Component {
     const { departments } = this.props.data;
     const { i, count } = this.props;
     const currentDept = departments[i];
-    const { name, description, amount } = currentDept;
+    const { name, description, amount, deptId } = currentDept;
 
     let spendingAmount = amount.toLocaleString(
       'en-US', { style: 'currency', currency: 'USD', maximumSignificantDigits: 6 }
@@ -25,25 +25,25 @@ class DepartmentCard extends Component {
           <div className={styles.adjustButtons}>
             <div
               className={styles.descreaseButton}
-              onClick={this.props.onAmountChange(name, -1000000)}
+              onClick={() => this.props.onAmountChange(deptId, -1000000)}
             >
               <p>-1m</p>
             </div>
             <div
               className={styles.descreaseButton}
-              onClick={this.props.onAmountChange(name, -1000)}
+              onClick={() => this.props.onAmountChange(deptId, -1000)}
             >
               <p>-1k</p>
             </div>
             <div
               className={styles.increaseButton}
-              onClick={this.props.onAmountChange(name, 1000)}
+              onClick={() => this.props.onAmountChange(deptId, 1000)}
             >
               <p>+1k</p>
             </div>
             <div
               className={styles.increaseButton}
-              onClick={this.props.onAmountChange(name, 1000000)}
+              onClick={() => this.props.onAmountChange(deptId, 1000000)}
             >
               <p>+1m</p>
             </div>

@@ -33,13 +33,22 @@ function groups(state = InitialState.data.groups, action = {}) {
   }
 }
 
+function replacedDepartmentState(state, departmentId, departmentUpdate) {
+  let newAmount = state.amount + departmentUpdate;
+  newAmount = newAmount <= 0 ? 0 : newAmount;
+
+  return Object.assign({}, state, { amount: newAmount });
+}
+
 function departments(state = InitialState.data.departments, action = {}) {
   switch (action.type) {
     case CHANGE_DEPARTMENT_AMOUNT:
-
-
-      return state;
-      // return Object.assign({}, state, {  });
+      const updatingDepartmentIndex = action.department - 1;
+      return [
+        ...state.slice(0, updatingDepartmentIndex),
+        replacedDepartmentState(state[updatingDepartmentIndex], action.department - 1, action.amount),
+        ...state.slice(action.department),
+      ];
     default:
       return state;
   }
