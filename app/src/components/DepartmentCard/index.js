@@ -4,8 +4,10 @@ import styles from './styles.scss';
 
 class DepartmentCard extends Component {
   render() {
-    const { name, description, amount } = this.props.dept;
+    const { departments } = this.props.data;
     const { i, count } = this.props;
+    const currentDept = departments[i];
+    const { name, description, amount, deptId } = currentDept;
 
     let spendingAmount = amount.toLocaleString(
       'en-US', { style: 'currency', currency: 'USD', maximumSignificantDigits: 6 }
@@ -21,16 +23,28 @@ class DepartmentCard extends Component {
           <h4>Spending</h4>
           <h3>{spendingAmount}</h3>
           <div className={styles.adjustButtons}>
-            <div className={styles.descreaseButton}>
+            <div
+              className={styles.descreaseButton}
+              onClick={() => this.props.onAmountChange(deptId, -1000000)}
+            >
               <p>-1m</p>
             </div>
-            <div className={styles.descreaseButton}>
+            <div
+              className={styles.descreaseButton}
+              onClick={() => this.props.onAmountChange(deptId, -1000)}
+            >
               <p>-1k</p>
             </div>
-            <div className={styles.increaseButton}>
+            <div
+              className={styles.increaseButton}
+              onClick={() => this.props.onAmountChange(deptId, 1000)}
+            >
               <p>+1k</p>
             </div>
-            <div className={styles.increaseButton}>
+            <div
+              className={styles.increaseButton}
+              onClick={() => this.props.onAmountChange(deptId, 1000000)}
+            >
               <p>+1m</p>
             </div>
           </div>

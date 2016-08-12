@@ -1,4 +1,4 @@
-import services from '../data/services';
+import data from '../data/services';
 
 export default {
   ui: {
@@ -9,7 +9,5 @@ export default {
       buttons: [],
     },
   },
-  data: {
-    services
-  }
+  data,
 };

@@ -9,10 +9,14 @@ import styles from './styles.scss';
 
 class ServiceType extends Component {
   render() {
-    const { groups } = this.props.data.services;
+    const { groups, departments } = this.props.data;
     const { groupId } = this.props.params;
     const i = groups.findIndex((group) => group.url === groupId);
     const group = groups[i];
+
+    const departmentsInGroup = departments.filter((dept) => {
+      return group.departments.includes(dept.deptId);
+    });
 
     return (
       <div>
@@ -24,12 +28,14 @@ class ServiceType extends Component {
             <p>{group.description}</p>
           </div>
           <div>
-            { group.departments.map((dept, index) =>
+            { departmentsInGroup.map((dept, index) =>
               <DepartmentCard
+                data={this.props.data}
                 dept={dept}
                 key={index}
                 i={index}
                 count={group.departments.length}
+                onAmountChange={this.props.changeDepartmentAmount}
               />
             )}
           </div>

@@ -7,7 +7,7 @@ import styles from '../styles.scss';
 
 class Services extends Component {
   render() {
-    const { groups } = this.props.data.services;
+    const { groups } = this.props.data;
 
     return (
       <div>

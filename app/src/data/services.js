@@ -7,112 +7,127 @@ const servicesData = {
       url: 'public-safety',
       image: '../../src/images/icons/publicSafety.gif',
       description: 'persequeris. Omnis molestie ex est, te quo tale suas Complete the below sections. ale suas Complete the below sections. ale suas Complete the below sections.',
-      departments: [
-        {
-          name: 'Municipal Courts',
-          description: 'Provide planning, preservation and design services to make Austin livable.',
-          default: 100000,
-          amount: 100000,
-        },
-        {
-          name: 'Police',
-          description: 'Provide planning, preservation and design services to make Austin livable.',
-          default: 100000,
-          amount: 100000,
-        },
-        {
-          name: 'Fire',
-          description: 'Provide planning, preservation and design services to make Austin livable.',
-          default: 100000,
-          amount: 100000,
-        },
-        {
-          name: 'Emergency Management Services',
-          description: 'Provide planning, preservation and design services to make Austin livable.',
-          default: 100000,
-          amount: 100000,
-        },
-      ]
+      groupdId: 1,
+      departments: [1, 2, 3, 4],
     },
     {
       name: 'Development',
       url: 'development',
       image: '../../src/images/icons/development.gif',
       description: 'persequeris. Omnis molestie ex est, te quo tale suas Complete the below sections. ale suas Complete the below sections. ale suas Complete the below sections.',
-      departments: [
-        {
-          name: 'Planning & Zoning',
-          description: 'Provide planning, preservation and design services to make Austin livable.',
-          default: 100000,
-          amount: 100000,
-        },
-        {
-          name: 'Development Services',
-          description: 'Provide planning, preservation and design services to make Austin livable.',
-          default: 100000,
-          amount: 100000,
-        },
-      ]
+      groupId: 2,
+      departments: [5, 6],
     },
     {
       name: 'Community Services',
       url: 'community-services',
       image: '../../src/images/icons/services.gif',
       description: 'persequeris. Omnis molestie ex est, te quo tale suas Complete the below sections. ale suas Complete the below sections. ale suas Complete the below sections.',
-      departments: [
-        {
-          name: 'Animal Services',
-          description: 'Provide planning, preservation and design services to make Austin livable.',
-          default: 100000,
-          amount: 100000,
-        },
-        {
-          name: 'Parks & Recreation',
-          description: 'Provide planning, preservation and design services to make Austin livable.',
-          default: 100000,
-          amount: 100000,
-        },
-        {
-          name: 'Public Libraries',
-          description: 'Provide planning, preservation and design services to make Austin livable.',
-          default: 100000,
-          amount: 100000,
-        },
-        {
-          name: 'Social Service Contracts',
-          description: 'Provide planning, preservation and design services to make Austin livable.',
-          default: 100000,
-          amount: 100000,
-        },
-        {
-          name: 'Health & Human Services',
-          description: 'Provide planning, preservation and design services to make Austin livable.',
-          default: 100000,
-          amount: 100000,
-        },
-      ]
+      groupdId: 3,
+      departments: [6, 7, 8, 9, 10, 11],
     },
     {
       name: 'Infrastructure & Transportation',
       url: 'infra-transportation',
       image: '../../src/images/icons/infraTransport.gif',
       description: 'persequeris. Omnis molestie ex est, te quo tale suas Complete the below sections. ale suas Complete the below sections. ale suas Complete the below sections.',
-      departments: [
-        {
-          name: 'Transportation Department',
-          description: 'Provide planning, preservation and design services to make Austin livable.',
-          default: 100000,
-          amount: 100000,
-        },
-        {
-          name: 'Public Works',
-          description: 'Provide planning, preservation and design services to make Austin livable.',
-          default: 100000,
-          amount: 100000,
-        },
-      ]
+      groupdId: 4,
+      departments: [12, 13],
     },
-  ]
+  ],
+  departments: [
+    {
+      name: 'Municipal Courts',
+      description: 'Provide planning, preservation and design services to make Austin livable.',
+      amount: 21086564,
+      lastYearAmount: 21086564,
+      deptId: 1,
+    },
+    {
+      name: 'Police',
+      description: 'Provide planning, preservation and design services to make Austin livable.',
+      amount: 373570249,
+      lastYearAmount: 373570249,
+      deptId: 2,
+    },
+    {
+      name: 'Fire',
+      description: 'Provide planning, preservation and design services to make Austin livable.',
+      amount: 175266499,
+      lastYearAmount: 175266499,
+      deptId: 3,
+    },
+    {
+      name: 'Emergency Management Services',
+      description: 'Provide planning, preservation and design services to make Austin livable.',
+      amount: 78255956,
+      lastYearAmount: 78255956,
+      deptId: 4,
+    },
+    {
+      name: 'Planning & Zoning',
+      description: 'Provide planning, preservation and design services to make Austin livable.',
+      amount: 100000,
+      lastYearAmount: 100000,
+      deptId: 5,
+    },
+    {
+      name: 'Development Services',
+      description: 'Provide planning, preservation and design services to make Austin livable.',
+      amount: 100000,
+      lastYearAmount: 100000,
+      deptId: 6,
+    },
+    {
+      name: 'Animal Services',
+      description: 'Provide planning, preservation and design services to make Austin livable.',
+      amount: 100000,
+      lastYearAmount: 100000,
+      deptId: 7,
+    },
+    {
+      name: 'Parks & Recreation',
+      description: 'Provide planning, preservation and design services to make Austin livable.',
+      amount: 100000,
+      lastYearAmount: 100000,
+      deptId: 8,
+    },
+    {
+      name: 'Public Libraries',
+      description: 'Provide planning, preservation and design services to make Austin livable.',
+      amount: 100000,
+      lastYearAmount: 100000,
+      deptId: 9,
+    },
+    {
+      name: 'Social Service Contracts',
+      description: 'Provide planning, preservation and design services to make Austin livable.',
+      amount: 100000,
+      lastYearAmount: 100000,
+      deptId: 10,
+    },
+    {
+      name: 'Health & Human Services',
+      description: 'Provide planning, preservation and design services to make Austin livable.',
+      amount: 100000,
+      lastYearAmount: 100000,
+      deptId: 11,
+    },
+    {
+      name: 'Transportation Department',
+      description: 'Provide planning, preservation and design services to make Austin livable.',
+      amount: 100000,
+      lastYearAmount: 100000,
+      deptId: 12,
+    },
+    {
+      name: 'Public Works',
+      description: 'Provide planning, preservation and design services to make Austin livable.',
+      amount: 100000,
+      lastYearAmount: 100000,
+      deptId: 13,
+    },
+  ],
 };
 
 export default servicesData;
