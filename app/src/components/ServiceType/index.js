@@ -35,7 +35,8 @@ class ServiceType extends Component {
                 key={index}
                 i={index}
                 count={group.departments.length}
-                onAmountChange={this.props.changeDepartmentAmount}
+                changeDepartmentAmount={this.props.changeDepartmentAmount}
+                updateServiceSpendingAmount={this.props.updateServiceSpendingAmount}
               />
             )}
           </div>
