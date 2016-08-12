@@ -5,6 +5,7 @@ import styles from 'styles/base.scss';
 
 import { setGlobalError } from 'actions/ui';
 import { changeDepartmentAmount } from 'actions/data';
+import { updateServiceSpendingAmount } from 'actions/data';
 
 import Main from 'components/Main';
 
@@ -16,6 +17,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {
   setGlobalError,
   changeDepartmentAmount,
+  updateServiceSpendingAmount,
 };
 
 const App = connect(mapStateToProps, mapDispatchToProps)(Main);

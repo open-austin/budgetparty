@@ -10,7 +10,7 @@ class SaveAndSubmitCard extends Component {
           {/* TODO, get yourBudget svg */}
           <div className={styles.placeholderButton}></div>
           <h3>Your Budget</h3>
-          <h4>$611,056,000</h4>
+          <h4>{this.props.data.servicesSum}</h4>
         </div>
         <div className={styles.cardBody}>
           <p>You increased the budget by $x,xxx,xxx or 8%</p>

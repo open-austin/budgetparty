@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
 import DollarCount from 'components/DollarCount';
-import NavBottom from 'components/NavBottom';
+import NavBottomAlt from 'components/NavBottomAlt';
 import DepartmentCard from 'components/DepartmentCard';
 
 import styles from './styles.scss';
@@ -35,13 +35,14 @@ class ServiceType extends Component {
                 key={index}
                 i={index}
                 count={group.departments.length}
-                onAmountChange={this.props.changeDepartmentAmount}
+                changeDepartmentAmount={this.props.changeDepartmentAmount}
+                updateServiceSpendingAmount={this.props.updateServiceSpendingAmount}
               />
             )}
           </div>
         </div>
 
-        <NavBottom />
+        <NavBottomAlt />
       </div>
     )
   }

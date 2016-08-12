@@ -20,7 +20,7 @@ class Report extends Component {
             <p>persequeris. Omnis molestie ex est, te quo tale suas Complete the below sections. ale suas Complete the below.</p>
           </div>
 
-          <YourBudgetCard />
+          <YourBudgetCard data={this.props.data} />
           <UnusedFundsCard />
           <ServicesSummaryCard />
           <SaveAndSubmitCard />

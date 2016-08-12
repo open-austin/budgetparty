@@ -4,6 +4,7 @@ import InitialState from 'constants/InitialState';
 
 import {
   CHANGE_DEPARTMENT_AMOUNT,
+  UPDATE_SERVICE_SPENDING_AMOUNT,
 } from 'constants/ActionTypes';
 
 function generalFund(state = InitialState.data.generalFund, action = {}) {
@@ -17,8 +18,9 @@ function generalFund(state = InitialState.data.generalFund, action = {}) {
 
 function servicesSum(state = InitialState.data.servicesSum, action = {}) {
   switch (action.type) {
-    case 'action':
-      return state;
+    case UPDATE_SERVICE_SPENDING_AMOUNT:
+      const newState = state + action.amount;
+      return newState;
     default:
       return state;
   }

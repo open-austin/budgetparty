@@ -1,0 +1,30 @@
+.navBottom {
+  width: 100%;
+  text-align: center;
+  float: left;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.5);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 15px 20px;
+  height: 50px;
+}
+
+.navItemLeft {
+  width: 50%;
+  float: left;
+  text-align: left;
+}
+
+.navItemRight {
+  width: 50%;
+  float: left;
+  text-align: right;
+}
+
+.navText {
+  clear: both;
+  font-weight: bold;
+}

@@ -3,6 +3,12 @@ import React, { Component, PropTypes } from 'react';
 import styles from './styles.scss';
 
 class DepartmentCard extends Component {
+  handleClick(deptId, amount) {
+    return () => {
+      this.props.changeDepartmentAmount(deptId, amount);
+      this.props.updateServiceSpendingAmount(amount);
+    };
+  }
   render() {
     const { departments } = this.props.data;
     const { i, count, deptIndex } = this.props;
@@ -25,25 +31,25 @@ class DepartmentCard extends Component {
           <div className={styles.adjustButtons}>
             <div
               className={styles.descreaseButton}
-              onClick={() => this.props.onAmountChange(deptId, -1000000)}
+              onClick={this.handleClick(deptId, -1000000).bind(this)}
             >
               <p>-1m</p>
             </div>
             <div
               className={styles.descreaseButton}
-              onClick={() => this.props.onAmountChange(deptId, -1000)}
+              onClick={this.handleClick(deptId, -1000).bind(this)}
             >
               <p>-1k</p>
             </div>
             <div
               className={styles.increaseButton}
-              onClick={() => this.props.onAmountChange(deptId, 1000)}
+              onClick={this.handleClick(deptId, 1000).bind(this)}
             >
               <p>+1k</p>
             </div>
             <div
               className={styles.increaseButton}
-              onClick={() => this.props.onAmountChange(deptId, 1000000)}
+              onClick={this.handleClick(deptId, 1000000).bind(this)}
             >
               <p>+1m</p>
             </div>
