@@ -11,19 +11,19 @@ class Fund extends Component {
   render() {
     return (
       <div>
-        <DollarCount data={this.props.data}/>
+        <DollarCount data={this.props.data} />
         <div className={styles.contentBody}>
           <div className={styles.pageTitle}>
             <h1>
-              You have<br/>
-              <span className={styles.cashMoney}>{dollarAmout}</span><br/>
+              You have<br />
+              <span className={styles.cashMoney}>{dollarAmout}</span><br />
               to fund services
             </h1>
           </div>
 
           <div className={styles.pageBody}>
             <h4>This money comes from the General Fund for 2016-17</h4>
-            <p>The General Fund is where the City of Austin gets money to run programs and pay the 12,000 civil servants it employs.</p>
+            <p>The General Fund is where the City of Austin gets money to run programs and employ 13,838 civil servants.</p>
 
             <p>General Fund money is collected through:</p>
               <ul>
