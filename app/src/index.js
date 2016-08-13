@@ -14,11 +14,11 @@ import Report from 'components/BodyContent/Report';
 const store = window.store = configureStore();
 
 // import react router dependencies
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 const router = (
   <Provider store={store}>
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={Welcome} />
         <Route path="/fund" components={Fund} />
