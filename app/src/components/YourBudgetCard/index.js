@@ -7,8 +7,10 @@ class SaveAndSubmitCard extends Component {
     return (
       <div className={styles.cardOutline}>
         <div className={styles.cardHeader}>
-          {/* TODO, get yourBudget svg */}
-          <div className={styles.placeholderButton}></div>
+          <img src="../../src/images/icons/YourBudget.gif"
+            className={styles.icon}
+            alt="Your Budget Results icon"
+          />
           <h3>Your Budget</h3>
           <h4>{this.props.data.servicesSum}</h4>
         </div>
