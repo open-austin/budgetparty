@@ -7,7 +7,11 @@ class SaveAndSubmitCard extends Component {
     return (
       <div className={styles.cardOutline}>
         <div className={styles.cardHeader}>
-          <div className={styles.placeholderButton}></div>
+          <img
+            src="../../src/images/icons/saveAndSubmit.gif" 
+            alt="Envelope Icon"
+            className={styles.icon}
+          />
           <h3>Save & Submit</h3>
           <h4>Your Budget</h4>
         </div>
