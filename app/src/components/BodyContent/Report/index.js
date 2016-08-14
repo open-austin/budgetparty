@@ -76,7 +76,7 @@ class Report extends Component {
             getBiggestChangeList={this.getBiggestChangeList}
             getDifference={this.getDifference}
           />
-          <SaveAndSubmitCard />
+          <SaveAndSubmitCard data={this.props.data} />
 
         </div>
 
