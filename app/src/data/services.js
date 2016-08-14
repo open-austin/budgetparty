@@ -1,5 +1,6 @@
 const servicesData = {
   generalFund: 969200000,
+  generalFund2016: 911000000,
   servicesSum: 847189704,
   groups: [
     {

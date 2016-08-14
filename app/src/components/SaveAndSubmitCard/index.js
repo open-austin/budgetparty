@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 
 import styles from './styles.scss';
 
-class YourBudgetCard extends Component {
+class SaveAndSubmitCard extends Component {
   render() {
     return (
       <div className={styles.cardOutline}>
@@ -25,4 +25,4 @@ class YourBudgetCard extends Component {
   }
 }
 
-export default YourBudgetCard;
+export default SaveAndSubmitCard;
