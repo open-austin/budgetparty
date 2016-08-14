@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
+import { IntlProvider } from 'react-intl';
 
 import configureStore from 'redux/configureStore';
 
@@ -18,15 +19,17 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 const router = (
   <Provider store={store}>
-    <Router history={hashHistory}>
-      <Route path="/" component={App}>
-        <IndexRoute component={Welcome} />
-        <Route path="/fund" components={Fund} />
-        <Route path="/services" component={Services} />
-        <Route path="/services/:groupId" component={ServiceType} />
-        <Route path="/report" component={Report} />
-      </Route>
-    </Router>
+    <IntlProvider locale="en">
+      <Router history={hashHistory}>
+        <Route path="/" component={App}>
+          <IndexRoute component={Welcome} />
+          <Route path="/fund" components={Fund} />
+          <Route path="/services" component={Services} />
+          <Route path="/services/:groupId" component={ServiceType} />
+          <Route path="/report" component={Report} />
+        </Route>
+      </Router>
+    </IntlProvider>
   </Provider>
 );
 

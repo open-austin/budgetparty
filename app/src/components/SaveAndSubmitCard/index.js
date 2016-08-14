@@ -2,12 +2,16 @@ import React, { Component, PropTypes } from 'react';
 
 import styles from './styles.scss';
 
-class YourBudgetCard extends Component {
+class SaveAndSubmitCard extends Component {
   render() {
     return (
       <div className={styles.cardOutline}>
         <div className={styles.cardHeader}>
-          <div className={styles.placeholderButton}></div>
+          <img
+            src="../../src/images/icons/saveAndSubmit.gif" 
+            alt="Envelope Icon"
+            className={styles.icon}
+          />
           <h3>Save & Submit</h3>
           <h4>Your Budget</h4>
         </div>
@@ -25,4 +29,4 @@ class YourBudgetCard extends Component {
   }
 }
 
-export default YourBudgetCard;
+export default SaveAndSubmitCard;

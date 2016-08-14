@@ -16,6 +16,15 @@ function generalFund(state = InitialState.data.generalFund, action = {}) {
   }
 }
 
+function generalFund2016(state = InitialState.data.generalFund2016, action = {}) {
+  switch (action.type) {
+    case 'action':
+      return state;
+    default:
+      return state;
+  }
+}
+
 function servicesSum(state = InitialState.data.servicesSum, action = {}) {
   switch (action.type) {
     case UPDATE_SERVICE_SPENDING_AMOUNT:
@@ -58,6 +67,7 @@ function departments(state = InitialState.data.departments, action = {}) {
 
 export default combineReducers({
   generalFund,
+  generalFund2016,
   servicesSum,
   groups,
   departments,

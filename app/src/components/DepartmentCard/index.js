@@ -30,25 +30,25 @@ class DepartmentCard extends Component {
           <h3>{spendingAmount}</h3>
           <div className={styles.adjustButtons}>
             <div
-              className={styles.descreaseButton}
+              className={styles.oneMillionRed}
               onClick={this.handleClick(deptId, -1000000).bind(this)}
             >
               <p>-1m</p>
             </div>
             <div
-              className={styles.descreaseButton}
+              className={styles.hundredThousandRed}
               onClick={this.handleClick(deptId, -1000).bind(this)}
             >
               <p>-1k</p>
             </div>
             <div
-              className={styles.increaseButton}
+              className={styles.hundredThousandGreen}
               onClick={this.handleClick(deptId, 1000).bind(this)}
             >
               <p>+1k</p>
             </div>
             <div
-              className={styles.increaseButton}
+              className={styles.oneMillionGreen}
               onClick={this.handleClick(deptId, 1000000).bind(this)}
             >
               <p>+1m</p>

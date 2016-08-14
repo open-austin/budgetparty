@@ -1,5 +1,6 @@
 const servicesData = {
   generalFund: 969200000,
+  generalFund2016: 911000000,
   servicesSum: 847189704,
   groups: [
     {
@@ -32,7 +33,7 @@ const servicesData = {
       image: '../../src/images/icons/infraTransport.gif',
       description: '',
       groupdId: 4,
-      departments: [13, 14, 15],
+      departments: [13, 14],
     },
   ],
   departments: [
@@ -240,13 +241,6 @@ const servicesData = {
           95712: 'Increased funding for street and bridge operations facilities and fleet management.',
         },
       ],
-    },
-    {
-      name: 'Watershed Protection',
-      description: 'Watershed Protection protects lives, property and the environment of our community by reducing the impact of flood, erosion and water pollution. Watershed Protection recieved all of its funding from sources outside the General Fund last year.',
-      amount: 0,
-      lastYearAmount: 0,
-      deptId: 15,
     },
   ],
 };
