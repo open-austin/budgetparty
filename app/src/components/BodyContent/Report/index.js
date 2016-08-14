@@ -44,6 +44,10 @@ class Report extends Component {
     return ((generalFund2016 - servicesSum) > 0) ? true : false;
   }
 
+  shouldDisplaySubmitForm(servicesSum) {
+    return (servicesSum === 847189704) ? false : true;
+  }
+
   render() {
     const { generalFund2016, servicesSum } = this.props.data;
 
@@ -62,13 +66,6 @@ class Report extends Component {
             getDifference={this.getDifference}
             getPercentChange={this.getPercentChange}
           />
-          {
-            this.shouldDisplayUnusedFunds(generalFund2016, servicesSum) &&
-            <UnusedFundsCard
-              data={this.props.data}
-              getDifference={this.getDifference}
-            />
-          }
           <ServicesSummaryCard
             data={this.props.data}
             getIncreaseOrDecrease={this.getIncreaseOrDecrease}
@@ -76,7 +73,17 @@ class Report extends Component {
             getBiggestChangeList={this.getBiggestChangeList}
             getDifference={this.getDifference}
           />
-          <SaveAndSubmitCard data={this.props.data} />
+          {
+            this.shouldDisplayUnusedFunds(generalFund2016, servicesSum) &&
+            <UnusedFundsCard
+              data={this.props.data}
+              getDifference={this.getDifference}
+            />
+          }
+          {
+            this.shouldDisplaySubmitForm(servicesSum) &&
+            <SaveAndSubmitCard data={this.props.data} />
+          }
 
         </div>
 

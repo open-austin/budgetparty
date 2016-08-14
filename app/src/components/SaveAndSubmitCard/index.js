@@ -58,11 +58,7 @@ const SaveAndSubmitCard = React.createClass({
   componentWillUnmount: function() {
     this.unbind('results');
   },
-
-  submittedForm: function() {
-
-  },
-
+  
   render: function() {
     let isSubmitted = this.state.isSubmitted;
     return (
