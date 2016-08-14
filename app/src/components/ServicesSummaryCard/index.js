@@ -1,19 +1,24 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
+import ChangedItem from 'components/ChangedItem';
 
 import styles from './styles.scss';
 
 class ServicesSummaryCard extends Component {
   render() {
+    const { generalFund2016, servicesSum, departments } = this.props.data;
+    const deptChangeList = this.props.getBiggestChangeList(departments)
+
     return (
       <div className={styles.cardOutline}>
         <div className={styles.cardHeader}>
           <h4>Services</h4>
-          <p>You opted to increase our services spending. est recusabo signiferumque, deleniti vivendum imperdiet et mei</p>
+          <p>You opted to {this.props.getIncreaseOrDecrease(generalFund2016, servicesSum)} overall service spending from last year's amount.</p>
         </div>
         <div className={styles.body}>
-          {/* TODO filter 4 biggest changes by percentage.
-            display upArrow or downArrow alongside*/}
+          { deptChangeList.map((dept) =>
+            <ChangedItem dept={dept} />
+          )}
           <p>Increase Something</p>
           <p>Decrease Something</p>
           <p>Increase Something</p>

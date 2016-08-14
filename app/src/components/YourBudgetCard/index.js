@@ -20,7 +20,7 @@ class YourBudgetCard extends Component {
               value={this.props.data.servicesSum}
               style="currency"
               currency="USD"
-              maximumSignificantDigits="6"
+              maximumSignificantDigits={6}
             />
           </h4>
         </div>
@@ -28,7 +28,7 @@ class YourBudgetCard extends Component {
           <p>
             You {' '}
             <span className={styles.strong}>
-              {this.props.getIncreaseOrDecrease(generalFund2016, servicesSum)}
+              {this.props.getIncreaseOrDecrease(generalFund2016, servicesSum, true)}
             </span>
             {' '} the budget  <br />
             by {' '}
@@ -36,13 +36,13 @@ class YourBudgetCard extends Component {
               value={this.props.getDifference(generalFund2016, servicesSum)}
               style="currency"
               currency="USD"
-              maximumSignificantDigits="5"
+              maximumSignificantDigits={5}
             />
             {' '} or {' '}
             <FormattedNumber
               value={this.props.getPercentChange(generalFund2016, servicesSum)}
               style="percent"
-              maximumSignificantDigits="2"
+              maximumSignificantDigits={2}
             />
             {' '} <br />
             compared to the previous year.
