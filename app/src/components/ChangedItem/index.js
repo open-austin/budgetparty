@@ -7,15 +7,16 @@ import styles from './styles.scss';
 class ChangedItem extends Component {
   render() {
     const { name, change } = this.props.dept;
+    const icon = change > 0 ? 'upArrow' : 'downArrow';
 
     return (
       <p>
         <img
-          src="../../src/images/icons/downArrow.gif"
+          src={`../../src/images/icons/${icon}.gif`}
           alt="arrow"
-          style={{ width: '20px' }}
+          style={{ width: '15px' }}
         />
-        {' '} {name} by {' '}
+        {'   '} {name} by {' '}
         <FormattedNumber
           value={change}
           style="percent"
