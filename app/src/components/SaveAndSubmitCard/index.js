@@ -23,7 +23,7 @@ const SaveAndSubmitCard = React.createClass({
   },
 
   componentWillMount: function() {
-    this.bindAsArray(firebase.database().ref('userResults'), 'data');
+    this.bindAsArray(firebase.database().ref('userResults'), 'budgetData');
   },
 
   handleSubmit: function(e) {
@@ -52,13 +52,15 @@ const SaveAndSubmitCard = React.createClass({
   },
 
   onSubmit: function(result) {
-    this.firebaseRefs['data'].push(result);
+    this.firebaseRefs['budgetData'].push(result);
+    // this.unbind('budgetData');
+
   },
 
   componentWillUnmount: function() {
-    this.unbind('results');
+    // this.unbind('budgetData');
   },
-  
+
   render: function() {
     let isSubmitted = this.state.isSubmitted;
     return (

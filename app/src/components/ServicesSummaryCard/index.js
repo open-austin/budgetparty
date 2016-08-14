@@ -22,8 +22,8 @@ class ServicesSummaryCard extends Component {
                 <h4>Services</h4>
                 <p>You opted to {this.props.getIncreaseOrDecrease(generalFund2016, servicesSum)} overall service spending from last year's amount.</p>
                 <div className={styles.body}>
-                { deptChangeList.map((dept) =>
-                    <ChangedItem dept={dept} />
+                { deptChangeList.map((dept, i) =>
+                    <ChangedItem dept={dept} key={i} />
                   )
                 }
               </div>

@@ -17,7 +17,7 @@ class UnusedFundsCard extends Component {
               value={unused}
               style="currency"
               currency="USD"
-              maximumSignificantDigits="5"
+              maximumSignificantDigits={5}
             />
           </h3>
         </div>
