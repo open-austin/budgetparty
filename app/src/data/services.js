@@ -43,7 +43,7 @@ const servicesData = {
       amount: 21086564,
       lastYearAmount: 21086564,
       deptId: 1,
-      url: 'http://www.austintexas.gov/department/municipal-court',
+      url: 'https://data.austintexas.gov/stories/s/Municipal-Court/xm6x-8vij',
       metrics: [
         'Number of cases magistrated',
         'Percent of offenders who complete rehabilitative recommendations',
@@ -60,7 +60,7 @@ const servicesData = {
       amount: 373570249,
       lastYearAmount: 373570249,
       deptId: 2,
-      url: 'http://www.austintexas.gov/department/police',
+      url: 'https://data.austintexas.gov/stories/s/Police/v4d4-74jw',
       tradeoff: [
         {
           112397.25: '1 Officer full year of funding with equipment, fuel, salary, pension, etc.',
@@ -69,7 +69,7 @@ const servicesData = {
     },
     {
       name: 'Fire',
-      description: 'Fire is committed to creating a safer Austin through prevention and education efforts and emergency response services.   Emergency Response controls and extinguishes fires in the least possible amount of time and with the least possible loss of life.',
+      description: 'https://data.austintexas.gov/stories/s/Fire/3jfc-eb8s',
       amount: 175266499,
       lastYearAmount: 175266499,
       deptId: 3,
@@ -98,12 +98,12 @@ const servicesData = {
       metrics: [
         'Percent of potentially life-threatening calls responded to within 9 minutes and 59 seconds',
       ],
-      url: 'https://austintexas.gov/department/ems',
+      url: 'https://data.austintexas.gov/stories/s/Emergency-Medical-Services/nq44-vyqb',
     },
     {
       name: 'Planning & Zoning',
       description: 'The Purpose of the Planning and Zoning Department is to provide planning, preservation and design services. PAZ is responsible for long range planning, current planning (including historic preservation, annexation, and zoning), urban design services, and updates of the Land Development Code. Current Projects underway: Imagine Austin, CodeNEXT, South Center Waterfront Initiative.',
-      url: 'http://www.austintexas.gov/department/planning-and-zoning',
+      url: 'https://data.austintexas.gov/stories/s/Planning-and-Zoning/se7h-anvc',
       amount: 7505329,
       lastYearAmount: 7505329,
       deptId: 5,
@@ -122,7 +122,7 @@ const servicesData = {
       metrics: [
         'Percent of building inspections performed within 24 hours of request',
       ],
-      url: 'http://www.austintexas.gov/department/development-services',
+      url: 'https://data.austintexas.gov/stories/s/Development-Services/qwps-5848',
     },
     {
       name: 'Animal Services',
@@ -138,7 +138,7 @@ const servicesData = {
       metrics: [
         '90% of a live shelter outcome goal. This refers to 90% animals that enter the shelter are adopted, transferred to rescue programs, or returned to their homes',
       ],
-      url: 'http://www.austintexas.gov/department/aac',
+      url: 'https://data.austintexas.gov/stories/s/Animal-Services/qqkn-erv5',
     },
     {
       name: 'Parks & Recreation',
@@ -146,7 +146,7 @@ const servicesData = {
       amount: 75432093,
       lastYearAmount: 75432093,
       deptId: 8,
-      url: 'https://austintexas.gov/department/parks-and-recreation/about',
+      url: 'https://data.austintexas.gov/stories/s/Parks-and-Recreation/wgi2-kbuk',
       tradeoff: [
         {
           75000: '1 FTE for maintaining safe trails and playgrounds',
@@ -164,7 +164,7 @@ const servicesData = {
       metrics: [
         'Library Program attendance per capita',
       ],
-      url: 'http://library.austintexas.gov/',
+      url: 'https://data.austintexas.gov/stories/s/Austin-Public-Library/patt-h8xx',
       amount: 41755192,
       lastYearAmount: 41755192,
       deptId: 9,
@@ -216,11 +216,12 @@ const servicesData = {
       metrics: [
         'Total number of services provided to beneficiaries through housing and community development',
       ],
-      url: 'http://www.austintexas.gov/department/housing',
+      url: 'https://data.austintexas.gov/stories/s/Neighborhood-Housing-and-Community-Development/wywe-6mv3',
     },
     {
       name: 'Transportation Department',
       description: 'In 2008, the City of Austin established the Austin Transportation Department to address the city’s sustained transportation and mobility needs. The department administers and oversees the city’s traffic and parking management programs and transportation planning efforts.',
+      url: 'https://data.austintexas.gov/stories/s/Austin-Transportation/7sy3-ec3s',
       amount: 852536,
       lastYearAmount: 852536,
       deptId: 13,
@@ -233,6 +234,7 @@ const servicesData = {
     {
       name: 'Public Works',
       description: "Public Works Department is tasked with the physical construction and maintenance of the City's infrastructure. The four primary service areas are 1) street and bridge maintenance and repair; 2) Design and implementation of capital improvement projects; 3) Neighborhood connectivity activities  (i.e. the planning and construction of pedestrian amenities and the construction of bicycle facilities); 4) Implementation of the child safety program including school zone improvement projects and school zone crossing guards.",
+      url: 'https://data.austintexas.gov/stories/s/Public-Works/7vsj-iwwq',
       amount: 360943,
       lastYearAmount: 360943,
       deptId: 14,

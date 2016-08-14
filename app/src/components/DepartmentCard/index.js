@@ -13,7 +13,7 @@ class DepartmentCard extends Component {
     const { departments } = this.props.data;
     const { i, count, deptIndex } = this.props;
     const currentDept = departments[deptIndex];
-    const { name, description, amount, deptId } = currentDept;
+    const { name, description, amount, deptId, url } = currentDept;
 
     let spendingAmount = amount.toLocaleString(
       'en-US', { style: 'currency', currency: 'USD', maximumSignificantDigits: 6 }
@@ -58,7 +58,7 @@ class DepartmentCard extends Component {
         <div className={styles.cardFooter}>
           <a href="" className={styles.footerItemLeft}>Reset</a>
           <span className={styles.footerItemCenter}>{ `${i+1} of ${count}` }</span>
-          <a href="#" className={styles.footerItemRight}>Learn More</a>
+           <a href={url} target="_blank" className={styles.footerItemRight}>Learn More</a>
         </div>
       </div>
     );
