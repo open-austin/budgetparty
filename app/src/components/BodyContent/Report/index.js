@@ -18,15 +18,11 @@ class Report extends Component {
   }
 
   getDifference(generalFund2016, servicesSum) {
-    return Math.abs(servicesSum - generalFund2016);
+    return servicesSum - generalFund2016;
   }
 
   getPercentChange(oldNumber, newNumber) {
-    return Math.abs(this.getDifference(oldNumber, newNumber) / oldNumber);
-  }
-
-  shouldDisplayUnusedFunds(generalFund2016, servicesSum) {
-    return ((generalFund2016 - servicesSum) > 0) ? true : false;
+    return this.getDifference(oldNumber, newNumber) / oldNumber;
   }
 
   getBiggestChangeList(departments) {
@@ -42,6 +38,10 @@ class Report extends Component {
     sortedList = _.sortBy(list, 'change').reverse();
 
     return sortedList;
+  }
+  
+  shouldDisplayUnusedFunds(generalFund2016, servicesSum) {
+    return ((generalFund2016 - servicesSum) > 0) ? true : false;
   }
 
   render() {

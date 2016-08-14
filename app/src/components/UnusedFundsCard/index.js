@@ -6,6 +6,7 @@ import styles from './styles.scss';
 class UnusedFundsCard extends Component {
   render() {
     const { generalFund2016, servicesSum } = this.props.data;
+    const unused= Math.abs(this.props.getDifference(generalFund2016, servicesSum));
 
     return (
       <div className={styles.cardOutline}>
@@ -13,7 +14,7 @@ class UnusedFundsCard extends Component {
           <h4>You have unused funds</h4>
           <h3>
             <FormattedNumber
-              value={this.props.getDifference(generalFund2016, servicesSum)}
+              value={unused}
               style="currency"
               currency="USD"
               maximumSignificantDigits="5"

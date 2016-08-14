@@ -6,6 +6,9 @@ import styles from './styles.scss';
 class YourBudgetCard extends Component {
   render() {
     const { generalFund2016, servicesSum } = this.props.data;
+    const text = this.props.getIncreaseOrDecrease(generalFund2016, servicesSum, true);
+    const difference = Math.abs(this.props.getDifference(generalFund2016, servicesSum));
+    const percent = Math.abs(this.props.getPercentChange(generalFund2016, servicesSum));
 
     return (
       <div className={styles.cardOutline}>
@@ -28,19 +31,19 @@ class YourBudgetCard extends Component {
           <p>
             You {' '}
             <span className={styles.strong}>
-              {this.props.getIncreaseOrDecrease(generalFund2016, servicesSum, true)}
+              {text}
             </span>
             {' '} the budget  <br />
             by {' '}
             <FormattedNumber
-              value={this.props.getDifference(generalFund2016, servicesSum)}
+              value={difference}
               style="currency"
               currency="USD"
               maximumSignificantDigits={5}
             />
             {' '} or {' '}
             <FormattedNumber
-              value={this.props.getPercentChange(generalFund2016, servicesSum)}
+              value={percent}
               style="percent"
               maximumSignificantDigits={2}
             />
