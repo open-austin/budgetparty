@@ -12,18 +12,25 @@ class ServicesSummaryCard extends Component {
     return (
       <div className={styles.cardOutline}>
         <div className={styles.cardHeader}>
-          <h4>Services</h4>
-          <p>You opted to {this.props.getIncreaseOrDecrease(generalFund2016, servicesSum)} overall service spending from last year's amount.</p>
+          {
+            deptChangeList.length === 0 &&
+            <h4>You haven't made any changes yet. Stop being lazy and build a budget!</h4>
+          }
+          {
+            deptChangeList.length > 0 &&
+              <div>
+                <h4>Services</h4>
+                <p>You opted to {this.props.getIncreaseOrDecrease(generalFund2016, servicesSum)} overall service spending from last year's amount.</p>
+                <div className={styles.body}>
+                { deptChangeList.map((dept) =>
+                    <ChangedItem dept={dept} />
+                  )
+                }
+              </div>
+            </div>
+          }
         </div>
-        <div className={styles.body}>
-          { deptChangeList.map((dept) =>
-            <ChangedItem dept={dept} />
-          )}
-          <p>Increase Something</p>
-          <p>Decrease Something</p>
-          <p>Increase Something</p>
-          <p>Decrease Something</p>
-        </div>
+
         <div className={styles.cardFooter}>
           <Link to="/services">Edit Services</Link>
         </div>

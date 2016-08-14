@@ -36,7 +36,7 @@ class Report extends Component {
     departments.map((dept) => {
       const change = this.getPercentChange(dept.lastYearAmount, dept.amount);
       const deptObj = { name: dept.name, change };
-      list.push(deptObj);
+      if (change !== 0) list.push(deptObj);
     });
 
     sortedList = _.sortBy(list, 'change').reverse();
