@@ -1,16 +1,38 @@
 @import "globals";
 
-.margin {
-  margin: 60px;
+.bgWrapper {
+  padding: 120px 60px;
   text-align: center;
+  background: $blue;
+  color: $white;
+  height: 100vh;
+}
+
+.container {
+  z-index: 1;
+  position: relative;
 }
 
 .header {
   margin-bottom: 40px;
   font-weight: bold;
-  text-transform: uppercase; 
+  text-transform: uppercase;
+  z-index: 1;
+  position: relative;
 }
 
 .text {
   margin-bottom: 40px;
+}
+
+.bgImg {
+  position: absolute;
+  top: 16px;
+  left: -90px;
+  width: 230px;
+  z-index: 0;
+}
+
+.link {
+  color: $white;
 }

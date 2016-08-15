@@ -33,8 +33,8 @@ const Results = React.createClass({
         <ul className="list-group">
           {
             sortedResults.map((result, i) =>
-              <Link to={`/results/${result['.key']}`}>
-                <li className={`list-group-item ${this.listItemColor(result.totalBudget)}`} key={i}>
+              <Link to={`/results/${result['.key']}`} key={i}>
+                <li className={`list-group-item ${this.listItemColor(result.totalBudget)}`}>
                   <span className="badge">
                     <FormattedNumber
                       value={result.totalBudget}
