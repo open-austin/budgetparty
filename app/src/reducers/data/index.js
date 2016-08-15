@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { sum } from 'lodash';
 
 import InitialState from 'constants/InitialState';
 
@@ -7,68 +8,31 @@ import {
   UPDATE_SERVICE_SPENDING_AMOUNT,
 } from 'constants/ActionTypes';
 
-function generalFund(state = InitialState.data.generalFund, action = {}) {
-  switch (action.type) {
-    case 'action':
-      return state;
-    default:
-      return state;
-  }
+function replacedDepartmentState(state, departmentId, departmentUpdate) {
+  let percentChange = state.percentChange + departmentUpdate;
+  percentChange = percentChange < -100 ? -100 : percentChange;
+  const amount = state.lastYearAmount * (1 + (percentChange / 100));
+
+  return Object.assign({}, state, { amount, percentChange });
 }
 
-function generalFund2016(state = InitialState.data.generalFund2016, action = {}) {
+function reducer(state = InitialState.data, action = {}) {
   switch (action.type) {
-    case 'action':
-      return state;
-    default:
-      return state;
-  }
-}
-
-function servicesSum(state = InitialState.data.servicesSum, action = {}) {
-  switch (action.type) {
+    case CHANGE_DEPARTMENT_AMOUNT:
+      const updatingDepartmentIndex = action.department - 1;
+      const updatedDepartments = [
+        ...state.departments.slice(0, updatingDepartmentIndex),
+        replacedDepartmentState(state.departments[updatingDepartmentIndex], action.department - 1, action.amount),
+        ...state.departments.slice(action.department),
+      ];
+      return Object.assign({}, state, { departments: updatedDepartments });
     case UPDATE_SERVICE_SPENDING_AMOUNT:
-      const newState = state + action.amount;
+      const servicesSum = sum(state.departments.map((d) => d.amount));
+      return Object.assign({}, state, { servicesSum });
       return newState;
     default:
       return state;
   }
 }
 
-function groups(state = InitialState.data.groups, action = {}) {
-  switch (action.type) {
-    case 'action':
-      return state;
-    default:
-      return state;
-  }
-}
-
-function replacedDepartmentState(state, departmentId, departmentUpdate) {
-  let newAmount = state.amount + departmentUpdate;
-  newAmount = newAmount <= 0 ? 0 : newAmount;
-
-  return Object.assign({}, state, { amount: newAmount });
-}
-
-function departments(state = InitialState.data.departments, action = {}) {
-  switch (action.type) {
-    case CHANGE_DEPARTMENT_AMOUNT:
-      const updatingDepartmentIndex = action.department - 1;
-      return [
-        ...state.slice(0, updatingDepartmentIndex),
-        replacedDepartmentState(state[updatingDepartmentIndex], action.department - 1, action.amount),
-        ...state.slice(action.department),
-      ];
-    default:
-      return state;
-  }
-}
-
-export default combineReducers({
-  generalFund,
-  generalFund2016,
-  servicesSum,
-  groups,
-  departments,
-});
+export default reducer;

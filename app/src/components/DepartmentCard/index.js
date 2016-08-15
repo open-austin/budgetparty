@@ -3,10 +3,10 @@ import React, { Component, PropTypes } from 'react';
 import styles from './styles.scss';
 
 class DepartmentCard extends Component {
-  handleClick(deptId, amount) {
+  handleClick(deptId, percentChange) {
     return () => {
-      this.props.changeDepartmentAmount(deptId, amount);
-      this.props.updateServiceSpendingAmount(amount);
+      this.props.changeDepartmentAmount(deptId, percentChange);
+      this.props.updateServiceSpendingAmount();
     };
   }
   render() {
@@ -31,27 +31,27 @@ class DepartmentCard extends Component {
           <div className={styles.adjustButtons}>
             <div
               className={styles.oneMillionRed}
-              onClick={this.handleClick(deptId, -1000000).bind(this)}
+              onClick={this.handleClick(deptId, -1).bind(this)}
             >
-              <p>-1m</p>
+              <p>-1%</p>
             </div>
             <div
               className={styles.hundredThousandRed}
-              onClick={this.handleClick(deptId, -1000).bind(this)}
+              onClick={this.handleClick(deptId, -.1).bind(this)}
             >
-              <p>-1k</p>
+              <p>-0.1%</p>
             </div>
             <div
               className={styles.hundredThousandGreen}
-              onClick={this.handleClick(deptId, 1000).bind(this)}
+              onClick={this.handleClick(deptId, .1).bind(this)}
             >
-              <p>+1k</p>
+              <p>+0.1%</p>
             </div>
             <div
               className={styles.oneMillionGreen}
-              onClick={this.handleClick(deptId, 1000000).bind(this)}
+              onClick={this.handleClick(deptId, 1).bind(this)}
             >
-              <p>+1m</p>
+              <p>+1%</p>
             </div>
           </div>
         </div>

@@ -47,6 +47,7 @@ const servicesData = {
       description: 'Municipal court and Downtown Austin Community Court make up the judicial branch of the City of Austin local government. The court oversees cases of traffic, city ordinance, state code, and parking violations.',
       amount: 21086564,
       lastYearAmount: 21086564,
+      percentChange: 0,
       deptId: 1,
       url: 'https://data.austintexas.gov/stories/s/Municipal-Court/xm6x-8vij',
       metrics: [
@@ -64,6 +65,7 @@ const servicesData = {
       description: '',
       amount: 373570249,
       lastYearAmount: 373570249,
+      percentChange: 0,
       deptId: 2,
       url: 'https://data.austintexas.gov/stories/s/Police/v4d4-74jw',
       tradeoff: [
@@ -77,6 +79,7 @@ const servicesData = {
       description: 'https://data.austintexas.gov/stories/s/Fire/3jfc-eb8s',
       amount: 175266499,
       lastYearAmount: 175266499,
+      percentChange: 0,
       deptId: 3,
       url: 'http://www.austintexas.gov/department/fire',
       tradeoff: [
@@ -94,6 +97,7 @@ const servicesData = {
       description: 'EMS provides emergency communication services, ground and air emergency ambulance response, standby support, and special rescue services to the community.',
       amount: 78255956,
       lastYearAmount: 78255956,
+      percentChange: 0,
       deptId: 4,
       tradeoff: [
         {
@@ -111,6 +115,7 @@ const servicesData = {
       url: 'https://data.austintexas.gov/stories/s/Planning-and-Zoning/se7h-anvc',
       amount: 7505329,
       lastYearAmount: 7505329,
+      percentChange: 0,
       deptId: 5,
     },
     {
@@ -118,6 +123,7 @@ const servicesData = {
       description: 'Development services oversees the operations of the "one-stop shop". The purpose of the One Stop Shop is to consolidate the process of land development permitting and assistance into a single location.',
       amount: 32902297,
       lastYearAmount: 32902297,
+      percentChange: 0,
       deptId: 6,
       tradeoff: [
         {
@@ -134,6 +140,7 @@ const servicesData = {
       description: 'The purpose of the Animal Services Office is to provide an array of animal control, health, and pet-owner services to the public in order to promote responsible pet ownership and humane treatment of animals. They provide food, water, shelter and veterinary care for lost or homeless animals. They enforce animal regulations including impoundment, quarantine and other rabies control services.',
       amount: 11546362,
       lastYearAmount: 11546362,
+      percentChange: 0,
       deptId: 7,
       tradeoff: [
         {
@@ -150,6 +157,7 @@ const servicesData = {
       description: 'Parks and Recreation department is tasked with providing, protecting, and preserving the city’s park system.',
       amount: 75432093,
       lastYearAmount: 75432093,
+      percentChange: 0,
       deptId: 8,
       url: 'https://data.austintexas.gov/stories/s/Parks-and-Recreation/wgi2-kbuk',
       tradeoff: [
@@ -172,6 +180,7 @@ const servicesData = {
       url: 'https://data.austintexas.gov/stories/s/Austin-Public-Library/patt-h8xx',
       amount: 41755192,
       lastYearAmount: 41755192,
+      percentChange: 0,
       deptId: 9,
     },
     {
@@ -179,6 +188,7 @@ const servicesData = {
       description: 'The Social Services Contracts program includes funding for basic needs, behavioral health, child and youth services, HIV, homelessness, community planning efforts, and workforce development. We divided social service contracts from Health and Human Services Department to highlight the role these contracts play in the budget process.',
       amount: 7793303.00,
       lastYearAmount: 7793303,
+      percentChange: 0,
       deptId: 10,
       tradeoff: [
         {
@@ -196,6 +206,7 @@ const servicesData = {
       description: 'Mission is to prevent disease, and promote and protect the health and well-being of the community by providing services such as immunizations, food, shelter, and job assistance, health screenings , and overseeing the inspection and permitting of restaurants',
       amount: 36080604,
       lastYearAmount: 36080604,
+      percentChange: 0,
       deptId: 11,
       tradeoff: [
         {
@@ -212,6 +223,7 @@ const servicesData = {
       description: 'The Neighborhood Housing & Community Development programs  include housing, small business assistance, renter assistance, and neighborhood and community revitalization.',
       amount: 4818944,
       lastYearAmount: 4818944,
+      percentChange: 0,
       deptId: 12,
       tradeoff: [
         {
@@ -229,6 +241,7 @@ const servicesData = {
       url: 'https://data.austintexas.gov/stories/s/Austin-Transportation/7sy3-ec3s',
       amount: 852536,
       lastYearAmount: 852536,
+      percentChange: 0,
       deptId: 13,
       tradeoff: [
         {
@@ -242,6 +255,7 @@ const servicesData = {
       url: 'https://data.austintexas.gov/stories/s/Public-Works/7vsj-iwwq',
       amount: 360943,
       lastYearAmount: 360943,
+      percentChange: 0,
       deptId: 14,
       tradeoff: [
         {
