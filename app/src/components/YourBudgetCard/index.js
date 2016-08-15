@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { FormattedNumber } from 'react-intl';
 
 import styles from './styles.scss';
+import yourBudgetIcon from 'images/icons/YourBudget.gif';
+
 
 class YourBudgetCard extends Component {
   render() {
@@ -13,7 +15,7 @@ class YourBudgetCard extends Component {
     return (
       <div className={styles.cardOutline}>
         <div className={styles.cardHeader}>
-          <img src="../../src/images/icons/YourBudget.gif"
+          <img src={yourBudgetIcon}
             className={styles.icon}
             alt="Your Budget Results icon"
           />
