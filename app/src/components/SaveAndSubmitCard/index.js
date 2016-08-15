@@ -4,14 +4,6 @@ import ReactFireMixin from 'reactfire';
 
 import styles from './styles.scss';
 
-const config = {
-  apiKey: "AIzaSyDVYXW7KD054GkOAzHb597yrEZMMxz0aDM",
-  authDomain: "budget-party.firebaseapp.com",
-  databaseURL: "https://budget-party.firebaseio.com",
-  storageBucket: "budget-party.appspot.com",
-};
-
-firebase.initializeApp(config);
 
 const SaveAndSubmitCard = React.createClass({
   mixins: [ReactFireMixin],
@@ -31,7 +23,8 @@ const SaveAndSubmitCard = React.createClass({
     const name = this.refs.name.value.trim();
     const email = this.refs.email.value.trim();
     const budgetArray = this.summarizeUserBudget(this.props.data);
-    this.onSubmit({ name, email, budgetArray });
+    const totalBudget = this.props.data.servicesSum;
+    this.onSubmit({ name, email, budgetArray, totalBudget });
     this.refs.name.value = '';
     this.refs.email.value = '';
     this.setState({ isSubmitted: true });
@@ -39,14 +32,11 @@ const SaveAndSubmitCard = React.createClass({
 
   summarizeUserBudget: function(data) {
     let budgetArray = [];
-    const totalBudget = { item: 'Total Budget', amount: this.props.data.servicesSum };
 
     data.departments.map(function(dept){
       const deptObj = { item: dept.name, amount: dept.amount };
       budgetArray.push(deptObj);
     });
-
-    budgetArray.push(totalBudget);
 
     return budgetArray;
   },
