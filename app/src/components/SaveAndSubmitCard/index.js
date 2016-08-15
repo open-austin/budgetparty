@@ -4,14 +4,6 @@ import ReactFireMixin from 'reactfire';
 
 import styles from './styles.scss';
 
-const config = {
-  apiKey: "AIzaSyDVYXW7KD054GkOAzHb597yrEZMMxz0aDM",
-  authDomain: "budget-party.firebaseapp.com",
-  databaseURL: "https://budget-party.firebaseio.com",
-  storageBucket: "budget-party.appspot.com",
-};
-
-firebase.initializeApp(config);
 
 const SaveAndSubmitCard = React.createClass({
   mixins: [ReactFireMixin],
