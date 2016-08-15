@@ -1,3 +1,8 @@
+import publicSafetyImage from 'images/icons/publicSafety.gif';
+import developmentImage from 'images/icons/development.gif';
+import communityServicesImage from 'images/icons/services.gif';
+import infraTransportImage from 'images/icons/infraTransport.gif';
+
 const servicesData = {
   generalFund: 969200000,
   generalFund2016: 911000000,
@@ -6,7 +11,7 @@ const servicesData = {
     {
       name: 'Public Safety',
       url: 'public-safety',
-      image: '../../src/images/icons/publicSafety.gif',
+      image: publicSafetyImage,
       description: "Public safety made up nearly 70% of the City's General Fund budget, providing for police, fire, EMS and municipal court services.",
       groupdId: 1,
       departments: [1, 2, 3, 4],
@@ -14,7 +19,7 @@ const servicesData = {
     {
       name: 'Development',
       url: 'development',
-      image: '../../src/images/icons/development.gif',
+      image: developmentImage,
       description: 'The City’s development departments oversee the city’s planning, zoning, and permitting, and inspection services.',
       groupId: 2,
       departments: [5, 6],
@@ -22,7 +27,7 @@ const servicesData = {
     {
       name: 'Community Services',
       url: 'community-services',
-      image: '../../src/images/icons/services.gif',
+      image: communityServicesImage,
       description: 'The departments housed under community services provide environmental health services, animal services, and family health services, and managing the City’s libraries, parks, and affordable housing programs.',
       groupdId: 3,
       departments: [7, 8, 9, 10, 11, 12],
@@ -30,7 +35,7 @@ const servicesData = {
     {
       name: 'Infrastructure & Mobility',
       url: 'infra-transportation',
-      image: '../../src/images/icons/infraTransport.gif',
+      image: infraTransportImage,
       description: '',
       groupdId: 4,
       departments: [13, 14],

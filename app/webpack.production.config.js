@@ -23,6 +23,10 @@ module.exports = {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!sass'),
       },
+      {
+        test: /\.(gif|png|svg)$/,
+        loader: 'url-loader?limit=32768',
+      },
     ],
   },
   sassLoader: {

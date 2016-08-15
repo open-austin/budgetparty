@@ -4,15 +4,18 @@ import { FormattedNumber } from 'react-intl';
 
 import styles from './styles.scss';
 
+import upArrowIcon from 'images/icons/upArrow.gif';
+import downArrowIcon from 'images/icons/downArrow.gif';
+
 class ChangedItem extends Component {
   render() {
     const { name, change } = this.props.dept;
-    const icon = change > 0 ? 'upArrow' : 'downArrow';
+    const icon = change > 0 ? upArrowIcon : downArrowIcon;
 
     return (
       <p>
         <img
-          src={`../../src/images/icons/${icon}.gif`}
+          src={icon}
           alt="arrow"
           style={{ width: '15px' }}
         />

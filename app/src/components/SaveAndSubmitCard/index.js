@@ -3,6 +3,7 @@ import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 
 import styles from './styles.scss';
+import saveAndSubmitImage from 'images/icons/saveAndSubmit.gif';
 
 const config = {
   apiKey: "AIzaSyDVYXW7KD054GkOAzHb597yrEZMMxz0aDM",
@@ -67,7 +68,7 @@ const SaveAndSubmitCard = React.createClass({
       <div className={styles.cardOutline}>
         <div className={styles.cardHeader}>
           <img
-            src="../../src/images/icons/saveAndSubmit.gif"
+            src={saveAndSubmitImage}
             alt="Envelope Icon"
             className={styles.icon}
           />
