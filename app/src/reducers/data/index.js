@@ -29,7 +29,6 @@ function reducer(state = InitialState.data, action = {}) {
     case UPDATE_SERVICE_SPENDING_AMOUNT:
       const servicesSum = sum(state.departments.map((d) => d.amount));
       return Object.assign({}, state, { servicesSum });
-      return newState;
     default:
       return state;
   }
