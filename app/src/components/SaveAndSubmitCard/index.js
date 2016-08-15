@@ -53,11 +53,10 @@ const SaveAndSubmitCard = React.createClass({
 
   onSubmit: function(result) {
     this.firebaseRefs['budgetData'].push(result);
-    // this.unbind('budgetData');
-
   },
 
   componentWillUnmount: function() {
+    // I was getting a console error when I was unbinding this. So now I'm not.
     // this.unbind('budgetData');
   },
 
