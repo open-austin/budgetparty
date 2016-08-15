@@ -22,11 +22,11 @@ class DepartmentCard extends Component {
     const percentChangeFormatted = percentChange.toFixed(1);
     let changeMessage;
     if (percentChangeFormatted > 0) {
-      changeMessage = (<h4 className={styles.moreThanLastYear}>{percentChangeFormatted}% more than last year</h4>)
+      changeMessage = (<h5 className={styles.moreThanLastYear}>{percentChangeFormatted}% more than last year</h5>)
     } else if (percentChangeFormatted < 0) {
-      changeMessage = (<h4 className={styles.lessThanLastYear}>{Math.abs(percentChangeFormatted)}% less than last year</h4>)
+      changeMessage = (<h5 className={styles.lessThanLastYear}>{Math.abs(percentChangeFormatted)}% less than last year</h5>)
     } else {
-      changeMessage = (<h4>0% change from last year</h4>)
+      changeMessage = (<h5>0% change from last year</h5>)
     }
 
 
