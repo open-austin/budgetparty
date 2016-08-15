@@ -92,6 +92,14 @@
   @include increaseButton;
 }
 
+.lessThanLastYear {
+  color: $red;
+}
+
+.moreThanLastYear {
+  color: $green;
+}
+
 @mixin footerItem {
   flex: 0 1 33%;
 }

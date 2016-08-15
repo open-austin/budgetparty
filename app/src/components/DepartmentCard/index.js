@@ -13,11 +13,22 @@ class DepartmentCard extends Component {
     const { departments } = this.props.data;
     const { i, count, deptIndex } = this.props;
     const currentDept = departments[deptIndex];
-    const { name, description, amount, deptId, url } = currentDept;
+    const { name, description, amount, lastYearAmount, percentChange, deptId, url } = currentDept;
 
     let spendingAmount = amount.toLocaleString(
       'en-US', { style: 'currency', currency: 'USD', maximumSignificantDigits: 6 }
     );
+
+    const percentChangeFormatted = percentChange.toFixed(1);
+    let changeMessage;
+    if (percentChangeFormatted > 0) {
+      changeMessage = (<h4 className={styles.moreThanLastYear}>{percentChangeFormatted}% more than last year</h4>)
+    } else if (percentChangeFormatted < 0) {
+      changeMessage = (<h4 className={styles.lessThanLastYear}>{Math.abs(percentChangeFormatted)}% less than last year</h4>)
+    } else {
+      changeMessage = (<h4>0% change from last year</h4>)
+    }
+
 
     return (
       <div className={styles.cardOutline}>
@@ -28,6 +39,7 @@ class DepartmentCard extends Component {
         <div className={styles.body}>
           <h4>Spending</h4>
           <h3>{spendingAmount}</h3>
+          {changeMessage}
           <div className={styles.adjustButtons}>
             <div
               className={styles.oneMillionRed}
