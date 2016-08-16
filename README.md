@@ -1,15 +1,30 @@
-# Hack the Budget
+# Budget Party
+
+![Budget Party Logo](http://dsh.re/af3f9)
 
 ## Problem Statement: 
 
 **How might we get broad citizen input on the city budgeting process and move the City towards the model of [participatory budgeting (PB)](http://www.participatorybudgeting.org/about-participatory-budgeting/what-is-pb/)?**
 
-For more info, check out the original [project proposal](https://github.com/open-austin/project-ideas/issues/70).
+[Original Project Proposal](https://github.com/open-austin/project-ideas/issues/70).
+
 
 ## What are we working on now?:
 
-Right now, we are designing and ideating in preparation for a proof-of-concept working prototype app that will be used at the [Budget Game Night hosted by the Austin Monitor & Glasshouse Policy](https://www.eventbrite.com/e/budget-game-night-tickets-26423729085?aff=ehomecard) on **August 16th, 2016**.
+Right now, we have designed and built a proof-of-concept working prototype app that will be used at the [Budget Game Night hosted by the Austin Monitor & Glasshouse Policy](https://www.eventbrite.com/e/budget-game-night-tickets-26423729085?aff=ehomecard) on **August 16th, 2016**.
 
+We will want to interate on our progres and include more features.
+
+## Credit
+
+This project has recieved contributions from some wonderful volunteers. 
+
+- @graceatkins - Policy Domain Expert, Writing
+- @VictoriaODell - UX Design, CSS, Web Development
+- @brainnews - Graphic Design
+- @mateoclarke - Javascript, Web Development
+- @wilsoj - Javascript, Web Development
+- @kmclaugh - Javascript, Web Development
 
 ## Design
 
