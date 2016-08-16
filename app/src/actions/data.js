@@ -13,7 +13,6 @@ export function changeDepartmentAmount(department, amount) {
 
 export function updateServiceSpendingAmount(amount) {
   return {
-    type: UPDATE_SERVICE_SPENDING_AMOUNT,
-    amount,
+    type: UPDATE_SERVICE_SPENDING_AMOUNT
   };
 }
