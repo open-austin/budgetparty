@@ -4,8 +4,11 @@ import { connect } from 'react-redux';
 import styles from 'styles/base.scss';
 
 import { setGlobalError } from 'actions/ui';
-import { changeDepartmentAmount } from 'actions/data';
-import { updateServiceSpendingAmount } from 'actions/data';
+import {
+  changeDepartmentAmount,
+  updateServiceSpendingAmount,
+  resetDepartmentAmount,
+} from 'actions/data';
 
 import Main from 'components/Main';
 
@@ -18,6 +21,7 @@ const mapDispatchToProps = {
   setGlobalError,
   changeDepartmentAmount,
   updateServiceSpendingAmount,
+  resetDepartmentAmount,
 };
 
 const App = connect(mapStateToProps, mapDispatchToProps)(Main);

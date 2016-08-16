@@ -9,6 +9,15 @@ class DepartmentCard extends Component {
       this.props.updateServiceSpendingAmount();
     };
   }
+
+  handleReset(deptId) {
+    return (e) => {
+      e.preventDefault();
+      this.props.resetDepartmentAmount(deptId);
+      this.props.updateServiceSpendingAmount();
+    };
+  }
+
   render() {
     const { departments } = this.props.data;
     const { i, count, deptIndex } = this.props;
@@ -68,7 +77,12 @@ class DepartmentCard extends Component {
           </div>
         </div>
         <div className={styles.cardFooter}>
-          <a href="" className={styles.footerItemLeft}>Reset</a>
+          <a
+            href="#"
+            className={styles.footerItemLeft}
+            onClick={this.handleReset(deptId).bind(this)}
+          > Reset
+          </a>
           <span className={styles.footerItemCenter}>{ `${i+1} of ${count}` }</span>
            <a href={url} target="_blank" className={styles.footerItemRight}>Learn More</a>
         </div>
