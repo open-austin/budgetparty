@@ -5,38 +5,42 @@ import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 import { FormattedNumber } from 'react-intl';
 
+import data from '../../../data/services';
 import styles from './styles.scss';
+
 
 const ResultsSingle = React.createClass({
   mixins: [ReactFireMixin],
   getInitialState: function(){
-    return { results: [] };
+    return { items: [] };
   },
+
   componentWillMount: function() {
-    this.bindAsArray(firebase.database().ref('userResults'), 'results');
+    let firebaseRef = firebase.database().ref('userResults');
+    this.bindAsArray(firebaseRef, 'items');
   },
 
   listItemColor: function(amount) {
-    return  amount < 847189704 ? 'list-group-item-danger' : 'list-group-item-success'
+    return amount < data.servicesSum ? 'list-group-item-danger' : 'list-group-item-success';
   },
 
   render() {
-    const { results } = this.state;
+    const { items } = this.state;
     const { key } = this.props.params;
-    const i = results.findIndex((result) => result['.key'] === key);
-    const result = results[i];
-    const { budgetArray, comment } = result;
-    const sortedDepartments = _.sortBy(budgetArray, (dept) => dept.item);
+    const i = items.findIndex((item) => item['.key'] === key);
+    const item = items[i];
 
     return (
       <div className={styles.container}>
-        <div className="page-header">
-          <Link to="/results">Back</Link>
-          <h1>Results for <small>{result.name}</small></h1>
-        </div>
-
         {
-          comment &&
+          item &&
+          <div className="page-header">
+            <Link to="/results">Back</Link>
+            <h1>Results for <small>{item.name}</small></h1>
+          </div>
+        }
+        {
+          (item && item.comment) &&
           <div className="panel panel-primary">
             <div className="panel-heading">
               <h3 className="panel-title">
@@ -44,24 +48,25 @@ const ResultsSingle = React.createClass({
               </h3>
             </div>
             <div className="panel-body">
-              {comment}
+              {item.comment}
             </div>
           </div>
         }
-
-        <ul className="list-group">
-          <li className={`list-group-item ${this.listItemColor(result.totalBudget)}`}>
-            <span className="badge">
-              <FormattedNumber
-                value={result.totalBudget}
-                style="currency"
-                currency="USD"
-              />
-            </span>
-            Total Budget
-          </li>
+        {
+          item &&
+          <ul className="list-group">
+            <li className={`list-group-item ${this.listItemColor(item.totalBudget)}`}>
+              <span className="badge">
+                <FormattedNumber
+                  value={item.totalBudget}
+                  style="currency"
+                  currency="USD"
+                />
+              </span>
+              Total Budget
+            </li>
           {
-            sortedDepartments.map((dept, index) =>
+            item.budgetArray.map((dept, index) =>
               <li className={'list-group-item'} key={index}>
                 <span className="badge">
                   <FormattedNumber
@@ -74,8 +79,8 @@ const ResultsSingle = React.createClass({
               </li>
             )
           }
-        </ul>
-
+          </ul>
+        }
       </div>
     );
   },

@@ -4,6 +4,7 @@ import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 import { FormattedNumber } from 'react-intl';
 
+import data from '../../../data/services';
 import styles from './styles.scss';
 
 const Results = React.createClass({
@@ -16,7 +17,7 @@ const Results = React.createClass({
   },
 
   listItemColor: function(amount) {
-    return  amount < 847189704 ? 'list-group-item-danger' : 'list-group-item-success'
+    return  amount < data.servicesSum ? 'list-group-item-danger' : 'list-group-item-success'
   },
 
   render() {
