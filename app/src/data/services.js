@@ -62,7 +62,7 @@ const servicesData = {
     },
     {
       name: 'Police',
-      description: '',
+      description: 'Officers do everything from enforcing the law, to preventing crime, investigating crime, reaching out to the community and writing reports',
       amount: 373570249,
       lastYearAmount: 373570249,
       percentChange: 0,
@@ -76,7 +76,7 @@ const servicesData = {
     },
     {
       name: 'Fire',
-      description: 'https://data.austintexas.gov/stories/s/Fire/3jfc-eb8s',
+      description: 'The Austin Fire Department is committed to creating safer communities through prevention, preparedness and effective emergency response.',
       amount: 175266499,
       lastYearAmount: 175266499,
       percentChange: 0,
@@ -219,7 +219,7 @@ const servicesData = {
       url: 'http://www.austintexas.gov/department/health/about',
     },
     {
-      name: 'Neighborhood Housing and Community Development',
+      name: 'Neighborhood Housing & Community Development',
       description: 'The Neighborhood Housing & Community Development programs  include housing, small business assistance, renter assistance, and neighborhood and community revitalization.',
       amount: 4818944,
       lastYearAmount: 4818944,

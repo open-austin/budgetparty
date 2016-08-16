@@ -28,15 +28,15 @@ class Fund extends Component {
             <p>General Fund money is collected through:</p>
               <ul>
                 <li>Taxes on Property</li>
-                <li>Money generating enterprises like Energy, Waste Management, Airport Services, etc</li>
+                <li>Money transfers from the city's publicly owned utilities such as Austin energy and water</li>
                 <li>Fees on Serivces</li>
                 <li>Sales taxes</li>
               </ul>
 
 
-            <p>The General Fund varies from year to year because of outside effects like population change and overall economic activiy.</p>
+            <p>The General Fund varies from year to year because of outside effects like population change and overall economic activtiy.</p>
 
-            <p>It is also effected when City Council votes to change tax and service rates.</p>
+            <p>It is also affected when City Council votes to change tax and service rates.</p>
 
             <p> It is politically unpopular for the council to increase taxes in any way.</p>
           </div>
