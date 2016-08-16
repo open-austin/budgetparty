@@ -8,9 +8,10 @@ import yourBudgetIcon from 'images/icons/YourBudget.gif';
 class YourBudgetCard extends Component {
   render() {
     const { generalFund2016, servicesSum } = this.props.data;
-    const text = this.props.getIncreaseOrDecrease(generalFund2016, servicesSum, true);
-    const difference = Math.abs(this.props.getDifference(generalFund2016, servicesSum));
-    const percent = Math.abs(this.props.getPercentChange(generalFund2016, servicesSum));
+    const initialServicesSum = 867226871;
+    const text = this.props.getIncreaseOrDecrease(initialServicesSum, servicesSum, true);
+    const difference = Math.abs(this.props.getDifference(initialServicesSum, servicesSum));
+    const percent = Math.abs(this.props.getPercentChange(initialServicesSum, servicesSum));
 
     return (
       <div className={styles.cardOutline}>
@@ -35,7 +36,7 @@ class YourBudgetCard extends Component {
             <span className={styles.strong}>
               {text}
             </span>
-            {' '} the budget  <br />
+            {' '} department budgets  <br />
             by {' '}
             <FormattedNumber
               value={difference}

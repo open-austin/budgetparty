@@ -7,6 +7,7 @@ const servicesData = {
   generalFund: 969200000,
   generalFund2016: 911000000,
   servicesSum: 867226871,
+  initialSum: 867226871,
   groups: [
     {
       name: 'Public Safety',

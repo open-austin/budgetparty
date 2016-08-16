@@ -5,8 +5,9 @@ import styles from './styles.scss';
 
 class UnusedFundsCard extends Component {
   render() {
-    const { generalFund2016, servicesSum } = this.props.data;
-    const unused= Math.abs(this.props.getDifference(generalFund2016, servicesSum));
+    const { generalFund, servicesSum } = this.props.data;
+    const initialServicesSum = 867226871;
+    const unused = Math.abs(this.props.getDifference(generalFund, servicesSum));
 
     return (
       <div className={styles.cardOutline}>
