@@ -1,12 +1,22 @@
 @import "globals";
 
-.formInput {
+@mixin input {
   width: 100%;
-  height: 36px;
   border: 1px solid $grey;
   border-radius: 5px;
-  padding: 0 10px;
   margin-bottom: 20px;
+}
+
+.formInput {
+  @include input;
+  padding: 0 10px;
+  height: 36px;
+}
+
+.formTextarea {
+  @include input;
+  padding: 10px;
+  height: 100px;
 }
 
 .inputLabel {

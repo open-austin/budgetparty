@@ -23,11 +23,13 @@ const SaveAndSubmitCard = React.createClass({
     e.preventDefault();
     const name = this.refs.name.value.trim();
     const email = this.refs.email.value.trim();
+    const comment = this.refs.comment.value.trim();
     const budgetArray = this.summarizeUserBudget(this.props.data);
     const totalBudget = this.props.data.servicesSum;
-    this.onSubmit({ name, email, budgetArray, totalBudget });
+    this.onSubmit({ name, email, comment, budgetArray, totalBudget });
     this.refs.name.value = '';
     this.refs.email.value = '';
+    this.refs.comment.value = '';
     this.setState({ isSubmitted: true });
   },
 
@@ -86,7 +88,23 @@ const SaveAndSubmitCard = React.createClass({
           />
 
           <label htmlFor="name" className={styles.inputLabel}>Email</label>
-          <input type="text" placeholder="Email" name="email" ref="email" className={styles.formInput} />
+          <input
+            type="text"
+            placeholder="Email"
+            name="email"
+            ref="email"
+            className={styles.formInput}
+          />
+
+          <label htmlFor="comment" className={styles.inputLabel}>Comments</label>
+          <textarea
+            name="comment"
+            type="text"
+            ref="comment"
+            placeholder="Here you can explain why your budget is the best."
+            className={styles.formTextarea}
+          />
+
           <div
             className={`${styles.buttonWhiteOutline} btn btn-lg btn-success`}
             onClick={this.handleSubmit}

@@ -25,7 +25,7 @@ const ResultsSingle = React.createClass({
     const { key } = this.props.params;
     const i = results.findIndex((result) => result['.key'] === key);
     const result = results[i];
-    const budgetArray = result.budgetArray;
+    const { budgetArray, comment } = result;
     const sortedDepartments = _.sortBy(budgetArray, (dept) => dept.item);
 
     return (
@@ -34,6 +34,20 @@ const ResultsSingle = React.createClass({
           <Link to="/results">Back</Link>
           <h1>Results for <small>{result.name}</small></h1>
         </div>
+
+        {
+          comment &&
+          <div className="panel panel-primary">
+            <div className="panel-heading">
+              <h3 className="panel-title">
+                Comments
+              </h3>
+            </div>
+            <div className="panel-body">
+              {comment}
+            </div>
+          </div>
+        }
 
         <ul className="list-group">
           <li className={`list-group-item ${this.listItemColor(result.totalBudget)}`}>
