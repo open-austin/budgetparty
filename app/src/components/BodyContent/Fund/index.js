@@ -47,7 +47,7 @@ class Fund extends Component {
 
             <p>It is politically unpopular for the council to increase taxes in any way.</p>
 
-            <p>There is a an %11.76 increase in the amount money in the General Fund over last year. To start the budget process, you can either apply an %11.7 increase to all departments or begin with last years budget and a surplus of money.</p>
+            <p>There is a an %11.76 increase in the amount money in the General Fund over last year. To start the budget process, you can either apply an %11.7 increase to all departments or begin with last year's budget and a surplus of money.</p>
           </div>
           <div>
             <div
