@@ -1,6 +1,6 @@
 # Budget Party
 
-<img src="http://dsh.re/af3f9" width="300'/>
+<img src="http://dsh.re/af3f9" width="300"/>
 
 ## Problem Statement: 
 
