@@ -9,7 +9,7 @@ import {
   RESET_DEPARTMENT_AMOUNT,
 } from 'constants/ActionTypes';
 
-function replacedDepartmentState(state, departmentId, departmentUpdate) {
+function replacedDepartmentState(state, departmentUpdate) {
   let percentChange = state.percentChange + departmentUpdate;
   percentChange = percentChange < -100 ? -100 : percentChange;
   const amount = state.lastYearAmount * (1 + (percentChange / 100));
@@ -24,12 +24,20 @@ function resetDepartmentState(state) {
 function reducer(state = InitialState.data, action = {}) {
   switch (action.type) {
     case CHANGE_DEPARTMENT_AMOUNT:
-      const updatingDepartmentIndex = action.department - 1;
-      const updatedDepartments = [
-        ...state.departments.slice(0, updatingDepartmentIndex),
-        replacedDepartmentState(state.departments[updatingDepartmentIndex], action.department - 1, action.amount),
-        ...state.departments.slice(action.department),
-      ];
+      let updatedDepartments;
+      if (action.department === 'all') {
+        updatedDepartments = state.departments.map((departmentState) => {
+          const resetState = resetDepartmentState(departmentState);
+          return replacedDepartmentState(resetState, action.amount);
+        });
+      } else {
+        const updatingDepartmentIndex = action.department - 1;
+        updatedDepartments = [
+          ...state.departments.slice(0, updatingDepartmentIndex),
+          replacedDepartmentState(state.departments[updatingDepartmentIndex], action.amount),
+          ...state.departments.slice(action.department),
+        ];
+      }
       return Object.assign({}, state, { departments: updatedDepartments });
     case UPDATE_SERVICE_SPENDING_AMOUNT:
       const servicesSum = sum(state.departments.map((d) => d.amount));
