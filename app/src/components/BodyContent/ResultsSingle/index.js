@@ -5,7 +5,7 @@ import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 import { FormattedNumber } from 'react-intl';
 
-import styles from '../styles.scss';
+import styles from './styles.scss';
 
 const ResultsSingle = React.createClass({
   mixins: [ReactFireMixin],
@@ -29,7 +29,7 @@ const ResultsSingle = React.createClass({
     const sortedDepartments = _.sortBy(budgetArray, (dept) => dept.item);
 
     return (
-      <div className="container">
+      <div className={styles.container}>
         <div className="page-header">
           <Link to="/results">Back</Link>
           <h1>Results for <small>{result.name}</small></h1>

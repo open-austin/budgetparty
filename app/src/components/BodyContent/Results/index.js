@@ -4,7 +4,7 @@ import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 import { FormattedNumber } from 'react-intl';
 
-import styles from '../styles.scss';
+import styles from './styles.scss';
 
 const Results = React.createClass({
   mixins: [ReactFireMixin],
@@ -26,7 +26,7 @@ const Results = React.createClass({
     });
 
     return (
-      <div className="container">
+      <div className={styles.container}>
         <div className="page-header">
           <h1>Results <small>Updated upon new submissions</small></h1>
         </div>
