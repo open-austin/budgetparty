@@ -5,10 +5,12 @@ import firebase from 'firebase';
 import { firebaseConfig } from 'constants/index';
 firebase.initializeApp(firebaseConfig);
 
+import styles from './styles.scss';
+
 class Main extends Component {
   render() {
     return (
-      <div>
+      <div className={styles.rootWrapper}>
         {React.cloneElement(this.props.children, this.props)}
       </div>
     );

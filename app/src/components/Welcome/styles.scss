@@ -31,6 +31,11 @@
   left: -90px;
   width: 230px;
   z-index: 0;
+  @include tablet-plus {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 }
 
 .link {

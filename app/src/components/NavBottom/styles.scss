@@ -1,3 +1,5 @@
+@import "globals";
+
 .navBottom {
   width: 100%;
   text-align: center;
@@ -7,8 +9,13 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #fff;
+  background: $white;
   padding: 5px 0;
+  @include tablet-plus {
+    max-width: $tablet-width;
+    float: none;
+    left: auto;
+  }
 }
 
 .navItem {
@@ -24,5 +31,5 @@
 
 .navText {
   clear: both;
-  font-size: small; 
+  font-size: small;
 }

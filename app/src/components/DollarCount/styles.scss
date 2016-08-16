@@ -9,17 +9,22 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: $white; 
+    background: $white;
+    @include tablet-plus {
+      max-width: $tablet-width;
+      float: none;
+      left: auto;
+    }
 }
 .dollarCount a {
-    color: $black; 
+    color: $black;
 }
 
 .amount {
   width: 50%;
   float: left;
   padding: 10px;
-  color: $black; 
+  color: $black;
 }
 
 .amountSumTitle {

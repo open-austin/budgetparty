@@ -25,6 +25,10 @@
   border-color: $blue;
   font-size: 14px;
   border-radius: 25px;
+  @include tablet-plus {
+    width: 50%;
+    margin: auto 25%;
+  };
 }
 
 /*to be used on dark color backgrounds*/
