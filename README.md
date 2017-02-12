@@ -15,14 +15,18 @@ February 12, 2017
 
 We will want to interate on our progres and include more features. Check out the [Issues](https://github.com/open-austin/budgetparty/issues) to see what we're thinking about next and feel free to jump in with your own suggestions or contributions.
 
-## Credit
+## Contributors
 
 This project has recieved contributions from some wonderful volunteers. 
 
+### Current Project Leads | Contact for any questions
+- [@mateoclarke](https://github.com/mateoclarke) - Javascript, Web Development, Project Leader
+- [@VictoriaODell](https://github.com/VictoriaODell) - UX Design
+- [@brainnews](https://github.com/brainnews) - Visual Design
+
+
+### Previous Contributors
 - [@graceatkins](https://github.com/graceatkins) - Policy Domain Expert, Writing
-- [@VictoriaODell](https://github.com/VictoriaODell) - UX Design, CSS, Web Development
-- [@brainnews](https://github.com/brainnews) - Graphic Design
-- [@mateoclarke](https://github.com/mateoclarke) - Javascript, Web Development
 - [@wilsaj](https://github.com/wilsaj) - Javascript, Web Development
 - [@kmclaugh](https://github.com/kmclaugh) - Javascript, Web Development
 
