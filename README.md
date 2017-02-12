@@ -10,7 +10,8 @@
 
 ## What are we working on now?:
 
-Right now, we have designed and built a proof-of-concept working prototype app that will be used at the [Budget Game Night hosted by the Austin Monitor & Glasshouse Policy](https://www.eventbrite.com/e/budget-game-night-tickets-26423729085?aff=ehomecard) on **August 16th, 2016**.
+We're currently working to modify and extend the orignial budget party app to develop a Digital Mock City Council experience. Read more about our Partnership with Austin Monitor and the Mozilla Gigabit Community Fund grant we were awarded. (https://www.open-austin.org/blog/2017/02/08/budget-party-mozilla-gigabit-grant-announcement) 
+February 12, 2017
 
 We will want to interate on our progres and include more features. Check out the [Issues](https://github.com/open-austin/budgetparty/issues) to see what we're thinking about next and feel free to jump in with your own suggestions or contributions.
 
