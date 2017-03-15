@@ -8,6 +8,13 @@ import styles from '../styles.scss';
 let dollarAmout = "$969.2 Million"
 
 class Fund extends Component {
+  handleClick(percentChange) {
+    return () => {
+      this.props.changeDepartmentAmount('all', percentChange);
+      this.props.updateServiceSpendingAmount();
+    };
+  }
+
   render() {
     return (
       <div>
@@ -38,9 +45,25 @@ class Fund extends Component {
 
             <p>It is also affected when City Council votes to change tax and service rates.</p>
 
-            <p> It is politically unpopular for the council to increase taxes in any way.</p>
+            <p>It is politically unpopular for the council to increase taxes in any way.</p>
+
+            <p>There is a an %11.76 increase in the amount money in the General Fund over last year. To start the budget process, you can either apply an %11.7 increase to all departments or begin with last year's budget and a surplus of money.</p>
           </div>
-           <Link className={`${styles.buttonSolid} btn btn-lg btn-success`} role="button" to="/services">Continue to services</Link>
+          <div>
+            <div
+              className={`${styles.buttonSolid} btn btn-lg btn-success`}
+              onClick={this.handleClick(11.7).bind(this)}
+              role="button">
+                Apply 11.7% increase to all departments
+            </div>
+            <div
+              className={`${styles.buttonSolid} btn btn-lg btn-success`}
+              onClick={this.handleClick(0).bind(this)}
+              role="button">
+                Apply 0% change to all departments
+            </div>
+          </div>
+          <Link className={`${styles.buttonSolid} btn btn-lg btn-success`} role="button" to="/services">Continue to services</Link>
         </div>
         <NavBottom props={this.props}/>
       </div>
