@@ -9,7 +9,7 @@ import {
 import Register from './Register'
 import Home from './Home'
 import Intro from './Intro'
-import Dashboard from './protected/Dashboard'
+import Dashboard from './Dashboard'
 import { firebaseAuth, googleAuthProvider } from '../config/constants'
 import { logout, login, resetPassword, auth } from '../helpers/auth'
 
@@ -85,8 +85,7 @@ export default class App extends Component {
                 }}
               />
               <Route path='/intro' render={(props) => <Intro {...props} authed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
-              <PublicRoute authed={this.state.authed} path='/register' component={Register} />
-              <PrivateRoute authed={this.state.authed} path='/dashboard' component={Dashboard} />
+              <Route path='/dashboard' component={Dashboard} />
               <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
             </Switch>
           </div>
