@@ -1,0 +1,16 @@
+@import "./colors";
+
+@mixin button {
+  background-color: $white;
+  border-color: $dark-grey;
+  height: 50px;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 25px;
+}
+
+@mixin primary-button {
+  @include button;
+  background-color: $brightblue;
+  border-color: $brightblue;
+}
