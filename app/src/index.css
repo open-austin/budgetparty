@@ -1,3 +1,6 @@
+.home {
+  background: #DFF7FE; }
+
 .logo {
   padding: 30px 0; }
 
@@ -77,7 +80,8 @@
 .intro {
   display: flex;
   flex-direction: column;
-  padding: 0 40px; }
+  padding: 0 40px;
+  background: #ffffff; }
 
 .intro__skip {
   text-align: right;
@@ -129,6 +133,11 @@
 .intro__next-button:hover {
   color: #ffffff;
   text-decoration: none; }
+
+html, body, #root,
+.container, .row,
+.intro {
+  height: 100%; }
 
 body {
   margin: 0;

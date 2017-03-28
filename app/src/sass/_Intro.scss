@@ -1,7 +1,10 @@
+@import "colors";
+
 .intro {
   display: flex;
   flex-direction: column;
   padding: 0 40px;
+  background: $white;
 }
 
 .intro__skip {

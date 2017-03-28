@@ -3,6 +3,12 @@
 @import "./sass/Home.scss";
 @import "./sass/Intro.scss";
 
+html, body, #root,
+.container, .row,
+.intro {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
