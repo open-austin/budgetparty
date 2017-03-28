@@ -10,6 +10,7 @@ import Register from './Register'
 import Home from './Home'
 import Intro from './Intro'
 import Dashboard from './Dashboard'
+import User from './User'
 import { firebaseAuth, googleAuthProvider } from '../config/constants'
 import { logout, login, resetPassword, auth } from '../helpers/auth'
 
@@ -86,6 +87,7 @@ export default class App extends Component {
               />
               <Route path='/intro/:id' render={(props) => <Intro {...props} authed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
               <Route path='/dashboard' render={props => <Dashboard isAuthed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
+              <Route path='/user' render={props => <User isAuthed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
               <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
             </Switch>
           </div>
