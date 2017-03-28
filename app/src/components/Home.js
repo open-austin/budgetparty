@@ -42,7 +42,7 @@ export default class Home extends Component {
           </div>
 
         </div>
-        <Link to="/intro" className="auth-form__skip">Skip Login</Link>
+        <Link to="/intro/1" className="auth-form__skip">Skip Login</Link>
       </div>
     )
   }
