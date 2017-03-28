@@ -1,3 +1,9 @@
+.flexbox {
+  display: flex; }
+
+.flex {
+  flex: 1; }
+
 .home {
   background: #DFF7FE; }
 
@@ -134,6 +140,25 @@
   color: #ffffff;
   text-decoration: none; }
 
+.Navigation {
+  background-color: #DFF7FE; }
+
+.Navigation__user-icon {
+  margin: 20px 0 20px 5px; }
+
+.TotalFundsAvailable {
+  text-align: center;
+  padding-right: 5px; }
+
+.TotalFundsAvailable__header {
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 12px;
+  margin: 10px 0 0; }
+
+.TotalFundsAvailable__dollars {
+  margin: 2px 0 10px; }
+
 html, body, #root,
 .container, .row,
 .intro {
@@ -143,5 +168,4 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: #DFF7FE;
   color: #4D4D4D; }
