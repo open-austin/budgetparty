@@ -80,11 +80,11 @@ export default class App extends Component {
               <Route path='/' exact render={() => <Redirect to="/login" />} />
               <Route path='/login' isAuthed={this.state.authed} render={() => {
                 return this.state.authed
-                ? <Redirect to="/intro" />
+                ? <Redirect to="/intro/1" />
                 : <Home />
                 }}
               />
-              <Route path='/intro' render={(props) => <Intro {...props} authed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
+              <Route path='/intro/:id' render={(props) => <Intro {...props} authed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
               <Route path='/dashboard' render={props => <Dashboard isAuthed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
               <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
             </Switch>
