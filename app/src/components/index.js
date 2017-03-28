@@ -85,7 +85,7 @@ export default class App extends Component {
                 }}
               />
               <Route path='/intro' render={(props) => <Intro {...props} authed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
-              <Route path='/dashboard' component={Dashboard} />
+              <Route path='/dashboard' render={props => <Dashboard isAuthed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
               <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
             </Switch>
           </div>

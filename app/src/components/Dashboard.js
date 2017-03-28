@@ -7,7 +7,7 @@ export default class Dashboard extends Component {
   render () {
     return (
       <div>
-        <Navigation isAuthed={this.props.authed} handleLogout={this.props.handleLogout}/>
+        <Navigation isAuthed={this.props.isAuthed} handleLogout={this.props.handleLogout}/>
         <h1>dashboard</h1>
       </div>
     )
