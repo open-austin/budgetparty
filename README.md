@@ -90,7 +90,7 @@ Here is a link to our [design assets and documentation](./design). Here are [ope
 
 ### Development
 
-The Budget Party app is primarily written in javascript and leans heavily into the libraries [React](https://facebook.github.io/react/) and [Redux](http://redux.js.org/). The static assets are hosted via [Github pages](https://pages.github.com/). Data submitted to the server lives in a [Firebase](https://www.firebase.com/), a cloud service bought by Google.
+The Budget Party app is primarily written in javascript and leans heavily into the libraries [React](https://facebook.github.io/react/) and [Redux](http://redux.js.org/). The static assets are hosted via [Github pages](https://pages.github.com/). Data submitted to the server lives in a [Firebase](https://www.firebase.com/), a Google cloud service.
 
 **Getting started**
 

@@ -1,0 +1,40 @@
+@import "colors";
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  background: $white;
+}
+
+.intro__skip {
+  text-align: right;
+  padding: 20px 0;
+}
+
+.intro__img {
+  margin: 35px 0 50px;
+}
+
+.intro__text {
+  font-size: 22px;
+  text-align: center;
+  line-height: 32px;
+  margin-bottom: 40px;
+}
+
+@mixin intro-btn {
+  @include button-standard-width;
+  margin: auto;
+  padding: 12px;
+}
+
+.intro__start-button {
+  @include primary-button;
+  @include intro-btn;
+}
+
+.intro__next-button {
+  @include secondary-button;
+  @include intro-btn;
+}

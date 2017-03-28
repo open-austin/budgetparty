@@ -1,0 +1,68 @@
+@import "./colors";
+@import "./buttons";
+
+.home {
+  background: $skyblue;  
+}
+
+.logo {
+  padding: 30px 0;
+}
+
+.auth-form-wrapper {
+  background: $white;
+  width: 90%;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.auth-tabs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.auth-tab {
+  width: 50%;
+  text-align: center;
+  padding: 20px 0;
+  display: block;
+  &:last-child {
+    border-left: 2px solid $skyblue;
+  }
+}
+
+.auth-tab.inactive-tab {
+  background-color: $grey;
+}
+
+.auth-form {
+  padding: 20px 40px;
+}
+
+.auth-form__label {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.auth-form__button {
+  @include primary-button;
+  margin: 30px auto 10px;
+  display: block;
+  width: 45%;
+}
+
+.auth-form__skip {
+  display: block;
+  text-align: center;
+  color: $dark-text-color;
+  padding: 20px;
+}
+
+.google-auth-button {
+  @include button;
+  color: $dark-text-color;
+  img {
+    margin: -5px 5px 0 0;
+  }
+}
