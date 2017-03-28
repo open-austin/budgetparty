@@ -57,6 +57,7 @@
 
 .google-auth-button {
   @include button;
+  color: $dark-text-color;
   img {
     margin: -5px 5px 0 0;
   }
