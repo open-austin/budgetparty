@@ -2,6 +2,12 @@
 
 .Navigation {
   background-color: $skyblue;
+  border: 1px solid transparent;
+  position: fixed;
+  width: 100%;
+  height: $nav_height;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px;
 }
 
 .Navigation__user-icon {

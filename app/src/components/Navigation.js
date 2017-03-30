@@ -7,7 +7,7 @@ import avatar from '../images/avatar.svg'
 export default class Navigation extends Component {
   render () {
     return (
-      <nav className="Navigation navbar navbar-default navbar-static-top">
+      <nav className="Navigation">
         <div className="container flexbox">
           <Link to="/user" className="flex">
             <img src={avatar} alt="User Account" className="Navigation__user-icon"/>
