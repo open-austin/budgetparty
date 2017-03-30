@@ -141,7 +141,13 @@
   text-decoration: none; }
 
 .Navigation {
-  background-color: #DFF7FE; }
+  background-color: #DFF7FE;
+  border: 1px solid transparent;
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px; }
 
 .Navigation__user-icon {
   margin: 20px 0 20px 5px; }
@@ -158,6 +164,60 @@
 
 .TotalFundsAvailable__dollars {
   margin: 2px 0 10px; }
+
+.Dashboard__body {
+  padding-top: 65px;
+  height: 100%; }
+
+.Dashboard__body a {
+  color: #4D4D4D;
+  text-decoration: none; }
+
+.PartyLevel {
+  height: 140px;
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 4px;
+  background-color: #F8F8F8; }
+
+.PartyLevel--complete {
+  height: 140px;
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 4px;
+  background-color: #EDFEE4; }
+
+.PartyLevel__image {
+  width: 50%;
+  padding-right: 5%; }
+
+.PartyLevel__image--unstarted {
+  width: 50%;
+  padding-right: 5%;
+  opacity: 0.4; }
+
+.PartyLevel__details {
+  width: 50%; }
+
+.PartyLevel__title {
+  font-size: 22px;
+  margin: 50px 0 3px;
+  color: #4D4D4D; }
+
+.PartyLevel__title--unstarted {
+  font-size: 22px;
+  margin: 50px 0 3px;
+  color: #4D4D4D;
+  color: #b3b3b3; }
+
+.PartyLevel__status {
+  float: right;
+  padding: 15px; }
+
+.PartyLevel__progress {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px; }
 
 html, body, #root,
 .container, .row,

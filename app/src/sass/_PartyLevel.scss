@@ -1,0 +1,60 @@
+@mixin PartyLevel {
+  height: 140px;
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+.PartyLevel {
+  @include PartyLevel;
+  background-color: $grey2;
+}
+
+.PartyLevel--complete {
+  @include PartyLevel;
+  background-color: $lightgreen;
+}
+
+@mixin PartyLevel__image {
+  width: 50%;
+  padding-right: 5%;
+}
+
+.PartyLevel__image {
+  @include PartyLevel__image;
+}
+
+.PartyLevel__image--unstarted {
+  @include PartyLevel__image;
+  opacity: 0.4;
+}
+
+.PartyLevel__details {
+  width: 50%;
+}
+
+@mixin PartyLevel__title {
+  font-size: 22px;
+  margin: 50px 0 3px;
+  color: $text-color;
+}
+
+.PartyLevel__title {
+  @include PartyLevel__title;
+}
+
+.PartyLevel__title--unstarted {
+  @include PartyLevel__title;
+  color: lighten($text-color, 40%);
+}
+
+.PartyLevel__status {
+  float: right;
+  padding: 15px;
+}
+
+.PartyLevel__progress {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px
+}
