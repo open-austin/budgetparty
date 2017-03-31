@@ -28,18 +28,21 @@ const partyLevels = [
      image: "public_safety.svg",
      index: 3,
      desc: "The departments housed under community services provide services including providing environmental health services, animal services, and family health services, and managing the City’s libraries, parks, and affordable housing efforts."
+     index: 3
    },
    {
      title: "Community Services",
      image: "community_services.svg",
      index: 4,
      desc: "The departments housed under community services provide services including providing environmental health services, animal services, and family health services, and managing the City’s libraries, parks, and affordable housing efforts."
+     index: 4
    },
    {
      title: "Budget Submission",
      image: "envelope.svg",
      index: 5,
      desc: "The departments housed under community services provide services including providing environmental health services, animal services, and family health services, and managing the City’s libraries, parks, and affordable housing efforts."
+     index: 5
    },
 ]
 

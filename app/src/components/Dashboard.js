@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Navigation from './Navigation'
+import PartyLevel from './PartyLevel'
+import partyLevels from '../config/partyLevels.js'
 import { Route, Link } from 'react-router-dom'
-import moneyImg from '../images/money.svg'
 
 export default class Dashboard extends Component {
   render () {
