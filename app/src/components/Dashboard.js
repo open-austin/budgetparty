@@ -8,7 +8,17 @@ export default class Dashboard extends Component {
     return (
       <div>
         <Navigation isAuthed={this.props.isAuthed} handleLogout={this.props.handleLogout}/>
-        <h1>dashboard</h1>
+
+        <div className="Dashboard__body">{
+          partyLevels.map( (level) => {
+            return (
+              <Link to={`/service/${level.index}`} key={level.index}>
+                <PartyLevel {...level} />
+              </Link>
+            )
+          })
+        }</div>
+
       </div>
     )
   }

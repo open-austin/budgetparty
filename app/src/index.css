@@ -41,6 +41,7 @@
   font-weight: normal; }
 
 .auth-form__button {
+  width: 180px;
   background-color: #ffffff;
   border-color: #4D4D4D;
   color: #ffffff;
@@ -49,6 +50,8 @@
   min-width: 150px;
   font-size: 18px;
   border-radius: 25px;
+  margin: auto;
+  padding: 12px;
   background-color: #00A3DE;
   border-color: #00A3DE;
   margin: 30px auto 10px;
@@ -66,6 +69,7 @@
   padding: 20px; }
 
 .google-auth-button {
+  width: 180px;
   background-color: #ffffff;
   border-color: #4D4D4D;
   color: #ffffff;
@@ -74,6 +78,8 @@
   min-width: 150px;
   font-size: 18px;
   border-radius: 25px;
+  margin: auto;
+  padding: 12px;
   color: #244665; }
 
 .google-auth-button:hover {
@@ -103,6 +109,7 @@
   margin-bottom: 40px; }
 
 .intro__start-button {
+  width: 180px;
   background-color: #ffffff;
   border-color: #4D4D4D;
   color: #ffffff;
@@ -111,17 +118,17 @@
   min-width: 150px;
   font-size: 18px;
   border-radius: 25px;
-  background-color: #00A3DE;
-  border-color: #00A3DE;
-  width: 180px;
   margin: auto;
-  padding: 12px; }
+  padding: 12px;
+  background-color: #00A3DE;
+  border-color: #00A3DE; }
 
 .intro__start-button:hover {
   color: #ffffff;
   text-decoration: none; }
 
 .intro__next-button {
+  width: 180px;
   background-color: #ffffff;
   border-color: #4D4D4D;
   color: #ffffff;
@@ -130,11 +137,10 @@
   min-width: 150px;
   font-size: 18px;
   border-radius: 25px;
-  background-color: #9CD54B;
-  border-color: #9CD54B;
-  width: 180px;
   margin: auto;
-  padding: 12px; }
+  padding: 12px;
+  background-color: #9CD54B;
+  border-color: #9CD54B; }
 
 .intro__next-button:hover {
   color: #ffffff;
@@ -159,6 +165,106 @@
 .TotalFundsAvailable__dollars {
   margin: 2px 0 10px; }
 
+<<<<<<< Updated upstream
+=======
+.Dashboard__body {
+  padding-top: 65px;
+  height: 100%; }
+
+.Dashboard__body a {
+  color: #4D4D4D;
+  text-decoration: none; }
+
+.PartyLevel {
+  height: 140px;
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 4px;
+  background-color: #F8F8F8; }
+
+.PartyLevel--complete {
+  height: 140px;
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 4px;
+  background-color: #EDFEE4; }
+
+.PartyLevel__image {
+  width: 50%;
+  padding-right: 5%; }
+
+.PartyLevel__image--unstarted {
+  width: 50%;
+  padding-right: 5%;
+  opacity: 0.4; }
+
+.PartyLevel__details {
+  width: 50%; }
+
+.PartyLevel__title {
+  font-size: 22px;
+  margin: 50px 0 3px;
+  color: #4D4D4D; }
+
+.PartyLevel__title--unstarted {
+  font-size: 22px;
+  margin: 50px 0 3px;
+  color: #4D4D4D;
+  color: #b3b3b3; }
+
+.PartyLevel__status {
+  float: right;
+  padding: 15px; }
+
+.PartyLevel__progress {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px; }
+
+.PartyLevelHeader {
+  padding-top: 65px;
+  max-height: 205px;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  background-color: #F8F8F8; }
+
+.Service {
+  text-align: center; }
+
+.Service__body {
+  padding: 25px 40px; }
+
+.Service__title {
+  font-size: 26px;
+  text-align: center;
+  margin: 0 0 15px; }
+
+.Service__desc {
+  font-size: 16px;
+  text-align: center;
+  line-height: 24px; }
+
+.Service__next-button {
+  width: 180px;
+  background-color: #ffffff;
+  border-color: #4D4D4D;
+  color: #ffffff;
+  text-align: center;
+  height: 50px;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin: auto;
+  padding: 12px;
+  background-color: #00A3DE;
+  border-color: #00A3DE; }
+
+.Service__next-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
+
+>>>>>>> Stashed changes
 html, body, #root,
 .container, .row,
 .intro {
