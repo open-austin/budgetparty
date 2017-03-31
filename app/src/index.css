@@ -26,9 +26,8 @@
   text-align: center;
   padding: 20px 0;
   display: block; }
-
-.auth-tab:last-child {
-  border-left: 2px solid #DFF7FE; }
+  .auth-tab:last-child {
+    border-left: 2px solid #DFF7FE; }
 
 .auth-tab.inactive-tab {
   background-color: #F5F6F5; }
@@ -57,10 +56,9 @@
   margin: 30px auto 10px;
   display: block;
   width: 45%; }
-
-.auth-form__button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .auth-form__button:hover {
+    color: #ffffff;
+    text-decoration: none; }
 
 .auth-form__skip {
   display: block;
@@ -81,13 +79,11 @@
   margin: auto;
   padding: 12px;
   color: #244665; }
-
-.google-auth-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
-
-.google-auth-button img {
-  margin: -5px 5px 0 0; }
+  .google-auth-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
+  .google-auth-button img {
+    margin: -5px 5px 0 0; }
 
 .intro {
   display: flex;
@@ -122,10 +118,9 @@
   padding: 12px;
   background-color: #00A3DE;
   border-color: #00A3DE; }
-
-.intro__start-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .intro__start-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
 
 .intro__next-button {
   width: 180px;
@@ -141,12 +136,12 @@
   padding: 12px;
   background-color: #9CD54B;
   border-color: #9CD54B; }
-
-.intro__next-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .intro__next-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
 
 .Navigation {
+  padding-left: 15px;
   background-color: #DFF7FE;
   border: 1px solid transparent;
   position: fixed;
@@ -155,12 +150,16 @@
   z-index: 10;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px; }
 
+.Navigation__back {
+  flex-grow: 1;
+  justify-content: flex-start; }
+
 .Navigation__user-icon {
   margin: 20px 0 20px 5px; }
 
 .TotalFundsAvailable {
   text-align: center;
-  padding-right: 5px; }
+  padding-right: 15px; }
 
 .TotalFundsAvailable__header {
   font-size: 10px;
@@ -171,13 +170,18 @@
 .TotalFundsAvailable__dollars {
   margin: 2px 0 10px; }
 
+.ServiceFundsAvailable {
+  width: 155px;
+  text-align: center;
+  padding-right: 5px;
+  border-left: 2px solid #ffffff; }
+
 .Dashboard__body {
   padding-top: 65px;
   height: 100%; }
-
-.Dashboard__body a {
-  color: #4D4D4D;
-  text-decoration: none; }
+  .Dashboard__body a {
+    color: #4D4D4D;
+    text-decoration: none; }
 
 .PartyLevel {
   height: 140px;
@@ -263,10 +267,9 @@
   padding: 12px;
   background-color: #00A3DE;
   border-color: #00A3DE; }
-
-.Service__next-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .Service__next-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
 
 html, body, #root,
 .container, .row,

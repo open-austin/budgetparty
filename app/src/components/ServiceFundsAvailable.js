@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-const TotalFundAvailable = (props) => {
+const ServiceFundsAvailable = (props) => {
   return (
-    <div className="TotalFundsAvailable">
+    <div className="ServiceFundsAvailable">
       <h4 className="TotalFundsAvailable__header">
-        Total Funds<br/>
+        Service Funds<br/>
         Available
       </h4>
       <h4 className="TotalFundsAvailable__dollars">
@@ -14,4 +14,4 @@ const TotalFundAvailable = (props) => {
   )
 }
 
-export default TotalFundAvailable
+export default ServiceFundsAvailable

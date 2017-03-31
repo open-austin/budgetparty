@@ -12,6 +12,7 @@ export default class Service extends Component {
     return (
       <div>
         <Navigation {...this.props}
+          service={service}
           isAuthed={this.props.isAuthed}
           handleLogout={this.props.handleLogout}
         />
