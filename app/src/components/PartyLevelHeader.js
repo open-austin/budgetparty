@@ -1,7 +1,5 @@
-import React, { Component } from 'react'
-import { Route, Link } from 'react-router-dom'
+import React from 'react'
 
-import Navigation from './Navigation'
 import partyLevels from '../config/partyLevels.js'
 
 const PartyLevelHeader = (props) => {

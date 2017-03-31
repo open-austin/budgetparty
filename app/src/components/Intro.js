@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Navigation from './Navigation'
 import { Route, Link } from 'react-router-dom'
 import moneyImg from '../images/money.svg'
 

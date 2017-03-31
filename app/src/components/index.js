@@ -6,15 +6,15 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom'
-import Register from './Register'
 import Home from './Home'
 import Intro from './Intro'
 import Dashboard from './Dashboard'
 import Service from './Service'
 import ServiceBudget from './ServiceBudget'
 import User from './User'
-import { firebaseAuth, googleAuthProvider } from '../config/constants'
-import { logout, login, resetPassword, auth } from '../helpers/auth'
+import { firebaseAuth } from '../config/constants'
+import { logout } from '../helpers/auth'
+
 
 
 
@@ -39,7 +39,6 @@ function PublicRoute ({component: Component, authed, ...rest}) {
     />
   )
 }
-
 export default class App extends Component {
   state = {
     authed: false,

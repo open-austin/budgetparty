@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import User from './User'
+import { Link } from 'react-router-dom'
+
 import TotalFundAvailable from './TotalFundAvailable'
 import ServiceFundsAvailable from './ServiceFundsAvailable'
-import { Link } from 'react-router-dom'
+
 import avatar from '../images/avatar.svg'
 import back from '../images/back.svg'
 

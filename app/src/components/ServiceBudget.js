@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import { Route, Link } from 'react-router-dom'
+import React from 'react'
 
 import partyLevels from '../config/partyLevels.js'
 
