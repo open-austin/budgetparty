@@ -28,9 +28,9 @@ export default class Service extends Component {
             to={`/service/${service.index}/budget/1`}
             className="Service__next-button"
           >
-            Start Budgeting
+            {(service.index + 1) < partyLevels.length ? 'Start Budgeting' : 'Review Final Budget'}
           </Link>
-          
+
         </div>
 
       </div>
