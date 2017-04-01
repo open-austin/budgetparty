@@ -5,4 +5,35 @@
   overflow: hidden;
   text-align: center;
   background-color: $grey2;
+  color: $white;
+}
+
+.PartyLevelHeader__overlay {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba($green, 0.8);
+  height: 205px - $nav_height;
+  padding: 25px 5%;
+  // top: 0;
+}
+
+.PartyLevelHeader__image--complete {
+  opacity: 0.4;
+}
+
+.PartyLevelHeader__status {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.PartyLevelHeader__value {
+  margin: 5px 0 7px;
+  font-size: 36px;
+}
+
+.PartyLevelHeader__change {
+  font-size: 12px;
+  text-transform: uppercase;
 }

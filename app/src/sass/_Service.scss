@@ -21,3 +21,24 @@
 .Service__next-button {
   @include primary-button;
 }
+
+.Service__review-buttons {
+  display: flex;
+  padding: 0 15%;
+}
+
+.Service__edit-button {
+  @include primary-button;
+  width: 95px;
+  font-size: 14px;
+  height: auto;
+  min-width: auto;
+}
+
+.Service__done-button {
+  @include secondary-button;
+  width: 95px;
+  font-size: 14px;
+  height: auto;
+  min-width: auto;
+}

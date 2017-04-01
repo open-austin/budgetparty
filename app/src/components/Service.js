@@ -9,6 +9,9 @@ export default class Service extends Component {
   render () {
     let service = partyLevels[this.props.match.params.id]
 
+    const { totalSections, completeSections } = service
+    const isComplete = totalSections - completeSections === 0
+
     return (
       <div>
         <Navigation {...this.props}
@@ -19,18 +22,32 @@ export default class Service extends Component {
 
         <div className="Service">
 
-          <PartyLevelHeader {...this.props} />
+          <PartyLevelHeader {...this.props} service={service} />
+
           <div className="Service__body">
             <h1 className="Service__title">{service.title}</h1>
             <p className="Service__desc">{service.desc}</p>
           </div>
 
-          <Link
-            to={`/service/${service.index}/budget/1`}
-            className="Service__next-button"
-          >
-            {(service.index + 1) < partyLevels.length ? 'Start Budgeting' : 'Review Final Budget'}
-          </Link>
+          {
+            isComplete ?
+              <div className="Service__review-buttons">
+                <Link to="/service/:service_id/budget/1"
+                  className="Service__edit-button">
+                  Revise
+                </Link>
+                <Link to="/dashboard"
+                  className="Service__done-button">
+                  Done
+                </Link>
+              </div>
+            :
+              <Link to={`/service/${service.index}/budget/1`}
+                className="Service__next-button"
+              >
+                {(service.index + 1) < partyLevels.length ? 'Start Budgeting' : 'Review Final Budget'}
+              </Link>
+          }
 
         </div>
 
