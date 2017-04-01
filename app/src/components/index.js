@@ -15,30 +15,28 @@ import User from './User'
 import { firebaseAuth } from '../config/constants'
 import { logout } from '../helpers/auth'
 
+// function PrivateRoute ({component: Component, authed, ...rest}) {
+//   return (
+//     <Route
+//       {...rest}
+//       render={(props) => authed === true
+//         ? <Component {...props} />
+//         : <Redirect to={{pathname: '/login', state: {from: props.location}}} />}
+//     />
+//   )
+// }
+//
+// function PublicRoute ({component: Component, authed, ...rest}) {
+//   return (
+//     <Route
+//       {...rest}
+//       render={(props) => authed === false
+//         ? <Component {...props} />
+//         : <Redirect to='/intro' />}
+//     />
+//   )
+// }
 
-
-
-function PrivateRoute ({component: Component, authed, ...rest}) {
-  return (
-    <Route
-      {...rest}
-      render={(props) => authed === true
-        ? <Component {...props} />
-        : <Redirect to={{pathname: '/login', state: {from: props.location}}} />}
-    />
-  )
-}
-
-function PublicRoute ({component: Component, authed, ...rest}) {
-  return (
-    <Route
-      {...rest}
-      render={(props) => authed === false
-        ? <Component {...props} />
-        : <Redirect to='/intro' />}
-    />
-  )
-}
 export default class App extends Component {
   state = {
     authed: false,
