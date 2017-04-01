@@ -5,6 +5,7 @@ const partyLevels = [
      image: "titled_logo.svg",
      completeSections: 5,
      totalSections: 5,
+     desc: "The departments housed under community services provide services including providing environmental health services, animal services, and family health services, and managing the City’s libraries, parks, and affordable housing efforts."
    },
    {
      index: 1,
@@ -12,28 +13,36 @@ const partyLevels = [
      image: "development.svg",
      completeSections: 4,
      totalSections: 4,
+     desc: "The departments housed under community services provide services including providing environmental health services, animal services, and family health services, and managing the City’s libraries, parks, and affordable housing efforts.",
+     serviceBudget: 956000000,
+     lastYearBudget: 920000000,
+     percentChange: 3.76,
    },
    {
+     index: 2,
      title: "Infrastructure & Mobility",
      image: "infrastructure.svg",
-     index: 2,
      completeSections: 3,
      totalSections: 8,
+     desc: "The departments housed under community services provide services including providing environmental health services, animal services, and family health services, and managing the City’s libraries, parks, and affordable housing efforts."
    },
    {
+     index: 3,
      title: "Public Safety",
      image: "public_safety.svg",
-     index: 3
+     desc: "The departments housed under community services provide services including providing environmental health services, animal services, and family health services, and managing the City’s libraries, parks, and affordable housing efforts."
    },
    {
+     index: 4,
      title: "Community Services",
      image: "community_services.svg",
-     index: 4
+     desc: "The departments housed under community services provide services including providing environmental health services, animal services, and family health services, and managing the City’s libraries, parks, and affordable housing efforts."
    },
    {
+     index: 5,
      title: "Budget Submission",
      image: "envelope.svg",
-     index: 5
+     desc: "The departments housed under community services provide services including providing environmental health services, animal services, and family health services, and managing the City’s libraries, parks, and affordable housing efforts."
    },
 ]
 

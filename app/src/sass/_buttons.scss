@@ -1,6 +1,7 @@
 @import "./colors";
 
 @mixin button {
+  @include button-standard-width;
   background-color: $white;
   border-color: $dark-grey;
   color: $white;
@@ -9,6 +10,8 @@
   min-width: 150px;
   font-size: 18px;
   border-radius: 25px;
+  margin: auto;
+  padding: 12px;
   &:hover {
     color: $white;
     text-decoration: none;

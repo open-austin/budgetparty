@@ -23,18 +23,10 @@
   margin-bottom: 40px;
 }
 
-@mixin intro-btn {
-  @include button-standard-width;
-  margin: auto;
-  padding: 12px;
-}
-
 .intro__start-button {
   @include primary-button;
-  @include intro-btn;
 }
 
 .intro__next-button {
   @include secondary-button;
-  @include intro-btn;
 }

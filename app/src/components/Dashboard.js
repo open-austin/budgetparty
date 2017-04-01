@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Navigation from './Navigation'
 import PartyLevel from './PartyLevel'
 import partyLevels from '../config/partyLevels.js'
-import { Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default class Dashboard extends Component {
   render () {
@@ -13,7 +13,7 @@ export default class Dashboard extends Component {
         <div className="Dashboard__body">{
           partyLevels.map( (level) => {
             return (
-              <Link to={`/${level.title}`} key={level.index}>
+              <Link to={`/service/${level.index}`} key={level.index}>
                 <PartyLevel {...level} />
               </Link>
             )
