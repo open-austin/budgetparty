@@ -1,4 +1,4 @@
-import { createStore, compose } from 'redux';
+import { createStore } from 'redux';
 
 import levels from './data/levels';
 import departments from './data/departments';

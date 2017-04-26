@@ -32,7 +32,7 @@ export default class Service extends Component {
           {
             isComplete ?
               <div className="Service__review-buttons">
-                <Link to="/service/:service_id/budget/1"
+                <Link to={`/service/${service.index}/department/1`}
                   className="Service__edit-button">
                   Revise
                 </Link>
@@ -42,10 +42,10 @@ export default class Service extends Component {
                 </Link>
               </div>
             :
-              <Link to={`/service/${service.index}/budget/1`}
+              <Link to={`/service/${service.index}/department/1`}
                 className="Service__next-button"
               >
-                {(service.index + 1) < partyLevels.length ? 'Start Budgeting' : 'Review Final Budget'}
+                {(service.index + 1) < levels.length ? 'Start Budgeting' : 'Review Final Budget'}
               </Link>
           }
 
