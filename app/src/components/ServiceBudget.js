@@ -1,10 +1,9 @@
 import React from 'react'
 
-import partyLevels from '../config/partyLevels.js'
+import levels from '../data/levels.js'
 
 const ServiceBudget = (props) => {
-  let service = partyLevels[props.match.params.id]
-  console.log(service)
+  const service = levels[service_id]
 
   return (
     <div className="ServiceBudget">

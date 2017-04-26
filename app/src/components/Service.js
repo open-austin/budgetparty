@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 
 import Navigation from './Navigation'
 import PartyLevelHeader from './PartyLevelHeader'
-import partyLevels from '../config/partyLevels.js'
+import levels from '../data/levels.js'
 
 export default class Service extends Component {
   render () {
-    let service = partyLevels[this.props.match.params.id]
+    let service = levels[this.props.match.params.id]
 
     const { totalSections, completeSections } = service
     const isComplete = totalSections - completeSections === 0
