@@ -16,27 +16,6 @@ import { firebaseAuth } from '../config/constants'
 import { logout } from '../helpers/auth'
 import { Provider } from 'react-redux'
 
-// function PrivateRoute ({component: Component, authed, ...rest}) {
-//   return (
-//     <Route
-//       {...rest}
-//       render={(props) => authed === true
-//         ? <Component {...props} />
-//         : <Redirect to={{pathname: '/login', state: {from: props.location}}} />}
-//     />
-//   )
-// }
-//
-// function PublicRoute ({component: Component, authed, ...rest}) {
-//   return (
-//     <Route
-//       {...rest}
-//       render={(props) => authed === false
-//         ? <Component {...props} />
-//         : <Redirect to='/intro' />}
-//     />
-//   )
-// }
 import store from '../store';
 
 export default class App extends Component {
