@@ -70,21 +70,17 @@ export default class App extends Component {
                   : <Home />
                   }}
                 />
-                <Route path='/intro/:id' render={(props) => <Intro {...props} authed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
-                <Route path='/dashboard' render={props => <DashboardContainer isAuthed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
-                <Route path='/service/:id' exact render={props => {
-                  return <Service {...props}
-                    isAuthed={this.state.authed}
+                <Route path='/intro/:id' render={props => <Intro {...props} />} />
+                <Route path='/dashboard' render={props => <DashboardContainer {...props}/>} />
+                <Route path='/service/:id' exact render={props => <Service {...props} />} />
+                <Route path='/service/:service_id/department/:id'
+                  render={props => <ServiceBudget {...props}/>}
+                />
+                <Route path='/user' render={props => {
+                  return <User isAuthed={this.state.authed}
                     handleLogout={this.handleLogout.bind(this)}
                   />
                 }} />
-                <Route path='/service/:service_id/department/:id' render={props => {
-                  return <ServiceBudget {...props}
-                    isAuthed={this.state.authed}
-                    handleLogout={this.handleLogout.bind(this)}
-                  />
-                }} />
-                <Route path='/user' render={props => <User isAuthed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
                 <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
               </Switch>
             </div>

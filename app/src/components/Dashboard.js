@@ -9,7 +9,7 @@ export default class Dashboard extends Component {
 
     return (
       <div>
-        <Navigation isAuthed={this.props.isAuthed} handleLogout={this.props.handleLogout}/>
+        <Navigation />
 
         <div className="Dashboard__body">
           { levels.map(level => {
