@@ -13,7 +13,7 @@ export default class Dashboard extends Component {
 
         <div className="Dashboard__body">
           { levels.map(level => {
-            if (level.status && level.status !== "locked") {
+            if (level.status || level.status !== "locked") {
               return (
                 <Link to={`/service/${level.index}`} key={level.index}>
                   <PartyLevel {...level} />
