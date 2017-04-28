@@ -22,7 +22,7 @@ export default class Dashboard extends Component {
 
     return (
       <div>
-        <Navigation />
+        <Navigation showUser showTotalFunds />
 
         <div className="Dashboard__body">
           {levels.map(level => {

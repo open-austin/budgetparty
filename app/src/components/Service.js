@@ -14,11 +14,7 @@ export default class Service extends Component {
 
     return (
       <div>
-        <Navigation {...this.props}
-          service={service}
-          isAuthed={this.props.isAuthed}
-          handleLogout={this.props.handleLogout}
-        />
+        <Navigation service={service} showBack showTotalFunds showServiceFunds />
 
         <div className="Service">
 
@@ -32,7 +28,7 @@ export default class Service extends Component {
           {
             isComplete ?
               <div className="Service__review-buttons">
-                <Link to={`/service/${service.index}/department/1`}
+                <Link to={`/service/${service.index}/department/${service.departments[0]}`}
                   className="Service__edit-button">
                   Revise
                 </Link>
@@ -42,7 +38,7 @@ export default class Service extends Component {
                 </Link>
               </div>
             :
-              <Link to={`/service/${service.index}/department/1`}
+              <Link to={`/service/${service.index}/department/${service.departments[0]}`}
                 className="Service__next-button"
               >
                 {(service.index + 1) < levels.length ? 'Start Budgeting' : 'Review Final Budget'}

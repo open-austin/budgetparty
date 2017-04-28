@@ -1,7 +1,6 @@
 @import "colors";
 
 .Navigation {
-  padding-left: 15px;
   background-color: $skyblue;
   border: 1px solid transparent;
   position: fixed;
@@ -11,11 +10,35 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px;
 }
 
-.Navigation__back {
+@mixin Navigation__header-text {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+@mixin Navigation__icon {
   flex-grow: 1;
+  margin: 20px;
+}
+
+.Navigation__center-text {
+  text-align: center;
+  margin-top: 27px;
+  @include Navigation__header-text;
+}
+
+.Navigation__icon--left {
+  @include Navigation__icon;
   justify-content: flex-start;
 }
 
-.Navigation__user-icon {
-  margin: 20px 0 20px 5px;
+.Navigation__icon--right {
+  @include Navigation__icon;
+  float: right; // oops
+  justify-content: flex-end;
+}
+
+.Navigation__special-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
