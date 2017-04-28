@@ -11,6 +11,7 @@ import Intro from './Intro'
 import DashboardContainer from '../containers/Dashboard'
 import Service from './Service'
 import DepartmentContainer from '../containers/Department'
+import LearnMore from './LearnMore'
 import User from './User'
 import { firebaseAuth } from '../config/constants'
 import { logout } from '../helpers/auth'
@@ -58,7 +59,7 @@ export default class App extends Component {
         <Router>
           <div className="container">
             <div className="row">
-              <Switch>
+              <Switch className="row">
                 <Route path='/' exact render={() => {
                   return this.state.authed
                   ? <Redirect to="/dashboard" />
@@ -75,6 +76,9 @@ export default class App extends Component {
                 <Route path='/service/:id' exact render={props => <Service {...props} />} />
                 <Route path='/service/:service_id/department/:id' exact
                   render={props => <DepartmentContainer {...props}/>}
+                />
+                <Route path='/service/:service_id/department/:id/learn-more'
+                  render={props => <LearnMore {...props}/>}
                 />
                 <Route path='/user' render={props => {
                   return <User isAuthed={this.state.authed}

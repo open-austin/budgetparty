@@ -1,0 +1,22 @@
+.LearnMore {
+  padding-top: $nav_height;
+  text-align: center;
+  background: $lightblue;
+  height: 100%;
+}
+
+.LearnMore__body {
+  @include body;
+}
+
+.LearnMore__title {
+  @include title-text;
+}
+
+.LearnMore__desc {
+  @include description-text;
+}
+
+.LearnMore__close-button {
+  @include primary-button;
+}
