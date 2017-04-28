@@ -1,0 +1,17 @@
+// Maybe this file gets renamed typography?
+
+@mixin body {
+  padding: 25px 40px;
+}
+
+@mixin title-text {
+  font-size: 26px;
+  text-align: center;
+  margin: 0 0 15px;
+}
+
+@mixin description-text {
+  font-size: 16px;
+  text-align: center;
+  line-height: 24px;
+}

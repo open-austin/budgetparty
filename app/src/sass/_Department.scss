@@ -1,0 +1,15 @@
+.Department {
+  text-align: center;
+}
+
+.Department__body {
+  @include body;
+}
+
+.Department__title {
+  @include title-text;
+}
+
+.Department__desc {
+  @include description-text;
+}

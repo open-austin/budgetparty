@@ -3,19 +3,15 @@
 }
 
 .Service__body {
-  padding: 25px 40px;
+  @include body;
 }
 
 .Service__title {
-  font-size: 26px;
-  text-align: center;
-  margin: 0 0 15px;
+  @include title-text;
 }
 
 .Service__desc {
-  font-size: 16px;
-  text-align: center;
-  line-height: 24px;
+  @include description-text;
 }
 
 .Service__next-button {

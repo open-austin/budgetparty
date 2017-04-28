@@ -36,7 +36,7 @@ const renderFinishedOverlay = (service) => {
 }
 
 const renderInProgressOverlay = (service, department) => {
-  const departmentBudget = formatter.format(department.departmentBudget)
+  const departmentBudget = formatter.format(department.amount)
   const sign = getSign(department)
   console.log(department)
 
@@ -59,14 +59,14 @@ const PartyLevelHeader = (props) => {
   const { service, department } = props
   const { totalSections, completeSections } = service
   const isComplete = totalSections - completeSections === 0
-  const isInProgress = completeSections > 0
+  const isInProgress = department && department.amount !== null
 
   const imgCssClass = isComplete ? 'PartyLevelHeader__image--complete' : 'PartyLevelHeader__image'
 
   return (
     <div className="PartyLevelHeader">
       { isComplete && renderFinishedOverlay(service) }
-      {/* { isInProgress && renderInProgressOverlay(service, department) } */}
+      { isInProgress && renderInProgressOverlay(service, department) }
       <img
         src={`/images/${service.image.split(".")[0]}_full.svg`}
         alt={service.title}
