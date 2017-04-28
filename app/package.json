@@ -5,7 +5,9 @@
   "devDependencies": {
     "node-sass": "^4.5.0",
     "npm-run-all": "^4.0.2",
-    "react-scripts": "0.7.0"
+    "react-redux": "^5.0.4",
+    "react-scripts": "0.7.0",
+    "redux": "^3.6.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",

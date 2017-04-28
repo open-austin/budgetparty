@@ -3,22 +3,18 @@ import { Link } from 'react-router-dom'
 
 import Navigation from './Navigation'
 import PartyLevelHeader from './PartyLevelHeader'
-import partyLevels from '../config/partyLevels.js'
+import levels from '../data/levels.js'
 
 export default class Service extends Component {
   render () {
-    let service = partyLevels[this.props.match.params.id]
+    let service = levels[this.props.match.params.id]
 
     const { totalSections, completeSections } = service
     const isComplete = totalSections - completeSections === 0
 
     return (
       <div>
-        <Navigation {...this.props}
-          service={service}
-          isAuthed={this.props.isAuthed}
-          handleLogout={this.props.handleLogout}
-        />
+        <Navigation service={service} showBack showTotalFunds showServiceFunds />
 
         <div className="Service">
 
@@ -32,7 +28,7 @@ export default class Service extends Component {
           {
             isComplete ?
               <div className="Service__review-buttons">
-                <Link to="/service/:service_id/budget/1"
+                <Link to={`/service/${service.index}/department/${service.departments[0]}`}
                   className="Service__edit-button">
                   Revise
                 </Link>
@@ -42,10 +38,10 @@ export default class Service extends Component {
                 </Link>
               </div>
             :
-              <Link to={`/service/${service.index}/budget/1`}
+              <Link to={`/service/${service.index}/department/${service.departments[0]}`}
                 className="Service__next-button"
               >
-                {(service.index + 1) < partyLevels.length ? 'Start Budgeting' : 'Review Final Budget'}
+                {(service.index + 1) < levels.length ? 'Start Budgeting' : 'Review Final Budget'}
               </Link>
           }
 

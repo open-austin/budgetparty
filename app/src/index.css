@@ -134,8 +134,8 @@
   border-radius: 25px;
   margin: auto;
   padding: 12px;
-  background-color: #9CD54B;
-  border-color: #9CD54B; }
+  background-color: #50D200;
+  border-color: #50D200; }
   .intro__next-button:hover {
     color: #ffffff;
     text-decoration: none; }
@@ -232,10 +232,49 @@
 .PartyLevelHeader {
   padding-top: 65px;
   max-height: 205px;
-  cursor: pointer;
   overflow: hidden;
   text-align: center;
   background-color: #F8F8F8; }
+
+.PartyLevelHeader__overlay--green {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 140px;
+  padding: 25px 5%;
+  background-color: rgba(80, 210, 0, 0.8);
+  color: #ffffff; }
+
+.PartyLevelHeader__overlay--grey {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 140px;
+  padding: 25px 5%;
+  background-color: rgba(245, 246, 245, 0.9);
+  color: #4D4D4D; }
+
+.PartyLevelHeader__image--complete {
+  opacity: 0.4; }
+
+.PartyLevelHeader__status {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+.PartyLevelHeader__value {
+  margin: 5px 0 7px;
+  font-size: 36px; }
+
+.PartyLevelHeader__change {
+  font-size: 12px;
+  text-transform: uppercase; }
+
+.PartyLevelHeader__reset {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #00A3DE;
+  letter-spacing: 1.5px; }
 
 .Service {
   text-align: center; }
@@ -268,6 +307,54 @@
   background-color: #00A3DE;
   border-color: #00A3DE; }
   .Service__next-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
+
+.Service__review-buttons {
+  display: flex;
+  padding: 0 15%; }
+
+.Service__edit-button {
+  width: 180px;
+  background-color: #ffffff;
+  border-color: #4D4D4D;
+  color: #ffffff;
+  text-align: center;
+  height: 50px;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin: auto;
+  padding: 12px;
+  background-color: #00A3DE;
+  border-color: #00A3DE;
+  width: 95px;
+  font-size: 14px;
+  height: auto;
+  min-width: auto; }
+  .Service__edit-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
+
+.Service__done-button {
+  width: 180px;
+  background-color: #ffffff;
+  border-color: #4D4D4D;
+  color: #ffffff;
+  text-align: center;
+  height: 50px;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin: auto;
+  padding: 12px;
+  background-color: #50D200;
+  border-color: #50D200;
+  width: 95px;
+  font-size: 14px;
+  height: auto;
+  min-width: auto; }
+  .Service__done-button:hover {
     color: #ffffff;
     text-decoration: none; }
 

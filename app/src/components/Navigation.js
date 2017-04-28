@@ -6,36 +6,54 @@ import ServiceFundsAvailable from './ServiceFundsAvailable'
 
 import avatar from '../images/avatar.svg'
 import back from '../images/back.svg'
+import close from '../images/close.svg'
 
-export default class Navigation extends Component {
-  render () {
-    return (
-      <nav className="Navigation">
-        <div className="flexbox">
-          {
-            this.props.service &&
-            <div className="Navigation__back">
+const Navigation = (props) => {
+  const {
+    showClose,
+    showBack,
+    showUser,
+    showTotalFunds,
+    showServiceFunds,
+  } = props
+
+  return (
+    <nav className="Navigation">
+      <div className="flexbox">
+        {
+          props.showBack &&
+            <Link to="/dashboard" className="flex">
               <img
                 src={back}
-                alt="Go Back"
-                className="Navigation__user-icon"
-                onClick={this.props.history.goBack}
+                alt="Go Back to Dashboard"
+                className="Navigation__icon--left"
               />
+            </Link>
+        }
+        {
+          props.showUser &&
+            <Link to="/user" className="flex">
+              <img src={avatar} alt="User Account" className="Navigation__icon--left"/>
+            </Link>
+        }
+        { props.showTotalFunds && <TotalFundAvailable /> }
+        { props.showServiceFunds && <ServiceFundsAvailable /> }
+        {
+          props.showClose &&
+            <div className="Navigation__special-header">
+              <div className="flex"></div>
+              <div className="flex Navigation__center-text">{props.centerText}</div>
+              <div className="flex">
+                <img src={close} alt="Go Back to Department"
+                  className="Navigation__icon--right"
+                  onClick={props.history.goBack}>
+                </img>
+              </div>
             </div>
-          }
-          {
-            !this.props.service &&
-              <Link to="/user" className="flex">
-                <img src={avatar} alt="User Account" className="Navigation__user-icon"/>
-              </Link>
-          }
-          <TotalFundAvailable />
-          {
-            this.props.service &&
-              <ServiceFundsAvailable />
-          }
-        </div>
-      </nav>
-    )
-  }
+        }
+      </div>
+    </nav>
+  )
 }
+
+export default Navigation

@@ -4,14 +4,21 @@ import pencil from '../images/pencil.svg'
 import lock from '../images/lock.svg'
 
 const PartyLevel = (props) => {
+  const {
+    status,
+    completeSections,
+    percentChange,
+    departments,
+    title,
+    image,
+    index,
+  } = props
 
-  const {totalSections, completeSections } = props
-  const isComplete = totalSections - completeSections === 0
-  const isInProgress = completeSections > 0
-  const isUnstarted = !isComplete && !isInProgress
+  const isComplete = status === "complete"
+  const isInProgress = status === "ready"
+  const isLocked = !status || !status === "locked"
   const partyLevelCssClass = isComplete ? 'PartyLevel--complete' : 'PartyLevel'
-  const imgCssClass = isUnstarted ? 'PartyLevel__image--unstarted' : 'PartyLevel__image'
-  let percentChange = "3.2"
+  const imgCssClass = isLocked ? 'PartyLevel__image--unstarted' : 'PartyLevel__image'
 
   const statusIcon = () => {
     if (isComplete){
@@ -28,7 +35,7 @@ const PartyLevel = (props) => {
       if (index === 0) return
       return `Increased Funding ${percentChange}%`
     } else if (isInProgress) {
-      return `${completeSections}/${totalSections} Complete`
+      return `${completeSections}/${departments.length} Complete`
     }
   }
 
@@ -42,14 +49,14 @@ const PartyLevel = (props) => {
 
   return (
     <div className={partyLevelCssClass}>
-      <img src={`../images/${props.image}`}
-        alt={props.title}
+      <img src={`../images/${image}`}
+        alt={title}
         className={imgCssClass}
       />
       <div className="PartyLevel__details">
-        <img src={statusIcon()} alt={props.title} className="PartyLevel__status"/>
-        <h2 className={titleCssClass()}>{props.title}</h2>
-        <span className="PartyLevel__progress">{progressMessage(props.index)}</span>
+        <img src={statusIcon()} alt={title} className="PartyLevel__status"/>
+        <h2 className={titleCssClass()}>{title}</h2>
+        <span className="PartyLevel__progress">{progressMessage(index)}</span>
       </div>
     </div>
   )

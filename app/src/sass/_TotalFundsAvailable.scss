@@ -4,8 +4,7 @@
 }
 
 .TotalFundsAvailable__header {
-  font-size: 10px;
-  text-transform: uppercase;
+  @include Navigation__header-text;
   line-height: 12px;
   margin: 10px 0 0;
 }

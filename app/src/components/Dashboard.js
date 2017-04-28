@@ -1,24 +1,40 @@
 import React, { Component } from 'react'
 import Navigation from './Navigation'
 import PartyLevel from './PartyLevel'
-import partyLevels from '../config/partyLevels.js'
 import { Link } from 'react-router-dom'
 
 export default class Dashboard extends Component {
   render () {
+    const { levels } = this.props;
+
+    const getServiceLink = (level) => {
+      // The Welcome Level should go back to the Intro pages...
+      if (level.index === 0) return '/intro/1';
+      // The Budget Submission will also have a special link...
+      else if (level.index + 1 >= levels.length) return '/submit';
+      // Otherwise, continue at will for the other service buckets.
+      else return `/service/${level.index}`;
+    };
+
+    const isLinkClickAllowed = (level) => {
+      return level.status && level.status !== "locked";
+    }
+
     return (
       <div>
-        <Navigation isAuthed={this.props.isAuthed} handleLogout={this.props.handleLogout}/>
+        <Navigation showUser showTotalFunds />
 
-        <div className="Dashboard__body">{
-          partyLevels.map( (level) => {
-            return (
-              <Link to={`/service/${level.index}`} key={level.index}>
-                <PartyLevel {...level} />
-              </Link>
-            )
-          })
-        }</div>
+        <div className="Dashboard__body">
+          {levels.map(level => {
+            return isLinkClickAllowed(level)
+              ?
+                <Link to={getServiceLink(level)} key={level.index}>
+                  <PartyLevel {...level} />
+                </Link>
+              :
+                <PartyLevel {...level} key={level.index} />
+          })}
+        </div>
 
       </div>
     )

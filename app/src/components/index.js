@@ -8,34 +8,16 @@ import {
 } from 'react-router-dom'
 import Home from './Home'
 import Intro from './Intro'
-import Dashboard from './Dashboard'
+import DashboardContainer from '../containers/Dashboard'
 import Service from './Service'
-import ServiceBudget from './ServiceBudget'
+import DepartmentContainer from '../containers/Department'
+import LearnMore from './LearnMore'
 import User from './User'
 import { firebaseAuth } from '../config/constants'
 import { logout } from '../helpers/auth'
+import { Provider } from 'react-redux'
 
-// function PrivateRoute ({component: Component, authed, ...rest}) {
-//   return (
-//     <Route
-//       {...rest}
-//       render={(props) => authed === true
-//         ? <Component {...props} />
-//         : <Redirect to={{pathname: '/login', state: {from: props.location}}} />}
-//     />
-//   )
-// }
-//
-// function PublicRoute ({component: Component, authed, ...rest}) {
-//   return (
-//     <Route
-//       {...rest}
-//       render={(props) => authed === false
-//         ? <Component {...props} />
-//         : <Redirect to='/intro' />}
-//     />
-//   )
-// }
+import store from '../store';
 
 export default class App extends Component {
   state = {
@@ -73,27 +55,42 @@ export default class App extends Component {
 
   render() {
     return this.state.loading === true ? <h1>Loading</h1> : (
-      <Router>
-        <div className="container">
-          <div className="row">
-            <Switch>
-              <Route path='/' exact render={() => <Redirect to="/login" />} />
-              <Route path='/login' isAuthed={this.state.authed} render={() => {
-                return this.state.authed
-                ? <Redirect to="/intro/1" />
-                : <Home />
-                }}
-              />
-              <Route path='/intro/:id' render={(props) => <Intro {...props} authed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
-              <Route path='/dashboard' render={props => <Dashboard isAuthed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
-              <Route path='/service/:id' render={props => <Service {...props} isAuthed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
-              <Route path='/service/:service_id/budget/:id' render={props => <ServiceBudget {...props} isAuthed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
-              <Route path='/user' render={props => <User isAuthed={this.state.authed} handleLogout={this.handleLogout.bind(this)} />} />
-              <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
-            </Switch>
+      <Provider store={store}>
+        <Router>
+          <div className="container">
+            <div className="row">
+              <Switch className="row">
+                <Route path='/' exact render={() => {
+                  return this.state.authed
+                  ? <Redirect to="/dashboard" />
+                  : <Redirect to="/login" />
+                }} />
+                <Route path='/login' isAuthed={this.state.authed} render={() => {
+                  return this.state.authed
+                  ? <Redirect to="/intro/1" />
+                  : <Home />
+                  }}
+                />
+                <Route path='/intro/:id' render={props => <Intro {...props} />} />
+                <Route path='/dashboard' render={props => <DashboardContainer {...props}/>} />
+                <Route path='/service/:id' exact render={props => <Service {...props} />} />
+                <Route path='/service/:service_id/department/:id' exact
+                  render={props => <DepartmentContainer {...props}/>}
+                />
+                <Route path='/service/:service_id/department/:id/learn-more'
+                  render={props => <LearnMore {...props}/>}
+                />
+                <Route path='/user' render={props => {
+                  return <User isAuthed={this.state.authed}
+                    handleLogout={this.handleLogout.bind(this)}
+                  />
+                }} />
+                <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
+              </Switch>
+            </div>
           </div>
-        </div>
-      </Router>
+        </Router>
+      </Provider>
     );
   }
 }

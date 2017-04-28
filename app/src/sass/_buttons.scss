@@ -19,6 +19,7 @@
 }
 
 @mixin button-standard-width {
+  display: block;
   width: 180px;
 }
 
