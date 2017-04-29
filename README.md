@@ -44,7 +44,7 @@ You can read more on our [blog post](https://www.open-austin.org/blog/2017/02/08
 
 At this stage, we have:
 
-1. A working prototype (version 0.0) [austinbudget.party](http://austinbudget.party/).
+1. A working prototype (version 0.0) [austinbudget.party](http://austinbudget.party/). This prototype was used at our first Game Night with Glasshouse Policy. This is the [feedback](https://github.com/open-austin/budgetparty/issues/66) we got.
 2. Designs for version 1.0 of Budget Party. See examples [here](https://github.com/open-austin/budgetparty/issues/74#issuecomment-284244078) and [here](https://github.com/open-austin/budgetparty/issues/73#issuecomment-284243962). [Sketch File](https://github.com/open-austin/budgetparty/files/880263/budgetParty-v2.2.sketch.zip)
 3. Tested the prototype at a Budget Game Nights and in a high school classroom.
 
