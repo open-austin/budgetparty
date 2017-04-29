@@ -45,7 +45,7 @@ You can read more on our [blog post](https://www.open-austin.org/blog/2017/02/08
 At this stage, we have:
 
 1. A working prototype (version 0.0) [austinbudget.party](http://austinbudget.party/).
-2. Designs for version 1.0 of Budget Party. See examples [here](https://github.com/open-austin/budgetparty/issues/74#issuecomment-284244078) and [here](https://github.com/open-austin/budgetparty/issues/73#issuecomment-284243962).
+2. Designs for version 1.0 of Budget Party. See examples [here](https://github.com/open-austin/budgetparty/issues/74#issuecomment-284244078) and [here](https://github.com/open-austin/budgetparty/issues/73#issuecomment-284243962). [Sketch File](https://github.com/open-austin/budgetparty/files/880263/budgetParty-v2.2.sketch.zip)
 3. Tested the prototype at a Budget Game Nights and in a high school classroom.
 
 **For the 1.0 release, we are working on:**
@@ -58,9 +58,9 @@ At this stage, we have:
 - New icons and [imagery](https://github.com/open-austin/budgetparty/issues/71).
 - Other [technical](https://github.com/open-austin/budgetparty/issues/43) improvements.
 
-Our target launch for v1.0 is April 7, 2017.
+Our target launch for v1.0 is May 7, 2017.
 
-We will present the game and curriculum to AISD high school departments chairs on April 11, 2017.
+We presented the game and curriculum to AISD high school departments chairs on April 11, 2017.
 
 Teachers will implement the instructional tools in May 2017.
 
