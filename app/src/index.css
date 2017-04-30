@@ -26,8 +26,9 @@
   text-align: center;
   padding: 20px 0;
   display: block; }
-  .auth-tab:last-child {
-    border-left: 2px solid #DFF7FE; }
+
+.auth-tab:last-child {
+  border-left: 2px solid #DFF7FE; }
 
 .auth-tab.inactive-tab {
   background-color: #F5F6F5; }
@@ -56,9 +57,10 @@
   margin: 30px auto 10px;
   display: block;
   width: 45%; }
-  .auth-form__button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.auth-form__button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .auth-form__skip {
   display: block;
@@ -79,11 +81,13 @@
   margin: auto;
   padding: 12px;
   color: #244665; }
-  .google-auth-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
-  .google-auth-button img {
-    margin: -5px 5px 0 0; }
+
+.google-auth-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
+
+.google-auth-button img {
+  margin: -5px 5px 0 0; }
 
 .intro {
   display: flex;
@@ -118,9 +122,10 @@
   padding: 12px;
   background-color: #00A3DE;
   border-color: #00A3DE; }
-  .intro__start-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.intro__start-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .intro__next-button {
   width: 180px;
@@ -136,9 +141,10 @@
   padding: 12px;
   background-color: #50D200;
   border-color: #50D200; }
-  .intro__next-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.intro__next-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .Navigation {
   padding-left: 15px;
@@ -179,9 +185,10 @@
 .Dashboard__body {
   padding-top: 65px;
   height: 100%; }
-  .Dashboard__body a {
-    color: #4D4D4D;
-    text-decoration: none; }
+
+.Dashboard__body a {
+  color: #4D4D4D;
+  text-decoration: none; }
 
 .PartyLevel {
   height: 140px;
@@ -306,9 +313,10 @@
   padding: 12px;
   background-color: #00A3DE;
   border-color: #00A3DE; }
-  .Service__next-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.Service__next-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .Service__review-buttons {
   display: flex;
@@ -332,9 +340,10 @@
   font-size: 14px;
   height: auto;
   min-width: auto; }
-  .Service__edit-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.Service__edit-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .Service__done-button {
   width: 180px;
@@ -354,9 +363,10 @@
   font-size: 14px;
   height: auto;
   min-width: auto; }
-  .Service__done-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.Service__done-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 html, body, #root,
 .container, .row,
