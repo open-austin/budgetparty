@@ -1,0 +1,19 @@
+.ProgressBar {
+  width: 100%;
+  height: 10px;
+  background-color: $green-incomplete;
+  width: 75%;
+  margin: auto;
+}
+
+.ProgressBar__complete {
+  background-color: $green-progress;
+  height: 10px;
+  display: block;
+}
+
+.ProgressBar__text {
+  margin-top: 10px;
+  color: $anothergrey;
+  display: block;
+}

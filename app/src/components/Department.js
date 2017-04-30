@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Navigation from './Navigation'
 import PartyLevelHeader from './PartyLevelHeader'
 import DepartmentChangeByPercentButtons from './Department/ChangeByPercentButtons'
+import ProgressBar from './ProgressBar'
 
 import comment from '../images/comment.svg'
 
@@ -12,6 +13,8 @@ const Department = (props) => {
   const { service_id, id } = props.match.params;
   const service = levels[Number(service_id)];
   const department = departments[Number(id) - 1];
+  const departmentIndex = service.departments.indexOf(Number(id)) + 1
+  const serviceDepartments = service.departments
 
   return (
     <div>
@@ -34,7 +37,7 @@ const Department = (props) => {
             Learn More
           </Link>
 
-          <DepartmentChangeByPercentButtons />
+          <DepartmentChangeByPercentButtons deptId={id} />
 
           <Link to={`/service/${service_id}/department/${id}/explain`}
             className="Department__link"
@@ -43,6 +46,7 @@ const Department = (props) => {
           </Link>
         </div>
 
+        <ProgressBar x={departmentIndex} y={serviceDepartments.length} />
 
       </div>
     </div>
