@@ -13,3 +13,7 @@
 .Department__desc {
   @include description-text;
 }
+
+.Department__link {
+  font-size: 16px;
+}

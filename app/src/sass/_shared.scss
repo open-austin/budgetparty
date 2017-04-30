@@ -1,4 +1,7 @@
 // Maybe this file gets renamed typography?
+a, .link {
+  color: $link-color;  
+}
 
 @mixin body {
   padding: 25px 40px;

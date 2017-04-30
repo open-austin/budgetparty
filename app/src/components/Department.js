@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import Navigation from './Navigation'
 import PartyLevelHeader from './PartyLevelHeader'
 
+import comment from '../images/comment.svg'
+
 const Department = (props) => {
   const { levels, departments } = props;
   const { service_id, id } = props.match.params;
@@ -22,12 +24,23 @@ const Department = (props) => {
 
         <div className="Department__body">
           <h1 className="Department__title">{department.name}</h1>
-          <p className="Department__desc">{department.description}</p>
+          <p className="Department__desc">
+            {department.description}
+          </p>
+          <Link to={`/service/${service_id}/department/${id}/learn-more`}
+            className="Department__link"
+          >
+            Learn More
+          </Link>
+
+
+          <Link to={`/service/${service_id}/department/${id}/explain`}
+            className="Department__link"
+          >
+            <img src={comment} alt="Comment bubble icon"/> Explain your spending
+          </Link>
         </div>
 
-        <Link to={`/service/${service_id}/department/${id}/learn-more`}>
-          Learn More
-        </Link>
 
       </div>
     </div>
