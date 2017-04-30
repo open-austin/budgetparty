@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import _ from 'underscore'
 
 import Navigation from './Navigation'
 import PartyLevelHeader from './PartyLevelHeader'
@@ -9,8 +10,11 @@ export default class Service extends Component {
   render () {
     let service = levels[this.props.match.params.id]
 
-    const { totalSections, completeSections } = service
-    const isComplete = totalSections - completeSections === 0
+    const departmentAmounts = service.departments.map(dept => {
+      return this.props.departments[dept - 1].amount
+    });
+
+    const isIncomplete = _.contains(departmentAmounts, null)
 
     return (
       <div>
@@ -26,7 +30,14 @@ export default class Service extends Component {
           </div>
 
           {
-            isComplete ?
+            isIncomplete
+              ?
+              <Link to={`/service/${service.index}/department/${service.departments[0]}`}
+                className="Service__next-button"
+              >
+                {(service.index + 1) < levels.length ? 'Start Budgeting' : 'Review Final Budget'}
+              </Link>
+              :
               <div className="Service__review-buttons">
                 <Link to={`/service/${service.index}/department/${service.departments[0]}`}
                   className="Service__edit-button">
@@ -37,12 +48,6 @@ export default class Service extends Component {
                   Done
                 </Link>
               </div>
-            :
-              <Link to={`/service/${service.index}/department/${service.departments[0]}`}
-                className="Service__next-button"
-              >
-                {(service.index + 1) < levels.length ? 'Start Budgeting' : 'Review Final Budget'}
-              </Link>
           }
 
         </div>
