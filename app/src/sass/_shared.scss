@@ -1,6 +1,6 @@
 // Maybe this file gets renamed typography?
 a, .link {
-  color: $link-color;  
+  color: $link-color;
 }
 
 @mixin body {
@@ -17,4 +17,12 @@ a, .link {
   font-size: 16px;
   text-align: center;
   line-height: 24px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }

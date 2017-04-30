@@ -7,6 +7,8 @@ import DepartmentChangeByPercentButtons from './Department/ChangeByPercentButton
 import ProgressBar from './ProgressBar'
 
 import comment from '../images/comment.svg'
+import backArrow from '../images/back_arrow.svg'
+import forwardArrow from '../images/forward_arrow.svg'
 
 const Department = (props) => {
   const { levels, departments } = props;
@@ -44,9 +46,25 @@ const Department = (props) => {
           >
             <img src={comment} alt="Comment bubble icon"/> Explain your spending
           </Link>
-        </div>
 
-        <ProgressBar x={departmentIndex} y={serviceDepartments.length} />
+          <div className="Department__review-buttons">
+            <Link to={departmentIndex > 1 ? `/service/${service.index}/department/${id - 1}` : `/service/${service.index}`}
+              className="Department__edit-button">
+              <div className="flexconatiner">
+                <img src={backArrow} alt="Back Arrow" className="left" style={{padding: "6px 0 0 10px"}}/>
+                <span className="right" style={{paddingRight: "20px"}}>Prev</span>
+              </div>
+
+            </Link>
+            <Link to={departmentIndex < serviceDepartments.length ? `/service/${service.index}/department/${Number(id) + 1}` : `/service/${service.index}`}
+              className="Department__done-button">
+              <span className="left" style={{paddingLeft: "20px"}}>Next</span>
+              <img src={forwardArrow} alt="Back Arrow" className="right" style={{padding: "6px 10px 0 0"}} />
+            </Link>
+          </div>
+
+          <ProgressBar x={departmentIndex} y={serviceDepartments.length} />
+        </div>
 
       </div>
     </div>
