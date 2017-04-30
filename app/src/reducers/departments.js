@@ -2,8 +2,18 @@ import InitialState from '../config/InitialState';
 
 function departments(state = InitialState.departments, action = {}) {
   switch (action.type) {
-    case "UPDATE_DEPARTMENT_STATUS":
-      return state;
+    case "CHANGE_DEPARTMENT_AMOUNT":
+      const deptId = action.departmentId - 1
+      const deptState = state[deptId]
+      const newDeptState = Object.assign({}, deptState,
+        deptState.amount = action.amount
+      )
+
+      const newState = Object.assign({}, state,
+        {[deptId]: newDeptState}
+      )
+
+      return newState
     default:
       return state;
 

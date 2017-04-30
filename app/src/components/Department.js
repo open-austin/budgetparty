@@ -17,6 +17,12 @@ const Department = (props) => {
   const department = departments[Number(id) - 1];
   const departmentIndex = service.departments.indexOf(Number(id)) + 1
   const serviceDepartments = service.departments
+  const nextLink = departmentIndex < serviceDepartments.length
+    ? `/service/${service.index}/department/${Number(id) + 1}`
+    : `/service/${service.index}`
+  const handleNextClick = dept => {
+    props.onClickNext(dept)
+  }
 
   return (
     <div>
@@ -56,7 +62,7 @@ const Department = (props) => {
               </div>
 
             </Link>
-            <Link to={departmentIndex < serviceDepartments.length ? `/service/${service.index}/department/${Number(id) + 1}` : `/service/${service.index}`}
+            <Link to={nextLink} onClick={handleNextClick.bind(this, department)}
               className="Department__done-button">
               <span className="left" style={{paddingLeft: "20px"}}>Next</span>
               <img src={forwardArrow} alt="Back Arrow" className="right" style={{padding: "6px 10px 0 0"}} />
