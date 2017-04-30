@@ -1,7 +1,16 @@
-.flexbox {
+@mixin flexconatiner {
   display: flex;
 }
 
-.flex {
+@mixin flex {
   flex: 1;
+}
+
+.flexbox,
+.flexcontainer {
+  @include flexconatiner;
+}
+
+.flex {
+  @include flex;
 }
