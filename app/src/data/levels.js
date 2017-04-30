@@ -3,10 +3,6 @@ const levels = [
      index: 0,
      title: "Welcome",
      image: "titled_logo.svg",
-     completeSections: 5,
-     totalSections: 5,
-     desc: "The departments housed under community services provide services including providing environmental health services, animal services, and family health services, and managing the City’s libraries, parks, and affordable housing efforts.",
-     departments: [],
      status: "complete",
    },
    {
@@ -44,7 +40,6 @@ const levels = [
      index: 5,
      title: "Budget Submission",
      image: "envelope.svg",
-     desc: "The departments housed under community services provide services including providing environmental health services, animal services, and family health services, and managing the City’s libraries, parks, and affordable housing efforts.",
      departments: [],
    },
 ]

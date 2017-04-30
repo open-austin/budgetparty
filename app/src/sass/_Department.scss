@@ -13,3 +13,37 @@
 .Department__desc {
   @include description-text;
 }
+
+.Department__link {
+  font-size: 16px;
+}
+
+.Department__review-buttons {
+  display: flex;
+  padding: 25px 15% 30px;
+}
+
+.Department__edit-button {
+  @include primary-button;
+  width: 95px;
+  font-size: 16px;
+  height: 36px;
+  min-width: auto;
+  padding: 6px;
+}
+
+.Department__done-button {
+  @include primary-button;
+  width: 95px;
+  font-size: 16px;
+  height: 36px;
+  min-width: auto;
+  padding: 6px;
+}
+
+.Department__button-content--icon {
+  padding: 6px 10px;
+}
+.Department__button-content--right {
+  padding-right: 25px;
+}

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 import TotalFundAvailable from './TotalFundAvailable'
@@ -21,7 +21,7 @@ const Navigation = (props) => {
     <nav className="Navigation">
       <div className="flexbox">
         {
-          props.showBack &&
+          showBack &&
             <Link to="/dashboard" className="flex">
               <img
                 src={back}
@@ -31,15 +31,15 @@ const Navigation = (props) => {
             </Link>
         }
         {
-          props.showUser &&
+          showUser &&
             <Link to="/user" className="flex">
               <img src={avatar} alt="User Account" className="Navigation__icon--left"/>
             </Link>
         }
-        { props.showTotalFunds && <TotalFundAvailable /> }
-        { props.showServiceFunds && <ServiceFundsAvailable /> }
+        { showTotalFunds && <TotalFundAvailable /> }
+        { showServiceFunds && <ServiceFundsAvailable /> }
         {
-          props.showClose &&
+          showClose &&
             <div className="Navigation__special-header">
               <div className="flex"></div>
               <div className="flex Navigation__center-text">{props.centerText}</div>

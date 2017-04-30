@@ -1,8 +1,18 @@
-.flexbox {
+.flexbox,
+.flexcontainer {
   display: flex; }
 
 .flex {
   flex: 1; }
+
+a, .link {
+  color: #00A3DE; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
 
 .home {
   background: #DFF7FE; }
@@ -26,9 +36,8 @@
   text-align: center;
   padding: 20px 0;
   display: block; }
-
-.auth-tab:last-child {
-  border-left: 2px solid #DFF7FE; }
+  .auth-tab:last-child {
+    border-left: 2px solid #DFF7FE; }
 
 .auth-tab.inactive-tab {
   background-color: #F5F6F5; }
@@ -41,6 +50,7 @@
   font-weight: normal; }
 
 .auth-form__button {
+  display: block;
   width: 180px;
   background-color: #ffffff;
   border-color: #4D4D4D;
@@ -57,10 +67,9 @@
   margin: 30px auto 10px;
   display: block;
   width: 45%; }
-
-.auth-form__button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .auth-form__button:hover {
+    color: #ffffff;
+    text-decoration: none; }
 
 .auth-form__skip {
   display: block;
@@ -69,6 +78,7 @@
   padding: 20px; }
 
 .google-auth-button {
+  display: block;
   width: 180px;
   background-color: #ffffff;
   border-color: #4D4D4D;
@@ -81,13 +91,11 @@
   margin: auto;
   padding: 12px;
   color: #244665; }
-
-.google-auth-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
-
-.google-auth-button img {
-  margin: -5px 5px 0 0; }
+  .google-auth-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
+  .google-auth-button img {
+    margin: -5px 5px 0 0; }
 
 .intro {
   display: flex;
@@ -109,6 +117,7 @@
   margin-bottom: 40px; }
 
 .intro__start-button {
+  display: block;
   width: 180px;
   background-color: #ffffff;
   border-color: #4D4D4D;
@@ -122,12 +131,12 @@
   padding: 12px;
   background-color: #00A3DE;
   border-color: #00A3DE; }
-
-.intro__start-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .intro__start-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
 
 .intro__next-button {
+  display: block;
   width: 180px;
   background-color: #ffffff;
   border-color: #4D4D4D;
@@ -141,13 +150,11 @@
   padding: 12px;
   background-color: #50D200;
   border-color: #50D200; }
-
-.intro__next-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .intro__next-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
 
 .Navigation {
-  padding-left: 15px;
   background-color: #DFF7FE;
   border: 1px solid transparent;
   position: fixed;
@@ -156,12 +163,29 @@
   z-index: 10;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px; }
 
-.Navigation__back {
+.Navigation__center-text {
+  text-align: center;
+  margin-top: 27px;
+  font-size: 10px;
+  text-transform: uppercase; }
+
+.Navigation__icon--left {
   flex-grow: 1;
+  margin: 20px;
+  cursor: pointer;
   justify-content: flex-start; }
 
-.Navigation__user-icon {
-  margin: 20px 0 20px 5px; }
+.Navigation__icon--right {
+  flex-grow: 1;
+  margin: 20px;
+  cursor: pointer;
+  float: right;
+  justify-content: flex-end; }
+
+.Navigation__special-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
 
 .TotalFundsAvailable {
   text-align: center;
@@ -185,10 +209,9 @@
 .Dashboard__body {
   padding-top: 65px;
   height: 100%; }
-
-.Dashboard__body a {
-  color: #4D4D4D;
-  text-decoration: none; }
+  .Dashboard__body a {
+    color: #4D4D4D;
+    text-decoration: none; }
 
 .PartyLevel {
   height: 140px;
@@ -300,6 +323,7 @@
   line-height: 24px; }
 
 .Service__next-button {
+  display: block;
   width: 180px;
   background-color: #ffffff;
   border-color: #4D4D4D;
@@ -313,16 +337,16 @@
   padding: 12px;
   background-color: #00A3DE;
   border-color: #00A3DE; }
-
-.Service__next-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .Service__next-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
 
 .Service__review-buttons {
   display: flex;
   padding: 0 15%; }
 
 .Service__edit-button {
+  display: block;
   width: 180px;
   background-color: #ffffff;
   border-color: #4D4D4D;
@@ -340,12 +364,12 @@
   font-size: 14px;
   height: auto;
   min-width: auto; }
-
-.Service__edit-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .Service__edit-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
 
 .Service__done-button {
+  display: block;
   width: 180px;
   background-color: #ffffff;
   border-color: #4D4D4D;
@@ -363,10 +387,249 @@
   font-size: 14px;
   height: auto;
   min-width: auto; }
+  .Service__done-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
 
-.Service__done-button:hover {
+.Department {
+  text-align: center; }
+
+.Department__body {
+  padding: 25px 40px; }
+
+.Department__title {
+  font-size: 26px;
+  text-align: center;
+  margin: 0 0 15px; }
+
+.Department__desc {
+  font-size: 16px;
+  text-align: center;
+  line-height: 24px; }
+
+.Department__link {
+  font-size: 16px; }
+
+.Department__review-buttons {
+  display: flex;
+  padding: 25px 15% 30px; }
+
+.Department__edit-button {
+  display: block;
+  width: 180px;
+  background-color: #ffffff;
+  border-color: #4D4D4D;
   color: #ffffff;
-  text-decoration: none; }
+  text-align: center;
+  height: 50px;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin: auto;
+  padding: 12px;
+  background-color: #00A3DE;
+  border-color: #00A3DE;
+  width: 95px;
+  font-size: 16px;
+  height: 36px;
+  min-width: auto;
+  padding: 6px; }
+  .Department__edit-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
+
+.Department__done-button {
+  display: block;
+  width: 180px;
+  background-color: #ffffff;
+  border-color: #4D4D4D;
+  color: #ffffff;
+  text-align: center;
+  height: 50px;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin: auto;
+  padding: 12px;
+  background-color: #00A3DE;
+  border-color: #00A3DE;
+  width: 95px;
+  font-size: 16px;
+  height: 36px;
+  min-width: auto;
+  padding: 6px; }
+  .Department__done-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
+
+.Department__button-content--icon {
+  padding: 6px 10px; }
+
+.Department__button-content--right {
+  padding-right: 25px; }
+
+.ChangeByPercentButtons__adjustButtons {
+  display: flex;
+  padding: 10px 0 0;
+  max-width: 300px;
+  margin: 20px auto 35px; }
+
+.ChangeByPercentButtons__tenMillionRed {
+  border-radius: 50%;
+  text-align: center;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding-top: 14px;
+  border-radius: 50%;
+  text-align: center;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid #D0011B;
+  color: #D0011B; }
+
+.ChangeByPercentButtons__tenMillionGreen {
+  border-radius: 50%;
+  text-align: center;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding-top: 14px;
+  border-radius: 50%;
+  text-align: center;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid #7ED321;
+  color: #7ED321; }
+
+.ChangeByPercentButtons__oneMillionRed {
+  border-radius: 50%;
+  text-align: center;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding-top: 14px;
+  border-radius: 50%;
+  text-align: center;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid #D0011B;
+  color: #D0011B; }
+
+.ChangeByPercentButtons__oneMillionGreen {
+  border-radius: 50%;
+  text-align: center;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding-top: 14px;
+  border-radius: 50%;
+  text-align: center;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid #7ED321;
+  color: #7ED321; }
+
+.ChangeByPercentButtons__hundredThousandRed {
+  border-radius: 50%;
+  text-align: center;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding-top: 14px;
+  border-radius: 50%;
+  text-align: center;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid #D0011B;
+  color: #D0011B; }
+
+.ChangeByPercentButtons__hundredThousandGreen {
+  border-radius: 50%;
+  text-align: center;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding-top: 14px;
+  border-radius: 50%;
+  text-align: center;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid #7ED321;
+  color: #7ED321; }
+
+.LearnMore {
+  padding-top: 65px;
+  text-align: center;
+  background: #EDFCFF;
+  height: 100%; }
+
+.LearnMore__body {
+  padding: 25px 40px; }
+
+.LearnMore__title {
+  font-size: 26px;
+  text-align: center;
+  margin: 0 0 15px; }
+
+.LearnMore__desc {
+  font-size: 16px;
+  text-align: center;
+  line-height: 24px; }
+
+.LearnMore__close-button {
+  display: block;
+  width: 180px;
+  background-color: #ffffff;
+  border-color: #4D4D4D;
+  color: #ffffff;
+  text-align: center;
+  height: 50px;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin: auto;
+  padding: 12px;
+  background-color: #00A3DE;
+  border-color: #00A3DE; }
+  .LearnMore__close-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
+
+.ProgressBar {
+  width: 100%;
+  height: 10px;
+  background-color: #E7FFDD;
+  width: 75%;
+  margin: auto; }
+
+.ProgressBar__complete {
+  background-color: #B8E986;
+  height: 10px;
+  display: block; }
+
+.ProgressBar__text {
+  margin-top: 10px;
+  color: #9B9B9B;
+  display: block; }
 
 html, body, #root,
 .container, .row,
