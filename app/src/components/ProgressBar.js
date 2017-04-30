@@ -11,7 +11,7 @@ const ProgressBar = (props) => {
           style={{ width: percent }}></span>
       </div>
       <span className="ProgressBar__text">
-        {`${x}/${y}`}
+        {`${x} / ${y}`}
       </span>
     </div>
   )
