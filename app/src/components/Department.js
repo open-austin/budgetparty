@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 import Navigation from './Navigation'
 import PartyLevelHeader from './PartyLevelHeader'
+import DepartmentChangeByPercentButtons from './Department/ChangeByPercentButtons'
 
 import comment from '../images/comment.svg'
 
@@ -33,6 +34,7 @@ const Department = (props) => {
             Learn More
           </Link>
 
+          <DepartmentChangeByPercentButtons />
 
           <Link to={`/service/${service_id}/department/${id}/explain`}
             className="Department__link"

@@ -1,0 +1,80 @@
+.ChangeByPercentButtons__adjustButtons {
+  display: flex;
+  padding: 10px 0 0;
+  max-width: 300px;
+  margin: 20px auto 35px;
+}
+
+@mixin adjustButton {
+  border-radius: 50%;
+  text-align: center;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+@mixin descreaseButton {
+  @include adjustButton;
+  border: 1px solid $red;
+  color: $red;
+}
+
+@mixin increaseButton {
+  @include adjustButton;
+  border: 1px solid $brightgreen;
+  color: $brightgreen;
+}
+
+@mixin largeBtn {
+  width: 100px;
+  height: 100px;
+  padding-top:40px;
+}
+
+@mixin mediumBtn {
+  width: 75px;
+  height: 75px;
+  padding-top: 25px;
+}
+
+@mixin smallBtn {
+  width: 50px;
+  height: 50px;
+  padding-top: 14px;
+}
+
+.ChangeByPercentButtons__tenMillionRed {
+  @include adjustButton;
+  @include smallBtn;
+  @include descreaseButton;
+}
+
+.ChangeByPercentButtons__tenMillionGreen {
+  @include adjustButton;
+  @include smallBtn;
+  @include increaseButton;
+}
+
+.ChangeByPercentButtons__oneMillionRed {
+  @include adjustButton;
+  @include smallBtn;
+  @include descreaseButton;
+}
+
+.ChangeByPercentButtons__oneMillionGreen {
+  @include adjustButton;
+  @include smallBtn;
+  @include increaseButton;
+}
+
+.ChangeByPercentButtons__hundredThousandRed {
+  @include adjustButton;
+  @include smallBtn;
+  @include descreaseButton;
+}
+
+.ChangeByPercentButtons__hundredThousandGreen {
+  @include adjustButton;
+  @include smallBtn;
+  @include increaseButton;
+}
