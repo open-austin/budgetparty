@@ -18,6 +18,7 @@
 @mixin Navigation__icon {
   flex-grow: 1;
   margin: 20px;
+  cursor: pointer;
 }
 
 .Navigation__center-text {
