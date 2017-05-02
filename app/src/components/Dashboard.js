@@ -7,17 +7,17 @@ export default class Dashboard extends Component {
   render () {
     const { services } = this.props;
 
-    const getServiceLink = (level) => {
+    const getServiceLink = (service) => {
       // The Welcome Level should go back to the Intro pages...
-      if (level.index === 0) return '/intro/1';
+      if (service.index === 0) return '/intro/1';
       // The Budget Submission will also have a special link...
-      else if (level.index + 1 >= services.length) return '/submit';
+      else if (service.index + 1 >= services.length) return '/submit';
       // Otherwise, continue at will for the other service buckets.
-      else return `/service/${level.index}`;
+      else return `/service/${service.index}`;
     };
 
-    const isLinkClickAllowed = (level) => {
-      return level.status && level.status !== "locked";
+    const isLinkClickAllowed = (service) => {
+      return service.status && service.status !== "locked";
     }
 
     return (
@@ -25,14 +25,15 @@ export default class Dashboard extends Component {
         <Navigation showUser showTotalFunds />
 
         <div className="Dashboard__body">
-          {services.map(level => {
-            return isLinkClickAllowed(level)
+          {services.map(service => {
+            if (service.index === 1) debugger
+            return isLinkClickAllowed(service)
               ?
-                <Link to={getServiceLink(level)} key={level.index}>
-                  <PartyLevel {...level} />
+                <Link to={getServiceLink(service)} key={service.index}>
+                  <PartyLevel {...service} />
                 </Link>
               :
-                <PartyLevel {...level} key={level.index} />
+                <PartyLevel {...service} key={service.index} />
           })}
         </div>
 
