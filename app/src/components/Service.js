@@ -7,15 +7,9 @@ import PartyLevelHeader from './PartyLevelHeader'
 
 export default class Service extends Component {
   render () {
-    let service = levels[this.props.match.params.id]
-
-    const departmentAmounts = service.departments.map(dept => {
-      return this.props.departments[dept - 1].amount
-    });
-
-    const isIncomplete = _.contains(departmentAmounts, null)
     const { services } = this.props
     const service = services[this.props.match.params.id]
+    const isIncomplete = service.status !== "complete"
 
     return (
       <div>
