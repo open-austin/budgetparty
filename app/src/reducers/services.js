@@ -5,13 +5,16 @@ function services(state = InitialState.services, action = {}) {
     case "UPDATE_SERVICE_STATUS":
       const { serviceIndex, status } = action
       const serviceState = state[serviceIndex]
+
       const newServiceState = Object.assign({}, serviceState,
         serviceState.status = status
       )
 
-      const newState = Object.assign({}, state,
-        {[serviceIndex]: newServiceState}
-      )
+      const newState = [
+        ...state.slice(0, serviceIndex),
+        serviceState,
+        ...state.slice(serviceIndex + 1)
+      ]
 
       return newState
     default:
