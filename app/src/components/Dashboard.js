@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom'
 
 export default class Dashboard extends Component {
   render () {
-    const { levels } = this.props;
+    const { services } = this.props;
 
     const getServiceLink = (level) => {
       // The Welcome Level should go back to the Intro pages...
       if (level.index === 0) return '/intro/1';
       // The Budget Submission will also have a special link...
-      else if (level.index + 1 >= levels.length) return '/submit';
+      else if (level.index + 1 >= services.length) return '/submit';
       // Otherwise, continue at will for the other service buckets.
       else return `/service/${level.index}`;
     };
@@ -25,7 +25,7 @@ export default class Dashboard extends Component {
         <Navigation showUser showTotalFunds />
 
         <div className="Dashboard__body">
-          {levels.map(level => {
+          {services.map(level => {
             return isLinkClickAllowed(level)
               ?
                 <Link to={getServiceLink(level)} key={level.index}>

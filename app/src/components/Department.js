@@ -11,9 +11,9 @@ import backArrow from '../images/back_arrow.svg'
 import forwardArrow from '../images/forward_arrow.svg'
 
 const Department = (props) => {
-  const { levels, departments } = props;
+  const { services, departments } = props;
   const { service_id, id } = props.match.params;
-  const service = levels[Number(service_id)];
+  const service = services[Number(service_id)];
   const department = departments[Number(id) - 1];
   const departmentIndex = service.departments.indexOf(Number(id)) + 1
   const serviceDepartments = service.departments

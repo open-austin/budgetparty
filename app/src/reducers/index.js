@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import levels from './levels';
+import services from './services';
 import departments from './departments';
 
 const rootReducer = combineReducers({
-  levels,
+  services,
   departments,
 });
 

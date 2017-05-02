@@ -1,7 +1,7 @@
-import levels from '../data/levels';
+import services from '../data/services';
 import departments from '../data/departments';
 
 export default {
-  levels,
+  services,
   departments,
 }

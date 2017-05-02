@@ -4,7 +4,6 @@ import _ from 'underscore'
 
 import Navigation from './Navigation'
 import PartyLevelHeader from './PartyLevelHeader'
-import levels from '../data/levels.js'
 
 export default class Service extends Component {
   render () {
@@ -15,6 +14,8 @@ export default class Service extends Component {
     });
 
     const isIncomplete = _.contains(departmentAmounts, null)
+    const { services } = this.props
+    const service = services[this.props.match.params.id]
 
     return (
       <div>
@@ -35,7 +36,7 @@ export default class Service extends Component {
               <Link to={`/service/${service.index}/department/${service.departments[0]}`}
                 className="Service__next-button"
               >
-                {(service.index + 1) < levels.length ? 'Start Budgeting' : 'Review Final Budget'}
+                {(service.index + 1) < services.length ? 'Start Budgeting' : 'Review Final Budget'}
               </Link>
               :
               <div className="Service__review-buttons">

@@ -1,11 +1,11 @@
 import { createStore } from 'redux';
 
-import levels from './data/levels';
+import services from './data/services';
 import departments from './data/departments';
 import rootReducer from './reducers/index';
 
 const defaultState = {
-  levels,
+  services,
   departments,
 }
 
