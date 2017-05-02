@@ -1,4 +1,4 @@
-const levels = [
+const services = [
    {
      index: 0,
      title: "Welcome",
@@ -44,4 +44,4 @@ const levels = [
    },
 ]
 
-export default levels;
+export default services;

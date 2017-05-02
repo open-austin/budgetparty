@@ -11,12 +11,20 @@ import backArrow from '../images/back_arrow.svg'
 import forwardArrow from '../images/forward_arrow.svg'
 
 const Department = (props) => {
-  const { levels, departments } = props;
+  const { services, departments } = props;
   const { service_id, id } = props.match.params;
-  const service = levels[Number(service_id)];
+  const service = services[Number(service_id)];
   const department = departments[Number(id) - 1];
   const departmentIndex = service.departments.indexOf(Number(id)) + 1
   const serviceDepartments = service.departments
+  const nextLink = departmentIndex < serviceDepartments.length
+    ? `/service/${service.index}/department/${Number(id) + 1}`
+    : `/service/${service.index}`
+
+  const handleNextClick = (dept, service, serviceDepts, departments, e) => {
+    // e.preventDefault()
+    props.onClickNext(dept, service, serviceDepts, departments)
+  }
 
   return (
     <div>
@@ -56,7 +64,7 @@ const Department = (props) => {
               </div>
 
             </Link>
-            <Link to={departmentIndex < serviceDepartments.length ? `/service/${service.index}/department/${Number(id) + 1}` : `/service/${service.index}`}
+            <Link to={nextLink} onClick={handleNextClick.bind(this, department, service, service.departments, departments)}
               className="Department__done-button">
               <span className="left" style={{paddingLeft: "20px"}}>Next</span>
               <img src={forwardArrow} alt="Back Arrow" className="right" style={{padding: "6px 10px 0 0"}} />

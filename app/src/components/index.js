@@ -9,7 +9,7 @@ import {
 import Home from './Home'
 import Intro from './Intro'
 import DashboardContainer from '../containers/Dashboard'
-import Service from './Service'
+import ServiceContainer from '../containers/Service'
 import DepartmentContainer from '../containers/Department'
 import LearnMore from './LearnMore'
 import User from './User'
@@ -73,7 +73,9 @@ export default class App extends Component {
                 />
                 <Route path='/intro/:id' render={props => <Intro {...props} />} />
                 <Route path='/dashboard' render={props => <DashboardContainer {...props}/>} />
-                <Route path='/service/:id' exact render={props => <Service {...props} />} />
+                <Route path='/service/:id' exact
+                  render={props => <ServiceContainer {...props} />}
+                />
                 <Route path='/service/:service_id/department/:id' exact
                   render={props => <DepartmentContainer {...props}/>}
                 />
