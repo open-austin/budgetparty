@@ -27,6 +27,12 @@ const mapDispatchToProps = (dispatch) => {
       } else {
         dispatch(updateServiceStatus(service.index, "complete"))
       }
+    },
+    onUpdateBudgetAmount: () => {
+      // TODO
+    },
+    resetBudgetAmount: () => {
+      // TODO
     }
   }
 }

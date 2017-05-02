@@ -12,6 +12,9 @@ const mapDispatchToProps = dispatch => {
     onReturnToDashboard: (service) => {
       const nextIndex = service.index + 1;
       dispatch(updateServiceStatus(nextIndex, 'ready'));
+    },
+    updateServiceSpending: () => {
+      // TODO
     }
   }
 }
