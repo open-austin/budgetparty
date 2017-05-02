@@ -5,49 +5,53 @@ import _ from 'underscore'
 import Navigation from './Navigation'
 import PartyLevelHeader from './PartyLevelHeader'
 
-export default class Service extends Component {
-  render () {
-    const { services } = this.props
-    const service = services[this.props.match.params.id]
-    const isIncomplete = service.status !== "complete"
+const Service = props => {
+  const handleReturnToDashboard = (service, e) => {
+    props.onReturnToDashboard(service)
+  }
 
-    return (
-      <div>
-        <Navigation service={service} showBack showTotalFunds showServiceFunds />
+  const { services } = props
+  const service = services[props.match.params.id]
+  const isIncomplete = service.status !== "complete"
 
-        <div className="Service">
+  return (
+    <div>
+      <Navigation service={service} showBack showTotalFunds showServiceFunds />
 
-          <PartyLevelHeader {...this.props} service={service} />
+      <div className="Service">
 
-          <div className="Service__body">
-            <h1 className="Service__title">{service.title}</h1>
-            <p className="Service__desc">{service.desc}</p>
-          </div>
+        <PartyLevelHeader {...props} service={service} />
 
-          {
-            isIncomplete
-              ?
-              <Link to={`/service/${service.index}/department/${service.departments[0]}`}
-                className="Service__next-button"
-              >
-                {(service.index + 1) < services.length ? 'Start Budgeting' : 'Review Final Budget'}
-              </Link>
-              :
-              <div className="Service__review-buttons">
-                <Link to={`/service/${service.index}/department/${service.departments[0]}`}
-                  className="Service__edit-button">
-                  Revise
-                </Link>
-                <Link to="/dashboard"
-                  className="Service__done-button">
-                  Done
-                </Link>
-              </div>
-          }
-
+        <div className="Service__body">
+          <h1 className="Service__title">{service.title}</h1>
+          <p className="Service__desc">{service.desc}</p>
         </div>
 
+        {
+          isIncomplete
+            ?
+            <Link to={`/service/${service.index}/department/${service.departments[0]}`}
+              className="Service__next-button"
+            >
+              {(service.index + 1) < services.length ? 'Start Budgeting' : 'Review Final Budget'}
+            </Link>
+            :
+            <div className="Service__review-buttons">
+              <Link to={`/service/${service.index}/department/${service.departments[0]}`}
+                className="Service__edit-button">
+                Revise
+              </Link>
+              <Link to="/dashboard" onClick={handleReturnToDashboard.bind(this, service)}
+                className="Service__done-button">
+                Done
+              </Link>
+            </div>
+        }
+
       </div>
-    )
-  }
+
+    </div>
+  )
 }
+
+export default Service

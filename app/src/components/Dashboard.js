@@ -26,7 +26,6 @@ export default class Dashboard extends Component {
 
         <div className="Dashboard__body">
           {services.map(service => {
-            if (service.index === 1) debugger
             return isLinkClickAllowed(service)
               ?
                 <Link to={getServiceLink(service)} key={service.index}>
