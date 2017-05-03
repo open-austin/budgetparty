@@ -25,7 +25,7 @@ const Department = (props) => {
     // e.preventDefault()
     props.onClickNext(dept, service, serviceDepts, departments)
   }
-  
+
   return (
     <div>
       <Navigation service={service} showBack showTotalFunds showServiceFunds />

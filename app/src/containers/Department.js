@@ -39,8 +39,8 @@ const mapDispatchToProps = (dispatch) => {
       const newAmount = (amount * percentChange / 100) + amount
       dispatch(changeDepartmentAmount(dept.deptId, newAmount))
     },
-    resetBudgetAmount: () => {
-      // TODO
+    resetBudgetAmount: (deptId) => {
+      dispatch(changeDepartmentAmount(deptId, null))
     }
   }
 }
