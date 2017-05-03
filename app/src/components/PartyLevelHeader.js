@@ -1,4 +1,5 @@
 import React from 'react'
+import accounting from 'accounting'
 
 const getSign = (number) => {
   if (number.percentChange > 0) {
@@ -22,6 +23,9 @@ const PartyLevelHeader = (props) => {
   const isComplete = totalSections - completeSections === 0
   const isInProgress = department && department.amount !== null
   const imgCssClass = isComplete ? 'PartyLevelHeader__image--complete' : 'PartyLevelHeader__image'
+  // TODO: The percentChange is imprecise. Blah... math
+  const amountChange = accounting.toFixed(((department.amount - department.lastYearAmount) / department.lastYearAmount), 3)
+  const percentChange = accounting.toFixed(amountChange * 100, 1)
 
   const handleReset = (deptId) => {
     props.resetBudgetAmount(deptId)
@@ -40,7 +44,7 @@ const PartyLevelHeader = (props) => {
           {serviceBudget}
         </h2>
         <span className="PartyLevelHeader__change">
-          {sign} {service.percentChange}% from Last Year
+          {sign} {percentChange}% from Last Year
         </span>
       </div>
     )
@@ -53,7 +57,7 @@ const PartyLevelHeader = (props) => {
     return (
       <div className="PartyLevelHeader__overlay--grey">
         <span className="PartyLevelHeader__change">
-          {sign} {department.percentChange}% from Last Year
+          {sign} {percentChange}% from Last Year
         </span>
         <h2 className="PartyLevelHeader__value">
           {departmentBudget}
