@@ -2,7 +2,7 @@ import _ from 'underscore'
 import { connect } from 'react-redux'
 import Department from '../components/Department'
 
-import { changeDepartmentAmount, updateDepartmentAmount } from '../actions/departments'
+import { changeDepartmentAmount } from '../actions/departments'
 import { updateServiceStatus } from '../actions/services'
 
 const mapStateToProps = (state) => {

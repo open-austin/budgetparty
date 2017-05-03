@@ -38,7 +38,6 @@ const renderFinishedOverlay = (service) => {
 const renderInProgressOverlay = (service, department) => {
   const departmentBudget = formatter.format(department.amount)
   const sign = getSign(department)
-  console.log(department)
 
   return (
     <div className="PartyLevelHeader__overlay--grey">
