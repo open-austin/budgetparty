@@ -2,7 +2,7 @@ import _ from 'underscore'
 import { connect } from 'react-redux'
 import Department from '../components/Department'
 
-import { changeDepartmentAmount } from '../actions/departments'
+import { changeDepartmentAmount, updateDepartmentAmount } from '../actions/departments'
 import { updateServiceStatus } from '../actions/services'
 
 const mapStateToProps = (state) => {
@@ -28,8 +28,16 @@ const mapDispatchToProps = (dispatch) => {
         dispatch(updateServiceStatus(service.index, "complete"))
       }
     },
-    onUpdateBudgetAmount: () => {
-      // TODO
+    onPercentChange: (dept, percentChange) => {
+      let amount
+      if (dept.amount === null) {
+        amount = dept.lastYearAmount;
+      } else {
+        amount = dept.amount
+      }
+
+      const newAmount = (amount * percentChange / 100) + amount
+      dispatch(changeDepartmentAmount(dept.deptId, newAmount))
     },
     resetBudgetAmount: () => {
       // TODO
