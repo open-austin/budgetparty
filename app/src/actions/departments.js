@@ -5,3 +5,11 @@ export function changeDepartmentAmount(departmentId, amount) {
     amount,
   };
 }
+
+export function updateExplainResponse(departmentId, text) {
+  return {
+    type: 'UPDATE_EXPLAIN_RESPONSE',
+    departmentId,
+    text
+  }
+}

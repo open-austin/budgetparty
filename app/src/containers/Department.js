@@ -27,6 +27,20 @@ const mapDispatchToProps = (dispatch) => {
       } else {
         dispatch(updateServiceStatus(service.index, "complete"))
       }
+    },
+    onPercentChange: (dept, percentChange) => {
+      let amount
+      if (dept.amount === null) {
+        amount = dept.lastYearAmount;
+      } else {
+        amount = dept.amount
+      }
+
+      const newAmount = (amount * percentChange / 100) + amount
+      dispatch(changeDepartmentAmount(dept.deptId, newAmount))
+    },
+    resetBudgetAmount: (deptId) => {
+      dispatch(changeDepartmentAmount(deptId, null))
     }
   }
 }

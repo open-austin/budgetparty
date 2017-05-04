@@ -47,7 +47,7 @@ const Department = (props) => {
             Learn More
           </Link>
 
-          <DepartmentChangeByPercentButtons deptId={id} />
+          <DepartmentChangeByPercentButtons deptId={id} {...props} />
 
           <Link to={`/service/${service_id}/department/${id}/explain`}
             className="Department__link"

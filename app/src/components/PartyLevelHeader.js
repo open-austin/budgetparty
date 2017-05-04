@@ -1,4 +1,5 @@
 import React from 'react'
+import accounting from 'accounting'
 
 const getSign = (number) => {
   if (number.percentChange > 0) {
@@ -16,56 +17,71 @@ const formatter = new Intl.NumberFormat('en-US', {
   maximumFractionDigits: 0,
 })
 
-const renderFinishedOverlay = (service) => {
-  const serviceBudget = formatter.format(service.serviceBudget)
-  const sign = getSign(service)
-
-  return (
-    <div className="PartyLevelHeader__overlay--green">
-      <span className="PartyLevelHeader__status">
-        You Did It!
-      </span>
-      <h2 className="PartyLevelHeader__value">
-        {serviceBudget}
-      </h2>
-      <span className="PartyLevelHeader__change">
-        {sign} {service.percentChange}% from Last Year
-      </span>
-    </div>
-  )
+const getPercentChange = department => {
+  // TODO: The percentChange is imprecise. Blah... math
+  // Maybe this is the next thing to try?
+  // https://github.com/MikeMcl/decimal.js/ or https://github.com/MikeMcl/big.js
+  const amountChange = accounting.toFixed(((department.amount - department.lastYearAmount) / department.lastYearAmount), 3)
+  return accounting.toFixed(amountChange * 100, 1)
 }
 
-const renderInProgressOverlay = (service, department) => {
-  const departmentBudget = formatter.format(department.amount)
-  const sign = getSign(department)
-  console.log(department)
-
-  return (
-    <div className="PartyLevelHeader__overlay--grey">
-      <span className="PartyLevelHeader__change">
-        {sign} {department.percentChange}% from Last Year
-      </span>
-      <h2 className="PartyLevelHeader__value">
-        {departmentBudget}
-      </h2>
-      <span className="PartyLevelHeader__reset">
-        Reset
-      </span>
-    </div>
-  )
+const getServicePercentChange = service => {
+  return service.amount || 5
 }
 
 const PartyLevelHeader = (props) => {
   const { service, department } = props
-  const { totalSections, completeSections } = service
-  const isComplete = totalSections - completeSections === 0
-  const isInProgress = department && department.amount !== null
 
-  const imgCssClass = isComplete ? 'PartyLevelHeader__image--complete' : 'PartyLevelHeader__image'
+  let isServiceComplete = department ? false : service.status === "complete"
+
+  const isInProgress = department && department.amount !== null
+  const imgCssClass = isServiceComplete ? 'PartyLevelHeader__image--complete' : 'PartyLevelHeader__image'
+
+  const handleReset = (deptId) => {
+    props.resetBudgetAmount(deptId)
+  }
+
+  const renderFinishedOverlay = (service) => {
+    const serviceBudget = formatter.format(service.serviceBudget)
+    const sign = getSign(service)
+
+    return (
+      <div className="PartyLevelHeader__overlay--green">
+        <span className="PartyLevelHeader__status">
+          You Did It!
+        </span>
+        <h2 className="PartyLevelHeader__value">
+          {serviceBudget}
+        </h2>
+        <span className="PartyLevelHeader__change">
+          {sign} {getServicePercentChange(service)}% from Last Year
+        </span>
+      </div>
+    )
+  }
+
+  const renderInProgressOverlay = (service, department) => {
+    const departmentBudget = formatter.format(department.amount)
+    const sign = getSign(department)
+
+    return (
+      <div className="PartyLevelHeader__overlay--grey">
+        <span className="PartyLevelHeader__change">
+          {sign} {getPercentChange(department)}% from Last Year
+        </span>
+        <h2 className="PartyLevelHeader__value">
+          {departmentBudget}
+        </h2>
+        <span className="PartyLevelHeader__reset" onClick={handleReset.bind(this, department.deptId)}>
+          Reset
+        </span>
+      </div>
+    )
+  }
 
   return (
     <div className="PartyLevelHeader">
-      { isComplete && renderFinishedOverlay(service) }
+      { isServiceComplete && renderFinishedOverlay(service, department) }
       { isInProgress && renderInProgressOverlay(service, department) }
       <img
         src={`/images/${service.image.split(".")[0]}_full.svg`}
