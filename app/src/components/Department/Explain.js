@@ -18,8 +18,7 @@ class Explain extends Component {
     const departmentId = this.props.match.params.id
     const department = departments[Number(departmentId) - 1]
 
-    debugger
-    console.log(this.state.value)
+    this.props.onSubmit(departmentId, this.state.value)
     this.props.history.push(`/service/${serviceId}/department/${departmentId}`)
   }
 
