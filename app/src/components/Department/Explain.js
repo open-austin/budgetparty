@@ -5,7 +5,8 @@ import Navigation from '../Navigation'
 class Explain extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    const departmentId = Number(this.props.match.params.id) - 1
+    this.state = {value: this.props.departments[departmentId].explainYourSpending || ''};
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -34,11 +35,12 @@ class Explain extends Component {
             <div className="Explain__body">
               <h1 className="Explain__title">Write a little something about your budget spending</h1>
               <textarea type="textarea" className="Explain__textarea"
+                value={this.state.value}
                 onChange={this.handleChange}
                 placeholder="Why did you increase or decrease this deparment's budget?"/>
             </div>
             <button type="submit" className="Explain__close-button">
-              Close
+              Done
             </button>
           </form>
         </div>

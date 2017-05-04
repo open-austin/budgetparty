@@ -18,11 +18,12 @@
 }
 
 .Explain__close-button {
-  @include primary-button;
+  @include secondary-button;
 }
 
 .Explain__textarea {
   width: 100%;
   margin: auto;
   height: 50vh;
+  padding: 20px;
 }
