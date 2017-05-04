@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 
 import Navigation from '../Navigation'
-import departments from '../../data/departments.js'
 
 class Explain extends Component {
   constructor(props) {
@@ -16,7 +14,6 @@ class Explain extends Component {
     e.preventDefault()
     const serviceId = this.props.match.params.service_id
     const departmentId = this.props.match.params.id
-    const department = departments[Number(departmentId) - 1]
 
     this.props.onSubmit(departmentId, this.state.value)
     this.props.history.push(`/service/${serviceId}/department/${departmentId}`)

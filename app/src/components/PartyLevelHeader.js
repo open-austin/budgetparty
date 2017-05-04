@@ -31,7 +31,6 @@ const getServicePercentChange = service => {
 
 const PartyLevelHeader = (props) => {
   const { service, department } = props
-  const { totalSections, completeSections } = service
 
   let isServiceComplete = department ? false : service.status === "complete"
 
