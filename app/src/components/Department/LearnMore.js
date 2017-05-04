@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import Navigation from './Navigation'
-import departments from '../data/departments.js'
+import Navigation from '../Navigation'
+import departments from '../../data/departments.js'
 
 const LearnMore = (props) => {
   const serviceId = props.match.params.service_id

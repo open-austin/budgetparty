@@ -1,0 +1,28 @@
+.Explain {
+  padding-top: $nav_height;
+  text-align: center;
+  background: $lightblue;
+  height: 100%;
+}
+
+.Explain__body {
+  @include body;
+}
+
+.Explain__title {
+  @include title-text;
+}
+
+.Explain__desc {
+  @include description-text;
+}
+
+.Explain__close-button {
+  @include primary-button;
+}
+
+.Explain__textarea {
+  width: 100%;
+  margin: auto;
+  height: 50vh;
+}

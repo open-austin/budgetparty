@@ -11,7 +11,8 @@ import Intro from './Intro'
 import DashboardContainer from '../containers/Dashboard'
 import ServiceContainer from '../containers/Service'
 import DepartmentContainer from '../containers/Department'
-import LearnMore from './LearnMore'
+import LearnMore from './Department/LearnMore'
+import Explain from './Department/Explain'
 import User from './User'
 import { firebaseAuth } from '../config/constants'
 import { logout } from '../helpers/auth'
@@ -81,6 +82,9 @@ export default class App extends Component {
                 />
                 <Route path='/service/:service_id/department/:id/learn-more'
                   render={props => <LearnMore {...props}/>}
+                />
+                <Route path='/service/:service_id/department/:id/explain'
+                  render={props => <Explain {...props}/>}
                 />
                 <Route path='/user' render={props => {
                   return <User isAuthed={this.state.authed}
