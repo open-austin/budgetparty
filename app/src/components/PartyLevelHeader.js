@@ -17,15 +17,26 @@ const formatter = new Intl.NumberFormat('en-US', {
   maximumFractionDigits: 0,
 })
 
+const getPercentChange = department => {
+  // TODO: The percentChange is imprecise. Blah... math
+  // Maybe this is the next thing to try?
+  // https://github.com/MikeMcl/decimal.js/ or https://github.com/MikeMcl/big.js
+  const amountChange = accounting.toFixed(((department.amount - department.lastYearAmount) / department.lastYearAmount), 3)
+  return accounting.toFixed(amountChange * 100, 1)
+}
+
+const getServicePercentChange = service => {
+  return service.amount || 5
+}
+
 const PartyLevelHeader = (props) => {
   const { service, department } = props
   const { totalSections, completeSections } = service
-  const isComplete = totalSections - completeSections === 0
+
+  let isServiceComplete = department ? false : service.status === "complete"
+
   const isInProgress = department && department.amount !== null
-  const imgCssClass = isComplete ? 'PartyLevelHeader__image--complete' : 'PartyLevelHeader__image'
-  // TODO: The percentChange is imprecise. Blah... math
-  const amountChange = accounting.toFixed(((department.amount - department.lastYearAmount) / department.lastYearAmount), 3)
-  const percentChange = accounting.toFixed(amountChange * 100, 1)
+  const imgCssClass = isServiceComplete ? 'PartyLevelHeader__image--complete' : 'PartyLevelHeader__image'
 
   const handleReset = (deptId) => {
     props.resetBudgetAmount(deptId)
@@ -44,7 +55,7 @@ const PartyLevelHeader = (props) => {
           {serviceBudget}
         </h2>
         <span className="PartyLevelHeader__change">
-          {sign} {percentChange}% from Last Year
+          {sign} {getServicePercentChange(service)}% from Last Year
         </span>
       </div>
     )
@@ -57,7 +68,7 @@ const PartyLevelHeader = (props) => {
     return (
       <div className="PartyLevelHeader__overlay--grey">
         <span className="PartyLevelHeader__change">
-          {sign} {percentChange}% from Last Year
+          {sign} {getPercentChange(department)}% from Last Year
         </span>
         <h2 className="PartyLevelHeader__value">
           {departmentBudget}
@@ -71,7 +82,7 @@ const PartyLevelHeader = (props) => {
 
   return (
     <div className="PartyLevelHeader">
-      { isComplete && renderFinishedOverlay(service) }
+      { isServiceComplete && renderFinishedOverlay(service, department) }
       { isInProgress && renderInProgressOverlay(service, department) }
       <img
         src={`/images/${service.image.split(".")[0]}_full.svg`}
