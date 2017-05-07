@@ -2,9 +2,10 @@ import _ from 'underscore'
 import InitialState from '../config/InitialState';
 
 function services(state = InitialState.services, action = {}) {
-  const { serviceIndex, status } = action
+  const { serviceIndex, status, departments } = action
   let newServiceState = state[serviceIndex]
   let newState = []
+  let service, departmentIds, departmentAmounts
 
   switch (action.type) {
     case "UPDATE_SERVICE_STATUS":
@@ -17,10 +18,9 @@ function services(state = InitialState.services, action = {}) {
       ]
       return newState
     case "RECALCULATE_SERVICE_AMOUNT":
-      const { serviceIndex, departments } = action
-      const service = state[serviceIndex]
-      const departmentIds = service.departments
-      const departmentAmounts = departmentIds.map((dept) => {
+      service = state[serviceIndex]
+      departmentIds = service.departments
+      departmentAmounts = departmentIds.map((dept) => {
         return departments[dept - 1].amount
       })
       const departmentLastYearAmounts = departmentIds.map((dept) => {
@@ -35,7 +35,6 @@ function services(state = InitialState.services, action = {}) {
 
       const delta = Math.round((sumOfDepartments - sumOfLastYearDepartments) / sumOfLastYearDepartments * 100)
 
-      console.log(departmentAmounts, sumOfDepartments)
       newServiceState.amount = sumOfDepartments
       newServiceState.percentChange = delta
 
@@ -46,6 +45,28 @@ function services(state = InitialState.services, action = {}) {
       ]
 
       return newState
+    case 'UPDATE_COMPLETED_DEPARTMENTS':
+      service = state[serviceIndex]
+      departmentIds = service.departments
+      departmentAmounts = departmentIds.map((dept) => {
+        return departments[dept - 1].amount
+      })
+      const updatedCount = _.reduce(departmentAmounts, (memo, num) => {
+        num !== null ? memo++ : memo
+        return memo
+      }, 0)
+
+      debugger
+
+      newServiceState.completeSections = updatedCount
+      newState = [
+        ...state.slice(0, service.index),
+        newServiceState,
+        ...state.slice(service.index + 1)
+      ]
+
+      return newState
+
     default:
       return state;
   }

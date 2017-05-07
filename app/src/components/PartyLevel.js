@@ -6,17 +6,19 @@ import lock from '../images/lock.svg'
 const PartyLevel = (props) => {
   const {
     status,
-    completeSections,
     percentChange,
     departments,
     title,
     image,
     index,
+    completeSections,
   } = props
 
   const isComplete = status === "complete"
-  const isInProgress = status === "ready"
-  const isLocked = !status || !status === "locked"
+  const isInProgress = status === "ready" || status === "in_progress"
+  const isLocked = !status || status === "locked" || status === null
+  const incrOrDecr = percentChange > 0 ? 'Increased' : 'Decreased'
+
   const partyLevelCssClass = isComplete ? 'PartyLevel--complete' : 'PartyLevel'
   const imgCssClass = isLocked ? 'PartyLevel__image--unstarted' : 'PartyLevel__image'
 
@@ -31,11 +33,19 @@ const PartyLevel = (props) => {
   }
 
   const progressMessage = (index) => {
+    let changeText
+
+    if (percentChange === 0) {
+      changeText = '0% Change in Funding'
+    } else {
+      changeText = `${incrOrDecr} Funding ${percentChange}%`
+    }
+
     if (isComplete){
-      if (index === 0) return
-      return `Increased Funding ${percentChange}%`
+      if (index === 0) return // Don't show anything for Welcome
+      return changeText
     } else if (isInProgress) {
-      return `${completeSections}/${departments.length} Complete`
+      return `${completeSections || 0}/${departments.length} Complete`
     }
   }
 
