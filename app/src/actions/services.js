@@ -5,3 +5,11 @@ export function updateServiceStatus(serviceIndex, status) {
     status,
   };
 }
+
+export function recalculateServiceAmount(serviceIndex, departments) {
+  return {
+    type: 'RECALCULATE_SERVICE_AMOUNT',
+    serviceIndex,
+    departments,
+  };
+}

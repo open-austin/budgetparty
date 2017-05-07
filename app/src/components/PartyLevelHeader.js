@@ -26,7 +26,7 @@ const getPercentChange = department => {
 }
 
 const getServicePercentChange = service => {
-  return service.amount || 5
+  return service.percentChange
 }
 
 const PartyLevelHeader = (props) => {
@@ -42,7 +42,7 @@ const PartyLevelHeader = (props) => {
   }
 
   const renderFinishedOverlay = (service) => {
-    const serviceBudget = formatter.format(service.serviceBudget)
+    const serviceAmount = formatter.format(service.amount)
     const sign = getSign(service)
 
     return (
@@ -51,10 +51,10 @@ const PartyLevelHeader = (props) => {
           You Did It!
         </span>
         <h2 className="PartyLevelHeader__value">
-          {serviceBudget}
+          {serviceAmount}
         </h2>
         <span className="PartyLevelHeader__change">
-          {sign} {getServicePercentChange(service)}% from Last Year
+          {sign} {Math.abs(service.percentChange)}% from Last Year
         </span>
       </div>
     )
