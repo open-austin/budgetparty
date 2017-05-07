@@ -3,6 +3,10 @@ a, .link {
   color: $link-color;
 }
 
+p {
+  white-space: pre-line;
+}
+
 @mixin body {
   padding: 25px 40px;
 }
