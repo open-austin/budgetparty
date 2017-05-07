@@ -13,3 +13,11 @@ export function recalculateServiceAmount(serviceIndex, departments) {
     departments,
   };
 }
+
+export function updateCompletedDepartments(serviceIndex, departments) {
+  return {
+    type: 'UPDATE_COMPLETED_DEPARTMENTS',
+    serviceIndex,
+    departments
+  }
+}

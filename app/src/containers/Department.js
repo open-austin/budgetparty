@@ -3,7 +3,11 @@ import { connect } from 'react-redux'
 import Department from '../components/Department'
 
 import { changeDepartmentAmount } from '../actions/departments'
-import { updateServiceStatus, recalculateServiceAmount } from '../actions/services'
+import {
+  updateServiceStatus,
+  recalculateServiceAmount,
+  updateCompletedDepartments,
+} from '../actions/services'
 
 const mapStateToProps = (state) => {
   return state
@@ -17,6 +21,7 @@ const mapDispatchToProps = (dispatch) => {
         console.log(`changeDepartmentAmount to ${department.lastYearAmount} for ${department.deptId}`)
       }
       dispatch(recalculateServiceAmount(service.index, departments))
+      dispatch(updateCompletedDepartments(service.index, departments))
 
       const departmentAmounts = serviceDepts.map(dept => {
         return departments[dept - 1].amount
