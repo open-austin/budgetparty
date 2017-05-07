@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Department from '../components/Department'
 
 import { changeDepartmentAmount } from '../actions/departments'
-import { updateServiceStatus } from '../actions/services'
+import { updateServiceStatus, recalculateServiceAmount } from '../actions/services'
 
 const mapStateToProps = (state) => {
   return state
@@ -12,9 +12,11 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onClickNext: (department, service, serviceDepts, departments) => {
-      if (!department.amount) {dispatch(
-        changeDepartmentAmount(department.deptId, department.lastYearAmount)
-      )}
+      if (!department.amount) {
+        dispatch(changeDepartmentAmount(department.deptId, department.lastYearAmount))
+        console.log(`changeDepartmentAmount to ${department.lastYearAmount} for ${department.deptId}`)
+      }
+      dispatch(recalculateServiceAmount(service.index, departments))
 
       const departmentAmounts = serviceDepts.map(dept => {
         return departments[dept - 1].amount
