@@ -17,9 +17,6 @@ const mapDispatchToProps = dispatch => {
     updateServiceSpending: () => {
       // TODO
     }
-    updateServiceSpending: () => {
-      // TODO
-    }
   }
 }
 

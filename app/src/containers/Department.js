@@ -49,13 +49,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(changeDepartmentAmount(deptId, null))
       // dispatch(recalculateServiceAmount(service.index, departments))
       console.log(`Reset changeDepartmentAmount to ${null} for ${deptId}`)
-    }
-    onUpdateBudgetAmount: () => {
-      // TODO
-    }
-    resetBudgetAmount: () => {
-      // TODO
-    }
+    },
   }
 }
 

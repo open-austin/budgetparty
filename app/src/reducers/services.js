@@ -44,7 +44,6 @@ function services(state = InitialState.services, action = {}) {
         newServiceState,
         ...state.slice(service.index + 1)
       ]
-      debugger
 
       return newState
     default:
