@@ -26,8 +26,10 @@ const mapDispatchToProps = (dispatch) => {
 
       if (hasProgress && isIncomplete) {
         dispatch(updateServiceStatus(service.index, "in_progress"))
+        console.log(`updateServiceStatus to "in_progress" for ${service.index}`)
       } else {
         dispatch(updateServiceStatus(service.index, "complete"))
+        console.log(`updateServiceStatus to "complete" for ${service.index}`)
       }
     },
     onPercentChange: (dept, percentChange) => {
@@ -40,9 +42,13 @@ const mapDispatchToProps = (dispatch) => {
 
       const newAmount = (amount * percentChange / 100) + amount
       dispatch(changeDepartmentAmount(dept.deptId, newAmount))
+      // dispatch(recalculateServiceAmount(service.index, departments))
+      console.log(`changeDepartmentAmount to ${newAmount} for ${dept.deptId}`)
     },
     resetBudgetAmount: (deptId) => {
       dispatch(changeDepartmentAmount(deptId, null))
+      // dispatch(recalculateServiceAmount(service.index, departments))
+      console.log(`Reset changeDepartmentAmount to ${null} for ${deptId}`)
     }
   }
 }

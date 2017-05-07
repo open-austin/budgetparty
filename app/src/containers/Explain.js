@@ -11,6 +11,7 @@ const mapDispatchToProps = dispatch => {
   return {
     onSubmit: (deptId, text) => {
       dispatch(updateExplainResponse(deptId, text))
+      console.log(`updateExplainResponse for ${deptId}: ${text}`)
     }
   }
 }
