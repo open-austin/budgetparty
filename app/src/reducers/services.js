@@ -56,8 +56,6 @@ function services(state = InitialState.services, action = {}) {
         return memo
       }, 0)
 
-      debugger
-
       newServiceState.completeSections = updatedCount
       newState = [
         ...state.slice(0, service.index),

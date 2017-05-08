@@ -1,35 +1,36 @@
 import React from 'react'
 
 const ChangeByPercentButtons = (props) => {
-  const { deptId, departments } = props
+  const { deptId, departments, services } = props
+  const serviceIndex = props.match.params.service_id
 
-  const handlePercentChange = (deptId, departments, percentChange) => {
-    props.onPercentChange(departments[deptId - 1], percentChange)
+  const handlePercentChange = (deptId, percentChange, departments, serviceIndex, services) => {
+    props.onPercentChange(departments[deptId - 1], percentChange, departments, serviceIndex, services)
   }
 
   return (
     <div className="ChangeByPercentButtons__adjustButtons">
       <div
         className="ChangeByPercentButtons__oneMillionRed"
-        onClick={handlePercentChange.bind(this, deptId, departments, -1)}
+        onClick={handlePercentChange.bind(this, deptId, -1, departments, serviceIndex, services)}
       >
         <p>-1%</p>
       </div>
       <div
         className="ChangeByPercentButtons__hundredThousandRed"
-        onClick={handlePercentChange.bind(this, deptId, departments, -.1)}
+        onClick={handlePercentChange.bind(this, deptId, -.1, departments, serviceIndex, services)}
       >
         <p>-0.1%</p>
       </div>
       <div
         className="ChangeByPercentButtons__hundredThousandGreen"
-        onClick={handlePercentChange.bind(this, deptId, departments, .1)}
+        onClick={handlePercentChange.bind(this, deptId, .1, departments, serviceIndex, services)}
       >
         <p>+0.1%</p>
       </div>
       <div
         className="ChangeByPercentButtons__oneMillionGreen"
-        onClick={handlePercentChange.bind(this, deptId, departments, 1)}
+        onClick={handlePercentChange.bind(this, deptId, 1, departments, serviceIndex, services)}
       >
         <p>+1%</p>
       </div>

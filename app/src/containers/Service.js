@@ -14,9 +14,6 @@ const mapDispatchToProps = dispatch => {
       dispatch(updateServiceStatus(nextIndex, 'ready'));
       console.log(`updateServiceStatus to "ready" for ${nextIndex}`);
     },
-    updateServiceSpending: () => {
-      // TODO
-    }
   }
 }
 
