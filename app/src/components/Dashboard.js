@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default class Dashboard extends Component {
   render () {
-    const { services } = this.props;
+    const { services, funds } = this.props;
 
     const getServiceLink = (service) => {
       // The Welcome Level should go back to the Intro pages...
@@ -22,7 +22,7 @@ export default class Dashboard extends Component {
 
     return (
       <div>
-        <Navigation showUser showTotalFunds />
+        <Navigation showUser showTotalFunds funds={funds} />
 
         <div className="Dashboard__body">
           {services.map(service => {

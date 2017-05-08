@@ -10,13 +10,13 @@ const Service = props => {
     props.onReturnToDashboard(service)
   }
 
-  const { services } = props
+  const { services, funds } = props
   const service = services[props.match.params.id]
   const isIncomplete = service.status !== "complete"
 
   return (
     <div>
-      <Navigation service={service} showBack showTotalFunds showServiceFunds />
+      <Navigation service={service} funds={funds} showBack showTotalFunds showServiceFunds />
 
       <div className="Service">
 

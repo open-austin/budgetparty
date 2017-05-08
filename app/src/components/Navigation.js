@@ -15,6 +15,8 @@ const Navigation = (props) => {
     showUser,
     showTotalFunds,
     showServiceFunds,
+    funds,
+    service
   } = props
 
   return (
@@ -36,8 +38,8 @@ const Navigation = (props) => {
               <img src={avatar} alt="User Account" className="Navigation__icon--left"/>
             </Link>
         }
-        { showTotalFunds && <TotalFundAvailable /> }
-        { showServiceFunds && <ServiceFundsAvailable /> }
+        { showTotalFunds && <TotalFundAvailable funds={funds}/> }
+        { showServiceFunds && <ServiceFundsAvailable service={service} /> }
         {
           showClose &&
             <div className="Navigation__special-header">

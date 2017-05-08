@@ -17,6 +17,7 @@ import User from './User'
 import { firebaseAuth } from '../config/constants'
 import { logout } from '../helpers/auth'
 import { Provider } from 'react-redux'
+import { IntlProvider } from 'react-intl'
 
 import store from '../store';
 
@@ -56,6 +57,7 @@ export default class App extends Component {
 
   render() {
     return this.state.loading === true ? <h1>Loading</h1> : (
+      <IntlProvider locale="en">
       <Provider store={store}>
         <Router>
           <div className="container">
@@ -97,6 +99,7 @@ export default class App extends Component {
           </div>
         </Router>
       </Provider>
+      </IntlProvider>
     );
   }
 }
