@@ -27,7 +27,7 @@ class Explain extends Component {
   render() {
     return (
       <div style={{height: '100%'}}>
-        <Navigation {...this.props} showClose="true" centerText="Explain Your Spending" />
+        <Navigation {...this.props} showClose centerText="Explain Your Spending" />
 
         <div className="Explain">
           <form onSubmit={this.handleSubmit}>

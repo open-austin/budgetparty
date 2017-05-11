@@ -71,7 +71,7 @@ Navigation.propTypes = {
     generalFund: PropTypes.number,
     servicesSum: PropTypes.number,
     generalFund2016: PropTypes.number,
-  }).isRequired,
+  }),
   service: PropTypes.shape({
     title: PropTypes.string,
     amount: PropTypes.number,
