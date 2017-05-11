@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import PropTypes from 'prop-types';
 import Navigation from '../Navigation'
 
 class Explain extends Component {
@@ -25,7 +25,6 @@ class Explain extends Component {
   }
 
   render() {
-
     return (
       <div style={{height: '100%'}}>
         <Navigation {...this.props} showClose="true" centerText="Explain Your Spending" />
@@ -50,3 +49,20 @@ class Explain extends Component {
 }
 
 export default Explain
+
+Explain.propTypes = {
+  match: PropTypes.shape({
+    isExact: PropTypes.bool,
+    params: PropTypes.shape({
+      id: PropTypes.string,
+      service_id: PropTypes.string,
+    }),
+    path: PropTypes.string,
+    url: PropTypes.string,
+  }).isRequired,
+  departments: PropTypes.arrayOf(
+    PropTypes.object,
+  ),
+  onSubmit: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
+};
