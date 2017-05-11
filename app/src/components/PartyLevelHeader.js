@@ -120,4 +120,5 @@ PartyLevelHeader.propTypes = {
     percentChange: PropTypes.number,
     url: PropTypes.string,
   }),
+  resetBudgetAmount: PropTypes.func,
 };
