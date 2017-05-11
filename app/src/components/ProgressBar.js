@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const ProgressBar = (props) => {
   const { x, y } = props
@@ -18,3 +19,8 @@ const ProgressBar = (props) => {
 }
 
 export default ProgressBar
+
+ProgressBar.propTypes = {
+  x: PropTypes.number.isRequired,
+  y: PropTypes.number.isRequired,
+};
