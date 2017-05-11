@@ -15,7 +15,7 @@ const getSign = (number) => {
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
-  // maximumFractionDigits: '100',
+  maximumFractionDigits: 0,
 })
 
 const getPercentChange = department => {
