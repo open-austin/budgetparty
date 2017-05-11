@@ -20,7 +20,9 @@
     "jsx-a11y/no-static-element-interactions": "off",
 		"react/jsx-no-bind": "off",
     "semi": "off",
-    "eol-last": "off"
+    "eol-last": "off",
+    "react/require-default-props": "warn",
+    "react/forbid-prop-types": "warn"
   },
   "parser": "babel-eslint"
 }

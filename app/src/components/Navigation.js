@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 import TotalFundAvailable from './TotalFundAvailable'
 import ServiceFundsAvailable from './ServiceFundsAvailable'
@@ -16,7 +17,7 @@ const Navigation = (props) => {
     showTotalFunds,
     showServiceFunds,
     funds,
-    service
+    service,
   } = props
 
   return (
@@ -59,3 +60,22 @@ const Navigation = (props) => {
 }
 
 export default Navigation
+
+Navigation.propTypes = {
+  showClose: PropTypes.bool,
+  showBack: PropTypes.bool,
+  showUser: PropTypes.bool,
+  showTotalFunds: PropTypes.bool,
+  showServiceFunds: PropTypes.bool,
+  funds: PropTypes.shape({
+    generalFund: PropTypes.number,
+    servicesSum: PropTypes.number,
+    generalFund2016: PropTypes.number,
+  }).isRequired,
+  service: PropTypes.shape({
+    title: PropTypes.string,
+    amount: PropTypes.number,
+  }),
+  history: PropTypes.object,
+  centerText: PropTypes.string,
+};
