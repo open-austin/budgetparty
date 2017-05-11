@@ -27,5 +27,8 @@ const TotalFundAvailable = (props) => {
 export default TotalFundAvailable
 
 TotalFundAvailable.propTypes = {
-  funds: PropTypes.number.isRequired,
+  funds: PropTypes.shape({
+    generalFund: PropTypes.number,
+    generalFundsRemaining: PropTypes.number,
+  }).isRequired,
 };
