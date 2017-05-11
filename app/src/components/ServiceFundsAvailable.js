@@ -1,5 +1,6 @@
 import React from 'react'
 import { FormattedNumber } from 'react-intl'
+import PropTypes from 'prop-types';
 
 const ServiceFundsAvailable = (props) => {
   const { title, amount } = props.service
@@ -13,9 +14,9 @@ const ServiceFundsAvailable = (props) => {
       <h4 className="TotalFundsAvailable__dollars">
         <FormattedNumber
           value={displayAmount}
-          style="currency"
+          style="currency" //eslint-disable-line
           currency="USD"
-          maximumFractionDigits="0"
+          maximumFractionDigits={0}
         />
       </h4>
     </div>
@@ -23,3 +24,10 @@ const ServiceFundsAvailable = (props) => {
 }
 
 export default ServiceFundsAvailable
+
+ServiceFundsAvailable.propTypes = {
+  service: PropTypes.shape({
+    title: PropTypes.string,
+    amount: PropTypes.number,
+  }).isRequired,
+};
