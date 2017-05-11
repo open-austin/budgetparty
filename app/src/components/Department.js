@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 import Navigation from './Navigation'
 import PartyLevelHeader from './PartyLevelHeader'
@@ -79,3 +80,23 @@ const Department = (props) => {
 }
 
 export default Department
+
+Department.propTypes = {
+  departments: PropTypes.arrayOf(PropTypes.object).isRequired,
+  services: PropTypes.arrayOf(PropTypes.object).isRequired,
+  funds: PropTypes.shape({
+    generalFund: PropTypes.number,
+    servicesSum: PropTypes.number,
+    generalFund2016: PropTypes.number,
+  }).isRequired,
+  match: PropTypes.shape({
+    path: PropTypes.string,
+    url: PropTypes.string,
+    isExact: PropTypes.bool,
+    params: PropTypes.shape({
+      id: PropTypes.string,
+      service_id: PropTypes.string,
+    }),
+  }).isRequired,
+  onClickNext: PropTypes.func.isRequired,
+};
