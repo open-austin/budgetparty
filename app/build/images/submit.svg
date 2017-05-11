@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="156px" height="149px" viewBox="0 0 156 149" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Clip 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="5.68434189e-14 115.666012 126.833764 115.666012 126.833764 -5.86197757e-14 5.68434189e-14 -5.86197757e-14"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.4">
+        <g id="services-path-view" transform="translate(-18.000000, -789.000000)">
+            <g id="budget-tab" transform="translate(0.000000, 784.000000)">
+                <g id="development-+-Development-Mask">
+                    <g id="envelope" transform="translate(95.704430, 79.623368) rotate(17.000000) translate(-95.704430, -79.623368) translate(32.204430, 21.623368)">
+                        <g id="Group-34" transform="translate(0.000000, -0.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-6"></g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
