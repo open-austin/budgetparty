@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router-dom'
 import Navigation from './Navigation'
 import PartyLevel from './PartyLevel'
-import { Link } from 'react-router-dom'
 
 export default class Dashboard extends Component {
   render () {
     const { services, funds } = this.props;
-    // console.log(services)
+    console.log('funds', funds)
 
     const getServiceLink = (service) => {
       // The Welcome Level should go back to the Intro pages...
@@ -41,3 +41,12 @@ export default class Dashboard extends Component {
     )
   }
 }
+
+Dashboard.propTypes = {
+  services: PropTypes.arrayOf(PropTypes.object),
+  funds: PropTypes.shape({
+    generalFund: PropTypes.number,
+    servicesSum: PropTypes.number,
+    generalFund2016: PropTypes.number,
+  }),
+};
