@@ -15,9 +15,9 @@ const TotalFundAvailable = (props) => {
       <h4 className="TotalFundsAvailable__dollars">
         <FormattedNumber
           value={remainingAmount}
-          style="currency"
+          style="currency" //eslint-disable-line
           currency="USD"
-          maximumFractionDigits="0"
+          maximumFractionDigits={0}
         />
       </h4>
     </div>
