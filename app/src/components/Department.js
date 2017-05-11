@@ -82,7 +82,10 @@ const Department = (props) => {
 export default Department
 
 Department.propTypes = {
-  departments: PropTypes.arrayOf(PropTypes.object).isRequired,
+  departments: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object,
+  ]).isRequired,
   services: PropTypes.arrayOf(PropTypes.object).isRequired,
   funds: PropTypes.shape({
     generalFund: PropTypes.number,

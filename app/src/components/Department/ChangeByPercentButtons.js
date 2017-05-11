@@ -43,7 +43,10 @@ export default ChangeByPercentButtons;
 
 ChangeByPercentButtons.propTypes = {
   deptId: PropTypes.string.isRequired,
-  departments: PropTypes.arrayOf(PropTypes.object).isRequired,
+  departments: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object,
+  ]).isRequired,
   services: PropTypes.arrayOf(PropTypes.object).isRequired,
   match: PropTypes.shape({
     path: PropTypes.string,
