@@ -1,39 +1,36 @@
 import React from 'react'
 import accounting from 'accounting'
 import PropTypes from 'prop-types';
+import { FormattedNumber } from 'react-intl'
 
 const getSign = (number) => {
+  let sign = ''
+
   if (number.percentChange > 0) {
-    return '+'
+    sign = '+'
   } else if (number.percentChange < 0) {
-    return '-'
-  } else {
-    return ''
+    sign = '-'
   }
+
+  return sign
 }
 
-const formatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-  maximumFractionDigits: 0,
-})
-
-const getPercentChange = department => {
+const getPercentChange = (department) => {
   // TODO: The percentChange is imprecise. Blah... math
   // Maybe this is the next thing to try?
   // https://github.com/MikeMcl/decimal.js/ or https://github.com/MikeMcl/big.js
-  const amountChange = accounting.toFixed(((department.amount - department.lastYearAmount) / department.lastYearAmount), 3)
+  const percentDelta = (
+    (department.amount - department.lastYearAmount)
+    / department.lastYearAmount
+  )
+  const amountChange = accounting.toFixed(percentDelta, 3)
   return accounting.toFixed(amountChange * 100, 1)
-}
-
-const getServicePercentChange = service => {
-  return service.percentChange
 }
 
 const PartyLevelHeader = (props) => {
   const { service, department } = props
 
-  let isServiceComplete = department ? false : service.status === "complete"
+  const isServiceComplete = department ? false : service.status === 'complete'
 
   const isInProgress = department && department.amount !== null
   const imgCssClass = isServiceComplete ? 'PartyLevelHeader__image--complete' : 'PartyLevelHeader__image'
@@ -42,9 +39,8 @@ const PartyLevelHeader = (props) => {
     props.resetBudgetAmount(deptId)
   }
 
-  const renderFinishedOverlay = (service) => {
-    const serviceAmount = formatter.format(service.amount)
-    const sign = getSign(service)
+  const renderFinishedOverlay = (serv) => {
+    const sign = getSign(serv)
 
     return (
       <div className="PartyLevelHeader__overlay--green">
@@ -52,7 +48,12 @@ const PartyLevelHeader = (props) => {
           You Did It!
         </span>
         <h2 className="PartyLevelHeader__value">
-          {serviceAmount}
+          <FormattedNumber
+            value={service.amount}
+            style="currency" //eslint-disable-line
+            currency="USD"
+            maximumFractionDigits={0}
+          />
         </h2>
         <span className="PartyLevelHeader__change">
           {sign} {Math.abs(service.percentChange)}% from Last Year
@@ -61,19 +62,23 @@ const PartyLevelHeader = (props) => {
     )
   }
 
-  const renderInProgressOverlay = (service, department) => {
-    const departmentBudget = formatter.format(department.amount)
-    const sign = getSign(department)
+  const renderInProgressOverlay = (dept) => {
+    const sign = getSign(dept)
 
     return (
       <div className="PartyLevelHeader__overlay--grey">
         <span className="PartyLevelHeader__change">
-          {sign} {getPercentChange(department)}% from Last Year
+          {sign} {getPercentChange(dept)}% from Last Year
         </span>
         <h2 className="PartyLevelHeader__value">
-          {departmentBudget}
+          <FormattedNumber
+            value={dept.amount}
+            style="currency"  //eslint-disable-line
+            currency="USD"
+            maximumFractionDigits={0}
+          />
         </h2>
-        <span className="PartyLevelHeader__reset" onClick={handleReset.bind(this, department.deptId)}>
+        <span className="PartyLevelHeader__reset" onClick={handleReset.bind(this, dept.deptId)}>
           Reset
         </span>
       </div>
@@ -85,7 +90,7 @@ const PartyLevelHeader = (props) => {
       { isServiceComplete && renderFinishedOverlay(service, department) }
       { isInProgress && renderInProgressOverlay(service, department) }
       <img
-        src={`/images/${service.image.split(".")[0]}_full.svg`}
+        src={`/images/${service.image.split('.')[0]}_full.svg`}
         alt={service.title}
         className={imgCssClass}
       />
