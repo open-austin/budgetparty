@@ -95,6 +95,7 @@ export default class App extends Component {
                 }} />
                 <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
               </Switch>
+                  <Route path="/submit" render={() => <h1>hi</h1>} />
             </div>
           </div>
         </Router>
