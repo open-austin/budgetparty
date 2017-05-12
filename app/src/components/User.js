@@ -17,18 +17,18 @@ const User = ({ ...props }) => {
           >
               Logout
             </button>
+          <Link to="/dashboard">
+            <button
+              style={{ display: 'block', marginTop: 100 }}
+            >
+              Go Back
+            </button>
+          </Link>
         </div>
         : <span>
           <Link to="/login" className="navbar-brand">Login</Link>
         </span>
         }
-      <Link to="/dashboard">
-        <button
-          style={{ display: 'block', marginTop: 100 }}
-        >
-          Go Back
-        </button>
-      </Link>
     </div>
   )
 }
