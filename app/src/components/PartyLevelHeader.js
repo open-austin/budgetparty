@@ -13,12 +13,6 @@ const getSign = (number) => {
   }
 }
 
-const formatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-  maximumFractionDigits: 0,
-})
-
 const getPercentChange = department => {
   // TODO: The percentChange is imprecise. Blah... math
   // Maybe this is the next thing to try?
