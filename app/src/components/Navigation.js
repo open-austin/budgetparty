@@ -21,6 +21,8 @@ const Navigation = (props) => {
     user,
   } = props
 
+  const { displayName, photoURL } = user
+
   return (
     <nav className="Navigation">
       <div className="flexbox">
@@ -36,9 +38,12 @@ const Navigation = (props) => {
         }
         {
           showUser &&
-            <Link to="/user" className="flex">
-              <img src={avatar} alt="User Account" className="Navigation__icon--left" />
-            </Link>
+            <div>
+              <Link to="/user" className="flex">
+                <img src={photoURL || avatar} alt="User Account" className="Navigation__icon--left" />
+              </Link>
+              <p>Welcome, {displayName}</p>
+            </div>
         }
         { showTotalFunds && <TotalFundAvailable funds={funds}/> }
         { showServiceFunds && <ServiceFundsAvailable service={service} /> }
@@ -79,4 +84,5 @@ Navigation.propTypes = {
   }),
   history: PropTypes.object,
   centerText: PropTypes.string,
+  user: PropTypes.object,
 };
