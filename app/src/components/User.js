@@ -4,13 +4,12 @@ import PropTypes from 'prop-types';
 
 const User = ({ ...props }) => {
   const { isAuthed, user, handleLogout } = props
-  const { displayName, email } = user
   return (
     <div>
       {isAuthed
       ?
         <div>
-          <h2>Logged in as {displayName || email}</h2>
+          <h2>Logged in as {user.displayName || user.email}</h2>
           <button
             style={{border: 'none', background: 'transparent'}}
             onClick={handleLogout}

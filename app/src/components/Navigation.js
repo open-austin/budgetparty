@@ -11,6 +11,8 @@ import close from '../images/close.svg'
 
 const Navigation = (props) => {
   const {
+    centerText,
+    history,
     showClose,
     showBack,
     showUser,
@@ -20,8 +22,6 @@ const Navigation = (props) => {
     service,
     user,
   } = props
-
-  const { displayName, photoURL, email } = user
 
   return (
     <nav className="Navigation">
@@ -38,25 +38,26 @@ const Navigation = (props) => {
         }
         {
           showUser &&
-            <div>
+            <div className="Navigation__user__container">
               <Link to="/user" className="flex">
-                <img src={photoURL || avatar} alt="User Account" className="Navigation__icon--left" />
+                <img src={user.photoURL || avatar} alt="User Account" className="Navigation__icon--left" />
               </Link>
-              <p>Welcome, {displayName || email}</p>
+              <p className="Navigation__welcome__mssg">Welcome, {user.displayName || user.email}</p>
             </div>
         }
-        { showTotalFunds && <TotalFundAvailable funds={funds}/> }
+        { showTotalFunds && <TotalFundAvailable funds={funds} /> }
         { showServiceFunds && <ServiceFundsAvailable service={service} /> }
         {
           showClose &&
             <div className="Navigation__special-header">
               <div className="flex"></div>
-              <div className="flex Navigation__center-text">{props.centerText}</div>
+              <div className="flex Navigation__center-text">{centerText}</div>
               <div className="flex">
-                <img src={close} alt="Go Back to Department"
+                <img
+                  src={close} alt="Go Back to Department"
                   className="Navigation__icon--right"
-                  onClick={props.history.goBack}>
-                </img>
+                  onClick={history.goBack}
+                />
               </div>
             </div>
         }
