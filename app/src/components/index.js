@@ -96,10 +96,13 @@ export default class App extends Component {
                   render={props => <ExplainContainer {...props} />}
                 />
                 <Route path='/user' render={props => {
-                  return <User isAuthed={authed}
+                  return <User 
+                    isAuthed={authed}
+                    user={user}
                     handleLogout={this.handleLogout.bind(this)}
                   />
-                }} />
+                }}
+                />
                 <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
               </Switch>
             </div>
