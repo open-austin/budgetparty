@@ -21,7 +21,7 @@ const Navigation = (props) => {
     user,
   } = props
 
-  const { displayName, photoURL } = user
+  const { displayName, photoURL, email } = user
 
   return (
     <nav className="Navigation">
@@ -42,7 +42,7 @@ const Navigation = (props) => {
               <Link to="/user" className="flex">
                 <img src={photoURL || avatar} alt="User Account" className="Navigation__icon--left" />
               </Link>
-              <p>Welcome, {displayName}</p>
+              <p>Welcome, {displayName || email}</p>
             </div>
         }
         { showTotalFunds && <TotalFundAvailable funds={funds}/> }
