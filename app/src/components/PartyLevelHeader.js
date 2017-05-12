@@ -4,31 +4,33 @@ import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl'
 
 const getSign = (number) => {
+  let sign = ''
+
   if (number.percentChange > 0) {
-    return '+'
+    sign = '+'
   } else if (number.percentChange < 0) {
-    return '-'
-  } else {
-    return ''
+    sign = '-'
   }
+
+  return sign
 }
 
-const getPercentChange = department => {
+const getPercentChange = (department) => {
   // TODO: The percentChange is imprecise. Blah... math
   // Maybe this is the next thing to try?
   // https://github.com/MikeMcl/decimal.js/ or https://github.com/MikeMcl/big.js
-  const amountChange = accounting.toFixed(((department.amount - department.lastYearAmount) / department.lastYearAmount), 3)
+  const percentDelta = (
+    (department.amount - department.lastYearAmount)
+    / department.lastYearAmount
+  )
+  const amountChange = accounting.toFixed(percentDelta, 3)
   return accounting.toFixed(amountChange * 100, 1)
-}
-
-const getServicePercentChange = service => {
-  return service.percentChange
 }
 
 const PartyLevelHeader = (props) => {
   const { service, department } = props
 
-  let isServiceComplete = department ? false : service.status === "complete"
+  const isServiceComplete = department ? false : service.status === 'complete'
 
   const isInProgress = department && department.amount !== null
   const imgCssClass = isServiceComplete ? 'PartyLevelHeader__image--complete' : 'PartyLevelHeader__image'
@@ -37,8 +39,8 @@ const PartyLevelHeader = (props) => {
     props.resetBudgetAmount(deptId)
   }
 
-  const renderFinishedOverlay = (service) => {
-    const sign = getSign(service)
+  const renderFinishedOverlay = (serv) => {
+    const sign = getSign(serv)
 
     return (
       <div className="PartyLevelHeader__overlay--green">
@@ -88,7 +90,7 @@ const PartyLevelHeader = (props) => {
       { isServiceComplete && renderFinishedOverlay(service, department) }
       { isInProgress && renderInProgressOverlay(service, department) }
       <img
-        src={`/images/${service.image.split(".")[0]}_full.svg`}
+        src={`/images/${service.image.split('.')[0]}_full.svg`}
         alt={service.title}
         className={imgCssClass}
       />
