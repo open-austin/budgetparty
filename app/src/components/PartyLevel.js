@@ -77,7 +77,7 @@ export default PartyLevel
 
 PartyLevel.propTypes = {
   status: PropTypes.string,
-  percentChange: PropTypes.string,
+  percentChange: PropTypes.number,
   departments: PropTypes.arrayOf(PropTypes.number),
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
