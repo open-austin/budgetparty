@@ -230,14 +230,18 @@ button::-moz-focus-inner {
 
 .Navigation__icon--left {
   flex-grow: 1;
+  height: 30px;
   margin: 20px;
   cursor: pointer;
+  width: 30px;
   justify-content: flex-start; }
 
 .Navigation__icon--right {
   flex-grow: 1;
+  height: 30px;
   margin: 20px;
   cursor: pointer;
+  width: 30px;
   float: right;
   justify-content: flex-end; }
 

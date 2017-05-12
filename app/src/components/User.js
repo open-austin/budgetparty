@@ -25,9 +25,13 @@ const User = ({ ...props }) => {
             </button>
           </Link>
         </div>
-        : <span>
-          <Link to="/login" className="navbar-brand">Login</Link>
-        </span>
+        :
+        <div>
+          <h2>You are not logged in. Click on the button below to log in.</h2>
+          <span>
+            <Link to="/login" className="navbar-brand">Login</Link>
+          </span>
+        </div>
         }
     </div>
   )

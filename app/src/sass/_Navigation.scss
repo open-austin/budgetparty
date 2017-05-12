@@ -17,8 +17,10 @@
 
 @mixin Navigation__icon {
   flex-grow: 1;
+  height: 30px;
   margin: 20px;
   cursor: pointer;
+  width: 30px;
 }
 
 .Navigation__center-text {
