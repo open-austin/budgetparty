@@ -41,18 +41,21 @@ export default class App extends Component {
     }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.removeListener = firebaseAuth().onAuthStateChanged(user => this.updateAuthState(user))
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.removeListener()
   }
 
   handleLogout() {
-    console.log("LOGGED OUT")
-    logout()
-    this.setState({authed: false})
+    const warning = confirm('Are you sure you want to log out?')
+    if (warning) {
+      console.log("LOGGED OUT")
+      logout()
+      this.setState({ authed: false })
+    }
   }
 
   render() {

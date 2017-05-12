@@ -36,7 +36,7 @@ const Navigation = (props) => {
         {
           showUser &&
             <Link to="/user" className="flex">
-              <img src={avatar} alt="User Account" className="Navigation__icon--left"/>
+              <img src={avatar} alt="User Account" className="Navigation__icon--left" />
             </Link>
         }
         { showTotalFunds && <TotalFundAvailable funds={funds}/> }
