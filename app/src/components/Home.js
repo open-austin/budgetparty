@@ -12,13 +12,13 @@ export default class Home extends Component {
 
   changeTab = (tab) => {
     this.setState({
-      activeTab: tab.id
+      activeTab: tab.id,
     });
   }
 
   tabList = [
-    { id: 0, 'text': 'Sign Up' },
-    { id: 1, 'text': 'Log in' },
+    { id: 0, text: 'Sign Up' },
+    { id: 1, text: 'Log in' },
   ]
 
   render () {

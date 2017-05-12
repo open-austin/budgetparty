@@ -28,7 +28,7 @@ export default class App extends Component {
   }
 
   updateAuthState(user) {
-    console.log(user);
+    console.log('user', user);
     if (user) {
       this.setState({
         authed: true,

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const ChangeByPercentButtons = (props) => {
   const { deptId, departments, services } = props
@@ -39,3 +40,22 @@ const ChangeByPercentButtons = (props) => {
 }
 
 export default ChangeByPercentButtons;
+
+ChangeByPercentButtons.propTypes = {
+  deptId: PropTypes.string.isRequired,
+  departments: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object,
+  ]).isRequired,
+  services: PropTypes.arrayOf(PropTypes.object).isRequired,
+  match: PropTypes.shape({
+    path: PropTypes.string,
+    url: PropTypes.string,
+    isExact: PropTypes.bool,
+    params: PropTypes.shape({
+      id: PropTypes.string,
+      service_id: PropTypes.string,
+    }),
+  }).isRequired,
+  onPercentChange: PropTypes.func.isRequired,
+};

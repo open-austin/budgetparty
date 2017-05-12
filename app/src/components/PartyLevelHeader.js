@@ -1,5 +1,6 @@
 import React from 'react'
 import accounting from 'accounting'
+import PropTypes from 'prop-types';
 
 const getSign = (number) => {
   if (number.percentChange > 0) {
@@ -93,3 +94,31 @@ const PartyLevelHeader = (props) => {
 }
 
 export default PartyLevelHeader
+
+PartyLevelHeader.propTypes = {
+  service: PropTypes.shape({
+    completeSections: PropTypes.number,
+    departments: PropTypes.arrayOf(
+      PropTypes.number,
+    ),
+    desc: PropTypes.string,
+    image: PropTypes.string,
+    index: PropTypes.number,
+    percentChange: PropTypes.number,
+    status: PropTypes.string,
+    title: PropTypes.string,
+  }).isRequired,
+  department: PropTypes.shape({
+    amount: PropTypes.number,
+    amount2015: PropTypes.number,
+    deptId: PropTypes.number,
+    description: PropTypes.string,
+    explainYourSpending: PropTypes.string,
+    lastYearAmount: PropTypes.number,
+    learnMore: PropTypes.string,
+    name: PropTypes.string,
+    percentChange: PropTypes.number,
+    url: PropTypes.string,
+  }),
+  resetBudgetAmount: PropTypes.func,
+};

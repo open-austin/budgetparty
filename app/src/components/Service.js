@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import _ from 'underscore'
+import PropTypes from 'prop-types';
 
 import Navigation from './Navigation'
 import PartyLevelHeader from './PartyLevelHeader'
@@ -55,3 +56,28 @@ const Service = props => {
 }
 
 export default Service
+
+Service.propTypes = {
+  services: PropTypes.arrayOf(
+    PropTypes.shape({
+      image: PropTypes.string,
+      index: PropTypes.number,
+      status: PropTypes.string,
+      title: PropTypes.string,
+    }),
+  ).isRequired,
+  onReturnToDashboard: PropTypes.func.isRequired,
+  funds: PropTypes.shape({
+    generalFund: PropTypes.number,
+    generalFund2016: PropTypes.number,
+    servicesSum: PropTypes.number,
+  }),
+  match: PropTypes.shape({
+    isExact: PropTypes.bool,
+    params: PropTypes.shape({
+      id: PropTypes.string,
+    }),
+    path: PropTypes.string,
+    url: PropTypes.string,
+  }),
+};

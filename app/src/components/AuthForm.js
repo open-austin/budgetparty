@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import { auth, login } from '../helpers/auth'
 
 function setErrorMsg(error) {
@@ -60,3 +61,7 @@ export default class AuthForm extends Component {
     )
   }
 }
+
+AuthForm.propTypes = {
+  action: PropTypes.string.isRequired,
+};
