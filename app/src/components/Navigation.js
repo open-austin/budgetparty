@@ -18,6 +18,7 @@ const Navigation = (props) => {
     showServiceFunds,
     funds,
     service,
+    user,
   } = props
 
   return (
