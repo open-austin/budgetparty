@@ -27,6 +27,14 @@ export default class App extends Component {
     loading: true,
   }
 
+  componentDidMount() {
+    this.removeListener = firebaseAuth().onAuthStateChanged(user => this.updateAuthState(user))
+  }
+
+  componentWillUnmount() {
+    this.removeListener()
+  }
+
   updateAuthState(user) {
     console.log('user', user);
     if (user) {
@@ -36,70 +44,63 @@ export default class App extends Component {
       })
     } else {
       this.setState({
-        loading: false
+        loading: false,
       })
     }
   }
 
-  componentDidMount () {
-    this.removeListener = firebaseAuth().onAuthStateChanged(user => this.updateAuthState(user))
-  }
-
-  componentWillUnmount () {
-    this.removeListener()
-  }
-
   handleLogout() {
-    console.log("LOGGED OUT")
+    console.log('LOGGED OUT')
     logout()
-    this.setState({authed: false})
+    this.setState({ authed: false })
   }
 
   render() {
     return this.state.loading === true ? <h1>Loading</h1> : (
       <IntlProvider locale="en">
-      <Provider store={store}>
-        <Router>
-          <div className="container">
-            <div className="row">
-              <Switch className="row">
-                <Route path='/' exact render={() => {
-                  return this.state.authed
-                  ? <Redirect to="/dashboard" />
-                  : <Redirect to="/login" />
-                }} />
-                <Route path='/login' isAuthed={this.state.authed} render={() => {
-                  return this.state.authed
-                  ? <Redirect to="/intro/1" />
-                  : <Home />
-                  }}
-                />
-                <Route path='/intro/:id' render={props => <Intro {...props} />} />
-                <Route path='/dashboard' render={props => <DashboardContainer {...props}/>} />
-                <Route path='/service/:id' exact
-                  render={props => <ServiceContainer {...props} />}
-                />
-                <Route path='/service/:service_id/department/:id' exact
-                  render={props => <DepartmentContainer {...props}/>}
-                />
-                <Route path='/service/:service_id/department/:id/learn-more'
-                  render={props => <LearnMore {...props}/>}
-                />
-                <Route path='/service/:service_id/department/:id/explain'
-                  render={props => <ExplainContainer {...props}/>}
-                />
-                <Route path='/user' render={props => {
-                  return <User isAuthed={this.state.authed}
-                    handleLogout={this.handleLogout.bind(this)}
+        <Provider store={store}>
+          <Router>
+            <div className="container">
+              <div className="row">
+                <Switch className="row">
+                  <Route
+                    path="/" exact render={() => {
+                      return this.state.authed
+                      ? <Redirect to="/dashboard" />
+                      : <Redirect to="/login" />
+                    }}
                   />
-                }} />
-                <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
-              </Switch>
+                  <Route
+                    path="/login" isAuthed={this.state.authed} render={() => {
+                      return this.state.authed
+                      ? <Redirect to="/intro/1" />
+                      : <Home />
+                    }}
+                  />
+                  <Route path="/intro/:id" render={props => <Intro {...props} />} />
+                  <Route path="/dashboard" render={props => <DashboardContainer {...props} />} />
+                  <Route path="/service/:id" exact render={props => <ServiceContainer {...props} />} />
+                  <Route path="/service/:service_id/department/:id" exact
+                    render={props => <DepartmentContainer {...props} />}
+                  />
+                  <Route path="/service/:service_id/department/:id/learn-more"
+                    render={props => <LearnMore {...props} />}
+                  />
+                  <Route path="/service/:service_id/department/:id/explain"
+                    render={props => <ExplainContainer {...props} />}
+                  />
+                  <Route path="/user" render={() => {
+                    return (<User isAuthed={this.state.authed}
+                      handleLogout={this.handleLogout.bind(this)}
+                    />)
+                  }} />
                   <Route path="/submit" render={() => <h1>hi</h1>} />
+                  <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
+                </Switch>
+              </div>
             </div>
-          </div>
-        </Router>
-      </Provider>
+          </Router>
+        </Provider>
       </IntlProvider>
     );
   }
