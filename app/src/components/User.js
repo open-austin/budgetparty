@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 export default class User extends Component {
   render () {
@@ -21,3 +22,8 @@ export default class User extends Component {
     )
   }
 }
+
+User.propTypes = {
+  isAuthed: PropTypes.bool.isRequired,
+  handleLogout: PropTypes.func.isRequired,
+};

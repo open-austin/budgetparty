@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 import Navigation from './Navigation'
 import PartyLevel from './PartyLevel'
-import { Link } from 'react-router-dom'
 
 export default class Dashboard extends Component {
   render () {
@@ -40,3 +41,12 @@ export default class Dashboard extends Component {
     )
   }
 }
+
+Dashboard.propTypes = {
+  services: PropTypes.arrayOf(PropTypes.object).isRequired,
+  funds: PropTypes.shape({
+    generalFund: PropTypes.number,
+    servicesSum: PropTypes.number,
+    generalFund2016: PropTypes.number,
+  }).isRequired,
+};

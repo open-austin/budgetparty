@@ -6,3 +6,4 @@ dist
 .publish
 npm-debug.log*
 src/**/*.css
+notes.md

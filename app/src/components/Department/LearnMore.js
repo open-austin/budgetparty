@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 import Navigation from '../Navigation'
 import departments from '../../data/departments.js'
@@ -11,7 +12,7 @@ const LearnMore = (props) => {
 
   return (
     <div style={{height: '100%'}}>
-      <Navigation {...props} showClose="true" centerText="Learn More" />
+      <Navigation {...props} showClose centerText="Learn More" />
 
       <div className="LearnMore">
         <div className="LearnMore__body">
@@ -30,3 +31,15 @@ const LearnMore = (props) => {
 }
 
 export default LearnMore
+
+LearnMore.propTypes = {
+  match: PropTypes.shape({
+    isExact: PropTypes.bool,
+    params: PropTypes.shape({
+      id: PropTypes.string,
+      service_id: PropTypes.string,
+    }),
+    path: PropTypes.string,
+    url: PropTypes.string,
+  }),
+};
