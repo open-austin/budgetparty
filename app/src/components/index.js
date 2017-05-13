@@ -26,6 +26,15 @@ export default class App extends Component {
   state = {
     authed: false,
     loading: true,
+    user: {},
+  }
+
+  componentDidMount() {
+    this.removeListener = firebaseAuth().onAuthStateChanged(user => this.updateAuthState(user))
+  }
+
+  componentWillUnmount() {
+    this.removeListener()
   }
 
   componentDidMount() {
@@ -37,11 +46,12 @@ export default class App extends Component {
   }
 
   updateAuthState(user) {
-    console.log('user', user);
+    console.log('user in index.js', user);
     if (user) {
       this.setState({
         authed: true,
         loading: false,
+        user,
       })
     } else {
       this.setState({
@@ -51,13 +61,17 @@ export default class App extends Component {
   }
 
   handleLogout() {
-    console.log('LOGGED OUT')
-    logout()
-    this.setState({ authed: false })
+    const warning = confirm('Are you sure you want to log out?')
+    if (warning) {
+      console.log("LOGGED OUT")
+      logout()
+      this.setState({ authed: false })
+    }
   }
 
   render() {
-    return this.state.loading === true ? <h1>Loading</h1> : (
+    const { authed, user, loading } = this.state
+    return loading === true ? <h1>Loading</h1> : (
       <IntlProvider locale="en">
         <Provider store={store}>
           <Router>

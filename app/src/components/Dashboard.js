@@ -6,7 +6,7 @@ import PartyLevel from './PartyLevel'
 
 export default class Dashboard extends Component {
   render () {
-    const { services, funds } = this.props;
+    const { services, funds, user } = this.props;
 
     const getServiceLink = (service) => {
       // The Welcome Level should go back to the Intro pages...
@@ -23,7 +23,7 @@ export default class Dashboard extends Component {
 
     return (
       <div>
-        <Navigation showUser showTotalFunds funds={funds} />
+        <Navigation showUser showTotalFunds funds={funds} user={user} />
 
         <div className="Dashboard__body">
           {services.map(service => {
@@ -49,4 +49,5 @@ Dashboard.propTypes = {
     servicesSum: PropTypes.number,
     generalFund2016: PropTypes.number,
   }).isRequired,
+  user: PropTypes.object,
 };
