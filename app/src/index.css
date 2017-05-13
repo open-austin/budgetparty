@@ -89,8 +89,9 @@ button::-moz-focus-inner {
   text-align: center;
   padding: 20px 0;
   display: block; }
-  .auth-tab:last-child {
-    border-left: 2px solid #DFF7FE; }
+
+.auth-tab:last-child {
+  border-left: 2px solid #DFF7FE; }
 
 .auth-tab.inactive-tab {
   background-color: #F5F6F5; }
@@ -120,9 +121,10 @@ button::-moz-focus-inner {
   margin: 30px auto 10px;
   display: block;
   width: 45%; }
-  .auth-form__button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.auth-form__button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .auth-form__skip {
   display: block;
@@ -144,11 +146,13 @@ button::-moz-focus-inner {
   margin: auto;
   padding: 12px;
   color: #244665; }
-  .google-auth-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
-  .google-auth-button img {
-    margin: -5px 5px 0 0; }
+
+.google-auth-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
+
+.google-auth-button img {
+  margin: -5px 5px 0 0; }
 
 .intro {
   display: flex;
@@ -184,9 +188,10 @@ button::-moz-focus-inner {
   padding: 12px;
   background-color: #00A3DE;
   border-color: #00A3DE; }
-  .intro__start-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.intro__start-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .intro__next-button {
   display: block;
@@ -203,9 +208,10 @@ button::-moz-focus-inner {
   padding: 12px;
   background-color: #50D200;
   border-color: #50D200; }
-  .intro__next-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.intro__next-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .Navigation {
   background-color: #DFF7FE;
@@ -262,9 +268,10 @@ button::-moz-focus-inner {
 .Dashboard__body {
   padding-top: 65px;
   height: 100%; }
-  .Dashboard__body a {
-    color: #4D4D4D;
-    text-decoration: none; }
+
+.Dashboard__body a {
+  color: #4D4D4D;
+  text-decoration: none; }
 
 .PartyLevel {
   height: 140px;
@@ -390,9 +397,10 @@ button::-moz-focus-inner {
   padding: 12px;
   background-color: #00A3DE;
   border-color: #00A3DE; }
-  .Service__next-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.Service__next-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .Service__review-buttons {
   display: flex;
@@ -417,9 +425,10 @@ button::-moz-focus-inner {
   font-size: 14px;
   height: auto;
   min-width: auto; }
-  .Service__edit-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.Service__edit-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .Service__done-button {
   display: block;
@@ -440,9 +449,10 @@ button::-moz-focus-inner {
   font-size: 14px;
   height: auto;
   min-width: auto; }
-  .Service__done-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.Service__done-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .Department {
   text-align: center; }
@@ -487,9 +497,10 @@ button::-moz-focus-inner {
   height: 36px;
   min-width: auto;
   padding: 6px; }
-  .Department__edit-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.Department__edit-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .Department__done-button {
   display: block;
@@ -511,9 +522,10 @@ button::-moz-focus-inner {
   height: 36px;
   min-width: auto;
   padding: 6px; }
-  .Department__done-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.Department__done-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .Department__button-content--icon {
   padding: 6px 10px; }
@@ -663,9 +675,10 @@ button::-moz-focus-inner {
   padding: 12px;
   background-color: #00A3DE;
   border-color: #00A3DE; }
-  .LearnMore__close-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.LearnMore__close-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .Explain {
   padding-top: 65px;
@@ -701,9 +714,10 @@ button::-moz-focus-inner {
   padding: 12px;
   background-color: #50D200;
   border-color: #50D200; }
-  .Explain__close-button:hover {
-    color: #ffffff;
-    text-decoration: none; }
+
+.Explain__close-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
 
 .Explain__textarea {
   width: 100%;
