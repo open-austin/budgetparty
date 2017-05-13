@@ -105,7 +105,7 @@ Once you have cloned this repo to you local machine, open the `app` directory in
 ### Development
 
 1. `npm start`
-2. visit http://0.0.0.0:1111/ in your browser
+2. visit http://localhost:3000 in your browser
 
 ### Build
 
