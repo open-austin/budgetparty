@@ -115,6 +115,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #00A3DE;
   border-color: #00A3DE;
   margin: 30px auto 10px;
@@ -143,6 +144,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   color: #244665; }
   .google-auth-button:hover {
     color: #ffffff;
@@ -182,6 +184,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #00A3DE;
   border-color: #00A3DE; }
   .intro__start-button:hover {
@@ -201,6 +204,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #50D200;
   border-color: #50D200; }
   .intro__next-button:hover {
@@ -388,6 +392,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #00A3DE;
   border-color: #00A3DE; }
   .Service__next-button:hover {
@@ -411,6 +416,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #00A3DE;
   border-color: #00A3DE;
   width: 95px;
@@ -434,6 +440,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #50D200;
   border-color: #50D200;
   width: 95px;
@@ -480,6 +487,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #00A3DE;
   border-color: #00A3DE;
   width: 95px;
@@ -504,6 +512,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #00A3DE;
   border-color: #00A3DE;
   width: 95px;
@@ -661,6 +670,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #00A3DE;
   border-color: #00A3DE; }
   .LearnMore__close-button:hover {
@@ -699,6 +709,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #50D200;
   border-color: #50D200; }
   .Explain__close-button:hover {
@@ -727,6 +738,29 @@ button::-moz-focus-inner {
   margin-top: 10px;
   color: #9B9B9B;
   display: block; }
+
+.Submit {
+  padding-top: 65px; }
+
+.Submit__next-button {
+  display: block;
+  width: 180px;
+  background-color: #ffffff;
+  border-color: #4D4D4D;
+  color: #ffffff;
+  text-align: center;
+  height: 50px;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin: auto;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #00A3DE;
+  border-color: #00A3DE; }
+  .Submit__next-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
 
 html, body, #root,
 .container, .row,
