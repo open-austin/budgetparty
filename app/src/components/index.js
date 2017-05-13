@@ -25,38 +25,44 @@ export default class App extends Component {
   state = {
     authed: false,
     loading: true,
+    user: {},
+  }
+
+  componentDidMount() {
+    this.removeListener = firebaseAuth().onAuthStateChanged(user => this.updateAuthState(user))
+  }
+
+  componentWillUnmount() {
+    this.removeListener()
   }
 
   updateAuthState(user) {
-    console.log('user', user);
+    console.log('user in index.js', user);
     if (user) {
       this.setState({
         authed: true,
         loading: false,
+        user,
       })
     } else {
       this.setState({
-        loading: false
+        loading: false,
       })
     }
   }
 
-  componentDidMount () {
-    this.removeListener = firebaseAuth().onAuthStateChanged(user => this.updateAuthState(user))
-  }
-
-  componentWillUnmount () {
-    this.removeListener()
-  }
-
   handleLogout() {
-    console.log("LOGGED OUT")
-    logout()
-    this.setState({authed: false})
+    const warning = confirm('Are you sure you want to log out?')
+    if (warning) {
+      console.log("LOGGED OUT")
+      logout()
+      this.setState({ authed: false })
+    }
   }
 
   render() {
-    return this.state.loading === true ? <h1>Loading</h1> : (
+    const { authed, user, loading } = this.state
+    return loading === true ? <h1>Loading</h1> : (
       <IntlProvider locale="en">
       <Provider store={store}>
         <Router>
@@ -64,35 +70,39 @@ export default class App extends Component {
             <div className="row">
               <Switch className="row">
                 <Route path='/' exact render={() => {
-                  return this.state.authed
+                  return authed
                   ? <Redirect to="/dashboard" />
                   : <Redirect to="/login" />
-                }} />
-                <Route path='/login' isAuthed={this.state.authed} render={() => {
-                  return this.state.authed
+                }}
+                />
+                <Route path='/login' isAuthed={authed} render={() => {
+                  return authed
                   ? <Redirect to="/intro/1" />
                   : <Home />
-                  }}
+                }}
                 />
                 <Route path='/intro/:id' render={props => <Intro {...props} />} />
-                <Route path='/dashboard' render={props => <DashboardContainer {...props}/>} />
+                <Route path='/dashboard' render={props => <DashboardContainer {...props} user={user} />} />
                 <Route path='/service/:id' exact
                   render={props => <ServiceContainer {...props} />}
                 />
                 <Route path='/service/:service_id/department/:id' exact
-                  render={props => <DepartmentContainer {...props}/>}
+                  render={props => <DepartmentContainer {...props} />}
                 />
                 <Route path='/service/:service_id/department/:id/learn-more'
-                  render={props => <LearnMore {...props}/>}
+                  render={props => <LearnMore {...props} />}
                 />
                 <Route path='/service/:service_id/department/:id/explain'
-                  render={props => <ExplainContainer {...props}/>}
+                  render={props => <ExplainContainer {...props} />}
                 />
                 <Route path='/user' render={props => {
-                  return <User isAuthed={this.state.authed}
+                  return <User 
+                    isAuthed={authed}
+                    user={user}
                     handleLogout={this.handleLogout.bind(this)}
                   />
-                }} />
+                }}
+                />
                 <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
               </Switch>
             </div>
