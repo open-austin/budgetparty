@@ -40,9 +40,9 @@ const Navigation = (props) => {
           showUser &&
             <div className="Navigation__user__container">
               <Link to="/user" className="flex">
-                <img src={user.photoURL || avatar} alt="User Account" className="Navigation__icon--left" />
+                <img src={user && user.photoURL || avatar} alt="User Account" className="Navigation__icon--left" />
               </Link>
-              <p className="Navigation__welcome__mssg">Welcome, {user.displayName || user.email}</p>
+              <p className="Navigation__welcome__mssg">{user && user.displayName || user && user.email}</p>
             </div>
         }
         { showTotalFunds && <TotalFundAvailable funds={funds} /> }
@@ -84,9 +84,5 @@ Navigation.propTypes = {
   }),
   history: PropTypes.object,
   centerText: PropTypes.string,
-<<<<<<< HEAD
-};
-=======
   user: PropTypes.object,
 };
->>>>>>> master
