@@ -81,7 +81,7 @@ const departments = [
   {
     name: 'Planning & Zoning',
     description: 'Planning, preservation and design services',
-    learnMore: 'The purpose of the Planning and Zoning Department is to provide planning and zoning, preservation, and design services to make Austin the most livable city in the country\n\n Planning & Zonins is responsible for long range planning, current planning (including historic preservation, annexation, and zoning), urban design services, and updates of the Land Development Code.\n\n Current Projects underway include: Imagine Austin, CodeNEXT, South Center Waterfront Initiative.',
+    learnMore: 'The purpose of the Planning and Zoning Department is to provide planning and zoning, preservation, and design services to make Austin the most livable city in the country\n\n Planning & Zoning is responsible for long range planning, current planning (including historic preservation, annexation, and zoning), urban design services, and updates of the Land Development Code.\n\n Current Projects underway include: Imagine Austin, CodeNEXT, South Center Waterfront Initiative.',
     url: 'https://data.austintexas.gov/stories/s/Planning-and-Zoning/se7h-anvc',
     amount: null,
     explainYourSpending: null,
@@ -150,7 +150,7 @@ const departments = [
   {
     name: 'Public Libraries',
     description: "Provide easy access to books and information for all ages",
-    learnMore: "The mission of the Austin Public Library is to provide easy access to books and information for all ages, through responsive professionals, engaging programs, and state of the art technology in a safe and friendly environment.\n\n Austin Public Libraries' mission is to provide easy access to books and information for all ages. The budget includes staffing and management of existing and planned library facilities.",
+    learnMore: "The mission of the Austin Public Library is to provide easy access to books and information for all ages, through responsive professionals, engaging programs, and state of the art technology in a safe and friendly environment.\n\n The budget includes staffing and management of existing and planned library facilities.",
     tradeoff: [
       {
         23676.5: '1 Librarian',
@@ -170,7 +170,7 @@ const departments = [
   {
     name: 'Social Service Contracts',
     description: 'Basic needs, health, youth services, community planning efforts, and more',
-    learnMore: 'The Social Services Contracts program includes funding for basic needs, behavioral health, child and youth services, HIV, homelessness, community planning efforts, and workforce development. We divided social service contracts from Health and Human Services Department to highlight the role these contracts play in the budget process.',
+    learnMore: 'The Social Services Contracts program includes funding for basic needs, behavioral health, child and youth services, HIV, homelessness, community planning efforts, and workforce development.\n\n  We divided social service contracts from Health and Human Services Department to highlight the role these contracts play in the budget process.',
     amount: null,
     explainYourSpending: null,
     lastYearAmount: 27572364,
@@ -248,7 +248,7 @@ const departments = [
   {
     name: 'Public Works',
     description: "Tasked with the physical construction and maintenance of the City's infrastructure",
-    learnMore: "The mission of the Public Works Department is to provide an integrated approach to the development, design, construction, and maintenance of the City's infrastructure systems that supports an exceptional quality of life in a sustainable manner.\n\n The four primary service areas are 1) street and bridge maintenance and repair; 2) Design and implementation of capital improvement projects; 3) The planning and construction of pedestrian amenities and the construction of bicycle facilities); 4) Implementation of the child safety program including school zone improvement projects crossing guards.",
+    learnMore: "The mission of the Public Works Department is to provide an integrated approach to the development, design, construction, and maintenance of the City's infrastructure systems that supports an exceptional quality of life in a sustainable manner.\n\n The four primary service areas are 1) street and bridge maintenance and repair; 2) Design and implementation of capital improvement projects; 3) The planning and construction of pedestrian amenities and the construction of bicycle facilities); 4) Implementation of the child safety program including school zone improvement projects.",
     url: 'https://data.austintexas.gov/stories/s/Public-Works/7vsj-iwwq',
     amount: null,
     explainYourSpending: null,
