@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Switch, Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
+import { FormattedNumber } from 'react-intl'
 
 import Navigation from './Navigation'
 
@@ -15,14 +16,23 @@ const Submit = (props) => {
 
       <div className="Submit">
         <Switch>
-          <Route path="/submit" exact render={() => {
+          <Route path="/submit" className="intro" exact render={() => {
             return (
               <div className="Submit__body">
-                <img src={'/images/submit.svg'} className="intro__img" alt="Envelope Icon" />
-                <h1 className="Submit__title">hi</h1>
-                <p className="Submit__desc">
-                  Your budget {funds.servicesSum}
-                </p>
+                <img src={'/images/submit.svg'} className="Submit__img" alt="Envelope Icon" />
+                <h3 className="Submit__title">Your budget</h3>
+                <span className="Submit__desc">
+                  <FormattedNumber
+                    value={funds.servicesSum}
+                    style="currency" //eslint-disable-line
+                    currency="USD"
+                    maximumFractionDigits={0}
+                  />
+                </span>
+                <span className="Submit__smallcaps">
+                  {/* TODO: This calculation of percent change in Sum */}
+                  +12% from last year
+                </span>
                 <Link to="/submit/review" className="Submit__next-button">
                   Review & Submit
                 </Link>
@@ -31,7 +41,7 @@ const Submit = (props) => {
           }} />
           <Route path="/submit/review" exact render={() => {
             return (
-              <h2>hi</h2>
+              <h2>h3</h2>
             )
           }} />
         </Switch>

@@ -23,6 +23,13 @@ p {
   line-height: 24px;
 }
 
+@mixin small-caps {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $link-color;
+  letter-spacing: 1.5px;
+}
+
 .left {
   float: left;
 }

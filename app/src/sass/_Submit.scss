@@ -2,6 +2,31 @@
   padding-top: $nav_height;
 }
 
+.Submit__body {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  background: $white;
+  text-align: center;
+}
+
 .Submit__next-button {
   @include primary-button;
+}
+
+.Submit__title {
+}
+
+.Submit__desc {
+  font-size: 40px;
+  padding: 20px 0;
+}
+
+.Submit__img {
+    margin: 35px 0 40px;
+}
+
+.Submit__smallcaps {
+  @include small-caps;
+  margin-bottom: 50px;
 }
