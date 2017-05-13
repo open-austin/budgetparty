@@ -2,7 +2,7 @@ const departments = [
   {
     name: 'Municipal Courts',
     description: 'The judicial branch of the City of Austin',
-    learnMore: 'Municipal court and Downtown Austin Community Court make up the judicial branch of the City of Austin local government. The court oversees cases of traffic, city ordinance, state code, and parking violations.',
+    learnMore: 'The mission of the Municipal Courts is to provide fair, efficient, and accountable service to the public by impartially administering justice so that the quality of life is enhanced.\n\n  Municipal court and Downtown Austin Community Court make up the judicial branch of the City of Austin local government. The court oversees cases of traffic, city ordinance, state code, and parking violations.',
     amount: null,
     explainYourSpending: null,
     lastYearAmount: 22103276,
@@ -23,7 +23,7 @@ const departments = [
   {
     name: 'Police',
     description: 'Law enforcement and crime prevention',
-    learnMore: 'Officers do everything from enforcing the law, to preventing crime, investigating crime, reaching out to the community and writing reports',
+    learnMore: 'The mission of the Police Department is to keep you, your family and our community safe.\n\n Officers do everything from enforcing the law, to preventing crime, investigating crime, reaching out to the community and writing reports',
     amount: null,
     explainYourSpending: null,
     lastYearAmount: 387399375,
@@ -40,7 +40,7 @@ const departments = [
   {
     name: 'Fire',
     description: 'Fire prevention and emergency response',
-    learnMore: 'The Austin Fire Department is committed to creating safer communities through prevention, preparedness and effective emergency response.',
+    learnMore: 'The Austin Fire Department is committed to creating safer communities through prevention, preparedness and effective emergency response.\n\n ',
     amount: null,
     explainYourSpending: null,
     lastYearAmount: 185889176,
@@ -61,7 +61,7 @@ const departments = [
   {
     name: 'Emergency Management Services',
     description: 'Emergency systems, communication, and response',
-    learnMore: 'EMS provides emergency communication services, ground and air emergency ambulance response, standby support, and special rescue services to the community.',
+    learnMore: 'The mission of Austin-Travis County EMS is to positively impact and change the lives of the people we serve through the personal commitment of each of our members to provide great patient and customer care, pursue excellence in everything we do, and show compassion to others every day.\n\n EMS provides emergency communication services, ground and air emergency ambulance response, standby support, and special rescue services to the community.',
     amount: null,
     explainYourSpending: null,
     lastYearAmount: 83870728,
@@ -81,7 +81,7 @@ const departments = [
   {
     name: 'Planning & Zoning',
     description: 'Planning, preservation and design services',
-    learnMore: 'The Purpose of the Planning and Zoning Department is to provide planning, preservation and design services. PAZ is responsible for long range planning, current planning (including historic preservation, annexation, and zoning), urban design services, and updates of the Land Development Code. Current Projects underway: Imagine Austin, CodeNEXT, South Center Waterfront Initiative.',
+    learnMore: 'The purpose of the Planning and Zoning Department is to provide planning and zoning, preservation, and design services to make Austin the most livable city in the country\n\n Planning & Zonins is responsible for long range planning, current planning (including historic preservation, annexation, and zoning), urban design services, and updates of the Land Development Code.\n\n Current Projects underway include: Imagine Austin, CodeNEXT, South Center Waterfront Initiative.',
     url: 'https://data.austintexas.gov/stories/s/Planning-and-Zoning/se7h-anvc',
     amount: null,
     explainYourSpending: null,
@@ -93,7 +93,7 @@ const departments = [
   {
     name: 'Development Services',
     description: 'Consolidates the process of land development permitting and assistance',
-    learnMore: 'Development services oversees the operations of the "one-stop shop". The purpose of the One Stop Shop is to consolidate the process of land development permitting and assistance into a single location. Building Plan Review is responsible for reviewing Residential and Commercial construction plans for compliance with the Land Development Code before building permits can be issued. The Building Inspection Division (BID) performs construction related inspections for residential and commercial buildings within the City limits, and electrical and plumbing services in the extra-territorial jurisdiction (ETJ).',
+    learnMore: 'Development Services provides a mix of services to foster economic vibrancy, ensure the quality of new development and preserve our natural resources.\n\n The mission of the Department is to provide comprehensive development review and inspection services to build a better Austin.\n\n  Building Plan Review is responsible for reviewing all construction plans for compliance with the Land Development Code before building permits can be issued. The Building Inspection Division performs construction related inspections for all buildings within the City limits, and electrical and plumbing services in the extra-territorial jurisdiction.',
     amount: null,
     explainYourSpending: null,
     lastYearAmount: 38405897,
@@ -113,7 +113,7 @@ const departments = [
   {
     name: 'Animal Services',
     description: 'Pet services, animal regulation, and shelter',
-    learnMore: 'The purpose of the Animal Services Office is to provide an array of animal control, health, and pet-owner services to the public in order to promote responsible pet ownership and humane treatment of animals. They provide food, water, shelter and veterinary care for lost or homeless animals. They enforce animal regulations including impoundment, quarantine and other rabies control services.',
+    learnMore: 'The mission of the Austin Animal Services Department is to prevent animal homelessness and promote humane, compassionate treatment of animals by enforcing regulations, providing a safety net for lost or homeless animals, and achieving live outcomes for at least 90% of sheltered pets.\n\n  The departments provides an array of animal control, health, and pet-owner services to the public. They provide food, water, shelter and veterinary care for lost or homeless animals. They enforce animal regulations including impoundment, quarantine and other rabies control services.',
     amount: null,
     explainYourSpending: null,
     lastYearAmount: 12946559,
@@ -133,7 +133,7 @@ const departments = [
   {
     name: 'Parks & Recreation',
     description: 'Providing, protecting, and preserving the city’s park system.',
-    learnMore: 'Parks and Recreation department is tasked with providing, protecting, and preserving the city’s park system',
+    learnMore: 'The mission of the Parks and Recreation Department is to provide, protect, and preserve a premier park system that promotes quality recreational, cultural, and outdoor experiences for Austins citizens and visitors.\n\n  Parks and Recreation department is tasked with providing, protecting, and preserving the city’s park system',
     amount: null,
     explainYourSpending: null,
     lastYearAmount: 80760700,
@@ -150,7 +150,7 @@ const departments = [
   {
     name: 'Public Libraries',
     description: "Provide easy access to books and information for all ages",
-    learnMore: "Austin Public Libraries' mission is to provide easy access to books and information for all ages. The budget includes staffing and management of existing and planned library facilities.",
+    learnMore: "The mission of the Austin Public Library is to provide easy access to books and information for all ages, through responsive professionals, engaging programs, and state of the art technology in a safe and friendly environment.\n\n Austin Public Libraries' mission is to provide easy access to books and information for all ages. The budget includes staffing and management of existing and planned library facilities.",
     tradeoff: [
       {
         23676.5: '1 Librarian',
@@ -211,7 +211,7 @@ const departments = [
   {
     name: 'Neighborhood Housing & Community Development',
     description: 'Housing, small business assistance, renter assistance, and more',
-    learnMore: 'The Neighborhood Housing & Community Development programs  include housing, small business assistance, renter assistance, and neighborhood and community revitalization.',
+    learnMore: 'The purpose of the Neighborhood Housing and Community Development Department is to provide housing, community and small business development services to benefit eligible residents so they can have access to livable neighborhoods and can increase their opportunities for self-sufficiency.\n\n The Neighborhood Housing & Community Development programs  include housing, small business assistance, renter assistance, and neighborhood and community revitalization.',
     amount: null,
     explainYourSpending: null,
     lastYearAmount: 5377245,
@@ -231,7 +231,7 @@ const departments = [
   {
     name: 'Transportation Department',
     description: 'Oversees traffic and parking programs and transportation planning efforts',
-    learnMore: 'In 2008, the City of Austin established the Austin Transportation Department to address the city’s sustained transportation and mobility needs. The department administers and oversees the city’s traffic and parking management programs and transportation planning efforts.',
+    learnMore: 'The mission of the Austin Transportation Department is to deliver a safe, reliable, and sustainable multi-modal transportation system that enhances the environment and economic strength of the region for our residents, businesses, and visitors while conducting business in a customer focused and transparent manner.\n\n The department administers and oversees the city’s traffic and parking management programs and transportation planning efforts.',
     url: 'https://data.austintexas.gov/stories/s/Austin-Transportation/7sy3-ec3s',
     amount: null,
     explainYourSpending: null,
@@ -248,7 +248,7 @@ const departments = [
   {
     name: 'Public Works',
     description: "Tasked with the physical construction and maintenance of the City's infrastructure",
-    learnMore: "Public Works Department is tasked with the physical construction and maintenance of the City's infrastructure. The four primary service areas are 1) street and bridge maintenance and repair; 2) Design and implementation of capital improvement projects; 3) Neighborhood connectivity activities  (i.e. the planning and construction of pedestrian amenities and the construction of bicycle facilities); 4) Implementation of the child safety program including school zone improvement projects and school zone crossing guards.",
+    learnMore: "The mission of the Public Works Department is to provide an integrated approach to the development, design, construction, and maintenance of the City's infrastructure systems that supports an exceptional quality of life in a sustainable manner.\n\n The four primary service areas are 1) street and bridge maintenance and repair; 2) Design and implementation of capital improvement projects; 3) The planning and construction of pedestrian amenities and the construction of bicycle facilities); 4) Implementation of the child safety program including school zone improvement projects crossing guards.",
     url: 'https://data.austintexas.gov/stories/s/Public-Works/7vsj-iwwq',
     amount: null,
     explainYourSpending: null,
