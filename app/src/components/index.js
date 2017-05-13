@@ -13,6 +13,7 @@ import ServiceContainer from '../containers/Service'
 import DepartmentContainer from '../containers/Department'
 import LearnMore from './Department/LearnMore'
 import ExplainContainer from '../containers/Explain'
+import SubmitContainer from '../containers/Submit'
 import User from './User'
 import { firebaseAuth } from '../config/constants'
 import { logout } from '../helpers/auth'
@@ -90,11 +91,15 @@ export default class App extends Component {
                     render={props => <ExplainContainer {...props} />}
                   />
                   <Route path="/user" render={() => {
-                    return (<User isAuthed={this.state.authed}
-                      handleLogout={this.handleLogout.bind(this)}
-                    />)
+                    return (
+                      <User isAuthed={this.state.authed}
+                        handleLogout={this.handleLogout.bind(this)}
+                      />
+                    )
                   }} />
-                  <Route path="/submit" render={() => <h1>hi</h1>} />
+                  <Route path="/submit" render={(props) => {
+                    return <SubmitContainer {...props} />
+                  }} />
                   <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
                 </Switch>
               </div>

@@ -1,0 +1,7 @@
+.Submit {
+  padding-top: $nav_height;
+}
+
+.Submit__next-button {
+  @include primary-button;
+}

@@ -36,15 +36,14 @@ const Navigation = (props) => {
         {
           showUser &&
             <Link to="/user" className="flex">
-              <img src={avatar} alt="User Account" className="Navigation__icon--left"/>
+              <img src={avatar} alt="User Account" className="Navigation__icon--left" />
             </Link>
         }
-        { showTotalFunds && <TotalFundAvailable funds={funds}/> }
+        { showTotalFunds && <TotalFundAvailable funds={funds} /> }
         { showServiceFunds && <ServiceFundsAvailable service={service} /> }
         {
           showClose &&
             <div className="Navigation__special-header">
-              <div className="flex"></div>
               <div className="flex Navigation__center-text">{props.centerText}</div>
               <div className="flex">
                 <img src={close} alt="Go Back to Department"
