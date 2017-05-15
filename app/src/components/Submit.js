@@ -23,15 +23,18 @@ const Submit = (props) => {
                 <h3 className="Submit__title">Your budget</h3>
                 <span className="Submit__desc">
                   <FormattedNumber
-                    value={funds.servicesSum}
+                    value={funds.sumOfServiceSpending}
                     style="currency" //eslint-disable-line
                     currency="USD"
                     maximumFractionDigits={0}
                   />
                 </span>
                 <span className="Submit__smallcaps">
-                  {/* TODO: This calculation of percent change in Sum */}
-                  +12% from last year
+                  <FormattedNumber
+                    value={funds.servicesSumPercentChange}
+                    maximumFractionDigits={1}
+                  />
+                  <span>% from last year</span>
                 </span>
                 <Link to="/submit/review" className="Submit__next-button">
                   Review & Submit

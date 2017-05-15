@@ -15,18 +15,6 @@ const getSign = (number) => {
   return sign
 }
 
-const getPercentChange = (department) => {
-  // TODO: The percentChange is imprecise. Blah... math
-  // Maybe this is the next thing to try?
-  // https://github.com/MikeMcl/decimal.js/ or https://github.com/MikeMcl/big.js
-  const percentDelta = (
-    (department.amount - department.lastYearAmount)
-    / department.lastYearAmount
-  )
-  const amountChange = accounting.toFixed(percentDelta, 3)
-  return accounting.toFixed(amountChange * 100, 1)
-}
-
 const PartyLevelHeader = (props) => {
   const { service, department } = props
 
@@ -68,7 +56,7 @@ const PartyLevelHeader = (props) => {
     return (
       <div className="PartyLevelHeader__overlay--grey">
         <span className="PartyLevelHeader__change">
-          {sign} {getPercentChange(dept)}% from Last Year
+          {sign} {dept.percentChange}% from Last Year
         </span>
         <h2 className="PartyLevelHeader__value">
           <FormattedNumber
@@ -88,7 +76,7 @@ const PartyLevelHeader = (props) => {
   return (
     <div className="PartyLevelHeader">
       { isServiceComplete && renderFinishedOverlay(service, department) }
-      { isInProgress && renderInProgressOverlay(service, department) }
+      { isInProgress && renderInProgressOverlay(department) }
       <img
         src={`/images/${service.image.split('.')[0]}_full.svg`}
         alt={service.title}

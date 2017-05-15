@@ -7,13 +7,18 @@ function departments(state = InitialState.departments, action = {}) {
   let newState
 
   switch (action.type) {
-    case "CHANGE_DEPARTMENT_AMOUNT":
-      newDeptState = Object.assign({}, deptState,
-        deptState.amount = action.amount
-      )
+    case 'CHANGE_DEPARTMENT_AMOUNT':
+      newDeptState = deptState
+      newDeptState.amount = action.amount
+      newDeptState.percentChange = (
+        (
+          (action.amount - deptState.lastYearAmount)
+          / deptState.lastYearAmount
+        ) * 100
+      ).toPrecision(2)
 
       newState = Object.assign({}, state,
-        {[deptId]: newDeptState}
+        { [deptId]: newDeptState },
       )
 
       return newState
@@ -24,7 +29,7 @@ function departments(state = InitialState.departments, action = {}) {
       newState = [
         ...state.slice(0, deptId),
         newDeptState,
-        ...state.slice(deptId + 1)
+        ...state.slice(deptId + 1),
       ]
 
       return newState
