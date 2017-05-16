@@ -2,12 +2,17 @@
   padding-top: $nav_height;
 }
 
-.Submit__body {
+.Submit__intro-body {
   display: flex;
   flex-direction: column;
   padding: 0 40px;
   background: $white;
   text-align: center;
+}
+
+.Submit__body {
+  text-align: center;
+  padding: 25px 40px;
 }
 
 .Submit__next-button {
@@ -29,4 +34,23 @@
 .Submit__smallcaps {
   @include small-caps;
   margin-bottom: 50px;
+}
+
+.Submit__review-header {
+  max-height: 205px;
+  overflow: hidden;
+  text-align: center;
+  background-color: $grey2;
+}
+
+.Submit__review-subtitle {
+  margin-bottom: 30px;
+}
+
+.Submit__review-service-list {
+  margin-bottom: 20px;
+}
+
+.Submit__revise-link {
+  padding: 10px 0 40px
 }

@@ -767,12 +767,16 @@ button::-moz-focus-inner {
 .Submit {
   padding-top: 65px; }
 
-.Submit__body {
+.Submit__intro-body {
   display: flex;
   flex-direction: column;
   padding: 0 40px;
   background: #ffffff;
   text-align: center; }
+
+.Submit__body {
+  text-align: center;
+  padding: 25px 40px; }
 
 .Submit__next-button {
   display: block;
@@ -808,6 +812,21 @@ button::-moz-focus-inner {
   color: #00A3DE;
   letter-spacing: 1.5px;
   margin-bottom: 50px; }
+
+.Submit__review-header {
+  max-height: 205px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #F8F8F8; }
+
+.Submit__review-subtitle {
+  margin-bottom: 30px; }
+
+.Submit__review-service-list {
+  margin-bottom: 20px; }
+
+.Submit__revise-link {
+  padding: 10px 0 40px; }
 
 html, body, #root,
 .container, .row,

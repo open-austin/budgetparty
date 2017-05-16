@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl'
 
 import Navigation from './Navigation'
+import ProgressBar from './ProgressBar'
 
-import envelopeIcon from '../images/submit.svg'
+import backArrow from '../images/back_arrow.svg'
+import forwardArrow from '../images/forward_arrow.svg'
 
 const Submit = (props) => {
   const { services, departments, funds } = props;
@@ -18,7 +20,7 @@ const Submit = (props) => {
         <Switch>
           <Route path="/submit" className="intro" exact render={() => {
             return (
-              <div className="Submit__body">
+              <div className="Submit__intro-body">
                 <img src={'/images/submit.svg'} className="Submit__img" alt="Envelope Icon" />
                 <h3 className="Submit__title">Your budget</h3>
                 <span className="Submit__desc">
@@ -44,8 +46,44 @@ const Submit = (props) => {
           }} />
           <Route path="/submit/review" exact render={() => {
             return (
-              <h2>h3</h2>
+              <div>
+                <div className="Submit__review-header">
+                  <img src="/images/submit.svg" alt="Envelope Icon" />
+                </div>
+                <div className="Submit__body">
+                  <h3>Review Your Budget Changes</h3>
+                  <h4 className="Submit__review-subtitle">You opted to increase overall service spending from last years amount.</h4>
+                  {services.map((service) => {
+                    const incDecText = service.percentChange > 0 ? 'Increased' : 'Decreased'
+
+                    // Skip Welcome & Submit
+                    if (service.index === 0 || service.index === 5) return
+
+                    return (
+                      <p className="Submit__review-service-list">{incDecText} {service.title} by {service.percentChange || 0}%</p>
+                    )
+                  })}
+                  <Link to="/dashboard" className="Submit__revise-link">Revise Service Spending</Link>
+                  <div className="Department__review-buttons">
+                    <Link to="/submit" className="Department__edit-button">
+                      <div className="flexconatiner">
+                        <img src={backArrow} alt="Back Arrow" className="left" style={{ padding: '6px 0 0 10px' }} />
+                        <span className="right" style={{ paddingRight: '20px' }}>Prev</span>
+                      </div>
+
+                    </Link>
+                    <Link to="/submit/save" className="Department__done-button">
+                      <span className="left" style={{ paddingLeft: '20px' }}>Next</span>
+                      <img src={forwardArrow} alt="Back Arrow" className="right" style={{ padding: '6px 10px 0 0' }} />
+                    </Link>
+                  </div>
+                  <ProgressBar x={2} y={3} />
+                </div>
+              </div>
             )
+          }} />
+          <Route path="/submit/save" exact render={() => {
+            return <h3>hi</h3>
           }} />
         </Switch>
       </div>
