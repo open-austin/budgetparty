@@ -25,42 +25,40 @@ const Navigation = (props) => {
 
   return (
     <nav className="Navigation">
-      <div className="flexbox">
-        {
-          showBack &&
-            <Link to="/dashboard" className="flex">
-              <img
-                src={back}
-                alt="Go Back to Dashboard"
-                className="Navigation__icon--left"
-              />
+      {
+        showBack &&
+          <Link to="/dashboard" className="flex">
+            <img
+              src={back}
+              alt="Go Back to Dashboard"
+              className="Navigation__icon--left"
+            />
+          </Link>
+      }
+      {
+        showUser &&
+          <div className="Navigation__user-container">
+            <Link to="/user" className="flex">
+              <img src={(user && user.photoURL) || avatar} alt="User Account" className="Navigation__icon--left" />
             </Link>
-        }
-        {
-          showUser &&
-            <div className="Navigation__user__container">
-              <Link to="/user" className="flex">
-                <img src={user && user.photoURL || avatar} alt="User Account" className="Navigation__icon--left" />
-              </Link>
-              <p className="Navigation__welcome__mssg">{user && user.displayName || user && user.email}</p>
+            <p className="Navigation__welcome-message">{(user && user.displayName) || (user && user.email)}</p>
+          </div>
+      }
+      { showTotalFunds && <TotalFundAvailable funds={funds} /> }
+      { showServiceFunds && <ServiceFundsAvailable service={service} /> }
+      {
+        showClose &&
+          <div className="Navigation__special-header">
+            <div className="flex Navigation__center-text">{centerText}</div>
+            <div className="flex">
+              <img
+                src={close} alt="Go Back to Department"
+                className="Navigation__icon--right"
+                onClick={history.goBack}
+              />
             </div>
-        }
-        { showTotalFunds && <TotalFundAvailable funds={funds} /> }
-        { showServiceFunds && <ServiceFundsAvailable service={service} /> }
-        {
-          showClose &&
-            <div className="Navigation__special-header">
-              <div className="flex Navigation__center-text">{centerText}</div>
-              <div className="flex">
-                <img
-                  src={close} alt="Go Back to Department"
-                  className="Navigation__icon--right"
-                  onClick={history.goBack}
-                />
-              </div>
-            </div>
-        }
-      </div>
+          </div>
+      }
     </nav>
   )
 }

@@ -2,7 +2,7 @@
 
 .Navigation {
   background-color: $skyblue;
-  border: 1px solid transparent;
+  display: flex;
   position: fixed;
   width: 100%;
   height: $nav_height;
@@ -46,11 +46,12 @@
   justify-content: space-between;
 }
 
-.Navigation__user__container {
+.Navigation__user-container {
   display: block;
   margin-right: 50px;
+  flex: 1;
 }
 
-.Navigation__welcome__mssg {
+.Navigation__welcome-message {
   display: inline-block;
 }
