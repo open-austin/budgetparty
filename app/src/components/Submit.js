@@ -64,7 +64,7 @@ const Submit = (props) => {
                     )
                   })}
                   <Link to="/dashboard" className="Submit__revise-link">Revise Service Spending</Link>
-                  <div className="Department__review-buttons">
+                  <div className="Submit__review-buttons">
                     <Link to="/submit" className="Department__edit-button">
                       <div className="flexconatiner">
                         <img src={backArrow} alt="Back Arrow" className="left" style={{ padding: '6px 0 0 10px' }} />
@@ -77,13 +77,37 @@ const Submit = (props) => {
                       <img src={forwardArrow} alt="Back Arrow" className="right" style={{ padding: '6px 10px 0 0' }} />
                     </Link>
                   </div>
-                  <ProgressBar x={2} y={3} />
+                  <ProgressBar x={1} y={2} />
                 </div>
               </div>
             )
           }} />
           <Route path="/submit/save" exact render={() => {
-            return <h3>hi</h3>
+            return (
+              <div className="Submit__save-body">
+                <h3 className="Submit__title">Save & Submit</h3>
+
+                <label htmlFor="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Name" />
+
+                <label htmlFor="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Email" />
+
+                <label htmlFor="comments">Comments</label>
+                <textarea type="textarea" name="comments" id="comments" placeholder="Comments" />
+
+                <div className="Submit__review-buttons">
+                  <Link to="/submit/review" className="Service__edit-button">
+                    Revise
+                  </Link>
+                  <Link to="/done" className="Service__done-button">
+                    Submit
+                  </Link>
+                </div>
+
+                <ProgressBar x={2} y={2} />
+              </div>
+            )
           }} />
         </Switch>
       </div>

@@ -15,6 +15,7 @@ import LearnMore from './Department/LearnMore'
 import ExplainContainer from '../containers/Explain'
 import SubmitContainer from '../containers/Submit'
 import User from './User'
+import Done from './Done'
 import { firebaseAuth } from '../config/constants'
 import { logout } from '../helpers/auth'
 import { Provider } from 'react-redux'
@@ -113,6 +114,9 @@ export default class App extends Component {
                   }} />
                   <Route path="/submit" render={(props) => {
                     return <SubmitContainer {...props} />
+                  }} />
+                  <Route path="/done" render={(props) => {
+                    return <Done {...props} />
                   }} />
                   <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
                 </Switch>
