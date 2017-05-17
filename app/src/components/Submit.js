@@ -57,10 +57,12 @@ const Submit = (props) => {
                     const incDecText = service.percentChange > 0 ? 'Increased' : 'Decreased'
 
                     // Skip Welcome & Submit
-                    if (service.index === 0 || service.index === 5) return
+                    if (service.index === 0 || service.index === 5) return false
 
                     return (
-                      <p className="Submit__review-service-list">{incDecText} {service.title} by {service.percentChange || 0}%</p>
+                      <p className="Submit__review-service-list" key={service.index}>
+                        {incDecText} {service.title} by {service.percentChange || 0}%
+                      </p>
                     )
                   })}
                   <Link to="/dashboard" className="Submit__revise-link">Revise Service Spending</Link>
@@ -120,6 +122,7 @@ export default Submit
 
 Submit.propTypes = {
   funds: PropTypes.shape({
-    servicesSum: PropTypes.number.isRequired,
+    sumOfServiceSpending: PropTypes.number.isRequired,
+    servicesSumPercentChange: PropTypes.number.isRequired,
   }).isRequired,
 }
