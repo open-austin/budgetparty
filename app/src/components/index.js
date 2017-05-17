@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Provider } from 'react-redux'
+import { IntlProvider } from 'react-intl'
 import 'bootstrap/dist/css/bootstrap.css'
 import {
   Route,
@@ -18,8 +20,6 @@ import User from './User'
 import Done from './Done'
 import { firebaseAuth } from '../config/constants'
 import { logout } from '../helpers/auth'
-import { Provider } from 'react-redux'
-import { IntlProvider } from 'react-intl'
 
 import store from '../store';
 
