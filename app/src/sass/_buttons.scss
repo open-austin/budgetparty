@@ -36,6 +36,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   &:hover {
     color: $white;
     text-decoration: none;
