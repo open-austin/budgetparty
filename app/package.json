@@ -11,10 +11,20 @@
     "underscore": "^1.8.3"
   },
   "dependencies": {
+    "accounting": "^0.4.1",
+    "babel-eslint": "^7.2.3",
     "bootstrap": "^3.3.7",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-nibble": "^3.1.2",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.0.0",
     "firebase": "^3.6.1",
+    "prop-types": "^15.5.9",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
+    "react-intl": "^2.3.0",
     "react-router-dom": "^4.0.0-beta.8"
   },
   "scripts": {
@@ -24,6 +34,8 @@
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src",
+    "nibble": "eslint-nibble src"
   }
 }

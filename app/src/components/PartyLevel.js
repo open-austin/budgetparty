@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import check from '../images/check.svg'
 import pencil from '../images/pencil.svg'
 import lock from '../images/lock.svg'
@@ -73,3 +74,13 @@ const PartyLevel = (props) => {
 }
 
 export default PartyLevel
+
+PartyLevel.propTypes = {
+  status: PropTypes.string,
+  percentChange: PropTypes.number,
+  departments: PropTypes.arrayOf(PropTypes.number),
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  index: PropTypes.number,
+  completeSections: PropTypes.number,
+};

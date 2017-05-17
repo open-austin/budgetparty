@@ -2,7 +2,7 @@
 
 .Navigation {
   background-color: $skyblue;
-  border: 1px solid transparent;
+  display: flex;
   position: fixed;
   width: 100%;
   height: $nav_height;
@@ -17,8 +17,10 @@
 
 @mixin Navigation__icon {
   flex-grow: 1;
+  height: 30px;
   margin: 20px;
   cursor: pointer;
+  width: 30px;
 }
 
 .Navigation__center-text {
@@ -42,4 +44,14 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.Navigation__user-container {
+  display: block;
+  margin-right: 50px;
+  flex: 1;
+}
+
+.Navigation__welcome-message {
+  display: inline-block;
 }

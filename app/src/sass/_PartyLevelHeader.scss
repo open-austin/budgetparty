@@ -48,8 +48,5 @@
 }
 
 .PartyLevelHeader__reset {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: $link-color;
-  letter-spacing: 1.5px;
+  @include small-caps;
 }

@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 import Navigation from './Navigation'
 import PartyLevel from './PartyLevel'
-import { Link } from 'react-router-dom'
 
 export default class Dashboard extends Component {
   render () {
-    const { services, funds } = this.props;
+    const { services, funds, user } = this.props;
 
     const getServiceLink = (service) => {
       // The Welcome Level should go back to the Intro pages...
@@ -22,7 +23,7 @@ export default class Dashboard extends Component {
 
     return (
       <div>
-        <Navigation showUser showTotalFunds funds={funds} />
+        <Navigation showUser showTotalFunds funds={funds} user={user} />
 
         <div className="Dashboard__body">
           {services.map(service => {
@@ -40,3 +41,13 @@ export default class Dashboard extends Component {
     )
   }
 }
+
+Dashboard.propTypes = {
+  services: PropTypes.arrayOf(PropTypes.object).isRequired,
+  funds: PropTypes.shape({
+    generalFund: PropTypes.number,
+    servicesSum: PropTypes.number,
+    generalFund2016: PropTypes.number,
+  }).isRequired,
+  user: PropTypes.object,
+};

@@ -1,0 +1,30 @@
+{
+  "extends": "airbnb",
+  "plugins": [
+    "react"
+  ],
+  "ecmafeatures":{
+    "arrowFunctions": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "react/prefer-stateless-function": "off",
+    "react/jsx-filename-extension": "off",
+    "arrow-body-style": "off",
+    "react/prop-types": "error",
+    "react/jsx-equals-spacing": "off",
+    "no-alert": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+		"react/jsx-no-bind": "off",
+    "semi": "off",
+    "eol-last": "off",
+    "react/require-default-props": "warn",
+    "react/forbid-prop-types": "warn",
+    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-first-prop-new-line": "off"
+  },
+  "parser": "babel-eslint"
+}

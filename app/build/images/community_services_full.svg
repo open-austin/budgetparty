@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="168px" height="140px" viewBox="0 0 168 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="service-overview" transform="translate(-102.000000, -64.000000)">
+            <g id="comm-serv-tab" transform="translate(0.000000, 64.000000)">
+                <g id="development-+-Development-Mask">
+                    <g id="icon" transform="translate(96.000000, -14.000000)">
+                        <g id="Layer_1">
+                            <g id="Group" transform="translate(91.866357, 85.083096) rotate(-10.000000) translate(-91.866357, -85.083096) translate(43.866357, 35.583096)" stroke="#000000" stroke-width="2.1334" stroke-linejoin="round">
+                                <polygon id="Shape" stroke-linecap="round" fill="#FF6F00" fill-rule="nonzero" points="56.120514 2.8060257 47.7024369 5.6120514 47.7024369 -8.52651283e-14"></polygon>
+                                <path d="M22.4482056,44.8964112 L22.4482056,36.4783341 C22.4482056,22.5651233 33.7892261,11.2241028 47.7024369,11.2241028 C61.6156477,11.2241028 72.9566682,22.5651233 72.9566682,36.4783341 L72.9566682,44.8964112" id="Shape" stroke-linecap="round" fill="#DCDCDC" fill-rule="nonzero"></path>
+                                <rect id="Rectangle-path" stroke-linecap="round" fill="#DCDCC8" fill-rule="nonzero" x="2.77111667e-13" y="44.8964112" width="95.4048738" height="8.4180771"></rect>
+                                <polyline id="Shape" fill="#DCDCC8" fill-rule="nonzero" points="3.90798505e-13 98.2108995 3.90798505e-13 81.3747453 95.4048738 81.3747453 95.4048738 98.2108995"></polyline>
+                                <path d="M-4.97379915e-13,96.9248044 L95.4048738,96.9248044" id="Shape" fill="#DCDCC8" fill-rule="nonzero"></path>
+                                <rect id="Rectangle-path" stroke-linecap="round" fill="#DCDCDC" fill-rule="nonzero" x="16.8361542" y="53.3144883" width="8.4180771" height="28.060257"></rect>
+                                <rect id="Rectangle-path" stroke-linecap="round" fill="#DCDCDC" fill-rule="nonzero" x="33.6723084" y="53.3144883" width="8.4180771" height="28.060257"></rect>
+                                <rect id="Rectangle-path" stroke-linecap="round" fill="#DCDCDC" fill-rule="nonzero" x="53.3144883" y="53.3144883" width="8.4180771" height="28.060257"></rect>
+                                <rect id="Rectangle-path" stroke-linecap="round" fill="#DCDCDC" fill-rule="nonzero" x="70.1506425" y="53.3144883" width="8.4180771" height="28.060257"></rect>
+                                <rect id="Rectangle-path" stroke-linecap="round" fill="#DCDCDC" fill-rule="nonzero" x="86.9867967" y="53.3144883" width="8.4180771" height="28.060257"></rect>
+                                <rect id="Rectangle-path" stroke-linecap="round" fill="#DCDCDC" fill-rule="nonzero" x="-2.38031816e-13" y="53.3144883" width="8.4180771" height="28.060257"></rect>
+                                <path d="M39.2843598,86.9867967 L56.120514,86.9867967" id="Shape" stroke-linecap="round"></path>
+                                <path d="M33.6723084,92.5988481 L61.7325654,92.5988481" id="Shape" stroke-linecap="round"></path>
+                                <path d="M22.4482056,33.6723084 L72.9566682,33.6723084" id="Shape" stroke-linecap="round"></path>
+                                <path d="M47.7024369,11.2241028 L47.7024369,-1.56319402e-13" id="Shape" stroke-linecap="round"></path>
+                            </g>
+                            <g id="Group" transform="translate(155.752220, 130.283936) rotate(14.000000) translate(-155.752220, -130.283936) translate(135.752220, 94.783936)">
+                                <rect id="Rectangle-path" stroke="#000000" stroke-width="2.1334" stroke-linecap="round" stroke-linejoin="round" fill="#D06600" fill-rule="nonzero" x="17.6" y="41.2" width="4.8" height="28.8"></rect>
+                                <polygon id="Shape" fill="#00BE77" fill-rule="nonzero" points="20 0.4 0.8 43.6 20 48.4 39.2 43.6"></polygon>
+                                <polygon id="Shape" fill="#00A177" fill-rule="nonzero" points="20 0.4 20 48.4 39.2 43.6"></polygon>
+                                <polygon id="Shape" stroke="#000000" stroke-width="2.1334" stroke-linecap="round" stroke-linejoin="round" points="20 0.4 0.8 43.6 20 48.4 39.2 43.6"></polygon>
+                            </g>
+                            <g id="Group" transform="translate(30.011719, 65.279297) rotate(15.000000) translate(-30.011719, -65.279297) translate(10.511719, 23.779297)">
+                                <rect id="Rectangle-path" stroke="#000000" stroke-width="2.1334" stroke-linecap="round" stroke-linejoin="round" fill="#D06600" fill-rule="nonzero" x="14.4" y="53.2" width="9.6" height="28.8"></rect>
+                                <polygon id="Shape" fill="#72BE77" fill-rule="nonzero" points="19.2 0.4 9.6 17.2 14.4 17.2 4.8 36.4 9.6 36.4 1.98951966e-13 55.6 19.2 58"></polygon>
+                                <polygon id="Shape" fill="#00BE77" fill-rule="nonzero" points="19.2 0.4 28.8 17.2 24 17.2 33.6 36.4 28.8 36.4 38.4 55.6 19.2 58"></polygon>
+                                <polygon id="Shape" stroke="#000000" stroke-width="2.1334" stroke-linecap="round" stroke-linejoin="round" points="19.2 0.4 9.6 17.2 14.4 17.2 4.8 36.4 9.6 36.4 1.98951966e-13 55.6 19.2 58 38.4 55.6 28.8 36.4 33.6 36.4 24 17.2 28.8 17.2"></polygon>
+                            </g>
+                            <g id="Group" transform="translate(141.734375, 35.345703) rotate(-34.000000) translate(-141.734375, -35.345703) translate(124.234375, 5.345703)">
+                                <rect id="Rectangle-path" stroke="#000000" stroke-width="2.1334" stroke-linecap="round" stroke-linejoin="round" fill="#D06600" fill-rule="nonzero" x="15.2" y="31.2" width="4.8" height="28.8"></rect>
+                                <path d="M17.6,33.6 C8.3,33.6 0.8,26.1 0.8,16.8 C0.8,7.5 8.4,-5.68434189e-14 17.6,-5.68434189e-14" id="Shape" fill="#70BE77" fill-rule="nonzero"></path>
+                                <path d="M17.6,-2.84217094e-13 C26.9,-2.84217094e-13 34.4,7.5 34.4,16.8 C34.4,26.1 26.9,33.6 17.6,33.6" id="Shape" fill="#42BE77" fill-rule="nonzero"></path>
+                                <circle id="Oval" stroke="#000000" stroke-width="2.1334" stroke-linecap="round" stroke-linejoin="round" cx="17.6" cy="16.8" r="16.8"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

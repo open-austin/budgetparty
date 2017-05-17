@@ -1,0 +1,83 @@
+.Submit {
+  padding-top: $nav_height;
+}
+
+.Submit__intro-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  background: $white;
+  text-align: center;
+}
+
+.Submit__body {
+  text-align: center;
+  padding: 25px 40px;
+}
+
+.Submit__next-button {
+  @include primary-button;
+  margin: 20px auto;
+}
+
+.Submit__title {
+  text-align: center;
+}
+
+.Submit__desc {
+  font-size: 40px;
+  padding: 20px 0;
+}
+
+.Submit__img {
+    margin: 35px 0 40px;
+}
+
+.Submit__smallcaps {
+  @include small-caps;
+  margin-bottom: 50px;
+}
+
+.Submit__review-header {
+  max-height: 205px;
+  overflow: hidden;
+  text-align: center;
+  background-color: $grey2;
+}
+
+.Submit__review-subtitle {
+  margin-bottom: 30px;
+}
+
+.Submit__review-buttons {
+  display: flex;
+  padding: 25px 15% 30px;
+}
+
+.Submit__review-service-list {
+  margin-bottom: 20px;
+}
+
+.Submit__revise-link {
+  padding: 10px 0 40px
+}
+
+.Submit__save-body {
+  padding: 25px 40px;
+  label, input, textarea {
+    width: 100%;
+  }
+  input, textarea {
+    background: $superlightblue;
+    border: 1px solid $dark-grey;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  textarea {
+    height: 170px;
+  }
+  label {
+    font-weight: normal;
+    font-size: 16px;
+  }
+}
