@@ -41,14 +41,9 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(changeRemainingFundsAmout(services))
     },
     onPercentChange: (dept, percentChange, departments, serviceIndex, services) => {
-      let amount
-      if (dept.amount === null) {
-        amount = dept.lastYearAmount;
-      } else {
-        amount = dept.amount
-      }
+      const deptPercentChange = dept.amount === null ? 0 : percentChange
 
-      dispatch(changeDepartmentAmount(dept.deptId, percentChange))
+      dispatch(changeDepartmentAmount(dept.deptId, deptPercentChange))
       dispatch(recalculateServiceAmount(serviceIndex, departments))
       dispatch(changeRemainingFundsAmout(services))
     },
