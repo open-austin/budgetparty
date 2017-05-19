@@ -9,7 +9,9 @@ function departments(state = InitialState.departments, action = {}) {
   switch (action.type) {
     case 'CHANGE_DEPARTMENT_AMOUNT':
       newDeptState = deptState
-      newDeptState.percentChange = deptState.percentChange + action.percentChange
+      newDeptState.percentChange = Number(
+        (deptState.percentChange + action.percentChange).toFixed(1),
+      )
       newDeptState.amount =
         (deptState.lastYearAmount * (newDeptState.percentChange / 100))
         + deptState.lastYearAmount
