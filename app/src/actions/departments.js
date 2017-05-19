@@ -10,6 +10,6 @@ export function updateExplainResponse(departmentId, text) {
   return {
     type: 'UPDATE_EXPLAIN_RESPONSE',
     departmentId,
-    text
+    text,
   }
 }
