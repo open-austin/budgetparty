@@ -84,7 +84,7 @@ For more information, check out [CONTRIBUTING.md](/CONTRIBUTING.md)
 - [@wilsaj](https://github.com/wilsaj) - Javascript, Web Development
 - [@kmclaugh](https://github.com/kmclaugh) - Javascript, Web Development
 
-### Cirrulcuum
+### Curriculum
 An awesome teacher at Lanier High School, Laurie Beaman, laurie.beaman@austinisd.org, designed and wrote a Curriculum Binder for teaching high schoolers about the City Budget. Check it out here:
 [Budget Game Binder PDF](https://github.com/open-austin/budgetparty/files/1009706/Budget.Game.Binder.pdf)
 
