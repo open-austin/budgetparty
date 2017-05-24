@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
+import back from '../images/back.svg'
 
 const User = ({ ...props }) => {
   const { isAuthed, user, handleLogout } = props
@@ -21,11 +22,11 @@ const User = ({ ...props }) => {
               Logout
             </button>
           <Link to="/dashboard">
-            <button
-              style={{ display: 'block', marginTop: 100 }}
-            >
-              Go Back
-            </button>
+            <img
+              src={back}
+              alt="Go back button."
+              className="User__back-button"
+            />
           </Link>
         </div>
         :
