@@ -862,7 +862,38 @@ button::-moz-focus-inner {
   font-size: 16px; }
 
 .User {
-  background-color: #DFF7FE; }
+  background-color: #DFF7FE;
+  border-radius: 10px;
+  width: 90vw; }
+
+.User__title {
+  font-weight: 600;
+  text-align: center; }
+
+.User__logout-button {
+  display: block;
+  width: 180px;
+  background-color: #ffffff;
+  border-color: #4D4D4D;
+  color: #ffffff;
+  text-align: center;
+  height: 50px;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin: auto;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #D0011B;
+  border-color: #D0011B;
+  margin: 40px auto; }
+
+.User__logout-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
+
+.User__logout-button:hover {
+  background-color: #f86d64; }
 
 html, body, #root,
 .container, .row,

@@ -1,3 +1,18 @@
 .User {
-    background-color: #DFF7FE;
+  background-color: #DFF7FE;
+  border-radius: 10px;
+  width: 90vw;
+}
+
+.User__title {
+  font-weight: 600;
+  text-align: center;
+}
+
+.User__logout-button {
+  @include warning-button;
+  margin: 40px auto;
+  &:hover {
+    background-color: rgb(248, 109, 100);
+  }
 }

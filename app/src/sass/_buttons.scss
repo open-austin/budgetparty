@@ -59,3 +59,9 @@ button::-moz-focus-inner {
   background-color: $green;
   border-color: $green;
 }
+
+@mixin warning-button {
+  @include button;
+  background-color: $red;
+  border-color: $red;
+}
