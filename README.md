@@ -50,7 +50,7 @@ At this stage, we have:
 
 **For the 1.0 release, we are working on:**
 
-- A curriculum to provide context for middle school and high school students for understanding how the City Council makes decisions.
+- A [curriculum](https://github.com/open-austin/budgetparty/files/1009706/Budget.Game.Binder.pdf) to provide context for middle school and high school students for understanding how the City Council makes decisions.
 - [Information Architecture](https://github.com/open-austin/budgetparty/issues/79) and improved user workflows.
 - [District Profiles](https://github.com/open-austin/budgetparty/issues/80) for users to learn about City Council demographics.
 - Page Redesigns.
@@ -58,7 +58,7 @@ At this stage, we have:
 - New icons and [imagery](https://github.com/open-austin/budgetparty/issues/71).
 - Other [technical](https://github.com/open-austin/budgetparty/issues/43) improvements.
 
-Our target launch for v1.0 is May 7, 2017.
+Our target launch for v1.0 is May 7, 2017. 
 
 We presented the game and curriculum to AISD high school departments chairs on April 11, 2017.
 
@@ -84,6 +84,12 @@ For more information, check out [CONTRIBUTING.md](/CONTRIBUTING.md)
 - [@wilsaj](https://github.com/wilsaj) - Javascript, Web Development
 - [@kmclaugh](https://github.com/kmclaugh) - Javascript, Web Development
 
+### Curriculum
+An awesome teacher at Lanier High School, Laurie Beaman, laurie.beaman@austinisd.org, designed and wrote a Curriculum Binder for teaching high schoolers about the City Budget. Check it out here:
+[Budget Game Binder PDF](https://github.com/open-austin/budgetparty/files/1009706/Budget.Game.Binder.pdf)
+
+We'd like to convert this PDF document into HTML to make it accessible for more educators to view and use. If you're interested in helping with this task, check out [this issue](https://github.com/open-austin/budgetparty/issues/128) and let's chat!
+
 ### Design
 
 Here is a link to our [design assets and documentation](./design). Here are [open issues labeled "Design"](https://github.com/open-austin/hack-the-budget/issues?q=is%3Aissue+is%3Aopen+label%3Adesign) where you can discuss, provide feedback or volunteer to help.
@@ -105,7 +111,7 @@ Once you have cloned this repo to you local machine, open the `app` directory in
 ### Development
 
 1. `npm start`
-2. visit http://0.0.0.0:1111/ in your browser
+2. visit http://localhost:3000 in your browser
 
 ### Build
 

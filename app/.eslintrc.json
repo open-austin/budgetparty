@@ -22,7 +22,9 @@
     "semi": "off",
     "eol-last": "off",
     "react/require-default-props": "warn",
-    "react/forbid-prop-types": "warn"
+    "react/forbid-prop-types": "warn",
+    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-first-prop-new-line": "off"
   },
   "parser": "babel-eslint"
 }

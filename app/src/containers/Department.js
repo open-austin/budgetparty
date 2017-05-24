@@ -18,7 +18,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onClickNext: (department, service, serviceDepts, departments, services) => {
       if (!department.amount) {
-        dispatch(changeDepartmentAmount(department.deptId, department.lastYearAmount))
+        dispatch(changeDepartmentAmount(department.deptId, 0))
         console.log(`changeDepartmentAmount to ${department.lastYearAmount} for ${department.deptId}`)
       }
       dispatch(updateCompletedDepartments(service.index, departments))
@@ -41,21 +41,14 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(changeRemainingFundsAmout(services))
     },
     onPercentChange: (dept, percentChange, departments, serviceIndex, services) => {
-      let amount
-      if (dept.amount === null) {
-        amount = dept.lastYearAmount;
-      } else {
-        amount = dept.amount
-      }
+      const deptPercentChange = dept.amount === null ? 0 : percentChange
 
-      const newAmount = (amount * percentChange / 100) + amount
-      dispatch(changeDepartmentAmount(dept.deptId, newAmount))
-      console.log(`changeDepartmentAmount to ${newAmount} for ${dept.deptId}`)
+      dispatch(changeDepartmentAmount(dept.deptId, deptPercentChange))
       dispatch(recalculateServiceAmount(serviceIndex, departments))
       dispatch(changeRemainingFundsAmout(services))
     },
     resetBudgetAmount: (deptId) => {
-      dispatch(changeDepartmentAmount(deptId, null))
+      dispatch(changeDepartmentAmount(deptId, 0))
       // TODO: Get reset to recalculate
       // dispatch(recalculateServiceAmount(service.index, departments))
       // TODO: changeRemainingFundsAmout

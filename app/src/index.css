@@ -42,6 +42,9 @@ p {
 .right {
   float: right; }
 
+.center-text {
+  text-align: center; }
+
 /* Reset `button` and button-style `input` default styles */
 input[type="submit"],
 input[type="reset"],
@@ -116,6 +119,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #00A3DE;
   border-color: #00A3DE;
   margin: 30px auto 10px;
@@ -145,6 +149,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   color: #244665; }
 
 .google-auth-button:hover {
@@ -186,6 +191,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #00A3DE;
   border-color: #00A3DE; }
 
@@ -206,6 +212,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #50D200;
   border-color: #50D200; }
 
@@ -215,7 +222,7 @@ button::-moz-focus-inner {
 
 .Navigation {
   background-color: #DFF7FE;
-  border: 1px solid transparent;
+  display: flex;
   position: fixed;
   width: 100%;
   height: 65px;
@@ -250,11 +257,12 @@ button::-moz-focus-inner {
   display: flex;
   justify-content: space-between; }
 
-.Navigation__user__container {
+.Navigation__user-container {
   display: block;
-  margin-right: 50px; }
+  margin-right: 50px;
+  flex: 1; }
 
-.Navigation__welcome__mssg {
+.Navigation__welcome-message {
   display: inline-block; }
 
 .TotalFundsAvailable {
@@ -265,7 +273,8 @@ button::-moz-focus-inner {
   font-size: 10px;
   text-transform: uppercase;
   line-height: 12px;
-  margin: 10px 0 0; }
+  margin: 10px 0 0;
+  height: 20px; }
 
 .TotalFundsAvailable__dollars {
   margin: 2px 0 10px; }
@@ -406,6 +415,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #00A3DE;
   border-color: #00A3DE; }
 
@@ -430,6 +440,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #00A3DE;
   border-color: #00A3DE;
   width: 95px;
@@ -454,6 +465,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #50D200;
   border-color: #50D200;
   width: 95px;
@@ -501,6 +513,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #00A3DE;
   border-color: #00A3DE;
   width: 95px;
@@ -526,6 +539,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #00A3DE;
   border-color: #00A3DE;
   width: 95px;
@@ -684,6 +698,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #00A3DE;
   border-color: #00A3DE; }
 
@@ -723,6 +738,7 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
+  cursor: pointer;
   background-color: #50D200;
   border-color: #50D200; }
 
@@ -751,7 +767,99 @@ button::-moz-focus-inner {
 .ProgressBar__text {
   margin-top: 10px;
   color: #9B9B9B;
-  display: block; }
+  display: block;
+  text-align: center; }
+
+.Submit {
+  padding-top: 65px; }
+
+.Submit__intro-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  background: #ffffff;
+  text-align: center; }
+
+.Submit__body {
+  text-align: center;
+  padding: 25px 40px; }
+
+.Submit__next-button {
+  display: block;
+  width: 180px;
+  background-color: #ffffff;
+  border-color: #4D4D4D;
+  color: #ffffff;
+  text-align: center;
+  height: 50px;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin: auto;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #00A3DE;
+  border-color: #00A3DE;
+  margin: 20px auto; }
+
+.Submit__next-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
+
+.Submit__title {
+  text-align: center; }
+
+.Submit__desc {
+  font-size: 40px;
+  padding: 20px 0; }
+
+.Submit__img {
+  margin: 35px 0 40px; }
+
+.Submit__smallcaps {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #00A3DE;
+  letter-spacing: 1.5px;
+  margin-bottom: 50px; }
+
+.Submit__review-header {
+  max-height: 205px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #F8F8F8; }
+
+.Submit__review-subtitle {
+  margin-bottom: 30px; }
+
+.Submit__review-buttons {
+  display: flex;
+  padding: 25px 15% 30px; }
+
+.Submit__review-service-list {
+  margin-bottom: 20px; }
+
+.Submit__revise-link {
+  padding: 10px 0 40px; }
+
+.Submit__save-body {
+  padding: 25px 40px; }
+
+.Submit__save-body label, .Submit__save-body input, .Submit__save-body textarea {
+  width: 100%; }
+
+.Submit__save-body input, .Submit__save-body textarea {
+  background: #FBFFFF;
+  border: 1px solid #4D4D4D;
+  margin-bottom: 10px;
+  padding: 5px; }
+
+.Submit__save-body textarea {
+  height: 170px; }
+
+.Submit__save-body label {
+  font-weight: normal;
+  font-size: 16px; }
 
 html, body, #root,
 .container, .row,
