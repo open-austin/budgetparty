@@ -47,7 +47,6 @@ export default class App extends Component {
   }
 
   updateAuthState(user) {
-    console.log('user in index.js', user);
     if (user) {
       this.setState({
         authed: true,
@@ -107,8 +106,10 @@ export default class App extends Component {
                   />
                   <Route path="/user" render={() => {
                     return (
-                      <User isAuthed={this.state.authed}
+                      <User
+                        isAuthed={this.state.authed}
                         handleLogout={this.handleLogout.bind(this)}
+                        user={user}
                       />
                     )
                   }} />
