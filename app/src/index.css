@@ -861,6 +861,9 @@ button::-moz-focus-inner {
   font-weight: normal;
   font-size: 16px; }
 
+.User {
+  background-color: #DFF7FE; }
+
 html, body, #root,
 .container, .row,
 .intro {

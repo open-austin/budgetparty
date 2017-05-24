@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const User = ({ ...props }) => {
   const { isAuthed, user, handleLogout } = props
   return (
-    <div>
+    <div className="User">
       {isAuthed
       ?
         <div>
