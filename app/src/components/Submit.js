@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Switch, Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl'
+import { ref } from '../config/constants'
 
 import Navigation from './Navigation'
 import ProgressBar from './ProgressBar'
@@ -10,7 +11,30 @@ import backArrow from '../images/back_arrow.svg'
 import forwardArrow from '../images/forward_arrow.svg'
 
 const Submit = (props) => {
-  const { services, departments, funds } = props;
+  const { services, departments, funds, onSubmit, user } = props;
+
+  const handleSubmit = (userId, data) => {
+    onSubmit(userId, data)
+  }
+
+  const departmentArray = Object.keys(departments).map(key => departments[key])
+
+  const departmentsArray = departmentArray.map((item) => {
+    return {
+      item: item.name,
+      amount: item.amount,
+      explain: item.explainYourSpending,
+    }
+  });
+
+  const userData = {
+    // add in refs for comments, name, email fields
+    comments: 'hi',
+    name: 'Gary',
+    email: 'example',
+    userBudget: departmentsArray,
+    totalBudget: funds.sumOfServiceSpending,
+  }
 
   return (
     <div>
@@ -102,7 +126,7 @@ const Submit = (props) => {
                   <Link to="/submit/review" className="Service__edit-button">
                     Revise
                   </Link>
-                  <Link to="/done" className="Service__done-button">
+                  <Link to="/done" className="Service__done-button" onClick={handleSubmit.bind(this, user.uid, userData)}>
                     Submit
                   </Link>
                 </div>
@@ -125,4 +149,5 @@ Submit.propTypes = {
     sumOfServiceSpending: PropTypes.number.isRequired,
     servicesSumPercentChange: PropTypes.number.isRequired,
   }).isRequired,
+  onSubmit: PropTypes.func.isRequired,
 }

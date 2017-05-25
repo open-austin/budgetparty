@@ -106,7 +106,7 @@ export default class App extends Component {
                     )
                   }} />
                   <Route path="/submit" render={(props) => {
-                    return <SubmitContainer {...props} />
+                    return <SubmitContainer {...props} user={user} />
                   }} />
                   <Route path="/done" render={(props) => {
                     return <Done {...props} />

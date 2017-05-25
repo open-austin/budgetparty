@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import Submit from '../components/Submit'
+import { database } from '../config/constants'
 
 // import any actions
 
@@ -9,9 +10,13 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onSubmit: () => {
-      // dispatch(updateSubmitResponse(deptId, text))
-    }
+    onSubmit: (userId, data) => {
+      if (userId) {
+        database.app.database().ref(`userResults/${userId}`).set(data)
+      } else {
+        database.app.database().ref('userResults').push(data)
+      }
+    },
   }
 }
 
