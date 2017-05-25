@@ -47,7 +47,6 @@ export default class App extends Component {
   }
 
   updateAuthState(user) {
-    console.log('user in index.js', user);
     if (user) {
       this.setState({
         authed: true,
@@ -94,7 +93,7 @@ export default class App extends Component {
                     }}
                   />
                   <Route path="/intro/:id" render={props => <Intro {...props} />} />
-                  <Route path="/dashboard" render={props => <DashboardContainer {...props} />} />
+                  <Route path="/dashboard" render={props => <DashboardContainer {...props} user={user} />} />
                   <Route path="/service/:id" exact render={props => <ServiceContainer {...props} />} />
                   <Route path="/service/:service_id/department/:id" exact
                     render={props => <DepartmentContainer {...props} />}
@@ -107,8 +106,10 @@ export default class App extends Component {
                   />
                   <Route path="/user" render={() => {
                     return (
-                      <User isAuthed={this.state.authed}
+                      <User
+                        isAuthed={this.state.authed}
                         handleLogout={this.handleLogout.bind(this)}
+                        user={user}
                       />
                     )
                   }} />
