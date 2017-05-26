@@ -15,7 +15,7 @@ class Submit extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.state = {
-      comments: null,
+      comments: '',
       name: (props.user && props.user.displayName) || '',
       email: (props.user && props.user.email) || '',
     }
