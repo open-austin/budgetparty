@@ -12,7 +12,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onSubmit: (userId, data) => {
       if (userId) {
-        database.app.database().ref(`userResults/${userId}`).set(data)
+        database.app.database().ref(`userResults/${userId}`).update(data)
       } else {
         database.app.database().ref('userResults').push(data)
       }
