@@ -92,9 +92,8 @@ button::-moz-focus-inner {
   text-align: center;
   padding: 20px 0;
   display: block; }
-
-.auth-tab:last-child {
-  border-left: 2px solid #DFF7FE; }
+  .auth-tab:last-child {
+    border-left: 2px solid #DFF7FE; }
 
 .auth-tab.inactive-tab {
   background-color: #F5F6F5; }
@@ -107,10 +106,8 @@ button::-moz-focus-inner {
   font-weight: normal; }
 
 .auth-form__button {
-  display: block;
-  width: 180px;
-  background-color: #ffffff;
-  border-color: #4D4D4D;
+  background-color: #49ABDD;
+  border-color: #49ABDD;
   color: #ffffff;
   text-align: center;
   height: 50px;
@@ -119,16 +116,13 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
-  cursor: pointer;
-  background-color: #00A3DE;
-  border-color: #00A3DE;
   margin: 30px auto 10px;
   display: block;
   width: 45%; }
-
-.auth-form__button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .auth-form__button:hover {
+    color: #ffffff;
+    background-color: #006285;
+    text-decoration: none; }
 
 .auth-form__skip {
   display: block;
@@ -149,15 +143,12 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
-  cursor: pointer;
   color: #244665; }
-
-.google-auth-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
-
-.google-auth-button img {
-  margin: -5px 5px 0 0; }
+  .google-auth-button:hover {
+    color: #ffffff;
+    text-decoration: none; }
+  .google-auth-button img {
+    margin: -5px 5px 0 0; }
 
 .intro {
   display: flex;
@@ -179,10 +170,8 @@ button::-moz-focus-inner {
   margin-bottom: 40px; }
 
 .intro__start-button {
-  display: block;
-  width: 180px;
-  background-color: #ffffff;
-  border-color: #4D4D4D;
+  background-color: #49ABDD;
+  border-color: #49ABDD;
   color: #ffffff;
   text-align: center;
   height: 50px;
@@ -190,20 +179,15 @@ button::-moz-focus-inner {
   font-size: 18px;
   border-radius: 25px;
   margin: auto;
-  padding: 12px;
-  cursor: pointer;
-  background-color: #00A3DE;
-  border-color: #00A3DE; }
-
-.intro__start-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  padding: 12px; }
+  .intro__start-button:hover {
+    color: #ffffff;
+    background-color: #006285;
+    text-decoration: none; }
 
 .intro__next-button {
-  display: block;
-  width: 180px;
-  background-color: #ffffff;
-  border-color: #4D4D4D;
+  background-color: #50D200;
+  border-color: #50D200;
   color: #ffffff;
   text-align: center;
   height: 50px;
@@ -211,14 +195,11 @@ button::-moz-focus-inner {
   font-size: 18px;
   border-radius: 25px;
   margin: auto;
-  padding: 12px;
-  cursor: pointer;
-  background-color: #50D200;
-  border-color: #50D200; }
-
-.intro__next-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  padding: 12px; }
+  .intro__next-button:hover {
+    color: #ffffff;
+    background-color: #4B830E;
+    text-decoration: none; }
 
 .Navigation {
   background-color: #DFF7FE;
@@ -288,10 +269,9 @@ button::-moz-focus-inner {
 .Dashboard__body {
   padding-top: 65px;
   height: 100%; }
-
-.Dashboard__body a {
-  color: #4D4D4D;
-  text-decoration: none; }
+  .Dashboard__body a {
+    color: #4D4D4D;
+    text-decoration: none; }
 
 .PartyLevel {
   height: 140px;
@@ -403,10 +383,8 @@ button::-moz-focus-inner {
   line-height: 24px; }
 
 .Service__next-button {
-  display: block;
-  width: 180px;
-  background-color: #ffffff;
-  border-color: #4D4D4D;
+  background-color: #49ABDD;
+  border-color: #49ABDD;
   color: #ffffff;
   text-align: center;
   height: 50px;
@@ -414,24 +392,19 @@ button::-moz-focus-inner {
   font-size: 18px;
   border-radius: 25px;
   margin: auto;
-  padding: 12px;
-  cursor: pointer;
-  background-color: #00A3DE;
-  border-color: #00A3DE; }
-
-.Service__next-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  padding: 12px; }
+  .Service__next-button:hover {
+    color: #ffffff;
+    background-color: #006285;
+    text-decoration: none; }
 
 .Service__review-buttons {
   display: flex;
   padding: 0 15%; }
 
 .Service__edit-button {
-  display: block;
-  width: 180px;
-  background-color: #ffffff;
-  border-color: #4D4D4D;
+  background-color: #49ABDD;
+  border-color: #49ABDD;
   color: #ffffff;
   text-align: center;
   height: 50px;
@@ -440,23 +413,18 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
-  cursor: pointer;
-  background-color: #00A3DE;
-  border-color: #00A3DE;
   width: 95px;
   font-size: 14px;
   height: auto;
   min-width: auto; }
-
-.Service__edit-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .Service__edit-button:hover {
+    color: #ffffff;
+    background-color: #006285;
+    text-decoration: none; }
 
 .Service__done-button {
-  display: block;
-  width: 180px;
-  background-color: #ffffff;
-  border-color: #4D4D4D;
+  background-color: #50D200;
+  border-color: #50D200;
   color: #ffffff;
   text-align: center;
   height: 50px;
@@ -465,17 +433,14 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
-  cursor: pointer;
-  background-color: #50D200;
-  border-color: #50D200;
   width: 95px;
   font-size: 14px;
   height: auto;
   min-width: auto; }
-
-.Service__done-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .Service__done-button:hover {
+    color: #ffffff;
+    background-color: #4B830E;
+    text-decoration: none; }
 
 .Department {
   text-align: center; }
@@ -501,10 +466,8 @@ button::-moz-focus-inner {
   padding: 25px 15% 30px; }
 
 .Department__edit-button {
-  display: block;
-  width: 180px;
-  background-color: #ffffff;
-  border-color: #4D4D4D;
+  background-color: #49ABDD;
+  border-color: #49ABDD;
   color: #ffffff;
   text-align: center;
   height: 50px;
@@ -513,24 +476,19 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
-  cursor: pointer;
-  background-color: #00A3DE;
-  border-color: #00A3DE;
   width: 95px;
   font-size: 16px;
   height: 36px;
   min-width: auto;
   padding: 6px; }
-
-.Department__edit-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .Department__edit-button:hover {
+    color: #ffffff;
+    background-color: #006285;
+    text-decoration: none; }
 
 .Department__done-button {
-  display: block;
-  width: 180px;
-  background-color: #ffffff;
-  border-color: #4D4D4D;
+  background-color: #49ABDD;
+  border-color: #49ABDD;
   color: #ffffff;
   text-align: center;
   height: 50px;
@@ -539,18 +497,15 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
-  cursor: pointer;
-  background-color: #00A3DE;
-  border-color: #00A3DE;
   width: 95px;
   font-size: 16px;
   height: 36px;
   min-width: auto;
   padding: 6px; }
-
-.Department__done-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .Department__done-button:hover {
+    color: #ffffff;
+    background-color: #006285;
+    text-decoration: none; }
 
 .Department__button-content--icon {
   padding: 6px 10px; }
@@ -686,10 +641,8 @@ button::-moz-focus-inner {
   line-height: 24px; }
 
 .LearnMore__close-button {
-  display: block;
-  width: 180px;
-  background-color: #ffffff;
-  border-color: #4D4D4D;
+  background-color: #49ABDD;
+  border-color: #49ABDD;
   color: #ffffff;
   text-align: center;
   height: 50px;
@@ -697,14 +650,11 @@ button::-moz-focus-inner {
   font-size: 18px;
   border-radius: 25px;
   margin: auto;
-  padding: 12px;
-  cursor: pointer;
-  background-color: #00A3DE;
-  border-color: #00A3DE; }
-
-.LearnMore__close-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  padding: 12px; }
+  .LearnMore__close-button:hover {
+    color: #ffffff;
+    background-color: #006285;
+    text-decoration: none; }
 
 .Explain {
   padding-top: 65px;
@@ -726,10 +676,8 @@ button::-moz-focus-inner {
   line-height: 24px; }
 
 .Explain__close-button {
-  display: block;
-  width: 180px;
-  background-color: #ffffff;
-  border-color: #4D4D4D;
+  background-color: #50D200;
+  border-color: #50D200;
   color: #ffffff;
   text-align: center;
   height: 50px;
@@ -737,14 +685,11 @@ button::-moz-focus-inner {
   font-size: 18px;
   border-radius: 25px;
   margin: auto;
-  padding: 12px;
-  cursor: pointer;
-  background-color: #50D200;
-  border-color: #50D200; }
-
-.Explain__close-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  padding: 12px; }
+  .Explain__close-button:hover {
+    color: #ffffff;
+    background-color: #4B830E;
+    text-decoration: none; }
 
 .Explain__textarea {
   width: 100%;
@@ -785,10 +730,8 @@ button::-moz-focus-inner {
   padding: 25px 40px; }
 
 .Submit__next-button {
-  display: block;
-  width: 180px;
-  background-color: #ffffff;
-  border-color: #4D4D4D;
+  background-color: #49ABDD;
+  border-color: #49ABDD;
   color: #ffffff;
   text-align: center;
   height: 50px;
@@ -797,14 +740,11 @@ button::-moz-focus-inner {
   border-radius: 25px;
   margin: auto;
   padding: 12px;
-  cursor: pointer;
-  background-color: #00A3DE;
-  border-color: #00A3DE;
   margin: 20px auto; }
-
-.Submit__next-button:hover {
-  color: #ffffff;
-  text-decoration: none; }
+  .Submit__next-button:hover {
+    color: #ffffff;
+    background-color: #006285;
+    text-decoration: none; }
 
 .Submit__title {
   text-align: center; }
@@ -844,22 +784,18 @@ button::-moz-focus-inner {
 
 .Submit__save-body {
   padding: 25px 40px; }
-
-.Submit__save-body label, .Submit__save-body input, .Submit__save-body textarea {
-  width: 100%; }
-
-.Submit__save-body input, .Submit__save-body textarea {
-  background: #FBFFFF;
-  border: 1px solid #4D4D4D;
-  margin-bottom: 10px;
-  padding: 5px; }
-
-.Submit__save-body textarea {
-  height: 170px; }
-
-.Submit__save-body label {
-  font-weight: normal;
-  font-size: 16px; }
+  .Submit__save-body label, .Submit__save-body input, .Submit__save-body textarea {
+    width: 100%; }
+  .Submit__save-body input, .Submit__save-body textarea {
+    background: #FBFFFF;
+    border: 1px solid #4D4D4D;
+    margin-bottom: 10px;
+    padding: 5px; }
+  .Submit__save-body textarea {
+    height: 170px; }
+  .Submit__save-body label {
+    font-weight: normal;
+    font-size: 16px; }
 
 html, body, #root,
 .container, .row,
