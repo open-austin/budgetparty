@@ -24,10 +24,14 @@ import { logout } from '../helpers/auth'
 import store from '../store';
 
 export default class App extends Component {
-  state = {
-    authed: false,
-    loading: true,
-    user: {},
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      authed: false,
+      loading: true,
+      user: {},
+    }
   }
 
   componentDidMount() {
@@ -88,7 +92,7 @@ export default class App extends Component {
                   <Route path="/dashboard" render={props => <DashboardContainer {...props} user={user} />} />
                   <Route path="/service/:id" exact render={props => <ServiceContainer {...props} />} />
                   <Route path="/service/:service_id/department/:id" exact
-                    render={props => <DepartmentContainer {...props} />}
+                    render={props => <DepartmentContainer {...props} user={user} />}
                   />
                   <Route path="/service/:service_id/department/:id/learn-more"
                     render={props => <LearnMore {...props} />}
