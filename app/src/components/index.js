@@ -76,14 +76,14 @@ export default class App extends Component {
                 <Switch className="row">
                   <Route
                     path="/" exact render={() => {
-                      return this.state.authed
+                      return authed
                       ? <Redirect to="/dashboard" />
                       : <Redirect to="/login" />
                     }}
                   />
                   <Route
-                    path="/login" isAuthed={this.state.authed} render={() => {
-                      return this.state.authed
+                    path="/login" isAuthed={authed} render={() => {
+                      return authed
                       ? <Redirect to="/intro/1" />
                       : <Home />
                     }}
@@ -103,7 +103,7 @@ export default class App extends Component {
                   <Route path="/user" render={() => {
                     return (
                       <User
-                        isAuthed={this.state.authed}
+                        isAuthed={authed}
                         handleLogout={this.handleLogout.bind(this)}
                         user={user}
                       />

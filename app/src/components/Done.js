@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types';
 import moneyImg from '../images/money.svg'
+// import PropTypes from 'prop-types';
 
 
 export default class Done extends Component {
@@ -22,6 +22,6 @@ export default class Done extends Component {
   }
 }
 
-Done.propTypes = {
-
-};
+// Done.propTypes = {
+//
+// };

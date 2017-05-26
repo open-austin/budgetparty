@@ -1,5 +1,4 @@
 import React from 'react'
-import accounting from 'accounting'
 import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl'
 
