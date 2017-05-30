@@ -22,6 +22,8 @@ import { logout } from '../helpers/auth'
 
 import store from '../store';
 
+console.log('deploy to gh-pages test')
+
 export default class App extends Component {
   constructor(props) {
     super(props)
