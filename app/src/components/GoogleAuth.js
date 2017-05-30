@@ -25,9 +25,9 @@ export default class GoogleAuth extends Component {
 
   render() {
     return (
-      <div className="text-center">
+      <div className="center-text">
         <p>or</p>
-        <button className="btn google-auth-button" onClick={() => { this.authenticate() }} >
+        <button className="google-auth-button" onClick={() => { this.authenticate() }} >
           <img src={googleLogo} alt="Google" />
           Login with Google
         </button>

@@ -7,6 +7,7 @@ import {
   Redirect,
   Switch,
 } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.css'
 import Home from './Home'
 import Intro from './Intro'
 import DashboardContainer from '../containers/Dashboard'
