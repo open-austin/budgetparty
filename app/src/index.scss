@@ -34,3 +34,14 @@ body {
   font-family: 'Raleway', sans-serif;
   color: $text-color;
 }
+
+
+@media (min-width: 600px) {
+  .container, .Navigation {
+    width: 500px;
+    margin: auto;
+  }
+  .Navigation {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 0px;
+  }
+}

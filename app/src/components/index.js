@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import { IntlProvider } from 'react-intl'
-import 'bootstrap/dist/css/bootstrap.css'
 import {
   Route,
   BrowserRouter as Router,
   Redirect,
-  Switch
+  Switch,
 } from 'react-router-dom'
 import Home from './Home'
 import Intro from './Intro'
