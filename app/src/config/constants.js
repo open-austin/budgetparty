@@ -1,6 +1,6 @@
 import firebase from 'firebase'
 
-export const config = {
+const config = {
   apiKey: "AIzaSyDVYXW7KD054GkOAzHb597yrEZMMxz0aDM",
   authDomain: "budget-party.firebaseapp.com",
   databaseURL: "https://budget-party.firebaseio.com",
