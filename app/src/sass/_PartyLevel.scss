@@ -41,6 +41,7 @@
 
 .PartyLevel__title {
   @include PartyLevel__title;
+  padding-right: 10px;
 }
 
 .PartyLevel__title--unstarted {
