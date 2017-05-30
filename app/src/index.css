@@ -339,6 +339,7 @@ button::-moz-focus-inner {
   font-size: 22px;
   margin: 50px 0 3px;
   color: #4D4D4D;
+  padding-right: 10px;
   color: #b3b3b3; }
 
 .PartyLevel__status {

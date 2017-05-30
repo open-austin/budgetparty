@@ -37,11 +37,11 @@
   font-size: 22px;
   margin: 50px 0 3px;
   color: $text-color;
+  padding-right: 10px;
 }
 
 .PartyLevel__title {
   @include PartyLevel__title;
-  padding-right: 10px;
 }
 
 .PartyLevel__title--unstarted {
