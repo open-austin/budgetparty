@@ -47,11 +47,11 @@
 }
 
 .Navigation__user-container {
-  display: block;
+  display: flex;
   margin-right: 50px;
   flex: 1;
 }
 
 .Navigation__welcome-message {
-  display: inline-block;
+  align-self: center;
 }

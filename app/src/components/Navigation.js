@@ -38,7 +38,7 @@ const Navigation = (props) => {
       {
         showUser &&
           <div className="Navigation__user-container">
-            <Link to="/user" className="flex">
+            <Link to="/user">
               <img src={(user && user.photoURL) || avatar} alt="User Account" className="Navigation__icon--left" />
             </Link>
             <p className="Navigation__welcome-message">{(user && user.displayName) || (user && user.email)}</p>

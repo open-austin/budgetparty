@@ -3,7 +3,7 @@ import InitialState from '../config/InitialState';
 
 function services(state = InitialState.services, action = {}) {
   const { serviceIndex, status, departments } = action
-  let newServiceState = state[serviceIndex]
+  const newServiceState = state[serviceIndex]
   let newState = []
   let service, departmentIds, departmentAmounts
 

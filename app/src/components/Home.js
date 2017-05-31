@@ -24,7 +24,7 @@ export default class Home extends Component {
   render () {
     return (
       <div className="home">
-        <div className="text-center">
+        <div className="center-text">
           <img src={logo} alt="Budget Party" className="logo"/>
         </div>
         <div className="auth-form-wrapper">

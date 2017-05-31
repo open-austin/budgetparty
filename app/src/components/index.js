@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import { IntlProvider } from 'react-intl'
-import 'bootstrap/dist/css/bootstrap.css'
 import {
   Route,
   BrowserRouter as Router,
   Redirect,
-  Switch
+  Switch,
 } from 'react-router-dom'
 import Home from './Home'
 import Intro from './Intro'
@@ -23,19 +22,17 @@ import { logout } from '../helpers/auth'
 
 import store from '../store';
 
+console.log('deploy to gh-pages test')
+
 export default class App extends Component {
-  state = {
-    authed: false,
-    loading: true,
-    user: {},
-  }
+  constructor(props) {
+    super(props)
 
-  componentDidMount() {
-    this.removeListener = firebaseAuth().onAuthStateChanged(user => this.updateAuthState(user))
-  }
-
-  componentWillUnmount() {
-    this.removeListener()
+    this.state = {
+      authed: false,
+      loading: true,
+      user: {},
+    }
   }
 
   componentDidMount() {
@@ -80,14 +77,14 @@ export default class App extends Component {
                 <Switch className="row">
                   <Route
                     path="/" exact render={() => {
-                      return this.state.authed
+                      return authed
                       ? <Redirect to="/dashboard" />
                       : <Redirect to="/login" />
                     }}
                   />
                   <Route
-                    path="/login" isAuthed={this.state.authed} render={() => {
-                      return this.state.authed
+                    path="/login" isAuthed={authed} render={() => {
+                      return authed
                       ? <Redirect to="/intro/1" />
                       : <Home />
                     }}
@@ -96,7 +93,7 @@ export default class App extends Component {
                   <Route path="/dashboard" render={props => <DashboardContainer {...props} user={user} />} />
                   <Route path="/service/:id" exact render={props => <ServiceContainer {...props} />} />
                   <Route path="/service/:service_id/department/:id" exact
-                    render={props => <DepartmentContainer {...props} />}
+                    render={props => <DepartmentContainer {...props} user={user} />}
                   />
                   <Route path="/service/:service_id/department/:id/learn-more"
                     render={props => <LearnMore {...props} />}
@@ -107,14 +104,14 @@ export default class App extends Component {
                   <Route path="/user" render={() => {
                     return (
                       <User
-                        isAuthed={this.state.authed}
+                        isAuthed={authed}
                         handleLogout={this.handleLogout.bind(this)}
                         user={user}
                       />
                     )
                   }} />
                   <Route path="/submit" render={(props) => {
-                    return <SubmitContainer {...props} />
+                    return <SubmitContainer {...props} user={user} />
                   }} />
                   <Route path="/done" render={(props) => {
                     return <Done {...props} />
