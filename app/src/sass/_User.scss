@@ -29,6 +29,14 @@
   }
 }
 
+.User__login-button {
+  @include secondary-button;
+  margin: 40px auto;
+  &:hover {
+    background-color: rgb(89, 247, 102);
+  }
+}
+
 .User__back-button {
     height: 50px;
     width: 50px;

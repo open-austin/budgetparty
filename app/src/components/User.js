@@ -33,7 +33,13 @@ const User = ({ ...props }) => {
         <div>
           <h2>You are not logged in. Click on the button below to log in.</h2>
           <span>
-            <Link to="/login" className="navbar-brand">Login</Link>
+            <Link
+              to="/login"
+              className="User__login-button">
+              <button>
+                Login
+              </button>
+            </Link>
           </span>
         </div>
         }
