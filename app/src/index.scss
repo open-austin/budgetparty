@@ -20,6 +20,8 @@ $nav_height: 65px;
 @import "./sass/ProgressBar";
 @import "./sass/Submit";
 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 html, body, #root,
 .container, .row,
 .intro {
@@ -29,6 +31,17 @@ html, body, #root,
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: $text-color;
+}
+
+
+@media (min-width: 600px) {
+  .container, .Navigation {
+    width: 500px;
+    margin: auto;
+  }
+  .Navigation {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 0px;
+  }
 }

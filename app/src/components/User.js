@@ -9,9 +9,9 @@ const User = ({ ...props }) => {
       {isAuthed
       ?
         <div>
-          <h2>Logged in as {user && user.displayName || user && user.email}</h2>
+          <h2>Logged in as {(user && user.displayName) || (user && user.email)}</h2>
           <button
-            style={{border: 'none', background: 'transparent'}}
+            style={{ border: 'none', background: 'transparent' }}
             onClick={handleLogout}
             className="navbar-brand"
           >
