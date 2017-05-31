@@ -903,6 +903,7 @@ button::-moz-focus-inner {
   display: flex;
   height: 90vh;
   justify-content: center;
+  margin: 15px auto;
   text-align: center; }
 
 @media (max-width: 600px) {
@@ -939,6 +940,10 @@ button::-moz-focus-inner {
 .User__logout-button:hover {
   background-color: #f86d64; }
 
+.User__back-button {
+  height: 50px;
+  width: 50px; }
+
 html, body, #root,
 .container, .row,
 .intro {
@@ -951,7 +956,7 @@ body {
   color: #4D4D4D; }
 
 @media (min-width: 600px) {
-  .container, .Navigation, .User {
+  .container, .Navigation {
     width: 500px;
     margin: auto; }
   .Navigation {

@@ -5,6 +5,7 @@
   display: flex;
   height: 90vh;
   justify-content: center;
+  margin: 15px auto;
   text-align: center;
 }
 
@@ -26,4 +27,9 @@
   &:hover {
     background-color: rgb(248, 109, 100);
   }
+}
+
+.User__back-button {
+    height: 50px;
+    width: 50px;
 }
