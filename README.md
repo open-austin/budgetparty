@@ -3,7 +3,7 @@
 <img src="http://dsh.re/af3f9" width="300"/>
 
 ## ATX Hack for Change
-Our team is participating in the ATX Hack for Change on June 2-4, 2017. If you'd like to contribute to this project during the hackathon, [read this overview of our goals for the hackathon weekend](/atxh4c.md).
+Our team is participating in the ATX Hack for Change on June 2-4, 2017. If you'd like to contribute to this project during the hackathon, [read this overview of our goals for the hackathon weekend](https://github.com/open-austin/budgetparty/blob/master/ATXH4C.md).
 
 ### Table of Contents
 
