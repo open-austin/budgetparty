@@ -896,6 +896,79 @@ button::-moz-focus-inner {
   font-weight: normal;
   font-size: 16px; }
 
+.User {
+  align-items: center;
+  background-color: #DFF7FE;
+  border-radius: 10px;
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  margin: 15px auto;
+  text-align: center; }
+
+@media (max-width: 600px) {
+  .User {
+    border-radius: 0;
+    height: 100%; } }
+
+.User__title {
+  font-weight: 600;
+  text-align: center; }
+
+.User__logout-button {
+  display: block;
+  width: 180px;
+  background-color: #ffffff;
+  border-color: #4D4D4D;
+  color: #ffffff;
+  text-align: center;
+  height: 50px;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin: auto;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #D0011B;
+  border-color: #D0011B;
+  margin: 40px auto; }
+
+.User__logout-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
+
+.User__logout-button:hover {
+  background-color: #f86d64; }
+
+.User__login-button {
+  display: block;
+  width: 180px;
+  background-color: #ffffff;
+  border-color: #4D4D4D;
+  color: #ffffff;
+  text-align: center;
+  height: 50px;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin: auto;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #50D200;
+  border-color: #50D200;
+  margin: 40px auto; }
+
+.User__login-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
+
+.User__login-button:hover {
+  background-color: #59f766; }
+
+.User__back-button {
+  height: 50px;
+  width: 50px; }
+
 html, body, #root,
 .container, .row,
 .intro {

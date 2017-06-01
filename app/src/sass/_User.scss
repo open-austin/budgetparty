@@ -1,0 +1,43 @@
+.User {
+  align-items: center;
+  background-color: #DFF7FE;
+  border-radius: 10px;
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  margin: 15px auto;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .User {
+    border-radius: 0;
+    height: 100%;
+  }
+}
+
+.User__title {
+  font-weight: 600;
+  text-align: center;
+}
+
+.User__logout-button {
+  @include warning-button;
+  margin: 40px auto;
+  &:hover {
+    background-color: rgb(248, 109, 100);
+  }
+}
+
+.User__login-button {
+  @include secondary-button;
+  margin: 40px auto;
+  &:hover {
+    background-color: rgb(89, 247, 102);
+  }
+}
+
+.User__back-button {
+    height: 50px;
+    width: 50px;
+}
