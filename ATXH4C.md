@@ -15,7 +15,7 @@ To provide some more context, here is a high level overview of what we are focus
 1. todo [link issue(s)]
 
 ## Policy
-1. todo [link issue(s)]
+1. We are using 2016 budget numbers for City of Austin Departments. We need someone who can look at the 2017 budget and update the numbers for us. [link issue(s)]
 
 ## Marketing
 1. todo [link issue(s)]
