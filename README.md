@@ -2,11 +2,15 @@
 
 <img src="http://dsh.re/af3f9" width="300"/>
 
+## ATX Hack for Change
+Our team is participating in the ATX Hack for Change on June 2-4, 2017. If you'd like to contribute to this project during the hackathon, [read this overview of our goals for the hackathon weekend](/atxh4c.md).
+
 ### Table of Contents
 
 - [Project Description](#project-description)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
+  - [Curriculum](#curriculum)
   - [Design](#design)
   - [Development](#development)
 
@@ -17,18 +21,6 @@ We're Team Budget Party! Our team includes developers, designers, a publisher, a
 We are interested in the health of our civic fabric and we are excited about the potential for youth inclusion in the decision making process of local government.
 
 Thanks for coming here to learn more!
-
-### Our Team
-
-- Graphic & UX Design:
-  - [Vickie O'Dell](https://github.com/VictoriaODell)
-  - [Miles Gilbert](https://github.com/brainnews)
-- Web Development:
-  - [Mateo Clarke](https://github.com/mateoclarke)
-- Classroom Implementation
-  - Michael Kanin
-  - Sasha Cesare
-- More volunteers...
 
 ## Project Description
 
@@ -42,31 +34,27 @@ Open Austin contributors partnered with the [Capital of Texas Media Foundation]
 
 You can read more on our [blog post](https://www.open-austin.org/blog/2017/02/08/budget-party-mozilla-gigabit-grant-announcement) announcing the grant and from the [original project proposal](https://github.com/open-austin/project-ideas/issues/70).
 
+### Our Team
+
+- Graphic & UX Design:
+  - [Vickie O'Dell](https://github.com/VictoriaODell)
+  - [Miles Gilbert](https://github.com/brainnews)
+- Web Development:
+  - [Mateo Clarke](https://github.com/mateoclarke)
+- Classroom Implementation
+  - Michael Kanin
+  - Sasha Cesare
+- Many volunteers...
+
 ## Roadmap
 
 At this stage, we have:
 
-1. A working prototype (version 0.0) [austinbudget.party](http://austinbudget.party/). This prototype was used at our first Game Night with Glasshouse Policy. This is the [feedback](https://github.com/open-austin/budgetparty/issues/66) we got.
+1. A (mostly) working web (version 1.0) [austinbudget.party](http://austinbudget.party/). This is our second iteration of a design and user workflow. The first prototype (version 0.1) was used at our first Game Night with Glasshouse Policy. This is the [feedback](https://github.com/open-austin/budgetparty/issues/66) we got from that event.
 2. Designs for version 1.0 of Budget Party. See examples [here](https://github.com/open-austin/budgetparty/issues/74#issuecomment-284244078) and [here](https://github.com/open-austin/budgetparty/issues/73#issuecomment-284243962). [Sketch File](https://github.com/open-austin/budgetparty/files/880263/budgetParty-v2.2.sketch.zip)
-3. Tested the prototype at a Budget Game Nights and in a high school classroom.
+3. A [curriculum](https://github.com/open-austin/budgetparty/files/1009706/Budget.Game.Binder.pdf) to provide context for middle school and high school students for understanding how the City Council makes decisions. We are looking for opportunities to use the curriculum in classes with the Budget Party app.
 
-**For the 1.0 release, we are working on:**
-
-- A [curriculum](https://github.com/open-austin/budgetparty/files/1009706/Budget.Game.Binder.pdf) to provide context for middle school and high school students for understanding how the City Council makes decisions.
-- [Information Architecture](https://github.com/open-austin/budgetparty/issues/79) and improved user workflows.
-- [District Profiles](https://github.com/open-austin/budgetparty/issues/80) for users to learn about City Council demographics.
-- Page Redesigns.
-- [Login](https://github.com/open-austin/budgetparty/issues/72) & [save session data](https://github.com/open-austin/budgetparty/issues/75).
-- New icons and [imagery](https://github.com/open-austin/budgetparty/issues/71).
-- Other [technical](https://github.com/open-austin/budgetparty/issues/43) improvements.
-
-Our target launch for v1.0 is May 7, 2017. 
-
-We presented the game and curriculum to AISD high school departments chairs on April 11, 2017.
-
-Teachers will implement the instructional tools in May 2017.
-
-v1.1 will follow with feedback from user testing and teachers.
+We are currently working on bug fixes and more features to be included in v1.1. We are also looking for feedback from users and testing with educators.
 
 ## Slack
 
@@ -81,7 +69,9 @@ This project has received contributions from some wonderful volunteers. We would
 
 For more information, check out [CONTRIBUTING.md](/CONTRIBUTING.md)
 
-### Previous Contributors
+### Additional Contributors
+- [@gness1804](https://github.com/drewpchannel) - Javascript, CSS, Web
+- [@drewpchannel](https://github.com/drewpchannel) - Javascript, CSS, Web
 - [@graceatkins](https://github.com/graceatkins) - Policy Domain Expert, Research & Writing
 - [@wilsaj](https://github.com/wilsaj) - Javascript, Web Development
 - [@kmclaugh](https://github.com/kmclaugh) - Javascript, Web Development
