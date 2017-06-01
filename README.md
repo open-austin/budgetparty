@@ -32,7 +32,9 @@ Thanks for coming here to learn more!
 
 ## Project Description
 
-Austin Budget Party has been [awarded a Mozilla Gigabit Community Fund grant](https://learning.mozilla.org/blog/mozilla-awards-241000-to-explore-the-intersection-of-gigabit-technology-and-civics-robotics-farming-and-more) to help design and develop a **Digital Mock City Council** experience with [austinbudget.party](https://austinbudget.party/).
+Budget Party helps people understand and augment a city budget for austin. 
+
+Recently, Austin Budget Party has been [awarded a Mozilla Gigabit Community Fund grant](https://learning.mozilla.org/blog/mozilla-awards-241000-to-explore-the-intersection-of-gigabit-technology-and-civics-robotics-farming-and-more) to help design and develop a **Digital Mock City Council** experience with [austinbudget.party](https://austinbudget.party/).
 
 The goal of the grant is to create an online, open-source, digital budget debate platform and curriculum designed for middle and high school students to explore civic challenges and priorities.
 
