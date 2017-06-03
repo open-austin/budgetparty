@@ -68,4 +68,8 @@
   img {
     margin: -5px 5px 0 0;
   }
+  &:hover {
+    font-weight: bold;
+    color: $darkbluish;
+  }
 }
