@@ -19,7 +19,7 @@ const IntroPage = (props) => {
   return (
     <div className="intro">
       <Link to="/dashboard" className="intro__skip">Skip Intro</Link>
-      <img src={moneyImg} className="intro__img" alt="Money Emoji" />
+      <img src={moneyImg} className="intro__img" alt="Money Emoji"/>
       <p className="intro__text">{props.text}</p>
       {
         isLastIntro
