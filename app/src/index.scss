@@ -29,6 +29,10 @@ html, body, #root,
   height: 100%;
 }
 
+.container {
+  position: relative;
+}
+
 body {
   margin: 0;
   padding: 0;
