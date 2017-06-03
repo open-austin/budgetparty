@@ -92,6 +92,16 @@ The Budget Party app is primarily written in javascript and leans heavily into t
 
 **Getting started**
 
+This project has a dependency on Node and npm. Make sure they are install on your machine by running the following commands:
+`node -v`
+`npm -v`
+
+This should return the version number of your install. 
+If it doesn't Google how to install Node & npm for your operating system. 
+_Maybe these links could help you?_
+- [Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04)
+- [Mac](https://nodesource.com/blog/installing-nodejs-tutorial-mac-os-x/)
+
 Once you have cloned this repo to you local machine, open the `app` directory in your Terminal.
 
 `cd app`
