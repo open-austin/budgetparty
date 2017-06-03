@@ -4,7 +4,7 @@
 
 ## Project Description
 Budget Party helps people understand and augment a city budget for Austin. 
-Visit our current app at [austinbudget.party](http://austinbudget.party/)
+Visit our current app at [austinbudget.party](http://austinbudget.party/).
 Our Channel for the ATX Hack for Change Slack is [#Budgetparty](https://atxhack4change.slack.com/messages/C56PW6P4Y/)
 
 
@@ -21,13 +21,11 @@ To provide some more context, here is a high level overview of what we are focus
 - [Data viz designers & developers needed to create a District Profile tool](https://github.com/open-austin/budgetparty/issues/80)
 - This would be for students/citizens to view demographic breakdowns of each City Council district and look up who their Councilmember is.
 
-###  💰📊 Add Budget Data Visulizations
-- Data viz designers & developers needed [todo: make issue]()
-- Within Budget Party, incorporate a pie chart or another useful visualization that allows you to see what percentage of the City's General Fund is going to each department. Figure out how this fits into the exisitng flow of the app.
+###  💰📊 Add Budget Data Visualizations
+- Data viz designers & developers needed to incorporate a pie chart or another useful visualizations that allow you to see what percentage of the City's General Fund is going to each department. Figure out how this fits into the existing flow of the app. [Issue #136](https://github.com/open-austin/budgetparty/issues/136)
 
 ### 🏙️ 🎉 Make Budget Party work for other cities
-- To do this, we need to start abstracting the City specific logic.
-- And moving city specific details into easily editable config files.
+- Researchers, policy wonks, and software architectues needed to start research budgets in other cities and start abstracting out the City specific logic and moving city specific details into easily editable config files. [Issue #135](https://github.com/open-austin/budgetparty/issues/135)
 
 ### 💅 🐛 Polish up the budget party app by reporting bugs, fixing bugs, adding enhancements.
 1. 🔥 🗄️ Firebase is our backend system for authentication and NoSQL database services. We need to do a couple things to make our React/Redux app play more nicely with Firebase.
