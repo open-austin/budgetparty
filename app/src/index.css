@@ -157,6 +157,8 @@ button::-moz-focus-inner {
   .auth-form__button:hover {
     color: #ffffff;
     text-decoration: none; }
+  .auth-form__button:hover {
+    background-color: #006285; }
 
 .auth-form__skip {
   display: block;

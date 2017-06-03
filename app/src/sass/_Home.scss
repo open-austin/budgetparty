@@ -50,6 +50,9 @@
   margin: 30px auto 10px;
   display: block;
   width: 45%;
+  &:hover{
+    background-color: $darkbluish;
+  }
 }
 
 .auth-form__skip {
