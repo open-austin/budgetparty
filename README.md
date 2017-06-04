@@ -119,5 +119,7 @@ Once you have cloned this repo to you local machine, open the `app` directory in
 
 1. `npm run build`
 
+### Deploy
 
+1. `npm run deploy`
 ___
