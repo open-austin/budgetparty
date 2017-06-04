@@ -7,7 +7,7 @@ function departments(state = InitialState.departments, action = {}) {
   let newState
 
   switch (action.type) {
-    case 'CHANGE_DEPARTMENT_AMOUNT':
+    case 'CHANGE_DEPARTMENT_PERCENT_CHANGE':
       newDeptState = deptState
       newDeptState.percentChange = Number(
         (deptState.percentChange + action.percentChange).toFixed(1),

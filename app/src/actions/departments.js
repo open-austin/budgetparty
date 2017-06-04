@@ -1,6 +1,6 @@
-export function changeDepartmentAmount(departmentId, percentChange) {
+export function changeDepartmentPercentChange(departmentId, percentChange) {
   return {
-    type: 'CHANGE_DEPARTMENT_AMOUNT',
+    type: 'CHANGE_DEPARTMENT_PERCENT_CHANGE',
     departmentId,
     percentChange,
   };
