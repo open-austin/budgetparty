@@ -208,6 +208,12 @@ button::-moz-focus-inner {
 .intro__img {
   margin: 35px 0 50px; }
 
+.celebration {
+  position: absolute; }
+
+.intro__cof {
+  margin: 50px 75px 40px; }
+
 .intro__text {
   font-size: 22px;
   text-align: center;
