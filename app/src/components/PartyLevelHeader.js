@@ -56,7 +56,7 @@ const PartyLevelHeader = (props) => {
     return (
       <div className="PartyLevelHeader__overlay--grey">
         <span className="PartyLevelHeader__change">
-          {sign} {dept.percentChange}% from Last Year
+          {sign} {Math.abs(dept.percentChange)}% from Last Year
         </span>
         <h2 className="PartyLevelHeader__value">
           <FormattedNumber

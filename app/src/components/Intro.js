@@ -33,7 +33,7 @@ const IntroPage = (props) => {
       <Link to="/dashboard" className="intro__skip">Skip Intro</Link>
       <img src={introImgArray[props.params.id - 1]} className="intro__img" alt="Money Emoji" />
       <div className="celebration">
-      <img src={introCofArray[props.params.id -1]} className="intro__cof" alt="Money Emoji" />
+        <img src={introCofArray[props.params.id - 1]} className="intro__cof" alt="Money Emoji" />
       </div>
       <p className="intro__text">{props.text}</p>
       {
@@ -46,9 +46,9 @@ const IntroPage = (props) => {
 }
 
 export default class Intro extends Component {
-  render () {
+  render() {
     return (
-      <Route path='/intro/:id' render={({match}) => <IntroPage {...match} text={introText[match.params.id - 1]} />} />
+      <Route path="/intro/:id" render={({ match }) => <IntroPage {...match} text={introText[match.params.id - 1]} />} />
     )
   }
 }
