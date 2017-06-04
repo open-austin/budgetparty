@@ -3,7 +3,10 @@ import { connect } from 'react-redux'
 import Department from '../components/Department'
 import { database } from '../config/constants'
 
-import { changeDepartmentPercentChange } from '../actions/departments'
+import {
+  changeDepartmentPercentChange,
+  resetDepartmentPercentChange,
+} from '../actions/departments'
 import { changeRemainingFundsAmout } from '../actions/funds'
 import {
   updateServiceStatus,
@@ -61,10 +64,8 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(changeRemainingFundsAmout(services))
     },
     resetBudgetAmount: (deptId) => {
-      dispatch(changeDepartmentPercentChange(deptId, 0))
-      // TODO: Get reset to recalculate
+      dispatch(resetDepartmentPercentChange(deptId))
       // dispatch(recalculateServiceAmount(service.index, departments))
-      // TODO: changeRemainingFundsAmout
       // dispatch(changeRemainingFundsAmout(services))
     },
   }

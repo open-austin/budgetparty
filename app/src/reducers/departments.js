@@ -34,6 +34,17 @@ function departments(state = InitialState.departments, action = {}) {
       ]
 
       return newState
+    case 'RESET_DEPARTMENT_PERCENT_CHANGE':
+      newDeptState = deptState
+
+      newDeptState.amount = deptState.lastYearAmount
+      newDeptState.percentChange = 0
+
+      newState = Object.assign({}, state,
+        { [deptId]: newDeptState },
+      )
+
+      return newState
     default:
       return state;
 
