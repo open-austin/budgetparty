@@ -1,7 +1,17 @@
 import React, { Component } from 'react'
 import { Route, Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
-import moneyImg from '../images/money.svg'
+import introImg0 from '../images/intro-images/0.svg';
+import introImg1 from '../images/intro-images/1.svg';
+import introImg2 from '../images/intro-images/2.svg';
+import introImg3 from '../images/intro-images/3.svg';
+import introImg4 from '../images/intro-images/4.svg';
+import introCof0 from '../images/intro-confetti/0.svg';
+import introCof1 from '../images/intro-confetti/1.svg';
+import introCof2 from '../images/intro-confetti/2.svg';
+import introCof3 from '../images/intro-confetti/3.svg';
+import introCof4 from '../images/intro-confetti/4.svg'
+
 
 const introText = [
   "As a council member you have $969.2 Million to fund services for all of Austin, Texas",
@@ -10,6 +20,8 @@ const introText = [
   "Outside effects like population change and overall economic activity cause the fund to vary year to year",
   "It's now up to you to make sure we allocate the funds and create a fair budget."
 ]
+const introImgArray = [introImg0, introImg1, introImg2, introImg3, introImg4]
+const introCofArray = [introCof0, introCof1, introCof2, introCof3, introCof4]
 
 const IntroPage = (props) => {
   const nextId = Number(props.params.id) + 1;
@@ -19,7 +31,10 @@ const IntroPage = (props) => {
   return (
     <div className="intro">
       <Link to="/dashboard" className="intro__skip">Skip Intro</Link>
-      <img src={moneyImg} className="intro__img" alt="Money Emoji" />
+      <img src={introImgArray[props.params.id - 1]} className="intro__img" alt="Money Emoji" />
+      <div className="celebration">
+      <img src={introCofArray[props.params.id -1]} className="intro__cof" alt="Money Emoji" />
+      </div>
       <p className="intro__text">{props.text}</p>
       {
         isLastIntro
