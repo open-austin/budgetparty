@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl'
-import { constants } from '../data/config'
+import { constants } from '../config/constants'
 
 const getSign = (number) => {
   let sign = ''

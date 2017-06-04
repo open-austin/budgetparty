@@ -13,3 +13,7 @@ firebase.initializeApp(config)
 export const database = firebase.database()
 export const firebaseAuth = firebase.auth
 export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
+export const constants = {
+  LAST_YEAR: 2016,
+}
