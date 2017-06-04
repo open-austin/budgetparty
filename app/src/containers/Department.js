@@ -56,9 +56,7 @@ const mapDispatchToProps = (dispatch) => {
       persistToFirebase(userId, departments)
     },
     onPercentChange: (dept, percentChange, departments, serviceIndex, services) => {
-      const deptPercentChange = dept.amount === null ? 0 : percentChange
-
-      dispatch(changeDepartmentPercentChange(dept.deptId, deptPercentChange))
+      dispatch(changeDepartmentPercentChange(dept.deptId, percentChange))
       dispatch(recalculateServiceAmount(serviceIndex, departments))
       dispatch(changeRemainingFundsAmout(services))
     },
