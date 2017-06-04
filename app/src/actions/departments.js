@@ -13,3 +13,10 @@ export function updateExplainResponse(departmentId, text) {
     text,
   }
 }
+
+export function resetDepartmentPercentChange(departmentId) {
+  return {
+    type: 'RESET_DEPARTMENT_PERCENT_CHANGE',
+    departmentId,
+  }
+}

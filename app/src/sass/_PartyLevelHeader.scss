@@ -1,7 +1,6 @@
 .PartyLevelHeader {
   padding-top: $nav_height;
   max-height: 205px;
-  // cursor: pointer;
   overflow: hidden;
   text-align: center;
   background-color: $grey2;
@@ -48,5 +47,6 @@
 }
 
 .PartyLevelHeader__reset {
+  cursor: pointer;
   @include small-caps;
 }

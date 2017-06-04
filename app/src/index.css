@@ -438,6 +438,7 @@ button::-moz-focus-inner {
   text-transform: uppercase; }
 
 .PartyLevelHeader__reset {
+  cursor: pointer;
   font-size: 12px;
   text-transform: uppercase;
   color: #00A3DE;
@@ -1042,12 +1043,6 @@ body {
   color: #4D4D4D; }
 
 @media (min-width: 600px) {
-  .container, .Navigation {
-    width: 500px;
-    margin: auto; }
-  .Navigation {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 0px; } }
-edia (min-width: 600px) {
   .container, .Navigation {
     width: 500px;
     margin: auto; }
