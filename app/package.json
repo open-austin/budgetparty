@@ -39,6 +39,6 @@
     "lint": "eslint src",
     "nibble": "eslint-nibble src",
     "predeploy": "npm run build",
-    "deploy" : "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   }
 }

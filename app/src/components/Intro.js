@@ -36,11 +36,13 @@ const IntroPage = (props) => {
         <img src={introCofArray[props.params.id - 1]} className="intro__cof" alt="Money Emoji" />
       </div>
       <p className="intro__text">{props.text}</p>
-      {
-        isLastIntro
-        ? <Link to="/dashboard" className="intro__start-button"><span>Get Started</span></Link>
-        : <Link to={nextUrl} className="intro__next-button">Next</Link>
-      }
+      <div className="intro__button-flex-container">
+        {
+          isLastIntro
+          ? <Link to="/dashboard" className="intro__start-button"><span>Get Started</span></Link>
+          : <Link to={nextUrl} className="intro__next-button">Next</Link>
+        }
+      </div>
     </div>
   )
 }

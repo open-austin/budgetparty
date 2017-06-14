@@ -31,11 +31,13 @@ const Service = props => {
         {
           isIncomplete
             ?
-            <Link to={`/service/${service.index}/department/${service.departments[0]}`}
-              className="Service__next-button"
-            >
-              {(service.index + 1) < services.length ? 'Start Budgeting' : 'Review Final Budget'}
-            </Link>
+            <div className="Service__next-button-flex-container">
+              <Link to={`/service/${service.index}/department/${service.departments[0]}`}
+                className="Service__next-button"
+              >
+                {(service.index + 1) < services.length ? 'Start Budgeting' : 'Review Final Budget'}
+              </Link>
+            </div>
             :
             <div className="Service__review-buttons">
               <Link to={`/service/${service.index}/department/${service.departments[0]}`}
