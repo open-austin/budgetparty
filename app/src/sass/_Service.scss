@@ -16,6 +16,10 @@
 
 .Service__next-button {
   @include primary-button;
+&:hover{
+background-color: $darkbluish;
+}
+
 }
 
 .Service__review-buttons {

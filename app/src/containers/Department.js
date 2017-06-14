@@ -3,7 +3,10 @@ import { connect } from 'react-redux'
 import Department from '../components/Department'
 import { database } from '../config/constants'
 
-import { changeDepartmentAmount } from '../actions/departments'
+import {
+  changeDepartmentPercentChange,
+  resetDepartmentPercentChange,
+} from '../actions/departments'
 import { changeRemainingFundsAmout } from '../actions/funds'
 import {
   updateServiceStatus,
@@ -35,7 +38,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onClickNext: (department, service, serviceDepts, departments, services, userId) => {
       if (!department.amount) {
-        dispatch(changeDepartmentAmount(department.deptId, 0))
+        dispatch(changeDepartmentPercentChange(department.deptId, 0))
       }
       dispatch(updateCompletedDepartments(service.index, departments))
 
@@ -56,17 +59,13 @@ const mapDispatchToProps = (dispatch) => {
       persistToFirebase(userId, departments)
     },
     onPercentChange: (dept, percentChange, departments, serviceIndex, services) => {
-      const deptPercentChange = dept.amount === null ? 0 : percentChange
-
-      dispatch(changeDepartmentAmount(dept.deptId, deptPercentChange))
+      dispatch(changeDepartmentPercentChange(dept.deptId, percentChange))
       dispatch(recalculateServiceAmount(serviceIndex, departments))
       dispatch(changeRemainingFundsAmout(services))
     },
     resetBudgetAmount: (deptId) => {
-      dispatch(changeDepartmentAmount(deptId, 0))
-      // TODO: Get reset to recalculate
+      dispatch(resetDepartmentPercentChange(deptId))
       // dispatch(recalculateServiceAmount(service.index, departments))
-      // TODO: changeRemainingFundsAmout
       // dispatch(changeRemainingFundsAmout(services))
     },
   }

@@ -50,6 +50,9 @@
   margin: 30px auto 10px;
   display: block;
   width: 45%;
+  &:hover {
+    background-color: $darkbluish;
+  }
 }
 
 .auth-form__skip {
@@ -67,5 +70,9 @@
   font-size: 14px;
   img {
     margin: -5px 5px 0 0;
+  }
+  &:hover {
+    font-weight: bold;
+    color: $darkbluish;
   }
 }

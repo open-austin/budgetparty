@@ -52,10 +52,22 @@ button::-moz-focus-inner {
   @include button;
   background-color: $brightblue;
   border-color: $brightblue;
+  &:hover{
+    background-color: $darkbluish;
+  }
 }
 
 @mixin secondary-button {
   @include button;
   background-color: $green;
   border-color: $green;
+  &:hover{
+    background-color: $greenish;
+  }
+}
+
+@mixin warning-button {
+  @include button;
+  background-color: $red;
+  border-color: $red;
 }

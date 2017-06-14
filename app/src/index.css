@@ -160,6 +160,12 @@ button::-moz-focus-inner {
   color: #ffffff;
   text-decoration: none; }
 
+.auth-form__button:hover {
+  background-color: #006285; }
+
+.auth-form__button:hover {
+  background-color: #006285; }
+
 .auth-form__skip {
   display: block;
   text-align: center;
@@ -192,6 +198,10 @@ button::-moz-focus-inner {
 .google-auth-button img {
   margin: -5px 5px 0 0; }
 
+.google-auth-button:hover {
+  font-weight: bold;
+  color: #006285; }
+
 .intro {
   display: flex;
   flex-direction: column;
@@ -204,6 +214,12 @@ button::-moz-focus-inner {
 
 .intro__img {
   margin: 35px 0 50px; }
+
+.celebration {
+  position: absolute; }
+
+.intro__cof {
+  margin: 50px 75px 40px; }
 
 .intro__text {
   font-size: 22px;
@@ -232,6 +248,9 @@ button::-moz-focus-inner {
   color: #ffffff;
   text-decoration: none; }
 
+.intro__start-button:hover {
+  background-color: #006285; }
+
 .intro__next-button {
   display: block;
   width: 180px;
@@ -252,6 +271,9 @@ button::-moz-focus-inner {
 .intro__next-button:hover {
   color: #ffffff;
   text-decoration: none; }
+
+.intro__next-button:hover {
+  background-color: #4B830E; }
 
 .Navigation {
   background-color: #DFF7FE;
@@ -416,6 +438,7 @@ button::-moz-focus-inner {
   text-transform: uppercase; }
 
 .PartyLevelHeader__reset {
+  cursor: pointer;
   font-size: 12px;
   text-transform: uppercase;
   color: #00A3DE;
@@ -458,6 +481,12 @@ button::-moz-focus-inner {
   color: #ffffff;
   text-decoration: none; }
 
+.Service__next-button:hover {
+  background-color: #006285; }
+
+.Service__next-button:hover {
+  background-color: #006285; }
+
 .Service__review-buttons {
   display: flex;
   padding: 0 15%; }
@@ -487,6 +516,9 @@ button::-moz-focus-inner {
   color: #ffffff;
   text-decoration: none; }
 
+.Service__edit-button:hover {
+  background-color: #006285; }
+
 .Service__done-button {
   display: block;
   width: 180px;
@@ -511,6 +543,9 @@ button::-moz-focus-inner {
 .Service__done-button:hover {
   color: #ffffff;
   text-decoration: none; }
+
+.Service__done-button:hover {
+  background-color: #4B830E; }
 
 .Department {
   text-align: center; }
@@ -561,6 +596,12 @@ button::-moz-focus-inner {
   color: #ffffff;
   text-decoration: none; }
 
+.Department__edit-button:hover {
+  background-color: #006285; }
+
+.Department__edit-button:hover {
+  background-color: #006285; }
+
 .Department__done-button {
   display: block;
   width: 180px;
@@ -586,6 +627,12 @@ button::-moz-focus-inner {
 .Department__done-button:hover {
   color: #ffffff;
   text-decoration: none; }
+
+.Department__done-button:hover {
+  background-color: #006285; }
+
+.Department__done-button:hover {
+  background-color: #006285; }
 
 .Department__button-content--icon {
   padding: 6px 10px; }
@@ -741,6 +788,9 @@ button::-moz-focus-inner {
   color: #ffffff;
   text-decoration: none; }
 
+.LearnMore__close-button:hover {
+  background-color: #006285; }
+
 .Explain {
   padding-top: 65px;
   text-align: center;
@@ -780,6 +830,9 @@ button::-moz-focus-inner {
 .Explain__close-button:hover {
   color: #ffffff;
   text-decoration: none; }
+
+.Explain__close-button:hover {
+  background-color: #4B830E; }
 
 .Explain__textarea {
   width: 100%;
@@ -841,6 +894,9 @@ button::-moz-focus-inner {
   color: #ffffff;
   text-decoration: none; }
 
+.Submit__next-button:hover {
+  background-color: #006285; }
+
 .Submit__title {
   text-align: center; }
 
@@ -896,10 +952,89 @@ button::-moz-focus-inner {
   font-weight: normal;
   font-size: 16px; }
 
+.User {
+  align-items: center;
+  background-color: #DFF7FE;
+  border-radius: 10px;
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  margin: 15px auto;
+  text-align: center; }
+
+@media (max-width: 600px) {
+  .User {
+    border-radius: 0;
+    height: 100%; } }
+
+.User__title {
+  font-weight: 600;
+  text-align: center; }
+
+.User__logout-button {
+  display: block;
+  width: 180px;
+  background-color: #ffffff;
+  border-color: #4D4D4D;
+  color: #ffffff;
+  text-align: center;
+  height: 50px;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin: auto;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #D0011B;
+  border-color: #D0011B;
+  margin: 40px auto; }
+
+.User__logout-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
+
+.User__logout-button:hover {
+  background-color: #f86d64; }
+
+.User__login-button {
+  display: block;
+  width: 180px;
+  background-color: #ffffff;
+  border-color: #4D4D4D;
+  color: #ffffff;
+  text-align: center;
+  height: 50px;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin: auto;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #50D200;
+  border-color: #50D200;
+  margin: 40px auto; }
+
+.User__login-button:hover {
+  color: #ffffff;
+  text-decoration: none; }
+
+.User__login-button:hover {
+  background-color: #4B830E; }
+
+.User__login-button:hover {
+  background-color: #59f766; }
+
+.User__back-button {
+  height: 50px;
+  width: 50px; }
+
 html, body, #root,
 .container, .row,
 .intro {
   height: 100%; }
+
+.container {
+  position: relative; }
 
 body {
   margin: 0;

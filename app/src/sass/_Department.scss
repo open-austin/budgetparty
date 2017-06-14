@@ -30,6 +30,9 @@
   height: 36px;
   min-width: auto;
   padding: 6px;
+  &:hover {
+    background-color: $darkbluish;
+  }
 }
 
 .Department__done-button {
@@ -39,6 +42,9 @@
   height: 36px;
   min-width: auto;
   padding: 6px;
+  &:hover {
+    background-color:$darkbluish;
+  }
 }
 
 .Department__button-content--icon {

@@ -7,6 +7,7 @@
 - [Project Description](#project-description)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
+  - [Curriculum](#curriculum)
   - [Design](#design)
   - [Development](#development)
 
@@ -18,6 +19,18 @@ We are interested in the health of our civic fabric and we are excited about the
 
 Thanks for coming here to learn more!
 
+## Project Description
+
+Budget Party helps people understand and augment a city budget for austin.
+
+Recently, Austin Budget Party has been [awarded a Mozilla Gigabit Community Fund grant](https://learning.mozilla.org/blog/mozilla-awards-241000-to-explore-the-intersection-of-gigabit-technology-and-civics-robotics-farming-and-more) to help design and develop a **Digital Mock City Council** experience with [austinbudget.party](https://austinbudget.party/).
+
+The goal of the grant is to create an online, open-source, digital budget debate platform and curriculum designed for middle and high school students to explore civic challenges and priorities.
+
+Open Austin contributors partnered with the [Capital of Texas Media Foundation](https://www.cotmf.org/), publisher of the [Austin Monitor](http://www.austinmonitor.com/), to improve the budget app, develop a teaching curriculum, and implement the program in 10 pilots schools in Austin.
+
+You can read more on our [blog post](https://www.open-austin.org/blog/2017/02/08/budget-party-mozilla-gigabit-grant-announcement) announcing the grant and from the [original project proposal](https://github.com/open-austin/project-ideas/issues/70).
+
 ### Our Team
 
 - Graphic & UX Design:
@@ -28,43 +41,20 @@ Thanks for coming here to learn more!
 - Classroom Implementation
   - Michael Kanin
   - Sasha Cesare
-- More volunteers...
-
-## Project Description
-
-Austin Budget Party has been [awarded a Mozilla Gigabit Community Fund grant](https://learning.mozilla.org/blog/mozilla-awards-241000-to-explore-the-intersection-of-gigabit-technology-and-civics-robotics-farming-and-more) to help design and develop a **Digital Mock City Council** experience with [austinbudget.party](https://austinbudget.party/).
-
-The goal of the grant is to create an online, open-source, digital budget debate platform and curriculum designed for middle and high school students to explore civic challenges and priorities.
-
-Open Austin contributors partnered with the [Capital of Texas Media Foundation](https://www.cotmf.org/), publisher of the [Austin Monitor](http://www.austinmonitor.com/), to improve the budget app, develop a teaching curriculum, and implement the program in 10 pilots schools in Austin.
-
-You can read more on our [blog post](https://www.open-austin.org/blog/2017/02/08/budget-party-mozilla-gigabit-grant-announcement) announcing the grant and from the [original project proposal](https://github.com/open-austin/project-ideas/issues/70).
+- Many volunteers...
 
 ## Roadmap
 
 At this stage, we have:
 
-1. A working prototype (version 0.0) [austinbudget.party](http://austinbudget.party/). This prototype was used at our first Game Night with Glasshouse Policy. This is the [feedback](https://github.com/open-austin/budgetparty/issues/66) we got.
+1. A (mostly) working web (version 1.0) [austinbudget.party](http://austinbudget.party/). This is our second iteration of a design and user workflow. The first prototype (version 0.1) was used at our first Game Night with Glasshouse Policy. This is the [feedback](https://github.com/open-austin/budgetparty/issues/66) we got from that event.
 2. Designs for version 1.0 of Budget Party. See examples [here](https://github.com/open-austin/budgetparty/issues/74#issuecomment-284244078) and [here](https://github.com/open-austin/budgetparty/issues/73#issuecomment-284243962). [Sketch File](https://github.com/open-austin/budgetparty/files/880263/budgetParty-v2.2.sketch.zip)
-3. Tested the prototype at a Budget Game Nights and in a high school classroom.
+3. A [curriculum](https://github.com/open-austin/budgetparty/files/1009706/Budget.Game.Binder.pdf) to provide context for middle school and high school students for understanding how the City Council makes decisions. We are looking for opportunities to use the curriculum in classes with the Budget Party app.
+4. Our team participated in the ATX Hack for Change on June 2-4, 2017. [These were our goals from the hackathon](https://github.com/open-austin/budgetparty/blob/master/ATXH4C.md).
 
-**For the 1.0 release, we are working on:**
+We are currently working on bug fixes and more features to be included in v1.1. We are also looking for feedback from users and testing with educators.
 
-- A [curriculum](https://github.com/open-austin/budgetparty/files/1009706/Budget.Game.Binder.pdf) to provide context for middle school and high school students for understanding how the City Council makes decisions.
-- [Information Architecture](https://github.com/open-austin/budgetparty/issues/79) and improved user workflows.
-- [District Profiles](https://github.com/open-austin/budgetparty/issues/80) for users to learn about City Council demographics.
-- Page Redesigns.
-- [Login](https://github.com/open-austin/budgetparty/issues/72) & [save session data](https://github.com/open-austin/budgetparty/issues/75).
-- New icons and [imagery](https://github.com/open-austin/budgetparty/issues/71).
-- Other [technical](https://github.com/open-austin/budgetparty/issues/43) improvements.
-
-Our target launch for v1.0 is May 7, 2017. 
-
-We presented the game and curriculum to AISD high school departments chairs on April 11, 2017.
-
-Teachers will implement the instructional tools in May 2017.
-
-v1.1 will follow with feedback from user testing and teachers.
+More ideas for what is ahead in more detail can be found as the are updated in this [Google Doc](https://docs.google.com/document/d/1ySYsyXnY_2lSfezXXYYgmma5coXyCbgWtjpTqcHFVdw/edit?usp=sharing).
 
 ## Slack
 
@@ -79,7 +69,9 @@ This project has received contributions from some wonderful volunteers. We would
 
 For more information, check out [CONTRIBUTING.md](/CONTRIBUTING.md)
 
-### Previous Contributors
+### Additional Contributors
+- [@gness1804](https://github.com/drewpchannel) - Javascript, CSS, Web
+- [@drewpchannel](https://github.com/drewpchannel) - Javascript, CSS, Web
 - [@graceatkins](https://github.com/graceatkins) - Policy Domain Expert, Research & Writing
 - [@wilsaj](https://github.com/wilsaj) - Javascript, Web Development
 - [@kmclaugh](https://github.com/kmclaugh) - Javascript, Web Development
@@ -100,6 +92,16 @@ The Budget Party app is primarily written in javascript and leans heavily into t
 
 **Getting started**
 
+This project has a dependency on Node and npm. Make sure they are install on your machine by running the following commands:
+`node -v`
+`npm -v`
+
+This should return the version number of your install.
+If it doesn't Google how to install Node & npm for your operating system.
+_Maybe these links could help you?_
+- [Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04)
+- [Mac](https://nodesource.com/blog/installing-nodejs-tutorial-mac-os-x/)
+
 Once you have cloned this repo to you local machine, open the `app` directory in your Terminal.
 
 `cd app`
@@ -117,5 +119,7 @@ Once you have cloned this repo to you local machine, open the `app` directory in
 
 1. `npm run build`
 
+### Deploy
 
+1. `npm run deploy`
 ___

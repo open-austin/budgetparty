@@ -1,6 +1,6 @@
-export function changeDepartmentAmount(departmentId, percentChange) {
+export function changeDepartmentPercentChange(departmentId, percentChange) {
   return {
-    type: 'CHANGE_DEPARTMENT_AMOUNT',
+    type: 'CHANGE_DEPARTMENT_PERCENT_CHANGE',
     departmentId,
     percentChange,
   };
@@ -11,5 +11,12 @@ export function updateExplainResponse(departmentId, text) {
     type: 'UPDATE_EXPLAIN_RESPONSE',
     departmentId,
     text,
+  }
+}
+
+export function resetDepartmentPercentChange(departmentId) {
+  return {
+    type: 'RESET_DEPARTMENT_PERCENT_CHANGE',
+    departmentId,
   }
 }

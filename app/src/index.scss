@@ -19,6 +19,7 @@ $nav_height: 65px;
 @import "./sass/Explain";
 @import "./sass/ProgressBar";
 @import "./sass/Submit";
+@import "./sass/User";
 
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
@@ -26,6 +27,10 @@ html, body, #root,
 .container, .row,
 .intro {
   height: 100%;
+}
+
+.container {
+  position: relative;
 }
 
 body {

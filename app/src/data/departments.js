@@ -7,6 +7,7 @@ const departments = [
     explainYourSpending: null,
     lastYearAmount: 22103276,
     amount2015: 21086564,
+    amount2016: 22514014,
     percentChange: 0,
     deptId: 1,
     url: 'https://data.austintexas.gov/stories/s/Municipal-Court/xm6x-8vij',
@@ -28,6 +29,7 @@ const departments = [
     explainYourSpending: null,
     lastYearAmount: 387399375,
     amount2015: 373570249,
+    amount2016: 386573423,
     percentChange: 0,
     deptId: 2,
     url: 'https://data.austintexas.gov/stories/s/Police/v4d4-74jw',
@@ -45,6 +47,7 @@ const departments = [
     explainYourSpending: null,
     lastYearAmount: 185889176,
     amount2015: 175266499,
+    amount2016: 185513831,
     percentChange: 0,
     deptId: 3,
     url: 'http://www.austintexas.gov/department/fire',
@@ -66,6 +69,7 @@ const departments = [
     explainYourSpending: null,
     lastYearAmount: 83870728,
     amount2015: 78255956,
+    amount2016: 83786011,
     percentChange: 0,
     deptId: 4,
     tradeoff: [
@@ -87,6 +91,7 @@ const departments = [
     explainYourSpending: null,
     lastYearAmount: 8047868,
     amount2015: 7505329,
+    amount2016: 7642545,
     percentChange: 0,
     deptId: 5,
   },
@@ -98,6 +103,7 @@ const departments = [
     explainYourSpending: null,
     lastYearAmount: 38405897,
     amount2015: 32902297,
+    amount2016: 37523998,
     percentChange: 0,
     deptId: 6,
     tradeoff: [
@@ -118,6 +124,7 @@ const departments = [
     explainYourSpending: null,
     lastYearAmount: 12946559,
     amount2015: 11546362,
+    amount2016: 12914285,
     percentChange: 0,
     deptId: 7,
     tradeoff: [
@@ -138,6 +145,7 @@ const departments = [
     explainYourSpending: null,
     lastYearAmount: 80760700,
     amount2015: 75432093,
+    amount2016: 80504938,
     percentChange: 0,
     deptId: 8,
     url: 'https://data.austintexas.gov/stories/s/Parks-and-Recreation/wgi2-kbuk',
@@ -164,6 +172,7 @@ const departments = [
     explainYourSpending: null,
     lastYearAmount: 47877210,
     amount2015: 41755192,
+    amount2016: 47167036,
     percentChange: 0,
     deptId: 9,
   },
@@ -175,6 +184,7 @@ const departments = [
     explainYourSpending: null,
     lastYearAmount: 27572364,
     amount2015: 7793303,
+    amount2016: 7793303,
     percentChange: 0,
     deptId: 10,
     tradeoff: [
@@ -196,6 +206,7 @@ const departments = [
     explainYourSpending: null,
     lastYearAmount: 38118507,
     amount2015: 36080604,
+    amount2016: 38536285,
     percentChange: 0,
     deptId: 11,
     tradeoff: [
@@ -216,6 +227,7 @@ const departments = [
     explainYourSpending: null,
     lastYearAmount: 5377245,
     amount2015: 4818944,
+    amount2016: 5798181,
     percentChange: 0,
     deptId: 12,
     tradeoff: [
@@ -237,6 +249,7 @@ const departments = [
     explainYourSpending: null,
     lastYearAmount: 852536,
     amount2015: 852536,
+    amount2016: 852536,
     percentChange: 0,
     deptId: 13,
     tradeoff: [
@@ -254,6 +267,7 @@ const departments = [
     explainYourSpending: null,
     lastYearAmount: 1,
     amount2015: 360943,
+    amount2016: 835943,
     percentChange: 0,
     deptId: 14,
     tradeoff: [
