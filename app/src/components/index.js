@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
-import { IntlProvider } from 'react-intl'
+import { IntlProvider, addLocaleData } from 'react-intl'
+import en from 'react-intl/locale-data/en';
+import es from 'react-intl/locale-data/es';
 import {
   Route,
   BrowserRouter as Router,
@@ -21,6 +23,12 @@ import { firebaseAuth } from '../config/constants'
 import { logout } from '../helpers/auth'
 
 import store from '../store';
+
+addLocaleData([...en, ...es]);
+
+const language = (navigator.languages && navigator.languages[0]) ||
+                     navigator.language ||
+                     navigator.userLanguage;
 
 export default class App extends Component {
   constructor(props) {
@@ -67,7 +75,7 @@ export default class App extends Component {
   render() {
     const { authed, user, loading } = this.state
     return loading === true ? <h1>Loading</h1> : (
-      <IntlProvider locale="en">
+      <IntlProvider locale={language}>
         <Provider store={store}>
           <Router>
             <div className="container">
