@@ -30,10 +30,16 @@
   margin-bottom: 40px;
 }
 
+.intro__button-flex-container {
+  @include button-flex-container;
+}
+
 .intro__start-button {
   @include primary-button;
+  @include button-flex;
 }
 
 .intro__next-button {
   @include secondary-button;
+  @include button-flex;
 }

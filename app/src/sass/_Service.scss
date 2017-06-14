@@ -14,12 +14,17 @@
   @include description-text;
 }
 
+.Service__next-button-flex-container {
+  @include button-flex-container;
+}
+
 .Service__next-button {
+  @include button-flex;
   @include primary-button;
 &:hover{
 background-color: $darkbluish;
 }
-
+  
 }
 
 .Service__review-buttons {
