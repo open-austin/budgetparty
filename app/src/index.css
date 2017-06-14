@@ -227,6 +227,10 @@ button::-moz-focus-inner {
   line-height: 32px;
   margin-bottom: 40px; }
 
+.intro__button-flex-container {
+  display: flex;
+  justify-content: center; }
+
 .intro__start-button {
   display: block;
   width: 180px;
@@ -242,7 +246,9 @@ button::-moz-focus-inner {
   padding: 12px;
   cursor: pointer;
   background-color: #00A3DE;
-  border-color: #00A3DE; }
+  border-color: #00A3DE;
+  position: absolute;
+  bottom: 70px; }
 
 .intro__start-button:hover {
   color: #ffffff;
@@ -266,7 +272,9 @@ button::-moz-focus-inner {
   padding: 12px;
   cursor: pointer;
   background-color: #50D200;
-  border-color: #50D200; }
+  border-color: #50D200;
+  position: absolute;
+  bottom: 70px; }
 
 .intro__next-button:hover {
   color: #ffffff;
@@ -460,7 +468,13 @@ button::-moz-focus-inner {
   text-align: center;
   line-height: 24px; }
 
+.Service__next-button-flex-container {
+  display: flex;
+  justify-content: center; }
+
 .Service__next-button {
+  position: absolute;
+  bottom: 70px;
   display: block;
   width: 180px;
   background-color: #ffffff;
