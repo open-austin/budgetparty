@@ -4,16 +4,60 @@ import Tabs from './Tabs'
 import AuthForm from './AuthForm'
 import GoogleAuth from './GoogleAuth'
 import logo from '../images/logo.png'
+import { auth, login, anonymous_auth } from '../helpers/auth'
+
+function setErrorMsg(error) {
+  return {
+    errorText: error.message
+  }
+}
+
+function setLoginErrorMsg(error) {
+  return {
+    errorText: error
+  }
+}
 
 export default class Home extends Component {
+
   state = {
     activeTab: 0,
+    errorText: null,
   }
 
   changeTab = (tab) => {
     this.setState({
       activeTab: tab.id,
     });
+  }
+
+  skipLogin = (e) => {
+    anonymous_auth()
+      .catch((error) => {
+        this.setState(setLoginErrorMsg('Skip login is not supported as of now.'))
+      })
+  }
+
+  handleRegister = (email, pwd) => {
+    auth(email, pwd)
+      .catch(e => this.setState(setErrorMsg(e)))
+  }
+
+  handleLogin = (email, pwd) => {
+    login(email, pwd)
+      .catch((error) => {
+          this.setState(setLoginErrorMsg('Invalid username/password.'))
+        })
+  }
+
+  getAuthForm = () => {
+    return this.state.activeTab === 0
+            ? <AuthForm actionHandler={this.handleRegister}
+                buttonText={"Create Account"}
+                errorText={this.state.errorText} />
+            : <AuthForm actionHandler={this.handleLogin}
+                buttonText={"Sign in"}
+                errorText={this.state.errorText} />
   }
 
   tabList = [
@@ -34,15 +78,12 @@ export default class Home extends Component {
             changeTab={this.changeTab}
           />
           <div className="auth-form col-sm-6 col-sm-offset-3">
-            { this.state.activeTab === 0
-              ? <AuthForm action="signup"/>
-              : <AuthForm action="login"/>
-            }
+            { this.getAuthForm() }
             <GoogleAuth />
           </div>
 
         </div>
-        <Link to="/intro/1" className="auth-form__skip">Skip Login</Link>
+        <Link onClick={this.skipLogin} to="/intro/1" className="auth-form__skip">Skip Login</Link>
       </div>
     )
   }
