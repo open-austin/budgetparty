@@ -210,16 +210,47 @@ button::-moz-focus-inner {
 
 .intro__skip {
   text-align: right;
-  padding: 20px 0; }
+  padding: 20px 0;
+  z-index: 2; }
 
-.intro__img {
-  margin: 35px 0 50px; }
+.intro__image-wrapper {
+  position: relative;
+  margin: 20px auto; }
 
-.celebration {
+.intro__img-0,
+.intro__img-1,
+.intro__img-2,
+.intro__img-3,
+.intro__img-4 {
   position: absolute; }
 
-.intro__cof {
-  margin: 50px 75px 40px; }
+.intro__img-0 {
+  position: absolute;
+  left: 27%;
+  top: 19%; }
+
+.intro__img-1 {
+  position: absolute;
+  left: 27%;
+  top: 20%; }
+
+.intro__img-2 {
+  position: absolute;
+  left: 17%;
+  top: 23%; }
+
+.intro__img-3 {
+  position: absolute;
+  left: 26%;
+  top: 22%; }
+
+.intro__img-4 {
+  position: absolute;
+  left: 16%;
+  top: 23%; }
+
+.intro__confetti {
+  margin: auto; }
 
 .intro__text {
   font-size: 22px;
