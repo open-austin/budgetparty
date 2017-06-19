@@ -6,7 +6,7 @@ class Explain extends Component {
   constructor(props) {
     super(props);
     const departmentId = Number(this.props.match.params.id) - 1
-    this.state = {value: this.props.departments[departmentId].explainYourSpending || ''};
+    this.state = { value: this.props.departments[departmentId].explainYourSpending || '' };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -21,12 +21,12 @@ class Explain extends Component {
   }
 
   handleChange(e) {
-    this.setState({value: e.target.value});
+    this.setState({ value: e.target.value });
   }
 
   render() {
     return (
-      <div style={{height: '100%'}}>
+      <div style={{ height: '100%' }}>
         <Navigation {...this.props} showClose centerText="Explain Your Spending" />
 
         <div className="Explain">
@@ -36,7 +36,7 @@ class Explain extends Component {
               <textarea type="textarea" className="Explain__textarea"
                 value={this.state.value}
                 onChange={this.handleChange}
-                placeholder="Why did you increase or decrease this deparment's budget?"/>
+                placeholder="Why did you increase or decrease this deparment's budget?" />
             </div>
             <button type="submit" className="Explain__close-button">
               Done
