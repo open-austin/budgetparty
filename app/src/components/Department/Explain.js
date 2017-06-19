@@ -60,7 +60,7 @@ Explain.propTypes = {
     path: PropTypes.string,
     url: PropTypes.string,
   }).isRequired,
-  departments: PropTypes.arrayOf(
+  departments: PropTypes.objectOf(
     PropTypes.object,
   ),
   onSubmit: PropTypes.func.isRequired,

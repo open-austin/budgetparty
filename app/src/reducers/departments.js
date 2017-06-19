@@ -27,11 +27,9 @@ function departments(state = InitialState.departments, action = {}) {
       newDeptState = Object.assign({}, deptState, {})
       newDeptState.explainYourSpending = action.text
 
-      newState = [
-        ...state.slice(0, deptId),
-        newDeptState,
-        ...state.slice(deptId + 1),
-      ]
+      newState = Object.assign({}, state,
+        { [deptId]: newDeptState },
+      )
 
       return newState
     case 'RESET_DEPARTMENT_PERCENT_CHANGE':
