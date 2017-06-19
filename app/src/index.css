@@ -1004,7 +1004,7 @@ button::-moz-focus-inner {
   display: flex;
   height: 90vh;
   justify-content: center;
-  margin: 15px auto;
+  margin: 0 auto;
   text-align: center; }
 
 @media (max-width: 600px) {
