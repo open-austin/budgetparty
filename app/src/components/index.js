@@ -21,6 +21,7 @@ import User from './User'
 import Done from './Done'
 import { firebaseAuth } from '../config/constants'
 import { logout } from '../helpers/auth'
+import Landing from 'budgetparty-landing';
 
 import store from '../store';
 
@@ -88,6 +89,9 @@ export default class App extends Component {
                       : <Redirect to="/login" />
                     }}
                   />
+                  <Route path="/landing">
+                    <Landing/>
+                  </Route>
                   <Route
                     path="/login" isAuthed={authed} render={() => {
                       return authed
