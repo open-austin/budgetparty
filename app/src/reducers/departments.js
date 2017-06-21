@@ -12,7 +12,7 @@ function departments(state = InitialState.departments, action = {}) {
 
       const newPercentChange = Number(newDeptState.percentChange + action.percentChange)
 
-      newDeptState.percentChange = newPercentChange
+      newDeptState.percentChange = Number(newPercentChange.toFixed(2))
 
       newDeptState.amount =
         (deptState.lastYearAmount * (newPercentChange / 100))
