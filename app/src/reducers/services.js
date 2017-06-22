@@ -33,7 +33,7 @@ function services(state = InitialState.services, action = {}) {
         return memo + num
       }, 0)
 
-      const delta = Math.round((sumOfDepartments - sumOfLastYearDepartments) / sumOfLastYearDepartments * 100)
+      const delta = Number(((sumOfDepartments - sumOfLastYearDepartments) / sumOfLastYearDepartments * 100).toFixed(2))
 
       newServiceState.amount = sumOfDepartments
       newServiceState.percentChange = delta
