@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Tabs from './Tabs'
 import AuthForm from './AuthForm'
 import GoogleAuth from './GoogleAuth'
-import logo from '../images/logo.png'
+import logo from '../images/2017-budget-party-logo.svg'
 
 export default class Home extends Component {
   state = {
