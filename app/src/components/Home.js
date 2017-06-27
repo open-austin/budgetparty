@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import Tabs from './Tabs'
 import AuthForm from './AuthForm'
 import GoogleAuth from './GoogleAuth'
-import logo from '../images/logo.png'
+import logo from '../images/2017-budget-party-logo.svg'
+
 import { auth, login, anonymous_auth } from '../helpers/auth'
 
 function setErrorMsg(error) {
