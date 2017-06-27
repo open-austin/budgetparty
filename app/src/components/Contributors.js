@@ -7,15 +7,16 @@ export default ({contributors}) => {
         key={c.id}
         avatar={c.avatar_url}
         href={c.html_url}
-        dimensions="100"/>)}
+        dimensions="100"
+        name={c.login}/>)}
   </ul>
 };
 
-const Contributor = ({avatar, href, dimensions}) => {
+const Contributor = ({avatar, href, dimensions, name}) => {
   return (
     <li className="bubble">
       <a className="bubble-link" href={href}>
-        <img src={avatar} height={dimensions} width={dimensions} alt="Lovely contributor"/>
+        <img src={avatar} height={dimensions} width={dimensions} alt={name}/>
       </a>
     </li>
   );
