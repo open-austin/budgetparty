@@ -21,6 +21,7 @@ import User from './User'
 import Done from './Done'
 import { firebaseAuth } from '../config/constants'
 import { logout } from '../helpers/auth'
+import Landing from './Landing';
 
 import store from '../store';
 
@@ -85,9 +86,12 @@ export default class App extends Component {
                     path="/" exact render={() => {
                       return authed
                       ? <Redirect to="/dashboard" />
-                      : <Redirect to="/login" />
+                      : <Redirect to="/home" />
                     }}
                   />
+                  <Route path="/home">
+                    <Landing/>
+                  </Route>
                   <Route
                     path="/login" isAuthed={authed} render={() => {
                       return authed
