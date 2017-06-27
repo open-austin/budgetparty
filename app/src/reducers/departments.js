@@ -7,13 +7,15 @@ function departments(state = InitialState.departments, action = {}) {
   let newState
 
   switch (action.type) {
-    case 'CHANGE_DEPARTMENT_AMOUNT':
+    case 'CHANGE_DEPARTMENT_PERCENT_CHANGE':
       newDeptState = deptState
-      newDeptState.percentChange = Number(
-        (deptState.percentChange + action.percentChange).toFixed(1),
-      )
+
+      const newPercentChange = Number(newDeptState.percentChange + action.percentChange)
+
+      newDeptState.percentChange = Number(newPercentChange.toFixed(2))
+
       newDeptState.amount =
-        (deptState.lastYearAmount * (newDeptState.percentChange / 100))
+        (deptState.lastYearAmount * (newPercentChange / 100))
         + deptState.lastYearAmount
 
       newState = Object.assign({}, state,
@@ -25,11 +27,20 @@ function departments(state = InitialState.departments, action = {}) {
       newDeptState = Object.assign({}, deptState, {})
       newDeptState.explainYourSpending = action.text
 
-      newState = [
-        ...state.slice(0, deptId),
-        newDeptState,
-        ...state.slice(deptId + 1),
-      ]
+      newState = Object.assign({}, state,
+        { [deptId]: newDeptState },
+      )
+
+      return newState
+    case 'RESET_DEPARTMENT_PERCENT_CHANGE':
+      newDeptState = deptState
+
+      newDeptState.amount = deptState.lastYearAmount
+      newDeptState.percentChange = 0
+
+      newState = Object.assign({}, state,
+        { [deptId]: newDeptState },
+      )
 
       return newState
     default:

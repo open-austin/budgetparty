@@ -6,11 +6,11 @@ import introImg1 from '../images/intro-images/1.svg';
 import introImg2 from '../images/intro-images/2.svg';
 import introImg3 from '../images/intro-images/3.svg';
 import introImg4 from '../images/intro-images/4.svg';
-import introCof0 from '../images/intro-confetti/0.svg';
-import introCof1 from '../images/intro-confetti/1.svg';
-import introCof2 from '../images/intro-confetti/2.svg';
-import introCof3 from '../images/intro-confetti/3.svg';
-import introCof4 from '../images/intro-confetti/4.svg'
+import introConfetti0 from '../images/intro-confetti/0.svg';
+import introConfetti1 from '../images/intro-confetti/1.svg';
+import introConfetti2 from '../images/intro-confetti/2.svg';
+import introConfetti3 from '../images/intro-confetti/3.svg';
+import introConfetti4 from '../images/intro-confetti/4.svg'
 
 
 const introText = [
@@ -21,34 +21,39 @@ const introText = [
   "It's now up to you to make sure we allocate the funds and create a fair budget."
 ]
 const introImgArray = [introImg0, introImg1, introImg2, introImg3, introImg4]
-const introCofArray = [introCof0, introCof1, introCof2, introCof3, introCof4]
+const introConfettiArray = [introConfetti0, introConfetti1, introConfetti2, introConfetti3, introConfetti4]
 
 const IntroPage = (props) => {
   const nextId = Number(props.params.id) + 1;
   const nextUrl = `/intro/${nextId}`;
   const isLastIntro = introText.length === Number(props.params.id);
+  const imageIndex = props.params.id - 1
+  const confetti = introConfettiArray[imageIndex]
+  const image = introImgArray[imageIndex]
 
   return (
     <div className="intro">
       <Link to="/dashboard" className="intro__skip">Skip Intro</Link>
-      <img src={introImgArray[props.params.id - 1]} className="intro__img" alt="Money Emoji" />
-      <div className="celebration">
-      <img src={introCofArray[props.params.id -1]} className="intro__cof" alt="Money Emoji" />
+      <div className="intro__image-wrapper">
+        <img src={confetti} className="intro__confetti" alt="Confetti" />
+        <img src={image} className={`intro__img-${imageIndex}`} alt="Intro Image" />
       </div>
       <p className="intro__text">{props.text}</p>
-      {
-        isLastIntro
-        ? <Link to="/dashboard" className="intro__start-button"><span>Get Started</span></Link>
-        : <Link to={nextUrl} className="intro__next-button">Next</Link>
-      }
+      <div className="intro__button-flex-container">
+        {
+          isLastIntro
+          ? <Link to="/dashboard" className="intro__start-button"><span>Get Started</span></Link>
+          : <Link to={nextUrl} className="intro__next-button">Next</Link>
+        }
+      </div>
     </div>
   )
 }
 
 export default class Intro extends Component {
-  render () {
+  render() {
     return (
-      <Route path='/intro/:id' render={({match}) => <IntroPage {...match} text={introText[match.params.id - 1]} />} />
+      <Route path="/intro/:id" render={({ match }) => <IntroPage {...match} text={introText[match.params.id - 1]} />} />
     )
   }
 }

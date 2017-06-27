@@ -10,17 +10,58 @@
 .intro__skip {
   text-align: right;
   padding: 20px 0;
+  z-index: 2;
 }
 
-.intro__img {
-  margin: 35px 0 50px;
+.intro__image-wrapper {
+  position: relative;
+  margin: 20px auto;
 }
 
-.celebration{
-  position:  absolute;
+@mixin intro__img {
+  position: absolute;
 }
-.intro__cof{
-  margin: 50px 75px 40px ;
+
+.intro__img-0,
+.intro__img-1,
+.intro__img-2,
+.intro__img-3,
+.intro__img-4 {
+  @include intro__img;
+}
+
+.intro__img-0 {
+  @include intro__img;
+  left: 27%;
+  top: 19%;
+}
+
+.intro__img-1 {
+  @include intro__img;
+  left: 27%;
+  top: 20%;
+}
+
+.intro__img-2 {
+  @include intro__img;
+  left: 17%;
+  top: 23%;
+}
+
+.intro__img-3 {
+  @include intro__img;
+  left: 26%;
+  top: 22%;
+}
+
+.intro__img-4 {
+  @include intro__img;
+  left: 16%;
+  top: 23%;
+}
+
+.intro__confetti {
+  margin: auto;
 }
 
 .intro__text {
@@ -30,10 +71,16 @@
   margin-bottom: 40px;
 }
 
+.intro__button-flex-container {
+  @include button-flex-container;
+}
+
 .intro__start-button {
   @include primary-button;
+  @include button-flex;
 }
 
 .intro__next-button {
   @include secondary-button;
+  @include button-flex;
 }

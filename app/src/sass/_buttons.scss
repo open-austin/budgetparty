@@ -71,3 +71,13 @@ button::-moz-focus-inner {
   background-color: $red;
   border-color: $red;
 }
+
+@mixin button-flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin button-flex {
+  position: absolute;
+  bottom: 70px;
+}

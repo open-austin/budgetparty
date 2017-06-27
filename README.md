@@ -2,9 +2,6 @@
 
 <img src="http://dsh.re/af3f9" width="300"/>
 
-## ATX Hack for Change
-Our team is participating in the ATX Hack for Change on June 2-4, 2017. If you'd like to contribute to this project during the hackathon, [read this overview of our goals for the hackathon weekend](https://github.com/open-austin/budgetparty/blob/master/ATXH4C.md).
-
 ### Table of Contents
 
 - [Project Description](#project-description)
@@ -24,7 +21,7 @@ Thanks for coming here to learn more!
 
 ## Project Description
 
-Budget Party helps people understand and augment a city budget for austin. 
+Budget Party helps people understand and augment a city budget for austin.
 
 Recently, Austin Budget Party has been [awarded a Mozilla Gigabit Community Fund grant](https://learning.mozilla.org/blog/mozilla-awards-241000-to-explore-the-intersection-of-gigabit-technology-and-civics-robotics-farming-and-more) to help design and develop a **Digital Mock City Council** experience with [austinbudget.party](https://austinbudget.party/).
 
@@ -53,8 +50,11 @@ At this stage, we have:
 1. A (mostly) working web (version 1.0) [austinbudget.party](http://austinbudget.party/). This is our second iteration of a design and user workflow. The first prototype (version 0.1) was used at our first Game Night with Glasshouse Policy. This is the [feedback](https://github.com/open-austin/budgetparty/issues/66) we got from that event.
 2. Designs for version 1.0 of Budget Party. See examples [here](https://github.com/open-austin/budgetparty/issues/74#issuecomment-284244078) and [here](https://github.com/open-austin/budgetparty/issues/73#issuecomment-284243962). [Sketch File](https://github.com/open-austin/budgetparty/files/880263/budgetParty-v2.2.sketch.zip)
 3. A [curriculum](https://github.com/open-austin/budgetparty/files/1009706/Budget.Game.Binder.pdf) to provide context for middle school and high school students for understanding how the City Council makes decisions. We are looking for opportunities to use the curriculum in classes with the Budget Party app.
+4. Our team participated in the ATX Hack for Change on June 2-4, 2017. [These were our goals from the hackathon](https://github.com/open-austin/budgetparty/blob/master/ATXH4C.md).
 
 We are currently working on bug fixes and more features to be included in v1.1. We are also looking for feedback from users and testing with educators.
+
+More ideas for what is ahead in more detail can be found as the are updated in this [Google Doc](https://docs.google.com/document/d/1ySYsyXnY_2lSfezXXYYgmma5coXyCbgWtjpTqcHFVdw/edit?usp=sharing).
 
 ## Slack
 
@@ -96,8 +96,8 @@ This project has a dependency on Node and npm. Make sure they are install on you
 `node -v`
 `npm -v`
 
-This should return the version number of your install. 
-If it doesn't Google how to install Node & npm for your operating system. 
+This should return the version number of your install.
+If it doesn't Google how to install Node & npm for your operating system.
 _Maybe these links could help you?_
 - [Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04)
 - [Mac](https://nodesource.com/blog/installing-nodejs-tutorial-mac-os-x/)
@@ -119,5 +119,7 @@ Once you have cloned this repo to you local machine, open the `app` directory in
 
 1. `npm run build`
 
+### Deploy
 
+1. `npm run deploy`
 ___
