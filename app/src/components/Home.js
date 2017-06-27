@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Tabs from './Tabs'
 import AuthForm from './AuthForm'
 import GoogleAuth from './GoogleAuth'
-import logo from '../images/2017-budget-party-logo.svg'
+import logo from '../images/budget_party_logo.svg'
 
 import { auth, login, anonymous_auth } from '../helpers/auth'
 
