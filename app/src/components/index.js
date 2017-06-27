@@ -90,7 +90,7 @@ export default class App extends Component {
                     }}
                   />
                   <Route path="/home">
-                    <Landing/>
+                    <Landing />
                   </Route>
                   <Route
                     path="/login" isAuthed={authed} render={() => {
