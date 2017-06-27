@@ -1,0 +1,20 @@
+.bubble-list,
+.link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bubble {
+  display: inline-block;
+  transition: all .2s ease;
+  margin: 1em;
+}
+
+.bubble:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.bubble img {
+  border-radius: 100px;
+}
