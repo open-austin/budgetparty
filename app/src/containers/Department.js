@@ -63,13 +63,13 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(recalculateServiceAmount(serviceIndex, departments))
       dispatch(changeRemainingFundsAmout(services))
     },
-    resetBudgetAmount: (deptId) => {
-      dispatch(resetDepartmentPercentChange(deptId))
-      // dispatch(recalculateServiceAmount(service.index, departments))
-      // dispatch(changeRemainingFundsAmout(services))
+    resetBudgetAmount: (deptId, departments, service, services) => {
+      dispatch(resetDepartmentPercentChange(deptId));
+      dispatch(recalculateServiceAmount(service.index, departments));
+      dispatch(changeRemainingFundsAmout(services));
     },
-  }
-}
+  };
+};
 
 const DepartmentContainer = connect(
   mapStateToProps,

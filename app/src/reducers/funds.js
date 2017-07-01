@@ -2,7 +2,7 @@ import InitialState from '../config/InitialState';
 
 function funds(state = InitialState.funds, action = {}) {
   switch (action.type) {
-    case 'CHANGE_REMAINGING_FUNDS_AMOUNT':
+    case 'CHANGE_REMAINING_FUNDS_AMOUNT':
       const newFunds = state
       const sumOfServiceSpending = action.services.reduce((memo, service) => {
         if (!Number(service.amount)) return memo
