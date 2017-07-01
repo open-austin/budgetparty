@@ -17,6 +17,7 @@ const TotalFundAvailable = (props) => {
           value={remainingAmount}
           style="currency" //eslint-disable-line
           currency="USD"
+          minimumFractionDigits={0}
           maximumFractionDigits={0}
         />
       </h4>

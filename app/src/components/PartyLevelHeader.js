@@ -40,6 +40,7 @@ const PartyLevelHeader = (props) => {
             value={service.amount}
             style="currency" //eslint-disable-line
             currency="USD"
+            minimumFractionDigits={0}
             maximumFractionDigits={0}
           />
         </h2>
@@ -63,6 +64,7 @@ const PartyLevelHeader = (props) => {
             value={dept.amount}
             style="currency"  //eslint-disable-line
             currency="USD"
+            minimumFractionDigits={0}
             maximumFractionDigits={0}
           />
         </h2>
@@ -84,6 +86,7 @@ const PartyLevelHeader = (props) => {
             value={dept.lastYearAmount}
             style="currency"  //eslint-disable-line
             currency="USD"
+            minimumFractionDigits={0}
             maximumFractionDigits={0}
           />
         </h2>
