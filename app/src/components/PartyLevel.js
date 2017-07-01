@@ -15,9 +15,9 @@ const PartyLevel = (props) => {
     completeSections,
   } = props
 
-  const isComplete = status === "complete"
   const isInProgress = status === "ready" || status === "in_progress"
   const isLocked = !status || status === "locked" || status === null
+  const isComplete = status === 'complete' || (departments && departments.length === completeSections)
   const incrOrDecr = percentChange > 0 ? 'Increased' : 'Decreased'
 
   const partyLevelCssClass = isComplete ? 'PartyLevel--complete' : 'PartyLevel'
