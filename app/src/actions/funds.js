@@ -1,6 +1,6 @@
 export function changeRemainingFundsAmout(services) {
   return {
-    type: 'CHANGE_REMAINGING_FUNDS_AMOUNT',
+    type: 'CHANGE_REMAINING_FUNDS_AMOUNT',
     services,
   };
 }

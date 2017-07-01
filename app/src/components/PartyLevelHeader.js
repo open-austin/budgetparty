@@ -16,16 +16,16 @@ const getSign = (number) => {
 }
 
 const PartyLevelHeader = (props) => {
-  const { service, department } = props
+  const { service, services, department, departments } = props;
 
   const isServiceComplete = department ? false : service.status === 'complete'
   const isUnstarted = department && department.amount === null
   const isInProgress = department && department.amount !== null
   const imgCssClass = isServiceComplete ? 'PartyLevelHeader__image--complete' : 'PartyLevelHeader__image'
 
-  const handleReset = (deptId) => {
-    props.resetBudgetAmount(deptId)
-  }
+  const handleReset = (deptId, departments, service, services) => {
+    props.resetBudgetAmount(deptId, departments, service, services);
+  };
 
   const renderFinishedOverlay = (serv) => {
     const sign = getSign(serv)
@@ -68,7 +68,7 @@ const PartyLevelHeader = (props) => {
             maximumFractionDigits={0}
           />
         </h2>
-        <span className="PartyLevelHeader__reset" onClick={handleReset.bind(this, dept.deptId)}>
+        <span className="PartyLevelHeader__reset" onClick={handleReset.bind(this, dept.deptId, departments, service, services)}>
           Reset
         </span>
       </div>
@@ -123,6 +123,7 @@ PartyLevelHeader.propTypes = {
     status: PropTypes.string,
     title: PropTypes.string,
   }).isRequired,
+  services: PropTypes.arrayOf(PropTypes.object).isRequired,
   department: PropTypes.shape({
     amount: PropTypes.number,
     amount2015: PropTypes.number,
