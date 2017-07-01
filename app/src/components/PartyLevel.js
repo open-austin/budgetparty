@@ -15,25 +15,23 @@ const PartyLevel = (props) => {
     completeSections,
   } = props
 
-  const isInProgress = status === "ready" || status === "in_progress"
-  const isLocked = !status || status === "locked" || status === null
   const isComplete = status === 'complete' || (departments && departments.length === completeSections)
+  const isInProgress = status === 'ready' || status === 'in_progress'
+  const isLocked = !status || status === 'locked' || status === null
   const incrOrDecr = percentChange > 0 ? 'Increased' : 'Decreased'
 
   const partyLevelCssClass = isComplete ? 'PartyLevel--complete' : 'PartyLevel'
   const imgCssClass = isLocked ? 'PartyLevel__image--unstarted' : 'PartyLevel__image'
 
   const statusIcon = () => {
-    if (isComplete){
+    if (isComplete) {
       return check
     } else if (isInProgress) {
       return pencil
-    } else {
-      return lock
-    }
+    } return lock
   }
 
-  const progressMessage = (index) => {
+  const progressMessage = (i) => {
     let changeText
 
     if (percentChange === 0) {
@@ -42,8 +40,8 @@ const PartyLevel = (props) => {
       changeText = `${incrOrDecr} Funding ${percentChange}%`
     }
 
-    if (isComplete){
-      if (index === 0) return // Don't show anything for Welcome
+    if (isComplete) {
+      if (i === 0) return // Don't show anything for Welcome
       return changeText
     } else if (isInProgress) {
       return `${completeSections || 0}/${departments.length} Complete`
@@ -51,7 +49,7 @@ const PartyLevel = (props) => {
   }
 
   const titleCssClass = () => {
-    if (isComplete || isInProgress){
+    if (isComplete || isInProgress) {
       return 'PartyLevel__title'
     } else {
       return 'PartyLevel__title--unstarted'
@@ -65,7 +63,7 @@ const PartyLevel = (props) => {
         className={imgCssClass}
       />
       <div className="PartyLevel__details">
-        <img src={statusIcon()} alt={title} className="PartyLevel__status"/>
+        <img src={statusIcon()} alt={title} className="PartyLevel__status" />
         <h2 className={titleCssClass()}>{title}</h2>
         <span className="PartyLevel__progress">{progressMessage(index)}</span>
       </div>
