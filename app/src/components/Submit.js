@@ -66,12 +66,14 @@ class Submit extends Component {
                       value={funds.sumOfServiceSpending}
                       style="currency" //eslint-disable-line
                       currency="USD"
+                      minimumFractionDigits={0}
                       maximumFractionDigits={0}
                     />
                   </span>
                   <span className="Submit__smallcaps">
                     <FormattedNumber
                       value={funds.servicesSumPercentChange}
+                      minimumFractionDigits={0}
                       maximumFractionDigits={1}
                     />
                     <span>% from last year</span>
