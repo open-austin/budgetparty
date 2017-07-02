@@ -3,12 +3,10 @@ import { Provider } from 'react-redux'
 import { IntlProvider, addLocaleData } from 'react-intl'
 import en from 'react-intl/locale-data/en';
 import es from 'react-intl/locale-data/es';
-import {
-  Route,
-  BrowserRouter as Router,
-  Redirect,
-  Switch,
-} from 'react-router-dom'
+import { Route, Router, Redirect, Switch } from 'react-router-dom'
+import ReactGA from 'react-ga'
+import createHistory from 'history/createBrowserHistory'
+
 import Home from './Home'
 import Intro from './Intro'
 import DashboardContainer from '../containers/Dashboard'
@@ -26,6 +24,13 @@ import Landing from './Landing';
 import store from '../store';
 
 addLocaleData([...en, ...es]);
+// Google Analytics
+ReactGA.initialize('UA-64394324-4')
+const history = createHistory()
+history.listen((location) => {
+  ReactGA.set({ page: location.pathname })
+  ReactGA.pageview(location.pathname)
+});
 
 const language = (navigator.languages && navigator.languages[0]) ||
                      navigator.language ||
@@ -78,7 +83,7 @@ export default class App extends Component {
     return loading === true ? <h1>Loading</h1> : (
       <IntlProvider locale={language}>
         <Provider store={store}>
-          <Router>
+          <Router history={history}>
             <div className="container">
               <div className="row">
                 <Switch className="row">
