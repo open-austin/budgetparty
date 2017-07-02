@@ -23,7 +23,6 @@ import Landing from './Landing';
 
 import store from '../store';
 
-addLocaleData([...en, ...es]);
 // Google Analytics
 ReactGA.initialize('UA-64394324-4')
 const history = createHistory()
@@ -32,6 +31,8 @@ history.listen((location) => {
   ReactGA.pageview(location.pathname)
 });
 
+// Internationalization 🌎
+addLocaleData([...en, ...es]);
 const language = (navigator.languages && navigator.languages[0]) ||
                      navigator.language ||
                      navigator.userLanguage;
@@ -131,7 +132,7 @@ export default class App extends Component {
                   <Route path="/done" render={(props) => {
                     return <Done {...props} />
                   }} />
-                  <Route render={() => <h3>404, you ain't supposed to be here</h3>} />
+                  <Route render={() => <h3>404, you ain&apos;t supposed to be here</h3>} />
                 </Switch>
               </div>
             </div>
