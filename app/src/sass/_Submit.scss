@@ -79,5 +79,15 @@
   label {
     font-weight: normal;
     font-size: 16px;
+    width: 100%;
+    display: block;
+  }
+  select {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  small {
+    display: block;
+    margin-bottom: 3px;
   }
 }
