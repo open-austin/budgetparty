@@ -20,23 +20,28 @@ const introText = [
   "Outside effects like population change and overall economic activity cause the fund to vary year to year",
   "It's now up to you to make sure we allocate the funds and create a fair budget."
 ]
-const introImgArray = [introImg0, introImg1, introImg2, introImg3, introImg4]
-const introConfettiArray = [introConfetti0, introConfetti1, introConfetti2, introConfetti3, introConfetti4]
+
+const introImages = [
+  { src: introImg0, alt: 'open hand with coins', confetti: introConfetti0 },
+  { src: introImg1, alt: 'money bag', confetti: introConfetti1 },
+  { src: introImg2, alt: 'two anonymous civil servants', confetti: introConfetti2 },
+  { src: introImg3, alt: 'bar graph trending up', confetti: introConfetti3 },
+  { src: introImg4, alt: 'two children smiling', confetti: introConfetti4 },
+]
 
 const IntroPage = (props) => {
   const nextId = Number(props.params.id) + 1;
   const nextUrl = `/intro/${nextId}`;
   const isLastIntro = introText.length === Number(props.params.id);
   const imageIndex = props.params.id - 1
-  const confetti = introConfettiArray[imageIndex]
-  const image = introImgArray[imageIndex]
+  const image = introImages[imageIndex]
 
   return (
     <div className="intro">
       <Link to="/dashboard" className="intro__skip">Skip Intro</Link>
       <div className="intro__image-wrapper">
-        <img src={confetti} className="intro__confetti" alt="Confetti" />
-        <img src={image} className={`intro__img-${imageIndex}`} alt="Intro Image" />
+        <img src={image.confetti} className="intro__confetti" alt="Confetti" />
+        <img src={image.src} className={`intro__img-${imageIndex}`} alt={image.alt} />
       </div>
       <p className="intro__text">{props.text}</p>
       <div className="intro__button-flex-container">
