@@ -1,7 +1,8 @@
 const funds = {
-  generalFund: 969200000, // TOTAL FUNDS AVAILABLE
+  generalFund: 974060000, // TOTAL FUNDS AVAILABLE
   generalFund2016: 911000000,
-  lastYearServicesSum: 939221442, // need to doublecheck and update this number in line with the sum we use for departments
+  generalFund2017: 974060000,
+  lastYearServicesSum: 969200000,
   sumOfServiceSpending: null,
   generalFundsRemaining: null,
 }

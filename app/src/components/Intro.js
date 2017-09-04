@@ -10,15 +10,20 @@ import introConfetti0 from '../images/intro-confetti/0.svg';
 import introConfetti1 from '../images/intro-confetti/1.svg';
 import introConfetti2 from '../images/intro-confetti/2.svg';
 import introConfetti3 from '../images/intro-confetti/3.svg';
-import introConfetti4 from '../images/intro-confetti/4.svg'
+import introConfetti4 from '../images/intro-confetti/4.svg';
+
+import funds from '../data/funds';
+import { FormattedNumber } from 'react-intl'
+
+const generalFundAmount = Number(funds.generalFund / 1000000);
 
 
 const introText = [
-  "As a council member you have $969.2 Million to fund services for all of Austin, Texas",
-  "This money comes from the General Fund for 2016-17",
-  "This money helps Austin run programs and employs 13,838 civil servants",
-  "Outside effects like population change and overall economic activity cause the fund to vary year to year",
-  "It's now up to you to make sure we allocate the funds and create a fair budget."
+  `As a council member you have ${generalFundAmount} Million to fund services for all of Austin, Texas`,
+  'This money comes from the General Fund for 2016-17',
+  'This money helps Austin run programs and employs 13,838 civil servants',
+  'Outside effects like population change and overall economic activity cause the fund to vary year to year',
+  'It\'s now up to you to make sure we allocate the funds and create a fair budget.',
 ]
 
 const introImages = [
@@ -58,7 +63,9 @@ const IntroPage = (props) => {
 export default class Intro extends Component {
   render() {
     return (
-      <Route path="/intro/:id" render={({ match }) => <IntroPage {...match} text={introText[match.params.id - 1]} />} />
+      <Route path="/intro/:id" render={({ match }) => {
+        return <IntroPage {...match} text={introText[match.params.id - 1]} />
+      }} />
     )
   }
 }

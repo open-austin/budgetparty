@@ -21,7 +21,7 @@ Thanks for coming here to learn more!
 
 ## Project Description
 
-Budget Party helps people understand and augment a city budget for austin.
+Budget Party helps people understand and augment a city budget for Austin.
 
 Recently, Austin Budget Party has been [awarded a Mozilla Gigabit Community Fund grant](https://learning.mozilla.org/blog/mozilla-awards-241000-to-explore-the-intersection-of-gigabit-technology-and-civics-robotics-farming-and-more) to help design and develop a **Digital Mock City Council** experience with [austinbudget.party](https://austinbudget.party/).
 
@@ -38,9 +38,6 @@ You can read more on our [blog post](https://www.open-austin.org/blog/2017/02/08
   - [Miles Gilbert](https://github.com/brainnews)
 - Web Development:
   - [Mateo Clarke](https://github.com/mateoclarke)
-- Classroom Implementation
-  - Michael Kanin
-  - Sasha Cesare
 - Many volunteers...
 
 ## Roadmap
