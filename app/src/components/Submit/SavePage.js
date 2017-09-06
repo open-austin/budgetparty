@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import { Link } from 'react-router-dom'
 import ProgressBar from '../ProgressBar'
 
@@ -16,6 +17,7 @@ class SavePage extends Component {
       zipcode: '',
       councilDistrict: '',
       comments: '',
+      lastUpdated: '',
     }
   }
 
@@ -59,9 +61,11 @@ class SavePage extends Component {
       councilDistrict: this.state.councilDistrict,
       userBudget: departmentsArray,
       totalBudget: funds.sumOfServiceSpending || 0,
+      lastUpdated: moment().format(),
     }
 
     const showSchoolNameField = this.state.student === 'true'
+    console.log(userData)
 
     return (
       <div className="Submit__save-body">

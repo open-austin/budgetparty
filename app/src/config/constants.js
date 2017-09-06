@@ -12,7 +12,7 @@ export const constants = {
   LAST_YEAR: 2016,
 }
 
-firebase.initializeApp(config)
+export const firebaseApp = firebase.initializeApp(config)
 
 export const database = firebase.database()
 export const firebaseAuth = firebase.auth

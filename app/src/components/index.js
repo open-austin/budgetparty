@@ -17,6 +17,7 @@ import ExplainContainer from '../containers/Explain'
 import SubmitContainer from '../containers/Submit'
 import User from './User'
 import Done from './Done'
+import Admin from './Admin/Index'
 import { firebaseAuth } from '../config/constants'
 import { logout } from '../helpers/auth'
 import Landing from './Landing';
@@ -132,7 +133,10 @@ export default class App extends Component {
                   <Route path="/done" render={(props) => {
                     return <Done {...props} />
                   }} />
-                  <Route render={() => <h3>404, you ain&apos;t supposed to be here</h3>} />
+                  <Route path="/judges" render={(props) => {
+                    return <Admin {...props} />
+                  }} />
+                  <Route render={() => <h3>404, you ain&apos;t supposed to be here. <a href="/">Go back.</a></h3>} />
                 </Switch>
               </div>
             </div>
