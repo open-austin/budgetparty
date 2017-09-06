@@ -58,7 +58,7 @@ class SavePage extends Component {
       zipcode: this.state.zipcode,
       councilDistrict: this.state.councilDistrict,
       userBudget: departmentsArray,
-      totalBudget: funds.sumOfServiceSpending,
+      totalBudget: funds.sumOfServiceSpending || 0,
     }
 
     const showSchoolNameField = this.state.student === 'true'
