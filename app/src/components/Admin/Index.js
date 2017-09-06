@@ -77,8 +77,8 @@ class Admin extends Component {
                 return (
                   <tr key={i}>
                     <td style={{ borderTop: '1px solid gray', borderRight: '1px solid gray' }}>
-                      {dept.item}
-                      {/* <div style={{ width: }}></div> */}
+                      <b>{dept.item}</b>
+                      {dept.explain && <p style={{ fontStyle: 'italic', margin: '5px 3px' }}> Comments: {dept.explain}</p>}
                     </td>
                     <td style={{ textAlign: 'right', borderTop: '1px solid gray', borderRight: '1px solid gray' }}>
                       <FormattedNumber
