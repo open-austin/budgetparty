@@ -15,11 +15,11 @@ import introConfetti4 from '../images/intro-confetti/4.svg';
 import funds from '../data/funds';
 import { FormattedNumber } from 'react-intl'
 
-const generalFundAmount = Number(funds.generalFund / 1000000);
+const generalFundAmount = Number(funds.generalFund / 1000000).toFixed(0);
 
 
 const introText = [
-  `As a council member you have ${generalFundAmount} Million to fund services for all of Austin, Texas`,
+  `As a council member you have $${generalFundAmount} Million to fund services for all of Austin, Texas`,
   'This money comes from the General Fund for 2016-17',
   'This money helps Austin run programs and employs 13,838 civil servants',
   'Outside effects like population change and overall economic activity cause the fund to vary year to year',
