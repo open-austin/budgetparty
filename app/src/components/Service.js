@@ -13,7 +13,7 @@ const Service = props => {
 
   const { services, funds } = props
   const service = services[props.match.params.id]
-  const isIncomplete = service.status !== "complete"
+  const isIncomplete = service.status !== 'complete'
 
   return (
     <div>
@@ -29,8 +29,7 @@ const Service = props => {
         </div>
 
         {
-          isIncomplete
-            ?
+          isIncomplete ?
             <div className="Service__next-button-flex-container">
               <Link to={`/service/${service.index}/department/${service.departments[0]}`}
                 className="Service__next-button"

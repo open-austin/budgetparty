@@ -15,13 +15,6 @@ const services = [
     percentChange: null,
     completeSections: 0,
   },
-  //  {
-  //    index: 2,
-  //    title: "Infrastructure & Mobility",
-  //    image: "infrastructure.svg",
-  //    desc: "This service group includes the Public Works Department, Austin Transportation Department, and Watershed Protection.",
-  //    departments: [13, 14],
-  //  },
   {
     index: 2,
     title: 'Public Safety',
@@ -38,6 +31,13 @@ const services = [
   },
   {
     index: 4,
+    title: 'Transfers',
+    image: 'infrastructure.svg',
+    desc: 'Transfers are payments from general fund departments to non-general fund departments for services provided.  Examples include: the 311 call center, IT support, utility billing support, or professional training.',
+    departments: [12, 13, 14],
+  },
+  {
+    index: 5,
     title: 'Budget Submission',
     image: 'envelope.svg',
     departments: [],

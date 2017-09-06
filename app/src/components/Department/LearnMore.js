@@ -18,6 +18,11 @@ const LearnMore = (props) => {
         <div className="LearnMore__body">
           <h1 className="LearnMore__title">{department.name}</h1>
           <p className="LearnMore__desc">{department.learnMore}</p>
+          { department.learnMoreUrl &&
+            <a href={department.learnMoreUrl} target="_blank" className="LearnMore__desc">
+              Visit Open Budget to see the numbers.
+            </a>
+          }
         </div>
         <Link to={`/service/${serviceId}/department/${departmentId}`}
           className="LearnMore__close-button"

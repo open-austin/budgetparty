@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const TotalFundAvailable = (props) => {
   const { generalFund, generalFundsRemaining } = props.funds
-  const remainingAmount = generalFundsRemaining || generalFund
+  const remainingAmount = generalFundsRemaining === null ? generalFund : generalFundsRemaining
 
   return (
     <div className="TotalFundsAvailable">
