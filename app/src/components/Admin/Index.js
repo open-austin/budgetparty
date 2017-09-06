@@ -37,9 +37,6 @@ class Admin extends Component {
   }
 
   render() {
-
-    console.log(departments)
-
     return (
       <div style={{ padding: '20px' }}>
         {this.state.isLoading && <h1>Loading...</h1>}
@@ -51,7 +48,6 @@ class Admin extends Component {
         }
         {this.state.results.map((result) => {
           const sortedDepts = result.userBudget.sort((a, b) => b.amount - a.amount)
-          console.log(result)
           return (
             <table key={result.key} style={{ border: '1px solid gray', margin: '10px 0', width: '100%' }}>
               <tr><td colSpan="3">Name: {result.name}</td></tr>
@@ -73,6 +69,7 @@ class Admin extends Component {
               {sortedDepts.map((dept, i) => {
                 const department = departments.find((item) => item.name === dept.item)
                 const percentChange = (dept.amount - department.amount2017) / dept.amount
+                console.log(dept.explain)
 
                 return (
                   <tr key={i}>
