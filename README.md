@@ -3,9 +3,9 @@
 ### Table of Contents
 
 - [Project Description](#project-description)
-- [What's next?](#What's-next?)
+- [What's next?](#what's-next)
 - [Contributing](#contributing)
-- [Dev Getting Started](#Dev-Getting-started)
+- [Dev Getting Started](#dev-getting-started)
 
 ## 👋🏼 Hello! 
 
@@ -34,7 +34,7 @@ Read about the [history of Budget Party](https://github.com/open-austin/budgetpa
 
 
 
-## What's Next?
+## What's Next
 The Budget Party team is currently on pause. Budget season in Austin is over for 2017 but we are working to evaluate how best to move forward with the project to be ready for the 2018 budget seasion. 
 
 **Got an idea?** [Reach out to the team!](https://victoria283.typeform.com/to/K5Ppy1) Community feedback is valauabel in helping us evalaute our next steps. How can we make budget party more valuable for you? 
