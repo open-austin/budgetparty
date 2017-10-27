@@ -33,7 +33,17 @@ Over the course of this project, we will have (or have had) opportunities to hel
 Here is a link to our [design assets and documentation](./design). Here are [open issues labeled "Design"](https://github.com/open-austin/hack-the-budget/issues?q=is%3Aissue+is%3Aopen+label%3Adesign) where you can discuss, provide feedback or volunteer to help.
 
 ### Development
+The Budget Party app is primarily written in javascript and leans heavily into the libraries [React](https://facebook.github.io/react/) and [Redux](http://redux.js.org/). The static assets are hosted via [Github pages](https://pages.github.com/). Data submitted to the server lives in a [Firebase](https://www.firebase.com/), a Google cloud service.
 
 [Issues marked with the code label](stin/budgetparty/issues?q=is%3Aissue+is%3Aopen+label%3Acode) are bugs or features that require some knowledge of CSS, React, Javascript, or Firebase.
 
 Issues with the help wanted label indicate where the best place to start are, but contributions are welcome on any open issue. Please leave a comment before you start working in case work is underway from another contributor.
+
+
+### Curriculum
+An awesome teacher at Lanier High School, Laurie Beaman, laurie.beaman@austinisd.org, designed and wrote a Curriculum Binder for teaching high schoolers about the City Budget. Check it out here:
+[Budget Game Binder PDF](https://github.com/open-austin/budgetparty/files/1009706/Budget.Game.Binder.pdf)
+
+We'd like to convert this PDF document into HTML to make it accessible for more educators to view and use. If you're interested in helping with this task, check out [this issue](https://github.com/open-austin/budgetparty/issues/128) and let's chat!
+
+
