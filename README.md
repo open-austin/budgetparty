@@ -22,8 +22,9 @@ Historically, Budget party events have 4 parts:
 
 * **A budget Overview.** A quick presentation is given to people that primes them on the city budget, specifically the parts that citizens can influence.  
 * **Budget Party App Use.** People get into small teams with neighbors to go through the app and allocate funds to different departments. 
-* **Judging** A selection of people with real city budgeting experience judge the submitted budgets and choose a winner based on the nighs critera. 
-* **Panel Discussion** Once judginng is done there is an open discussion on budgetting based on the submitted budgets, feasability, and real world budgetting experience from the panelist/judges. 
+* **Judging** A selection of people with real city budgeting experience judge the submitted budgets and choose a winner based on the night’s criteria. 
+* **Panel Discussion** Once judging is done there is an open discussion on budgeting based on the submitted budgets, feasibility, and real world budgeting experience from the panelist/judges. 
+
 
 
 Read about the [history of Budget Party](https://github.com/open-austin/budgetparty/wiki/Project-History) which includes information on the inception of the project and our Mozilla Grant funding. 
