@@ -3,9 +3,9 @@
 ### Table of Contents
 
 - [Project Description](#project-description)
-- [What's next?](#Whats-next?)
+- [What's next?](#What's-next?)
 - [Contributing](#contributing)
-- [Dev Getting Started](##Dev-Getting-started)
+- [Dev Getting Started](#Dev-Getting-started)
 
 ## 👋🏼 Hello! 
 
