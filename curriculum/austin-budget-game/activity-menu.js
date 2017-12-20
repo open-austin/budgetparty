@@ -3,7 +3,7 @@ var title = "City of Austin Budget Game";
 var activities = [
 {
 title : "Intro to Budget",
-url: "intro-to-budget.html"
+url: "index.html"
 },
 {
 title : "The City",
