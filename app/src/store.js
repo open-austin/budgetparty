@@ -7,7 +7,7 @@ import rootReducer from './reducers/index';
 const defaultState = {
   services,
   departments,
-}
+};
 
 const store = createStore(
   rootReducer,
