@@ -7,3 +7,4 @@ dist
 npm-debug.log*
 src/**/*.css
 notes.md
+./build
