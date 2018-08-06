@@ -1,28 +1,31 @@
-import { connect } from 'react-redux'
-import Submit from '../components/Submit/index'
-import { database } from '../config/constants'
+import { connect } from 'react-redux';
+import Submit from '../components/Submit/Index';
+import { database } from '../config/constants';
 
 // import any actions
 
 const mapStateToProps = (state) => {
-  return state
-}
+  return state;
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
     onSubmit: (userId, data) => {
       if (userId) {
-        database.app.database().ref(`userResults/${userId}`).update(data)
+        database.app
+          .database()
+          .ref(`userResults/${userId}`)
+          .update(data);
       } else {
-        database.app.database().ref('userResults').push(data)
+        database.app
+          .database()
+          .ref('userResults')
+          .push(data);
       }
     },
-  }
-}
+  };
+};
 
-const SubmitContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Submit)
+const SubmitContainer = connect(mapStateToProps, mapDispatchToProps)(Submit);
 
-export default SubmitContainer
+export default SubmitContainer;
