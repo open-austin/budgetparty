@@ -1,40 +1,40 @@
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedNumber } from 'react-intl'
-import { constants } from '../config/constants'
+import { FormattedNumber } from 'react-intl';
+import { constants } from '../config/constants';
 
 const getSign = (number) => {
-  let sign = ''
+  let sign = '';
 
   if (number.percentChange > 0) {
-    sign = '+'
+    sign = '+';
   } else if (number.percentChange < 0) {
-    sign = '-'
+    sign = '-';
   }
 
-  return sign
-}
+  return sign;
+};
 
 const PartyLevelHeader = (props) => {
   const { service, services, department, departments } = props;
 
-  const isServiceComplete = department ? false : service.status === 'complete'
-  const isUnstarted = department && department.amount === null
-  const isInProgress = department && department.amount !== null
-  const imgCssClass = isServiceComplete ? 'PartyLevelHeader__image--complete' : 'PartyLevelHeader__image'
+  const isServiceComplete = department ? false : service.status === 'complete';
+  const isUnstarted = department && department.amount === null;
+  const isInProgress = department && department.amount !== null;
+  const imgCssClass = isServiceComplete
+    ? 'PartyLevelHeader__image--complete'
+    : 'PartyLevelHeader__image';
 
   const handleReset = (deptId, departments, service, services) => {
     props.resetBudgetAmount(deptId, departments, service, services);
   };
 
   const renderFinishedOverlay = (serv) => {
-    const sign = getSign(serv)
+    const sign = getSign(serv);
 
     return (
       <div className="PartyLevelHeader__overlay--green">
-        <span className="PartyLevelHeader__status">
-          You Did It!
-        </span>
+        <span className="PartyLevelHeader__status">You Did It!</span>
         <h2 className="PartyLevelHeader__value">
           <FormattedNumber
             value={service.amount}
@@ -48,11 +48,11 @@ const PartyLevelHeader = (props) => {
           {sign} {Math.abs(service.percentChange)}% from Last Year
         </span>
       </div>
-    )
-  }
+    );
+  };
 
   const renderInProgressOverlay = (dept) => {
-    const sign = getSign(dept)
+    const sign = getSign(dept);
 
     return (
       <div className="PartyLevelHeader__overlay--grey">
@@ -62,60 +62,59 @@ const PartyLevelHeader = (props) => {
         <h2 className="PartyLevelHeader__value">
           <FormattedNumber
             value={dept.amount}
-            style="currency"  //eslint-disable-line
+            style="currency" //eslint-disable-line
             currency="USD"
             minimumFractionDigits={0}
             maximumFractionDigits={0}
           />
         </h2>
-        <span className="PartyLevelHeader__reset" onClick={handleReset.bind(this, dept.deptId, departments, service, services)}>
+        <span
+          className="PartyLevelHeader__reset"
+          onClick={handleReset.bind(this, dept.deptId, departments, service, services)}
+        >
           Reset
         </span>
       </div>
-    )
-  }
+    );
+  };
 
   const renderStartingOverlay = (dept) => {
     return (
       <div className="PartyLevelHeader__overlay--grey">
-        <span className="PartyLevelHeader__change">
-          Department Spending from {constants.LAST_YEAR}
-        </span>
+        <span className="PartyLevelHeader__change">Proposed Department Budget</span>
         <h2 className="PartyLevelHeader__value">
           <FormattedNumber
             value={dept.lastYearAmount}
-            style="currency"  //eslint-disable-line
+            style="currency" //eslint-disable-line
             currency="USD"
             minimumFractionDigits={0}
             maximumFractionDigits={0}
           />
         </h2>
       </div>
-    )
-  }
+    );
+  };
 
   return (
     <div className="PartyLevelHeader">
-      { isServiceComplete && renderFinishedOverlay(service, department) }
-      { isInProgress && renderInProgressOverlay(department) }
-      { isUnstarted && renderStartingOverlay(department) }
+      {isServiceComplete && renderFinishedOverlay(service, department)}
+      {isInProgress && renderInProgressOverlay(department)}
+      {isUnstarted && renderStartingOverlay(department)}
       <img
         src={`/images/${service.image.split('.')[0]}_full.svg`}
         alt={service.title}
         className={imgCssClass}
       />
     </div>
-  )
-}
+  );
+};
 
-export default PartyLevelHeader
+export default PartyLevelHeader;
 
 PartyLevelHeader.propTypes = {
   service: PropTypes.shape({
     completeSections: PropTypes.number,
-    departments: PropTypes.arrayOf(
-      PropTypes.number,
-    ),
+    departments: PropTypes.arrayOf(PropTypes.number),
     desc: PropTypes.string,
     image: PropTypes.string,
     index: PropTypes.number,
