@@ -1,10 +1,10 @@
-import React from 'react'
-import { FormattedNumber } from 'react-intl'
-import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import React from 'react';
+import { FormattedNumber } from 'react-intl';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const IntroPage = (props) => {
-  const { funds } = props
+  const { funds } = props;
 
   return (
     <div className="Submit__intro-body">
@@ -25,20 +25,22 @@ const IntroPage = (props) => {
           minimumFractionDigits={0}
           maximumFractionDigits={1}
         />
-        <span>% from last year</span>
+        <span>
+          % from the City <br />Manager's Proposed Budget
+        </span>
       </span>
       <Link to="/submit/review" className="Submit__next-button">
         Review & Submit
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default IntroPage
+export default IntroPage;
 
 IntroPage.propTypes = {
   funds: PropTypes.shape({
     sumOfServiceSpending: PropTypes.number.isRequired,
     servicesSumPercentChange: PropTypes.number.isRequired,
   }).isRequired,
-}
+};
