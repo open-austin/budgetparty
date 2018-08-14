@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Route, Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import introImg0 from '../images/intro-images/0.svg';
 import introImg1 from '../images/intro-images/1.svg';
@@ -13,18 +13,17 @@ import introConfetti3 from '../images/intro-confetti/3.svg';
 import introConfetti4 from '../images/intro-confetti/4.svg';
 
 import funds from '../data/funds';
-import { FormattedNumber } from 'react-intl'
+import { FormattedNumber } from 'react-intl';
 
-const generalFundAmount = Number(funds.generalFund / 1000000).toFixed(0);
-
+const generalFundAmount = Number(funds.generalFund / 1000000000).toFixed(3);
 
 const introText = [
-  `As a council member you have $${generalFundAmount} Million to fund services for all of Austin, Texas`,
-  'This money comes from the General Fund for 2016-17',
+  `As a council member you have $${generalFundAmount} Billion to fund services for all of Austin, Texas`,
+  'This money comes from the General Fund for 2018-19',
   'This money helps Austin run programs and employs 13,838 civil servants',
   'Outside effects like population change and overall economic activity cause the fund to vary year to year',
-  'It\'s now up to you to make sure we allocate the funds and create a fair budget.',
-]
+  "It's now up to you to make sure we allocate the funds and create a fair budget.",
+];
 
 const introImages = [
   { src: introImg0, alt: 'open hand with coins', confetti: introConfetti0 },
@@ -32,41 +31,50 @@ const introImages = [
   { src: introImg2, alt: 'two anonymous civil servants', confetti: introConfetti2 },
   { src: introImg3, alt: 'bar graph trending up', confetti: introConfetti3 },
   { src: introImg4, alt: 'two children smiling', confetti: introConfetti4 },
-]
+];
 
 const IntroPage = (props) => {
   const nextId = Number(props.params.id) + 1;
   const nextUrl = `/intro/${nextId}`;
   const isLastIntro = introText.length === Number(props.params.id);
-  const imageIndex = props.params.id - 1
-  const image = introImages[imageIndex]
+  const imageIndex = props.params.id - 1;
+  const image = introImages[imageIndex];
 
   return (
     <div className="intro">
-      <Link to="/dashboard" className="intro__skip">Skip Intro</Link>
+      <Link to="/dashboard" className="intro__skip">
+        Skip Intro
+      </Link>
       <div className="intro__image-wrapper">
         <img src={image.confetti} className="intro__confetti" alt="Confetti" />
         <img src={image.src} className={`intro__img-${imageIndex}`} alt={image.alt} />
       </div>
       <p className="intro__text">{props.text}</p>
       <div className="intro__button-flex-container">
-        {
-          isLastIntro
-          ? <Link to="/dashboard" className="intro__start-button"><span>Get Started</span></Link>
-          : <Link to={nextUrl} className="intro__next-button">Next</Link>
-        }
+        {isLastIntro ? (
+          <Link to="/dashboard" className="intro__start-button">
+            <span>Get Started</span>
+          </Link>
+        ) : (
+          <Link to={nextUrl} className="intro__next-button">
+            Next
+          </Link>
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default class Intro extends Component {
   render() {
     return (
-      <Route path="/intro/:id" render={({ match }) => {
-        return <IntroPage {...match} text={introText[match.params.id - 1]} />
-      }} />
-    )
+      <Route
+        path="/intro/:id"
+        render={({ match }) => {
+          return <IntroPage {...match} text={introText[match.params.id - 1]} />;
+        }}
+      />
+    );
   }
 }
 

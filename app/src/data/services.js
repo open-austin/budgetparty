@@ -29,7 +29,7 @@ const services = [
     title: 'Community Services',
     image: 'community_services.svg',
     desc:
-      'The city of Austin is committed to promoting healthy, livable, communities with access to housing and libraries.  In FY 2015-16, Austin budgeted $194.3 million to the Health and Human Services Department, the Austin Public Library, the Animal Services Department, the Parks and Recreation Department, the Code Department, and the Neighborhood Housing and Community Development Department.',
+      'The city of Austin is committed to promoting healthy, livable, communities with access to housing and libraries.  The budget covers costs for the Health and Human Services Department, the Austin Public Library, the Animal Services Department, the Parks and Recreation Department, the Code Department, Social Service Contracts and the Neighborhood Housing and Community Development Department.',
     departments: [6, 7, 8, 9, 10, 11],
   },
   {

@@ -218,10 +218,12 @@ const departments = [
   },
   {
     name: 'Social Service Contracts',
-    description: '...',
-    learnMore: '...',
+    description:
+      'Programs with partner agencies and non-profits addressing children & youth, homelessness, behavioral health, workforce development, community planning, and HIV prevention.',
+    learnMore:
+      'Social Service contracts represent agreements for program funding for partner agencies and non-profits addressing children & youth, homelessness, behavioral health, workforce development, community planning, and HIV prevention. ',
     learnMoreUrl:
-      'http://budget.austintexas.gov/#!/year/2017/operating/0/fund_nm/General+Fund/0/dept_nm/Non-Departmental/0/div_nm/Transfers+and+Other+Requirements/0/gp_nm/Other+Requirements/0/unit_nm/Other+Requirements/0/obj_cat/Contractuals/0/obj_cat?vis=barChart',
+      'http://budget.austintexas.gov/#!/year/2017/operating/0/fund_nm/General+Fund/0/dept_nm/Austin+Public+Health/0/div_nm/Social+Services+Contracts/0/gp_nm/Basic+Needs/0/unit_nm/Basic+Needs+Contracts/0/obj_cat?vis=barChart',
     amount: null,
     explainYourSpending: null,
     lastYearAmount: 35694422,
@@ -263,9 +265,10 @@ const departments = [
     deptId: 13,
   },
   {
-    name: 'Transfers Out',
-    description: '...',
-    learnMore: '...',
+    name: 'Interdepartmental Charges',
+    description:
+      'Transfers are payments from general fund departments to non-general fund departments for services provided.  Examples include: the 311 call center, IT support, and utility billing support.',
+    learnMore: 'Learn more about Interdepartmental Charges',
     learnMoreUrl:
       'http://budget.austintexas.gov/#!/year/2017/operating/0/fund_nm/General+Fund/0/dept_nm/Non-Departmental/0/div_nm/Transfers+and+Other+Requirements/0/gp_nm/Other+Requirements/0/unit_nm/Other+Requirements/0/obj_cat/Contractuals/0/obj_cat?vis=barChart',
     amount: null,
