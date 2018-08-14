@@ -156,7 +156,7 @@ export default class App extends Component {
                     }}
                   />
                   <Route
-                    path="/judges"
+                    path="/results"
                     render={(props) => {
                       return <Admin {...props} />;
                     }}

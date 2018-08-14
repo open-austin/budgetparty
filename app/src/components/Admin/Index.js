@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Rebase from 're-base';
 import { FormattedNumber } from 'react-intl';
 import departments from '../../data/departments';
+import funds from '../../data/funds';
 import { firebaseApp } from '../../config/constants';
 
 class Admin extends Component {
@@ -24,7 +25,6 @@ class Admin extends Component {
       })
       .then((data) => {
         const fetchedResults = [];
-        debugger;
         data.map((result) => {
           if (result.lastUpdated) fetchedResults.push(result);
         });
@@ -40,7 +40,6 @@ class Admin extends Component {
   }
 
   render() {
-    console.log('judges', this.state);
     return (
       <div style={{ padding: '20px' }}>
         {this.state.isLoading && <h1>Loading...</h1>}
@@ -73,6 +72,14 @@ class Admin extends Component {
                     minimumFractionDigits={0}
                     maximumFractionDigits={0}
                   />
+                  <br />
+                  Perfect Difference from General Fund &nbsp;
+                  <FormattedNumber
+                    value={(result.totalBudget - funds.generalFund) / funds.generalFund * 100}
+                    minimumFractionDigits={0}
+                    maximumFractionDigits={2}
+                  />
+                  {'%'}
                 </td>
               </tr>
               <tr style={{ background: 'black', color: 'white' }}>
