@@ -18,7 +18,8 @@ export default class Dashboard extends Component {
     };
 
     const isLinkClickAllowed = (service) => {
-      return service.status && service.status !== "locked";
+      return true
+      // return service.status && service.status !== "locked";
     }
 
     return (

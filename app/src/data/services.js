@@ -32,14 +32,14 @@ const services = [
       'The city of Austin is committed to promoting healthy, livable, communities with access to housing and libraries.  The budget covers costs for the Health and Human Services Department, the Austin Public Library, the Animal Services Department, the Parks and Recreation Department, the Code Department, Social Service Contracts and the Neighborhood Housing and Community Development Department.',
     departments: [6, 7, 8, 9, 10, 11],
   },
-  {
-    index: 4,
-    title: 'Transfers',
-    image: 'infrastructure.svg',
-    desc:
-      'Transfers are payments from general fund departments to non-general fund departments for services provided.  Examples include: the 311 call center, IT support, utility billing support, or professional training.',
-    departments: [12, 13, 14],
-  },
+  // {
+  //   index: 4,
+  //   title: 'Transfers',
+  //   image: 'infrastructure.svg',
+  //   desc:
+  //     'Transfers are payments from general fund departments to non-general fund departments for services provided.  Examples include: the 311 call center, IT support, utility billing support, or professional training.',
+  //   departments: [12, 13, 14],
+  // },
   {
     index: 5,
     title: 'Budget Submission',

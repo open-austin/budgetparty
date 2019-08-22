@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 const IntroPage = (props) => {
   const { funds } = props;
 
+  console.log(funds)
+
   return (
     <div className="Submit__intro-body">
       <img src={'/images/submit.svg'} className="Submit__img" alt="Envelope Icon" />

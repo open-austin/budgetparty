@@ -11,8 +11,10 @@ function funds(state = InitialState.funds, action = {}) {
 
       newFunds.sumOfServiceSpending = sumOfServiceSpending
       newFunds.servicesSumPercentChange =
-        ((sumOfServiceSpending - state.lastYearServicesSum)
-        / state.lastYearServicesSum) * 100
+      ((sumOfServiceSpending - state.lastYearServicesSum)
+      / state.lastYearServicesSum) * 100
+      console.log('sumOfServiceSpending', sumOfServiceSpending)
+      console.log('lastYearServicesSum', state.lastYearServicesSum)
       newFunds.generalFundsRemaining = state.generalFund - sumOfServiceSpending
 
       return newFunds

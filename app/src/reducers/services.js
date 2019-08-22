@@ -67,8 +67,8 @@ function services(state = InitialState.services, action = {}) {
       const updatedCount = _.reduce(
         departmentAmounts,
         (memo, num) => {
-          num !== null ? memo++ : memo;
-          return memo;
+          // num !== null ? memo++ : memo;
+          // return memo;
         },
         0,
       );
