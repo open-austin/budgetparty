@@ -14,9 +14,9 @@ export default class Done extends Component {
           Your budget has been submitted for review
         </p>
         <Link to="/dashboard" className="Submit__next-button">Go Home</Link>
-        <Link to="https://github.com/open-austin/budgetparty" className="center-text">
+        <a href="https://github.com/open-austin/budgetparty#readme" target="_blank" className="center-text">
           Learn More about Budget Party
-        </Link>
+        </a>
       </div>
     )
   }
