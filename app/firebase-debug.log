@@ -1,0 +1,60 @@
+[debug] [2019-08-22T04:05:29.014Z] ----------------------------------------------------------------------
+[debug] [2019-08-22T04:05:29.016Z] Command:       /Users/mateoclarke/.nvm/versions/node/v12.9.0/bin/node /Users/mateoclarke/.nvm/versions/node/v12.9.0/bin/firebase deploy --only hosting:staging
+[debug] [2019-08-22T04:05:29.016Z] CLI Version:   7.2.4
+[debug] [2019-08-22T04:05:29.016Z] Platform:      darwin
+[debug] [2019-08-22T04:05:29.016Z] Node Version:  v12.9.0
+[debug] [2019-08-22T04:05:29.017Z] Time:          Wed Aug 21 2019 23:05:29 GMT-0500 (Central Daylight Time)
+[debug] [2019-08-22T04:05:29.017Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-22T04:05:29.024Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-22T04:05:29.024Z] > authorizing via signed-in user
+[debug] [2019-08-22T04:05:29.024Z] [iam] checking project budget-party for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-08-22T04:05:29.026Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/budget-party:testIamPermissions  
+
+[debug] [2019-08-22T04:05:29.396Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-22T04:05:29.399Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/budget-party  
+ 
+[debug] [2019-08-22T04:05:29.639Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'budget-party'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/budget-party/overview
+[debug] [2019-08-22T04:05:29.778Z] TypeError: Cannot read property 'deploys' of undefined
+    at /Users/mateoclarke/.nvm/versions/node/v12.9.0/lib/node_modules/firebase-tools/lib/deploy/index.js:84:36
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-08-22T04:07:51.792Z] ----------------------------------------------------------------------
+[debug] [2019-08-22T04:07:51.794Z] Command:       /Users/mateoclarke/.nvm/versions/node/v12.9.0/bin/node /Users/mateoclarke/.nvm/versions/node/v12.9.0/bin/firebase deploy --only hosting:staging
+[debug] [2019-08-22T04:07:51.794Z] CLI Version:   7.2.4
+[debug] [2019-08-22T04:07:51.794Z] Platform:      darwin
+[debug] [2019-08-22T04:07:51.794Z] Node Version:  v12.9.0
+[debug] [2019-08-22T04:07:51.795Z] Time:          Wed Aug 21 2019 23:07:51 GMT-0500 (Central Daylight Time)
+[debug] [2019-08-22T04:07:51.795Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-22T04:07:51.802Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-22T04:07:51.802Z] > authorizing via signed-in user
+[debug] [2019-08-22T04:07:51.802Z] [iam] checking project budget-party for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-08-22T04:07:51.804Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/budget-party:testIamPermissions  
+
+[debug] [2019-08-22T04:07:52.021Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-22T04:07:52.024Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/budget-party  
+ 
+[debug] [2019-08-22T04:07:52.250Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'budget-party'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/budget-party/overview
+[debug] [2019-08-22T04:07:52.399Z] TypeError: Cannot read property 'deploys' of undefined
+    at /Users/mateoclarke/.nvm/versions/node/v12.9.0/lib/node_modules/firebase-tools/lib/deploy/index.js:84:36
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+[error] 
+[error] Error: An unexpected error has occurred.

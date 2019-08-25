@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "budget-party"
+  },
+  "targets": {
+    "budget-party": {
+      "hosting": {
+        "staging": [
+          "staging-budgetparty"
+        ]
+      }
+    }
   }
 }
