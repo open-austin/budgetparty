@@ -5,7 +5,8 @@ import AuthForm from './AuthForm'
 import GoogleAuth from './GoogleAuth'
 import logo from '../images/budget_party_logo.svg'
 
-import { auth, login, anonymous_auth } from '../helpers/auth'
+import { login, anonymous_auth } from '../helpers/auth'
+// import { auth, login, anonymous_auth } from '../helpers/auth'
 
 function setErrorMsg(error) {
   return {
@@ -40,8 +41,8 @@ export default class Home extends Component {
   }
 
   handleRegister = (email, pwd) => {
-    auth(email, pwd)
-      .catch(e => this.setState(setErrorMsg(e)))
+    // auth(email, pwd)
+    //   .catch(e => this.setState(setErrorMsg(e)))
   }
 
   handleLogin = (email, pwd) => {

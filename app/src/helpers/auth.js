@@ -1,9 +1,9 @@
-import { ref, firebaseAuth } from '../config/constants'
+import { firebaseAuth } from '../config/constants'
 
-export function auth (email, pw) {
-  return firebaseAuth().createUserWithEmailAndPassword(email, pw)
-    .then(saveUser)
-}
+// export function auth (email, pw) {
+//   return firebaseAuth().createUserWithEmailAndPassword(email, pw)
+//     .then(saveUser)
+// }
 
 export function logout () {
   return firebaseAuth().signOut()
@@ -21,11 +21,11 @@ export function anonymous_auth () {
   return firebaseAuth().signInAnonymously()
 }
 
-export function saveUser (user) {
-  return ref.child(`users/${user.uid}/info`)
-    .set({
-      email: user.email,
-      uid: user.uid
-    })
-    .then(() => user)
-}
+// export function saveUser (user) {
+//   return ref.child(`users/${user.uid}/info`)
+//     .set({
+//       email: user.email,
+//       uid: user.uid
+//     })
+//     .then(() => user)
+// }

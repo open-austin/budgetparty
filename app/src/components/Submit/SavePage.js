@@ -108,7 +108,7 @@ class SavePage extends Component {
         <label htmlFor="councilDistrict">Council District</label>
         <small>
           Not sure what district you live in? &nbsp;
-          <a href="http://www.austintexas.gov/GIS/CouncilDistrictMap/">Check this map.</a>
+          <a href="http://www.austintexas.gov/GIS/CouncilDistrictMap/" target="_blank">Check this map.</a>
         </small>
         <select name="councilDistrict" id="councilDistrict"
           onChange={this.handleChange} value={this.state.councilDistrict}

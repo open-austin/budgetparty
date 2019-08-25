@@ -60,17 +60,31 @@ export default class Landing extends Component {
         <h1>Support & More</h1>
         <h3>A few of the awesome organizations that have funded and supported budget party.</h3>
         <ul className="bubble-list">
-          <li className="bubble"><img alt="Austin Monitor" src={logoAustinMonitor} height="100" width="100"/></li>
-          <li className="bubble"><img alt="Glasshouse" src={logoGlasshouse} height="100" width="100"/></li>
-          <li className="bubble"><img alt="Mozilla" src={logoMozilla} height="100" width="100"/></li>
-          <li className="bubble"><img alt="Open Austin" src={logoOpenAustin} height="100" width="100"/></li>
+          <li className="bubble">
+            <a href="https://www.austinmonitor.com/" target="_blank">
+              <img alt="Austin Monitor" src={logoAustinMonitor} height="100" width="100"/>
+            </a>
+        </li>
+          <li className="bubble">
+            <a href="https://glasshousepolicy.org/" target="_blank">
+              <img alt="Glasshouse" src={logoGlasshouse} height="100" width="100" />
+            </a>
+          </li>
+          <li className="bubble">
+            <a href="https://blog.mozilla.org/foundation-archive/mozilla-learning/mozilla-awards-241000-to-explore-the-intersection-of-gigabit-technology-and-civics-robotics-farming-and-more/" target="_blank">
+              <img alt="Mozilla" src={logoMozilla} height="100" width="100" />
+            </a>
+          </li>
+          <li className="bubble">
+            <a href="https://www.open-austin.org/" target="_blank">
+              <img alt="Open Austin" src={logoOpenAustin} height="100" width="100"/>
+            </a>
+          </li>
         </ul>
         <ul className="link-list">
           <li><Link to="/login">Start Budgeting</Link></li>
-          <li><Link to="/application">Application</Link></li>
-          <li><Link to="/get-involved">Get Involved</Link></li>
           <li><a href="https://github.com/open-austin/budgetparty" target="_blank">View Budget Party on Github</a></li>
-          <li><a href="https://victoria283.typeform.com/to/K5Ppy1" target="_blank">Contact or Submit Feedback</a></li>
+          <li><a href="https://github.com/open-austin/budgetparty/issues/new" target="_blank">Contact or Submit Feedback</a></li>
         </ul>
       </section>
     </div>;
