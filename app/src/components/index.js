@@ -71,12 +71,13 @@ export default class App extends Component {
   }
 
   handleLogout() {
-    // const warning = confirm('Are you sure you want to log out?');
-    // if (warning) {
-    //   console.log('LOGGED OUT');
-    //   logout();
-    //   this.setState({ authed: false });
-    // }
+
+    const warning = window.confirm('Are you sure you want to log out?');
+    if (warning) {
+      console.log('LOGGED OUT');
+      logout();
+      this.setState({ authed: false });
+    }
   }
 
   render() {
